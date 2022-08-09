@@ -8,5 +8,5 @@ RUN ls
 
 #We will deploy the application on a Nginx server and open the 80 port.
 FROM nginx:alpine
-COPY --from=Gengoffee-build /Gengoffee/dist/Gengoffee/ /usr/share/nginx/html
+COPY --from=Gengoffee-build /Gengoffee/dist/website-gengoffee/ /usr/share/nginx/html
 EXPOSE 80
