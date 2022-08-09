@@ -83,7 +83,6 @@ a {
   background: white;
   font-family: 'PPMori';
   font-weight: 400;
-  font-size: 1.125rem;
 }
 
 .gengoffee-btn:hover {
@@ -102,26 +101,32 @@ a {
 
 .gengoffee-btn-secondary {
   background: #262829;
+  color: white;
 }
 
 /* Text Styles */
 
+/* 38px */
 h1 {
   font-size: 2.375rem;
 }
 
+/* 34px */
 h2 {
   font-size: 2.125rem;
 }
 
+/* 28px */
 h3 {
   font-size: 1.75rem;
 }
 
+/* 24px */
 h4 {
   font-size: 1.5rem;
 }
 
+/* 22px */
 h5 {
   font-size: 1.375rem;
 }
