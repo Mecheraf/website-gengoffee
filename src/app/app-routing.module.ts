@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
+import { TranslateService } from '@ngx-translate/core';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

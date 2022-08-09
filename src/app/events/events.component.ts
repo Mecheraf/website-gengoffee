@@ -9,15 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class EventsComponent implements OnInit {
   title = "Events";
-
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'fr', 'jp']);
-    translate.setDefaultLang('en');
-  }
-
-  switchLanguage(lang: string){
-    this.translate.use(lang);
-  }
+  
   ngOnInit(): void {
   }
 }
