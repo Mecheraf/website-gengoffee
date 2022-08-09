@@ -1,1 +1,19 @@
-<p>event-item works!</p>
+<!-- Event wrapper -->
+<div [ngClass]="active ? 'p-6 relative bottom-24' : 'p-5 opacity-50'" class="rounded-[0.625rem] border border-solid border-[#262829] border-opacity-50">
+  <!-- Event box -->
+  <div [ngClass]="active ? 'w-[25rem] h-[29rem] p-5' : 'w-80 h-80 p-4'" class="bg-[#F8E7E7] rounded-[0.625rem]">
+    <!-- Event informations -->
+    <div class="flex justify-between ppmori">
+      <div [ngClass]="active ? 'text-2xl' : 'text-xl'" class="italic font-thin tracking-[0.05em]">Passé</div>
+      <div class="flex flex-col">
+        <div [ngClass]="active ? 'text-base' : 'text-sm'" class="font-semibold">Dimanche 10 juillet 2022</div>
+        <div [ngClass]="active ? 'text-sm' : 'text-xs'">{{flags}} {{place}} - {{hour}}</div>
+      </div>
+    </div>
+    <!-- Event image -->
+    <img [ngClass]="active ? 'pt-5' : 'pt-4'" class="m-auto w-full" src="assets/images/gengoffee_event-1.png" />
+    <button *ngIf="active" class="place-content-center flex mx-auto m-4 gengoffee-btn gengoffee-btn-secondary">
+      Participer
+    </button>
+  </div>
+</div>
