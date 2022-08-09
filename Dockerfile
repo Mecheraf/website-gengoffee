@@ -3,11 +3,10 @@ FROM node:16-alpine3.12 AS Gengoffee-build
 WORKDIR /Gengoffee
 #We will copy the app cloned from git to the container ./app folder, install it and build it.
 COPY . .
-RUN ls
-RUN pwd
 RUN npm ci && npm run build
+RUN ls
 
 #We will deploy the application on a Nginx server and open the 80 port.
 FROM nginx:alpine
-COPY --from=Gengoffee-build /app/dist/Gengoffee/ /usr/share/nginx/html
+COPY --from=Gengoffee-build /Gengoffee/dist/Gengoffee/ /usr/share/nginx/html
 EXPOSE 80
