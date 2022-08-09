@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Globals */
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  color: #262829;
+  margin: 0;
+  padding: 0;
+  font-family: 'PPMori';
+}
+
+a {
+  text-decoration: none;
+  color: #262829;
+}
+
+/* Colors */
+
+.gengoffee-red {
+  color: #BF292E;
+}
+
+.gengoffee-blue {
+  color: #1F3D87;
+}
+
+.gengoffee-lightyellow {
+  color: #FBF8EA;
+}
+
+.gengoffee-lightblue {
+  color: #E7EDF8;
+}
+
+.gengoffee-lightgreen {
+  color: #E1F2F5;
+}
+
+.gengoffee-lightred {
+  color: #F8E7E7;
+}
+
+.gengoffee-red-bg {
+  background-color: #BF292E;
+}
+
+.gengoffee-blue-bg {
+  background-color: #1F3D87;
+}
+
+.gengoffee-lightyellow-bg {
+  background-color: #FBF8EA;
+}
+
+.gengoffee-lightblue-bg {
+  background-color: #E7EDF8;
+}
+
+.gengoffee-lightgreen-bg {
+  background-color: #E1F2F5;
+}
+
+.gengoffee-lightred-bg {
+ background-color: #F8E7E7;
+}
+
+/* Inputs & Buttons */
+
+.gengoffee-btn {
+  place-items: center;
+  padding: 10px 15px;
+  width: 155px;
+  height: 48px;
+  border-radius: 35px;
+  border: none;
+  background: white;
+  font-family: 'PPMori';
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.gengoffee-btn:hover {
+  cursor: pointer;
+}
+
+.gengoffee-btn-primary {
+  background: #BF292E;
+  color: white;
+}
+
+.gengoffee-btn-outline-primary {
+  color: #BF292E;
+  border: 1px solid #BF292E;
+}
+
+.gengoffee-btn-secondary {
+  background: #262829;
+}
+
+/* Text Styles */
+
+h1 {
+  font-size: 2.375rem;
+}
+
+h2 {
+  font-size: 2.125rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.375rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Hagrid';
+}
+
+.hagrid {
+  font-family: 'Hagrid';
+}
+
+.ppmori {
+  font-family: 'PPMori';
+}
+
+.divider {
+  border-top-width: 1px;
+  border-color: rgba(38,40,41,0.5);
+}
+
+.relative {
+  position: relative;
+}
