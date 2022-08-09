@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-language-switcher',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguageSwitcherComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'fr', 'jp']);
+    translate.setDefaultLang('en');
+  }
+
+  switchLanguage(lang: string){
+    this.translate.use(lang);
+  }
 
   ngOnInit(): void {
   }
