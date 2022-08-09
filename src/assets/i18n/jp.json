@@ -1,0 +1,26 @@
+{
+    "title" : "English",
+    "header":{
+        "menu":{
+            "home":"Home",
+            "events":"Events",
+            "news":"News",
+            "about":"About",
+            "contact":"Contact"
+        }
+    },
+    "footer":{
+
+    },
+    "home":{
+
+    },
+    "body":{},
+    "events":{
+        "title":"Events",
+        "description":"Want to practice your french, english or japanese ? \nRegister to our next event !",
+        "past":{
+            "title":"Our passed events"
+        }        
+    }
+}

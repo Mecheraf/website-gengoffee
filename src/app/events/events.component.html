@@ -1,0 +1,16 @@
+<h1>{{'events.title'|translate}}</h1>
+<p>{{'events.description'|translate}}</p>
+
+<span class="form-inline">
+    <select 
+      class="form-control"
+      #selectedLang
+      (change)="switchLanguage(selectedLang.value)">
+      <option *ngFor="let language of translate.getLangs()"
+      [value]="language"
+      [selected]="language === translate.currentLang">
+      {{language}}
+      </option>
+    </select>
+  </span>
+<p>events works!</p>

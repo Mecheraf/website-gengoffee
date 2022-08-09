@@ -13,6 +13,12 @@ import { GengoffeeNoticeComponent } from './components/gengoffee-notice/gengoffe
 import { ClientsFeedbackComponent } from './components/clients-feedback/clients-feedback.component';
 import { WavesComponent } from './ui-components/waves/waves.component';
 
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { EventsComponent } from './events/events.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +30,26 @@ import { WavesComponent } from './ui-components/waves/waves.component';
     PartnersComponent,
     GengoffeeNoticeComponent,
     ClientsFeedbackComponent,
-    WavesComponent
+    WavesComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
