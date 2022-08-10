@@ -42,7 +42,7 @@ import { EventsComponent } from './events/events.component';
         loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
+            deps: [HttpClient] 
         }
     })
   ],
