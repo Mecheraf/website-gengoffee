@@ -43,7 +43,11 @@ import { EventsComponent } from './events/events.component';
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
         }
-    })
+    }),
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'events', component: EventsComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

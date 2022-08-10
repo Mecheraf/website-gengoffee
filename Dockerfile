@@ -4,7 +4,7 @@ WORKDIR /Gengoffee
 #We will copy the app cloned from git to the container ./app folder, install it and build it.
 COPY . .
 RUN npm ci && npm run build
-RUN ls
+RUN dist/website-gengoffee/ls
 
 #We will deploy the application on a Nginx server and open the 80 port.
 FROM nginx:alpine
