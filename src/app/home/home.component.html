@@ -1,21 +1,22 @@
 <div class="home">
-  <section class="pt-24 flex max-w-5xl m-auto">
-    <div class="pt-20 w-5/12">
+  <!-- Hero header -->
+  <section class="pt-12 flex flex-col md:max-w-3xl md:pt-24 md:flex-row lg:max-w-5xl m-auto">
+    <div class="flex flex-col place-items-center md:block md:pt-20 md:w-5/12">
       <div class="w-fit">
-        <h2 class="tracking-[0.03em] pb-1">
+        <h2 class="tracking-[0.03em] pb-1 text-[1.25rem] md:text-[2.125rem]">
           La culture japonaise
         </h2>
         <div class="divider"></div>
-        <h3 class="ppmori uppercase opacity-50 tracking-[0.18em] pt-3">
+        <h3 class="ppmori uppercase opacity-50 tracking-[0.18em] pt-3 text-base md:text-[1.75rem]">
           à votre rencontre
         </h3>
       </div>
-      <div class="pt-10 text-xl w-10/12">
+      <div class="pt-10 md:text-xl w-10/12 text-center md:text-left">
         Gengoffee est un collectif organisant 
         des événements Franco-Japonais et 
         Franco-Anglais sur Paris.
       </div>
-      <div class="pt-9">
+      <div class="pt-9 hidden md:block">
         <button class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
           Inscription
         </button>
@@ -24,38 +25,52 @@
         </button>
       </div>
     </div>
-    <div class="w-6/12 flex place-content-end">
-      <div class="relative w-[24rem] h-[29rem]">
-        <img class="absolute bottom-0" src="assets/images/mountain-view.png" />
-        <img class="absolute top-0" src="assets/images/red-shaped-mask.png" />
-        <div class="absolute outline-1 outline-offset-[-1rem] outline-white outline-double z-10 w-full h-full"></div>
+    <div class="md:w-6/12">
+      <div class="flex pt-10 md:pt-0 place-content-center md:place-content-end">
+        <div class="relative w-[24rem] h-[29rem]">
+          <img class="absolute bottom-0" src="assets/images/mountain-view.png" />
+          <img class="absolute top-0" src="assets/images/red-shaped-mask.png" />
+          <div class="absolute outline-1 outline-offset-[-1rem] outline-white outline-double z-10 w-full h-full"></div>
+        </div>
+      </div>
+      <div class="pt-9 md:hidden flex place-content-center">
+        <button class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
+          Inscription
+        </button>
+        <button class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+          En savoir plus
+        </button>
       </div>
     </div>
   </section>
-  <section class="pt-52">
-    <div class="ml-48">
-      <h4 class="font-medium">
+  <!-- Event list -->
+  <section class="pt-20 md:pt-52">
+    <div class="text-center md:text-left md:ml-48">
+      <h4 class="font-medium text-base md:text-2xl">
         Nos événements, vos rencontres
       </h4>
-      <div class="pt-4 max-w-lg">
+      <div class="pt-4 max-w-lg m-auto md:m-0">
         Chaque semaine des rendez-vous afin de vous permettre d’échanger autour d’un verre.
         Retrouvez nos prochaines sessions.
       </div>
     </div>
-    <div class="pt-12 flex gap-7 justify-center overflow-x-hidden">
+    <div class="w-fit m-auto md:w-auto md:m-0 pt-12 flex flex-col md:flex-row gap-7 justify-center overflow-x-clip">
       <app-event-item></app-event-item>
       <app-event-item></app-event-item>
       <app-event-item [active]="true"></app-event-item>
       <app-event-item></app-event-item>
     </div>
   </section>
-  <section class="home__partners text-lg">
+  <!-- Partners -->
+  <section class="md:text-lg pt-14 md:pt-8 text-center px-5 md:px-0">
     <app-partners></app-partners>
   </section>
-  <section class="home__gengoffee-notice">
-    <app-gengoffee-notice></app-gengoffee-notice>
+  <!-- Notice -->
+  <section class="mt-36">
+    <app-gengoffee-notice [redWave]="true"></app-gengoffee-notice>
   </section>
-  <section class="home__clients__feedback">
+  <!-- Clients feedback -->
+  <!-- <section class="home__clients__feedback">
     <app-clients-feedback></app-clients-feedback>
-  </section>
+  </section> -->
 </div>
