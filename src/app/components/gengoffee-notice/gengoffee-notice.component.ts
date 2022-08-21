@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gengoffee-notice',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GengoffeeNoticeComponent implements OnInit {
 
+  @Input() redWave: boolean = false;
+  @Input() blueWave: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
