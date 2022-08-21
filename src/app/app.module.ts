@@ -18,6 +18,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { EventsComponent } from './events/events.component';
+import { PastEventCardComponent } from './ui-components/past-event-card/past-event-card.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { EventsComponent } from './events/events.component';
     GengoffeeNoticeComponent,
     ClientsFeedbackComponent,
     WavesComponent,
-    EventsComponent
+    EventsComponent,
+    PastEventCardComponent
   ],
   imports: [
     BrowserModule,

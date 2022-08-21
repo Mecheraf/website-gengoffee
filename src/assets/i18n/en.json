@@ -18,7 +18,7 @@
     "body":{},
     "events":{
         "title":"Events",
-        "description":"Want to practice your french, english or japanese ? \nRegister to our next event !",
+        "description":"Want to practice your french, english or japanese ? <br>Register to our next event !",
         "past":{
             "title":"Our passed events"
         }        

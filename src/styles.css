@@ -104,6 +104,29 @@ a {
   color: white;
 }
 
+.gengoffee-dropdown {
+  box-shadow: 0 0.5px #383445;
+  position: relative;
+  width: 160px;
+  font-size: 14px;
+}
+
+.gengoffee-dropdown:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 9px;
+  background-image: url("assets/images/arrow-down.svg");
+  background-repeat: no-repeat;
+}
+
+.gengoffee-dropdown:hover {
+  cursor: pointer;
+}
+
 /* Text Styles */
 
 /* 38px */
