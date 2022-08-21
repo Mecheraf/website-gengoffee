@@ -19,6 +19,7 @@ export class EventItemComponent implements OnInit {
 
   @Input() language: string = "jp"; // Use locale e.g. fr, en, jp
   @Input() active: boolean = false;
+  @Input() participateLink: boolean = true;
   @Input() date: string = "";
   @Input() place: string = "";
   constructor() { }
