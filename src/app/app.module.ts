@@ -19,6 +19,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { EventsComponent } from './events/events.component';
 import { PastEventCardComponent } from './ui-components/past-event-card/past-event-card.component';
+import { AnimatedQuoteComponent } from './ui-components/animated-quote/animated-quote.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PastEventCardComponent } from './ui-components/past-event-card/past-eve
     ClientsFeedbackComponent,
     WavesComponent,
     EventsComponent,
-    PastEventCardComponent
+    PastEventCardComponent,
+    AnimatedQuoteComponent
   ],
   imports: [
     BrowserModule,
