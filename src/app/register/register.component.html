@@ -12,7 +12,7 @@
                         <div _ngcontent-ius-c5="" class="text-xl italic font-thin tracking-[0.05em]">Passé</div>
                         <div _ngcontent-ius-c5="" class="flex flex-col">
                             <div _ngcontent-ius-c5="" class="text-sm font-semibold">Dimanche 10 juillet 2022</div>
-                            <div _ngcontent-ius-c5="" class="text-xs">🇫🇷🇯🇵 -
+                            <div _ngcontent-ius-c5="" class="text-xs">🇫🇷🇯🇵 Les Berthom - 18H15
                             </div>
                         </div>
                     </div>
@@ -20,31 +20,10 @@
 
                 </div>
             </div>
-            <p>{{'register.nextevent'|translate}}</p>
-            <div _ngcontent-ius-c11=""
-                class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-10">
-                <app-past-event-card _ngcontent-ius-c11="" _nghost-ius-c10="">
-                    <div _ngcontent-ius-c10=""
-                        class="w-36 md:w-44 rounded-[5px] border border-solid border-[#262829] border-opacity-50">
-                        <div _ngcontent-ius-c10="" class="gengoffee-lightblue-bg w-full h-3 md:h-4 rounded-t-[5px]">
-                        </div>
-                        <div _ngcontent-ius-c10="" class="p-3 md:p-4 text-center text-xs md:text-base">
-                            <div _ngcontent-ius-c10="" class="font-semibold">Dimanche 10 juillet</div>
-                            <div _ngcontent-ius-c10="" class="font-extralight">Français - Anglais</div>
-                        </div>
-                    </div>
-                </app-past-event-card>
-                <app-past-event-card _ngcontent-ius-c11="" _nghost-ius-c10="">
-                    <div _ngcontent-ius-c10=""
-                        class="w-36 md:w-44 rounded-[5px] border border-solid border-[#262829] border-opacity-50">
-                        <div _ngcontent-ius-c10="" class="gengoffee-lightblue-bg w-full h-3 md:h-4 rounded-t-[5px]">
-                        </div>
-                        <div _ngcontent-ius-c10="" class="p-3 md:p-4 text-center text-xs md:text-base">
-                            <div _ngcontent-ius-c10="" class="font-semibold">Dimanche 10 juillet</div>
-                            <div _ngcontent-ius-c10="" class="font-extralight">Français - Anglais</div>
-                        </div>
-                    </div>
-                </app-past-event-card>
+            <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
+            <div class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-10">
+                <app-past-event-card></app-past-event-card>
+                <app-past-event-card></app-past-event-card>
             </div>
         </div>
         <div class="pr-24 pl-24 pt-6">
@@ -61,6 +40,15 @@
                     <p class="text-gray-400 inline">(facultatif)</p>
                 </div>
                 <input type="text" name="name" placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
+                <p class="pt-8">{{'register.form.language.title'|translate}}</p>
+                <div class="inline pl-4">
+                    <select id="standard-select" class="bg-white border-b-2">
+                        <option value="lv1">{{'register.form.language.lv1'|translate}}</option>
+                        <option value="lv2">{{'register.form.language.lv2'|translate}}</option>
+                        <option value="lv3">{{'register.form.language.lv3'|translate}}</option>
+                    </select>
+                </div>
+
             </form>
         </div>
     </div>
