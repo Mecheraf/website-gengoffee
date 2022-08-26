@@ -1,7 +1,46 @@
-<div class="events">
-    <h1>{{'events.title'|translate}}</h1>
-    <p>{{'events.description'|translate}}</p>
-    <p>{{'events.past.title'|translate}}</p>
-</div>
-
-<p>events works!</p>
+<section class="mt-16 md:mt-28 flex place-items-center text-center">
+  <div class="m-auto">
+    <h1 class="text-[2.25rem] md:text-[2.625rem]">{{'events.title'|translate}}</h1>
+    <div class="md:text-xl pt-14 md:pt-10" [innerHtml]="'events.description' | translate"></div>
+    <div class="pt-5">
+      <button class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
+        Inscription
+      </button>
+      <button class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+        En savoir plus
+      </button>
+    </div>
+  </div>
+</section>
+<section class="mt-12 md:mt-20">
+  <h2 class="text-lg md:text-[1.375rem] text-center font-light">Nos prochains rendez-vous</h2>
+  <div class="flex justify-center place-items-center flex-col md:flex-row mt-5 gap-7 md:gap-14">
+    <app-event-item [active]="true"></app-event-item>
+    <app-event-item [active]="true"></app-event-item>
+  </div>
+</section>
+<section class="w-fit mt-16 md:mt-28 mx-auto">
+  <div class="flex flex-col md:flex-row">
+    <div class="md:flex-1"></div>
+    <div class="md:m-auto md:flex-1 text-center text-lg font-light md:text-[1.375rem]">{{'events.past.title' | translate}}</div>
+    <div class="md:flex-1 md:justify-end">
+      <!-- TODO : Fill dropdown and add the animation -->
+      <div class="gengoffee-dropdown mt-5 mx-auto md:mt-0 md:ml-auto md:mr-0">Les plus récents</div>
+    </div>
+  </div>
+  <div class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-10">
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+    <app-past-event-card></app-past-event-card>
+  </div>
+</section>
+<section class="mt-16 md:mt-40">
+  <app-gengoffee-notice [redWave]="true"></app-gengoffee-notice>
+</section>

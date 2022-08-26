@@ -1,0 +1,66 @@
+.quote {
+  position: relative;
+  animation: animateQuote 0.35s;
+  width: fit-content;
+  transform-origin: bottom left;
+  z-index: 10;
+}
+
+.quote-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-weight: 600;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.quote-text:after {
+  content: '';
+  width: 100px;
+  height: 20px;
+  background: #F5F7F9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: writeText 0.35s linear 0.35s 1 normal both;
+}
+
+.reverted-quote {
+  transform: rotateY(180deg);
+}
+
+.reverted-text {
+  transform: translate(-40%, -50%) rotateY(180deg);
+}
+
+@keyframes animateQuote {
+  from {
+    transform: scale(0%);
+  }
+  
+  to {
+    transform: scale(100%);
+  }
+}
+
+@keyframes revertedAnimateQuote {
+  from {
+    transform: scale(0%);
+  }
+  
+  to {
+    transform: scale(100%);
+  }
+}
+
+@keyframes writeText {
+  from {
+    left: 0%;
+  }
+  
+  to {
+    left: 100%;
+  }
+}

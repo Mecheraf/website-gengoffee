@@ -18,6 +18,8 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { EventsComponent } from './events/events.component';
+import { PastEventCardComponent } from './ui-components/past-event-card/past-event-card.component';
+import { AnimatedQuoteComponent } from './ui-components/animated-quote/animated-quote.component';
 import { RegisterComponent } from './register/register.component';
 
 
@@ -34,6 +36,8 @@ import { RegisterComponent } from './register/register.component';
     ClientsFeedbackComponent,
     WavesComponent,
     EventsComponent,
+    PastEventCardComponent,
+    AnimatedQuoteComponent,
     RegisterComponent
   ],
   imports: [

@@ -1,22 +1,29 @@
-<header class="header">
-  <div class="header__logo gengoffee-blue-bg">
-    <img src="assets/images/gengoffee-logo.svg" />
+<header class="header h-20 md:flex md:pr-20 md:pl-16">
+  <div class="hidden md:block pt-8 px-4 pb-6 gengoffee-blue-bg">
+    <img class="w-28 h-6" src="assets/images/gengoffee-logo.svg" />
   </div>
-  <nav class="ppmori">
-    <div class="header__link">
-      <a href="#">Home</a>
+  <nav
+    [ngClass]="{ 'hidden': !showMobileMenu && isMobile() }"
+    class="
+      ppmori flex place-items-center fixed flex-col pt-24 gap-5 text-xl inset-0 bg-white z-50 
+      md:flex-row md:text-base md:gap-10 md:relative md:pt-5 md:ml-auto"
+  >
+    <div class="">
+      <a href="#" (click)="closeMenu();">Home</a>
     </div>
     <div class="header__link">
-      <a href="events">{{'events.title'|translate}}</a>
+      <a href="events" (click)="closeMenu();">{{'events.title'|translate}}</a>
     </div>
-    <div class="header__link">
-      <a href="#">News</a>
+    <div class="">
+      <a href="#" (click)="closeMenu();">News</a>
     </div>
-    <div class="header__link">
-      <a href="#">About</a>
+    <div class="">
+      <a href="#" (click)="closeMenu();">About</a>
     </div>
-    <div class="header__link">
-      <a href="#">Contact</a>
+    <div class="">
+      <a href="#" (click)="closeMenu();">Contact</a>
     </div>
+    <img *ngIf="isMobile()" class="pt-6" (click)="closeMenu();" src="assets/images/close.svg" />
   </nav>
+  <img *ngIf="!showMobileMenu && isMobile()" class="pt-5 m-auto" (click)="openMenu();" src="assets/images/hamburger-menu.svg">
 </header>
