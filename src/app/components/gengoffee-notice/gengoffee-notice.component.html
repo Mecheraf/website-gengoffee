@@ -1,20 +1,33 @@
-<div class="gengoffee-notice relative">
-  <div class="gengoffee-notice__wrapper">
-    <div class="gengoffee-notice__titles">
-      <p class="gengoffee-notice__subtitle">
+<div class="relative gengoffee-lightyellow-bg">
+  <div class="max-w-4xl m-auto py-20 flex flex-col md:flex-row place-items-center">
+    <div class="w-[24rem] md:mr-36 text-center md:text-left flex justify-center flex-col">
+      <p class="gengoffee-red">
         En savoir un peu plus
       </p>
-      <p class="gengoffee-notice__title">
-        Comment se déroule un évènement Gengoffee ?
-      </p>
+      <h4 class="font-medium text-lg md:text-2xl">
+        Comment se déroule<br>
+        un évènement Gengoffee ?
+      </h4>
     </div>
-    <div class="gengoffee-notice__steps">
-      <div class="gengoffee-notice__step">
-        <img class="" src="" />
-        <div><span class="font-semibold">1.</span> On vous installe à une table numérotée de <span class="font-semibold">6 à 8 personnes.</span></div>
+    <div class="mt-12 md:mt-0 text-center md:text-left">
+      <div class="flex flex-col place-items-center md:flex-row">
+        <img class="w-10 md:mr-10" src="assets/images/floating-numbers.svg" />
+        <div class="mt-6 md:mt-0"><span class="font-semibold">1.</span> On vous installe à une table<br> numérotée de <span class="font-semibold">6 à 8 personnes.</span></div>
+      </div>
+      <div class="flex flex-col place-items-center md:flex-row mt-10">
+        <img class="w-10 md:mr-10" src="assets/images/hourglass.svg" />
+        <div class="mt-6 md:mt-0"><span class="font-semibold">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class="font-semibold">pendant 15min.</span></div>
+      </div>
+      <div class="flex flex-col place-items-center md:flex-row mt-10">
+        <img class="w-10 md:mr-10" src="assets/images/text-bubble.svg" />
+        <div class="mt-6 md:mt-0"><span class="font-semibold">3.</span> Au bout de 15min, <span class="font-semibold">on change de langue.</span> <br>Continuez la conversation !</div>
+      </div>
+      <div class="flex flex-col place-items-center md:flex-row mt-10">
+        <img class="w-10 md:mr-10" src="assets/images/happy-smiley.svg" />
+        <div class="mt-6 md:mt-0"><span class="font-semibold">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !</div>
       </div>
     </div>
   </div>
-  <app-waves></app-waves>
-  <app-waves></app-waves>
+  <app-waves *ngIf="redWave" class="hidden md:block" color="red" top="0" left="0" translateY="-40%"></app-waves>
+  <app-waves *ngIf="blueWave" color="blue" bottom="0" right="0" translateY="60%"></app-waves>
 </div>

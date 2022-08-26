@@ -18,7 +18,6 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { EventsComponent } from './events/events.component';
-import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -33,8 +32,7 @@ import { RegisterComponent } from './register/register.component';
     GengoffeeNoticeComponent,
     ClientsFeedbackComponent,
     WavesComponent,
-    EventsComponent,
-    RegisterComponent
+    EventsComponent
   ],
   imports: [
     BrowserModule,

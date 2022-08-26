@@ -42,7 +42,7 @@
     },
     "events":{
         "title":"Évènements",
-        "description":"Vous voulez améliorer votre français, anglais ou japonais ?\nParticiper à notre prochain évènement !",
+        "description":"Vous voulez améliorer votre français, anglais ou japonais ?<br>Participer à notre prochain évènement !",
         "past":{
             "title":"Nos évènements passés"
         }        
