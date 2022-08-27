@@ -9,16 +9,16 @@
       md:flex-row md:text-base md:gap-10 md:relative md:pt-5 md:ml-auto"
   >
     <div class="">
-      <a href="#" (click)="closeMenu();">Home</a>
+      <a [routerLink]="['/']" (click)="closeMenu();">Home</a>
     </div>
     <div class="header__link">
-      <a href="events" (click)="closeMenu();">{{'events.title'|translate}}</a>
+      <a [routerLink]="['/events']" (click)="closeMenu();">{{'events.title'|translate}}</a>
     </div>
     <div class="">
       <a href="#" (click)="closeMenu();">News</a>
     </div>
     <div class="">
-      <a href="#" (click)="closeMenu();">About</a>
+      <a [routerLink]="['/about']" (click)="closeMenu();">About</a>
     </div>
     <div class="">
       <a href="#" (click)="closeMenu();">Contact</a>
