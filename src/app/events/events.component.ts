@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class EventsComponent implements OnInit {
   title = "Events";
-  
+
   ngOnInit(): void {
   }
 }

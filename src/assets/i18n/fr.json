@@ -1,8 +1,10 @@
 {
     "title" : "Français",
+    "contact_us":"Contactez-nous",
+    "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
     "header":{
         "menu":{
-            "home":"",
+            "home":"Accueil",
             "events":"Évènements",
             "news":"News",
             "about":"À Propos",
@@ -10,17 +12,109 @@
         }
     },
     "footer":{
-
+        "questions":"Des questions ?",
+        "followus":"Abonnez-vous sur les réseaux !",
+        "conditions":"Conditions générales"
     },
-    "home":{
-
+    "hero":{
+        "tilte":"La culture Japonaise",
+        "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
+        "subtitle":"À VOTRE RENCONTRE",
+        "buttons":{
+            "subscription":"Inscription",
+            "more":"En savoir plus"
+        }
     },
-    "body":{},
+    "carrousel":{
+        "title":"Nos événements, votre échanges",
+        "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
+    },
+    "partners":{
+        "title":"",
+        "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
+        "partner":{
+            "berthom":{
+                "title":"Un grand merci à Les Berthom qui accueille nos évènements.",
+                "name":"Les Berthom",
+                "address":"35 Boulevard Voltaire\n75011 Paris"
+            }
+        }
+    },
     "events":{
         "title":"Évènements",
         "description":"Vous voulez améliorer votre français, anglais ou japonais ?<br>Participer à notre prochain évènement !",
         "past":{
             "title":"Nos évènements passés"
         }        
+    },
+    "explaination":{
+        "title":"Comment se déroule\nun évènement Gengoffee ?",
+        "uptitle":"En savoir un peu plus",
+        "1":"1.  On vous installe à une table numérotée de 6 à 8 personnes.",
+        "2":"2.  Français, anglais ou japonais,\nvous discutez dans la langue indiquée\npendant 15min.",
+        "3":"3.  Au bout de 15min, on change de langue.\nContinuez la conversation !",
+        "4":"4.  Améliorez ainsi votre language\ngrâce aux différents interlocuteurs !"
+    },
+    "register":{
+        "title":"Inscription",
+        "savethedate":"SAVE THE DATE !",
+        "nextevent":"Inscrivez-vous également à nos prochains événements :)",
+        "form":{
+            "title":"Participer au prochain évènement Gengoffee",
+            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
+            "name":"Nom & Prénom",
+            "mail":"Adresse e-mail",
+            "phone":"Numéro de Téléphone",
+            "language":{
+                "title":"Langues parlées",
+                "add":"Ajouter une langue",
+                "english":"Anglais",
+                "french":"Japonais",
+                "japanese":"Japonais",
+                "lv1":"Débutant",
+                "lv2":"intérmédiaire",
+                "lv3":"Courant"
+            },
+            "diet":{
+                "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
+                "description":"Si vous avez des allergies veuillez nous le préciser par message ci-dessous.",
+                "none":"Aucun",
+                "vegan":"Vegan",
+                "vegetarian":"Végétarien",
+                "casher":"Casher",
+                "halal":"Halal",
+                "other":"Autres"
+            }
+        }
+    },
+    "about":{
+        "title":"",
+        "subtitle":"",
+        "description":"",
+        "followus":"",
+        "persons":{
+            "alan":{
+                "title":"",
+                "description":"",
+                "link":{
+                    "linkedin":"",
+                    "website":""
+                }
+            }
+        },
+        "stats":{
+
+        }
+    },
+    "contact":{
+        "title":"N'hésitez pas à nous écrire",
+        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
+        "name":"Nom & Prénom",
+        "mail":"Adresse e-mail",
+        "phone":"Numéro de Téléphone",
+        "objet":"Objet",
+        "message":"Message",
+        "button":"Envoyer",
+        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
     }
 }
