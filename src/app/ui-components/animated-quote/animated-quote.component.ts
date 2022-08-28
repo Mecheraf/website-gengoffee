@@ -9,6 +9,9 @@ export class AnimatedQuoteComponent implements OnInit {
 
   @Input() content: string = "";
   @Input() revert: boolean = false;
+  @Input() empty: boolean = false;
+  @Input() width: number = 126;
+  @Input() height: number = 43;
   constructor() { }
 
   ngOnInit(): void {
