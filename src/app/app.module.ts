@@ -20,6 +20,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { EventsComponent } from './events/events.component';
 import { PastEventCardComponent } from './ui-components/past-event-card/past-event-card.component';
 import { AnimatedQuoteComponent } from './ui-components/animated-quote/animated-quote.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AnimatedQuoteComponent } from './ui-components/animated-quote/animated-
     WavesComponent,
     EventsComponent,
     PastEventCardComponent,
-    AnimatedQuoteComponent
+    AnimatedQuoteComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

@@ -8,17 +8,19 @@
 
 .quote-text {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-47%, -48%);
   left: 50%;
   top: 50%;
   font-weight: 600;
   opacity: 0.5;
   overflow: hidden;
+  white-space: nowrap;
 }
 
-.quote-text:after {
+.quote-text::after {
+  /* --mask-width: 100px; */
   content: '';
-  width: 100px;
+  width: var(--mask-width);
   height: 20px;
   background: #F5F7F9;
   position: absolute;
@@ -32,7 +34,7 @@
 }
 
 .reverted-text {
-  transform: translate(-40%, -50%) rotateY(180deg);
+  transform: translate(-45%, -50%) rotateY(180deg);
 }
 
 @keyframes animateQuote {
