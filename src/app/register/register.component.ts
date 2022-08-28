@@ -12,4 +12,26 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  dietList:String[] = []
+  languagesList:String[] = ["fr", "jp", "en"]
+  
+  toggleDiet (diet:String) {
+    if (this.dietList.includes(diet)) {
+      this.dietList = this.dietList.filter(obj => diet !== obj);
+
+    }
+    else {
+      this.dietList.push(diet)
+    }
+    console.log(this.dietList)
+  } 
+
+  addLanguage(){
+
+  }
+
+  removeLanguage(){
+
+  }
+
 }
