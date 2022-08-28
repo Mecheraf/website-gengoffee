@@ -27,14 +27,20 @@
                 </div>
                 <input type="text" name="name" placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
                 <p class="pt-8">{{'register.form.language.title'|translate}}</p>
-                <div class="inline pl-4">
-                    <select id="standard-select" class="bg-white border-b-2">
-                        <option value="lv1">{{'register.form.language.lv1'|translate}}</option>
-                        <option value="lv2">{{'register.form.language.lv2'|translate}}</option>
-                        <option value="lv3">{{'register.form.language.lv3'|translate}}</option>
+                <div *ngFor="let language of selectedLanguages; let index = index;" class="flex gap-4 pl-4 my-4">
+                    <select [(ngModel)]="language.language" name="language + {{index}}" id="language + {{index}}" class="bg-white border-b-2">
+                        <option value="fr" [selected]="'fr' === language.language">{{'register.form.language.french'|translate}}</option>
+                        <option value="en" [selected]="'en' === language.language">{{'register.form.language.english'|translate}}</option>
+                        <option value="jp" [selected]="'jp' === language.language">{{'register.form.language.japanese'|translate}}</option>
                     </select>
+                    <select [(ngModel)]="language.level" name="level + {{index}}" id="level + {{index}}" class="bg-white border-b-2">
+                        <option value="lv1" [selected]="'lv1' === language.level">{{'register.form.language.lv1'|translate}}</option>
+                        <option value="lv2" [selected]="'lv2' === language.level">{{'register.form.language.lv2'|translate}}</option>
+                        <option value="lv3" [selected]="'lv3' === language.level">{{'register.form.language.lv3'|translate}}</option>
+                    </select>
+                    <button type="button" (click)="removeLanguage(language)">X</button>
                 </div>
-                <button type="button" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
+                <button type="button" (click)="addLanguage()" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
 
 
                 <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
