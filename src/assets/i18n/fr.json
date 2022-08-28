@@ -17,7 +17,7 @@
         "conditions":"Conditions générales"
     },
     "hero":{
-        "tilte":"La culture Japonaise",
+        "title":"La culture Japonaise",
         "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
@@ -69,7 +69,7 @@
                 "title":"Langues parlées",
                 "add":"Ajouter une langue",
                 "english":"Anglais",
-                "french":"Japonais",
+                "french":"Français",
                 "japanese":"Japonais",
                 "lv1":"Débutant",
                 "lv2":"intérmédiaire",

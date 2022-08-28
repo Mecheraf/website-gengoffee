@@ -22,6 +22,7 @@ import { PastEventCardComponent } from './ui-components/past-event-card/past-eve
 import { AnimatedQuoteComponent } from './ui-components/animated-quote/animated-quote.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

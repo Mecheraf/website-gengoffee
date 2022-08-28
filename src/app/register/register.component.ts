@@ -1,11 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+interface userLanguage {
+  language: string,
+  level: string,
+}
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  public languages: string[] = ["fr", "jp", "en"];
+  public selectedLanguages: userLanguage[] = [];
+  dietList: string[] = []
 
   public showText:boolean = false;
   public otherText: String = "";
@@ -14,13 +23,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  dietList:String[] = []
-  languagesList:String[] = ["fr", "jp", "en"]
   
-  toggleDiet (diet:String) {
+  toggleDiet (diet: string) {
     if (this.dietList.includes(diet)) {
       this.dietList = this.dietList.filter(obj => diet !== obj);
-
     }
     else {
       this.dietList.push(diet)
@@ -34,11 +40,13 @@ export class RegisterComponent implements OnInit {
   }
 
   addLanguage(){
-
+    const language: userLanguage = {language: "fr", level: "lv1"};
+    this.selectedLanguages.push(language);
+    console.log(this.selectedLanguages);
   }
 
-  removeLanguage(){
-
+  removeLanguage(language: userLanguage){
+    this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
   }
 
   
