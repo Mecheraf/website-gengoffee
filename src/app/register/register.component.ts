@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  public showText:boolean = false;
+  public otherText: String = "";
   constructor() { }
 
   ngOnInit(): void {
@@ -26,6 +28,11 @@ export class RegisterComponent implements OnInit {
     console.log(this.dietList)
   } 
 
+  toggleOther(){
+    this.showText = !this.showText;
+    console.log(this.otherText)
+  }
+
   addLanguage(){
 
   }
@@ -33,5 +40,7 @@ export class RegisterComponent implements OnInit {
   removeLanguage(){
 
   }
+
+  
 
 }

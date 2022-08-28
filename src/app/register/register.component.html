@@ -44,7 +44,8 @@
                     <button type="button" (click)="toggleDiet('vegetarian')" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.vegetarian'|translate}}</button>
                     <button type="button" (click)="toggleDiet('vegan')" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.vegan'|translate}}</button>
                     <button type="button" (click)="toggleDiet('halal')" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.halal'|translate}}</button>
-                    <button type="button" (click)="toggleDiet('other')" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.other'|translate}}</button>
+                    <button type="button" (click)="toggleOther()" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.other'|translate}}</button>
+                    <textarea [(ngModel)]="otherText" *ngIf="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
                 </div>
                 <button class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     Participer
