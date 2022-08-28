@@ -67,6 +67,7 @@
             "phone":"Numéro de Téléphone",
             "language":{
                 "title":"Langues parlées",
+                "add":"Ajouter une langue",
                 "english":"Anglais",
                 "french":"Japonais",
                 "japanese":"Japonais",

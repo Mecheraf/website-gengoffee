@@ -5,28 +5,14 @@
             <h2 class="text-white"
                 style="text-shadow: 1px 0 0 #262829, 0 -1px 0 #262829, 0 1px 0 #262829, -1px 0 0 #262829;">
                 {{'register.savethedate'|translate}}</h2>
-            <div _ngcontent-ius-c5=""
-                class="w-[22rem] p-5 opacity-50 rounded-[0.625rem] border border-solid border-[#262829] border-opacity-50 opacity-100">
-                <div _ngcontent-ius-c5="" class="p-4 bg-[#F8E7E7] rounded-[0.625rem]">
-                    <div _ngcontent-ius-c5="" class="flex justify-between ppmori">
-                        <div _ngcontent-ius-c5="" class="text-xl italic font-thin tracking-[0.05em]">Passé</div>
-                        <div _ngcontent-ius-c5="" class="flex flex-col">
-                            <div _ngcontent-ius-c5="" class="text-sm font-semibold">Dimanche 10 juillet 2022</div>
-                            <div _ngcontent-ius-c5="" class="text-xs">🇫🇷🇯🇵 Les Berthom - 18H15
-                            </div>
-                        </div>
-                    </div>
-                    <img _ngcontent-ius-c5="" src="assets/images/gengoffee_event-1.png" class="pt-4 m-auto w-full">
-
-                </div>
-            </div>
+            <app-event-item [active]="true" [participateLink]="false"></app-event-item>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
-            <div class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-10">
+            <div class="mt-10 md:mt-16 flex gap-8 md:gap-10">
                 <app-past-event-card></app-past-event-card>
                 <app-past-event-card></app-past-event-card>
             </div>
         </div>
-        <div class="pr-24 pl-24 pt-6">
+        <div class="pl-24 pt-6">
             <p class="font-bold">{{'register.form.title'|translate}}</p>
             <p class="pt-6">{{'register.form.description'|translate}}</p>
             <form class="pt-2">
@@ -48,10 +34,23 @@
                         <option value="lv3">{{'register.form.language.lv3'|translate}}</option>
                     </select>
                 </div>
+                <button class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
 
+
+                <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
+                <p>{{'register.form.diet.description'|translate}}</p>
+                <div class="">
+                    <button class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.none'|translate}}</button>
+                    <button class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.vegan'|translate}}</button>
+                    <button class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.vegetarian'|translate}}</button>
+                    <button class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.halal'|translate}}</button>
+                    <button class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.other'|translate}}</button>
+                </div>
+                <button class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                    Participer
+                </button>                
             </form>
         </div>
     </div>
 </div>
 
-<p>register works!</p>
