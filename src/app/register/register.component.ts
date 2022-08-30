@@ -5,6 +5,14 @@ interface userLanguage {
   level: string,
 }
 
+interface formParams {
+  name:string,
+  mail:string,
+  phone:string,
+  dietList: string[],
+  selectedLanguages: userLanguage[]
+}
+ 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,7 +25,13 @@ export class RegisterComponent implements OnInit {
   dietList: string[] = []
 
   public showText:boolean = false;
-  public otherText: String = "";
+  public otherText:string = "";
+  public name:string ="";
+  public mail:string ="";
+  public number:string ="";
+  
+  public formGroup = {} as formParams;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -49,6 +63,10 @@ export class RegisterComponent implements OnInit {
     this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
   }
 
-  
+  submitForm(){
+    this.formGroup.selectedLanguages = this.selectedLanguages
+    this.formGroup.dietList = this.dietList
+    console.log(this.formGroup)
+  }
 
 }

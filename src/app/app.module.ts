@@ -23,6 +23,7 @@ import { AnimatedQuoteComponent } from './ui-components/animated-quote/animated-
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
+import { CreateeventComponent } from './createevent/createevent.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     PastEventCardComponent,
     AnimatedQuoteComponent,
     AboutUsComponent,
-    RegisterComponent
+    RegisterComponent,
+    CreateeventComponent
   ],
   imports: [
     BrowserModule,

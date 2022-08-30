@@ -85,7 +85,8 @@
                 "halal":"Halal",
                 "other":"Autres/Allergies"
             }
-        }
+        },
+        "optionnal":"facultatif"
     },
     "about":{
         "title":"",

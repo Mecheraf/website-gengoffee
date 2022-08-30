@@ -1,5 +1,5 @@
 <div class="register">
-    <div class="flex max-w-5xl mx-auto pt-24">
+    <div class="flex max-w-screen-2xl mx-auto pt-24">
         <div class="pr-24 pl-24 pt-2 border-r border-solid border-[#]/50">
             <h1 class="text-[2.625rem]">{{'register.title'|translate}}</h1>
             <h2 class="text-white"
@@ -17,15 +17,15 @@
             <p class="pt-6">{{'register.form.description'|translate}}</p>
             <form class="pt-2">
                 <p class="pt-6">{{'register.form.name'|translate}}</p>
-                <input type="text" name="name" placeholder="GENGOFFEE San" class="border-b border-solid pt-4">
+                <input type="text" [(ngModel)]="name" name="name" placeholder="GENGOFFEE San" class="border-b border-solid pt-4">
                 <p class="pt-6">{{'register.form.mail'|translate}}</p>
-                <input type="text" name="name" placeholder="san-gengoffee@gengoffee.fr"
+                <input type="text"  [(ngModel)]="mail" name="mail" placeholder="san-gengoffee@gengoffee.fr"
                     class="border-b border-solid pt-4">
                 <div class="pt-6 whitespace-pre-wrap">
                     <p class="inline">{{'register.form.phone'|translate}} </p>
-                    <p class="text-gray-400 inline">(facultatif)</p>
+                    <p class="text-gray-400 inline">({{'register.optionnal'|translate}})</p>
                 </div>
-                <input type="text" name="name" placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
+                <input type="text" name="number"  [(ngModel)]="number"  placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
                 <p class="pt-8">{{'register.form.language.title'|translate}}</p>
                 <div *ngFor="let language of selectedLanguages; let index = index;" class="flex gap-4 pl-4 my-4">
                     <select [(ngModel)]="language.language" name="language + {{index}}" id="language + {{index}}" class="bg-white border-b-2">
@@ -51,9 +51,9 @@
                     <button type="button" (click)="toggleDiet('vegan')" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.vegan'|translate}}</button>
                     <button type="button" (click)="toggleDiet('halal')" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.halal'|translate}}</button>
                     <button type="button" (click)="toggleOther()" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2">{{'register.form.diet.other'|translate}}</button>
-                    <textarea [(ngModel)]="otherText" *ngIf="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
+                    <textarea [(ngModel)]="otherText" *ngIf="showText" name="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
                 </div>
-                <button class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     Participer
                 </button>                
             </form>
