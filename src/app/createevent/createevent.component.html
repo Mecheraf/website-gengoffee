@@ -1,1 +1,17 @@
+<form class="pt-2">
+    <p class="pt-10">Type de l'événement</p>
+    <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="border-b border-solid pt-4">
+    <!--<p class="pt-10">Date de l'événement</p>
+    <input type="date" value="2022-09-04 18:15:00" [(ngModel)]="date" name="date" placeholder="YYYY-MM-DD HH:MI:SS"
+        class="border-b border-solid pt-4">-->
+    <p class="pt-10">Lieu de l'événement</p>
+    <input type="text" name="number"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
+    
+    <ngx-mat-timepicker [(ngModel)]="date"></ngx-mat-timepicker>
+
+    <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+        Participer
+    </button>                
+</form>
+
 <p>createevent works!</p>
