@@ -2,10 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { EventService } from '../services/event.service';
+import { DatePipe } from '@angular/common'
+
 
 interface formParams {
   type:string,
-  date:Date|null,
+  day:string|null,
   place:string
 }
 
@@ -19,9 +21,8 @@ interface formParams {
 export class CreateeventComponent implements OnInit {
   @ViewChild('picker') picker: any;
 
-  constructor(private eventservice: EventService) { }
+  constructor(private eventservice: EventService, private datepipe: DatePipe) { }
   public type:string ="";
-  public date:Date = new Date();
   public place:string ="";
 
   public disabled = false;
@@ -59,8 +60,9 @@ export class CreateeventComponent implements OnInit {
 
   submitForm(){
     this.formGroup.type = this.type
-    this.formGroup.date = this.dateControl.value
+    this.formGroup.day = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
+    console.log(this.formGroup)
     this.eventservice.post(this.formGroup).subscribe()
   }
 

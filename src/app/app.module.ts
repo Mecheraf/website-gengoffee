@@ -30,6 +30,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 
   ],
   providers: [
-    MatDatepickerModule
+    MatDatepickerModule,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
