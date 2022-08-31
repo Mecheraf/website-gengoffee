@@ -25,7 +25,7 @@
                     <p class="inline">{{'register.form.phone'|translate}} </p>
                     <p class="text-gray-400 inline">({{'register.optionnal'|translate}})</p>
                 </div>
-                <input type="text" name="number"  [(ngModel)]="number"  placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
+                <input type="text" name="phone"  [(ngModel)]="phone"  placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
                 <p class="pt-8">{{'register.form.language.title'|translate}}</p>
                 <div *ngFor="let language of selectedLanguages; let index = index;" class="flex gap-4 pl-4 my-4">
                     <select [(ngModel)]="language.language" name="language + {{index}}" id="language + {{index}}" class="bg-white border-b-2">
@@ -42,6 +42,11 @@
                 </div>
                 <button type="button" (click)="addLanguage()" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
 
+
+                <div *ngFor="let event of nextEvents"> 
+                    <p>{{event.type}}</p>
+                    <p>{{event.day}}</p>
+                </div>
 
                 <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>

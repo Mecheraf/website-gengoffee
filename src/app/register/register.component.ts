@@ -1,4 +1,8 @@
+const NEXT_EVENTS = 3
+
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../services/event.service';
+import { RegisterService } from '../services/register.service';
 
 interface userLanguage {
   language: string,
@@ -29,16 +33,33 @@ export class RegisterComponent implements OnInit {
   public otherText:string = "";
   public name:string ="";
   public mail:string ="";
-  public number:string ="";
+  public phone:string ="";
+
   
   public formGroup = {} as formParams;
+  public events:any;
+  public nextEvents:any;
 
-  constructor() { }
+  constructor(private eventservice: EventService, private registerservice:RegisterService) { }
 
   ngOnInit(): void {
+    this.getEvent()
+    this.getNextEvents(NEXT_EVENTS)
   }
 
-  
+
+  getEvent() {
+    this.eventservice.get().subscribe((data) => {
+      this.events = data;
+    })
+  }
+
+  getNextEvents(limit:number) {
+    this.eventservice.getNextEvents({params:{nextEvents: limit}}).subscribe((data) => {
+      this.nextEvents = data;
+    })
+  }
+
   toggleDiet (diet: string) {
     if (this.dietList.includes(diet)) {
       this.dietList = this.dietList.filter(obj => diet !== obj);
@@ -65,9 +86,14 @@ export class RegisterComponent implements OnInit {
   }
 
   submitForm(){
+    this.dietList.push(this.otherText)
+    this.formGroup.name = this.name
+    this.formGroup.mail = this.mail
+    this.formGroup.phone = this.phone
     this.formGroup.selectedLanguages = this.selectedLanguages
     this.formGroup.dietList = this.dietList
     console.log(this.formGroup)
+    this.registerservice.post(this.formGroup).subscribe()
   }
 
 }
