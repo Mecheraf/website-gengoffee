@@ -5,11 +5,11 @@
             <h2 class="text-white"
                 style="text-shadow: 1px 0 0 #262829, 0 -1px 0 #262829, 0 1px 0 #262829, -1px 0 0 #262829;">
                 {{'register.savethedate'|translate}}</h2>
-            <app-event-item [active]="true" [participateLink]="false"></app-event-item>
+            <app-event-item [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
             <div class="mt-10 md:mt-16 flex gap-8 md:gap-10">
-                <app-past-event-card></app-past-event-card>
-                <app-past-event-card></app-past-event-card>
+                <app-past-event-card [event] = "nextEvents[1]"></app-past-event-card>
+                <app-past-event-card [event] = "nextEvents[2]"></app-past-event-card>
             </div>
         </div>
         <div class="pl-24 pt-6">
