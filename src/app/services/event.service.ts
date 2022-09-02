@@ -11,8 +11,8 @@ export class EventService {
   constructor(private http: HttpClient) { }
   private url = environment.API_URL
 
-  public get(options?: any) { 
-    return this.http.get<Event>(this.url+"getEvents", options); 
+  public getCountEvents(options?: any) { 
+    return this.http.get<Event>(this.url+"getCountEvents", options); 
   }
   public getNextEvents(options?: any) { 
     return this.http.get<Event>(this.url+"getNextEvents", options); 
