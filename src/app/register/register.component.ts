@@ -43,16 +43,10 @@ export class RegisterComponent implements OnInit {
   constructor(private eventservice: EventService, private registerservice:RegisterService) { }
 
   ngOnInit(): void {
-    this.getEvent()
     this.getNextEvents(NEXT_EVENTS)
   }
 
 
-  getEvent() {
-    this.eventservice.get().subscribe((data) => {
-      this.events = data;
-    })
-  }
 
   getNextEvents(limit:number) {
     this.eventservice.getNextEvents({params:{nextEvents: limit}}).subscribe((data) => {
