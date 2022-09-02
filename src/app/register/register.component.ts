@@ -1,20 +1,13 @@
 const NEXT_EVENTS = 3
 
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
 
 interface userLanguage {
   language: string,
   level: string,
-}
-
-interface formParams {
-  name:string,
-  mail:string,
-  phone:string,
-  dietList: string[],
-  selectedLanguages: userLanguage[]
 }
  
 @Component({
@@ -26,17 +19,18 @@ interface formParams {
 export class RegisterComponent implements OnInit {
 
   public languages: string[] = ["fr", "jp", "en"];
-  public selectedLanguages: userLanguage[] = [];
-  dietList: string[] = []
 
   public showText:boolean = false;
   public otherText:string = "";
-  public name:string ="";
-  public mail:string ="";
-  public phone:string ="";
+  public selectedLanguages: userLanguage[] = [];
 
-  
-  public formGroup = {} as formParams;
+  public registerForm: FormGroup = new FormGroup({
+    name: new FormControl<string>(''),
+    mail: new FormControl<string>(''),
+    phone: new FormControl<string>(''),
+    selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
+    dietList: new FormControl<string[]>([]),
+  });
   public events:any;
   public nextEvents:any;
 
@@ -46,48 +40,45 @@ export class RegisterComponent implements OnInit {
     this.getNextEvents(NEXT_EVENTS)
   }
 
-
-
   getNextEvents(limit:number) {
-    this.eventservice.getNextEvents({params:{nextEvents: limit}}).subscribe((data) => {
+    this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
       this.nextEvents = data;
     })
   }
 
-  toggleDiet (diet: string) {
-    if (this.dietList.includes(diet)) {
-      this.dietList = this.dietList.filter(obj => diet !== obj);
+  toggleDiet (selectedDiet: string) {
+    const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
+    if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
+      this.registerForm.patchValue({'dietList': dietList.filter(diet => selectedDiet === diet)});
     }
     else {
-      this.dietList.push(diet)
+      dietList.push(selectedDiet);
+      this.registerForm.patchValue({'dietList': dietList});
     }
-    console.log(this.dietList)
   } 
 
   toggleOther(){
     this.showText = !this.showText;
-    console.log(this.otherText)
   }
 
   addLanguage(){
     const language: userLanguage = {language: "fr", level: "lv1"};
     this.selectedLanguages.push(language);
-    console.log(this.selectedLanguages);
   }
 
   removeLanguage(language: userLanguage){
     this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
   }
 
-  submitForm(){
-    this.dietList.push(this.otherText)
-    this.formGroup.name = this.name
-    this.formGroup.mail = this.mail
-    this.formGroup.phone = this.phone
-    this.formGroup.selectedLanguages = this.selectedLanguages
-    this.formGroup.dietList = this.dietList
-    console.log(this.formGroup)
-    this.registerservice.post(this.formGroup).subscribe()
+  onSubmit(){
+    const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
+    dietList.push(this.otherText);
+    this.registerForm.patchValue({'dietList': dietList});
+
+    this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
+    this.registerservice.post(this.registerForm.value).subscribe();
+    this.registerForm.reset();
+    this.selectedLanguages = [];
   }
 
 }

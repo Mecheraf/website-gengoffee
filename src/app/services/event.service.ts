@@ -11,11 +11,15 @@ export class EventService {
   constructor(private http: HttpClient) { }
   private url = environment.API_URL
 
+
+  public getPastEvents(options?: any) { 
+    return this.http.get<Event[]>(this.url+"getPastEvents", options);
+  } 
   public getCountEvents(options?: any) { 
     return this.http.get<Event>(this.url+"getCountEvents", options); 
   }
   public getNextEvents(options?: any) { 
-    return this.http.get<Event>(this.url+"getNextEvents", options); 
+    return this.http.get<Event[]>(this.url+"getNextEvents", options); 
   }
   public post(data: any, options?: any) { 
     return this.http.post(this.url+"insertevent", data, options); 

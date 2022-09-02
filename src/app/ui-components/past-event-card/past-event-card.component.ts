@@ -9,32 +9,21 @@ import { Event } from 'src/app/models/event';
 })
 export class PastEventCardComponent implements OnInit {
 
-  
-
   public language:string ="";
   @Input() event: Event = {} as Event; 
 
-  constructor(public translate: TranslateService) { 
-
-    
-  }
-  
-  
-  
+  constructor(public translate: TranslateService) {}
 
   ngOnInit(): void {
     this.switchLanguage()
   }
 
   public switchLanguage(){
-      
-    /*if(this.event.type == "en"){
-      this.language = this.translate.get('foo.bar').subscribe((res: string) => {
-        return res;;
-      } 
-    } else {
-      this.language = "japanese"
-    }TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    if(this.event.type) {
+      this.translate.get(this.event.type).subscribe((language: string) => {
+        this.language = language;
+      });
+    }
   }
   
 }

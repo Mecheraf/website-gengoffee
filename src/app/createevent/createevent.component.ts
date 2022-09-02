@@ -62,7 +62,6 @@ export class CreateeventComponent implements OnInit {
     this.formGroup.type = this.type
     this.formGroup.day = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
-    console.log(this.formGroup)
     this.eventservice.post(this.formGroup).subscribe()
   }
 
