@@ -117,5 +117,8 @@
         "message":"Message",
         "button":"Envoyer",
         "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
-    }
+    },
+    "en": "Anglais",
+    "fr": "Français",
+    "jp": "Japonais"
 }
