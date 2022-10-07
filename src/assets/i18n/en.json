@@ -58,6 +58,7 @@
     "register":{
         "title":"Inscription",
         "savethedate":"SAVE THE DATE !",
+        "optionnal":"optionnal",
         "nextevent":"inscrivez-vous également à nos prochains événements :)",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
