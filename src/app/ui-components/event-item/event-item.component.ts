@@ -29,14 +29,12 @@ export class EventItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    console.log(this.event.date)
   }
 
   public renderFlags(): string {
 //    this.flags = this.defaultLanguage + localeToFlag[this.language];
     return this.defaultLanguage + localeToFlag[this.event.type];
   }
-
-  
 
 }
