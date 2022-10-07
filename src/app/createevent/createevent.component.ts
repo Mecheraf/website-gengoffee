@@ -7,7 +7,7 @@ import { DatePipe } from '@angular/common'
 
 interface formParams {
   type:string,
-  day:string|null,
+  date:string|null,
   place:string
 }
 
@@ -60,7 +60,7 @@ export class CreateeventComponent implements OnInit {
 
   submitForm(){
     this.formGroup.type = this.type
-    this.formGroup.day = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
+    this.formGroup.date = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
     console.log(this.formGroup)
     this.eventservice.post(this.formGroup).subscribe()
