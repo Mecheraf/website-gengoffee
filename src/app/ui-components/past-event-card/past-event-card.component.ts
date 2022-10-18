@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Event } from 'src/app/models/event';
 
 @Component({
   selector: 'app-past-event-card',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PastEventCardComponent implements OnInit {
 
-  constructor() { }
+  public language:string ="";
+  @Input() event: Event = {} as Event; 
+
+  constructor(public translate: TranslateService) {}
 
   ngOnInit(): void {
+    this.switchLanguage()
   }
 
+  public switchLanguage(){
+    if(this.event.type) {
+      this.translate.get(this.event.type).subscribe((language: string) => {
+        this.language = language;
+      });
+    }
+  }
+  
 }
