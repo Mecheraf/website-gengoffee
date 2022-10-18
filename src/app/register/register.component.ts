@@ -48,13 +48,18 @@ export class RegisterComponent implements OnInit {
 
   toggleDiet (selectedDiet: string) {
     const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
-    if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
-      this.registerForm.patchValue({'dietList': dietList.filter(diet => selectedDiet === diet)});
+    if(selectedDiet === "None"){
+      dietList.splice(0, 4)
+      this.toggleOther()
+    }
+    else if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
+      this.registerForm.patchValue({'dietList': dietList.filter(diet => selectedDiet !== diet)});
     }
     else {
       dietList.push(selectedDiet);
       this.registerForm.patchValue({'dietList': dietList});
     }
+    console.log(dietList)
   } 
 
   toggleOther(){
