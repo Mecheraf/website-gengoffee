@@ -1,8 +1,17 @@
 {
     "title" : "Français",
     "contact_us":"Contactez-nous",
-    "date":"Dimanche {{day}}",
+    "date":"{{day}} {{dayNumber}} {{month}} {{year}}",
     "optionnal":"Optionnel",
+    "days": {
+        "1":"Lundi",
+        "2":"Mardi",
+        "3":"Mercredi",
+        "4":"Jeudi",
+        "5":"Vendredi",
+        "6":"Samedi",
+        "0":"Dimanche"
+    },
     "months":{
         "1":"Janvier",
         "2":"Février",

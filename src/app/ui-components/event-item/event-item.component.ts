@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Event } from 'src/app/models/event';
 
 
@@ -20,21 +21,57 @@ export class EventItemComponent implements OnInit {
   public flags: string = '';
   public hour: string = '';
 
-  @Input() event: Event = {} as Event; 
-  @Input() language: string = "en"; // Use locale e.g. fr, en, jp
+  @Input() event: Event = {} as Event;
   @Input() active: boolean = false;
   @Input() participateLink: boolean = true;
-  @Input() date: string = "";
-  @Input() place: string = "";
-  constructor() { }
+  constructor(private translateService: TranslateService) { }
 
   ngOnInit(): void {
-    console.log(this.event.date)
   }
 
   public renderFlags(): string {
-//    this.flags = this.defaultLanguage + localeToFlag[this.language];
-    return this.defaultLanguage + localeToFlag[this.event.type];
+    if (localeToFlag[this.event.type]) {
+      return this.defaultLanguage + ' ' + localeToFlag[this.event.type] 
+    }
+
+    return this.defaultLanguage;
+  }
+
+  public getImageByCountry(): string {
+    if (this.event.type === 'jp') {
+      return 'gengoffee_event-1.png';
+    }
+    return 'gengoffee_event-2.png';
+  }
+
+  public getColorByCountry(): string {
+    if (this.event.type === 'jp') {
+      return "light-red";
+    }
+    
+    return "light-blue";
+  }
+
+  public isPastEvent(): string {
+    // TODO : translate
+    return new Date(this.event.date) < new Date()
+      ? this.translateService.instant('past')
+      : this.translateService.instant('incoming');
+  }
+
+  public getTranslatedDate() {
+    const eventDate = new Date(this.event.date);
+    const translatedDay = this.translateService.instant('days.' + eventDate.getDay().toString());
+    const translatedMonth = this.translateService.instant('months.' + eventDate.getMonth().toString());
+    const dayNumber = eventDate.getDate();
+    const year = eventDate.getFullYear();
+
+    return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
+  }
+
+  public getDayHour() {
+    const eventDate = new Date(this.event.date);
+    return eventDate.getUTCHours() + ':' + eventDate.getMinutes();
   }
 
 }
