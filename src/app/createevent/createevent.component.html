@@ -6,7 +6,7 @@
     <input type="text" name="number"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
     
     <mat-form-field>
-        <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
+        <input matInput [ngxMatDatetimePicker]="picker" [formControl]="dateControl"
            [min]="minDate" [max]="maxDate" [disabled]="disabled">
         <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
         <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
@@ -15,10 +15,9 @@
            [disableMinute]="disableMinute" [hideTime]="hideTime">
         </ngx-mat-datetime-picker>
      </mat-form-field>
+
      
-    <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+    <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
         Send
     </button>                
 </form>
-
-<p>createevent works!</p>
