@@ -48,7 +48,7 @@
         "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
-            "subscription":"Inscription",
+            "register":"Inscription",
             "more":"En savoir plus"
         }
     },
@@ -70,17 +70,20 @@
     "events":{
         "title":"Évènements",
         "description":"Vous voulez améliorer votre français, anglais ou japonais ?<br>Participer à notre prochain évènement !",
-        "past":{
+        "pastevents":{
             "title":"Nos évènements passés"
-        }        
+        },
+        "nextevents":"Nos prochains rendez-vous",
+        "incoming":"À venir",
+        "past":"Passé"
     },
     "explaination":{
         "title":"Comment se déroule\nun évènement Gengoffee ?",
         "uptitle":"En savoir un peu plus",
-        "1":"1.  On vous installe à une table numérotée de 6 à 8 personnes.",
-        "2":"2.  Français, anglais ou japonais,\nvous discutez dans la langue indiquée\npendant 15min.",
-        "3":"3.  Au bout de 15min, on change de langue.\nContinuez la conversation !",
-        "4":"4.  Améliorez ainsi votre language\ngrâce aux différents interlocuteurs !"
+        "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
+        "2":"<span class=\"font-semibold\">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
+        "3":"<span class=\"font-semibold\">3.</span> Au bout de 15min, <span class=\"font-semibold\">on change de langue.</span> <br>Continuez la conversation !",
+        "4":"<span class=\"font-semibold\">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !"
     },
     "register":{
         "title":"Inscription",
@@ -112,9 +115,9 @@
                 "casher":"Casher",
                 "halal":"Halal",
                 "other":"Autres/Allergies"
-            }
-        },
-        "optionnal":"facultatif"
+            },
+            "register":"participer"
+        }
     },
     "about":{
         "title":"",

@@ -2,29 +2,28 @@
   <div class="max-w-4xl m-auto py-20 flex flex-col md:flex-row place-items-center">
     <div class="w-[24rem] md:mr-36 text-center md:text-left flex justify-center flex-col">
       <p class="gengoffee-red">
-        En savoir un peu plus
+        {{'explaination.uptitle'|translate}}
       </p>
       <h4 class="font-medium text-lg md:text-2xl">
-        Comment se déroule<br>
-        un évènement Gengoffee ?
+        {{'explaination.title'|translate}}
       </h4>
     </div>
     <div class="mt-12 md:mt-0 text-center md:text-left">
       <div class="flex flex-col place-items-center md:flex-row">
         <img class="w-10 md:mr-10" src="assets/images/floating-numbers.svg" />
-        <div class="mt-6 md:mt-0"><span class="font-semibold">1.</span> On vous installe à une table<br> numérotée de <span class="font-semibold">6 à 8 personnes.</span></div>
+        <div class="mt-6 md:mt-0" [innerHtml]="'explaination.1'|translate"></div>
       </div>
       <div class="flex flex-col place-items-center md:flex-row mt-10">
         <img class="w-10 md:mr-10" src="assets/images/hourglass.svg" />
-        <div class="mt-6 md:mt-0"><span class="font-semibold">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class="font-semibold">pendant 15min.</span></div>
+        <div class="mt-6 md:mt-0" [innerHtml]="'explaination.2'|translate"></div>
       </div>
       <div class="flex flex-col place-items-center md:flex-row mt-10">
         <img class="w-10 md:mr-10" src="assets/images/text-bubble.svg" />
-        <div class="mt-6 md:mt-0"><span class="font-semibold">3.</span> Au bout de 15min, <span class="font-semibold">on change de langue.</span> <br>Continuez la conversation !</div>
+        <div class="mt-6 md:mt-0" [innerHtml]="'explaination.3'|translate"></div>
       </div>
       <div class="flex flex-col place-items-center md:flex-row mt-10">
         <img class="w-10 md:mr-10" src="assets/images/happy-smiley.svg" />
-        <div class="mt-6 md:mt-0"><span class="font-semibold">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !</div>
+        <div class="mt-6 md:mt-0" [innerHtml]="'explaination.4'|translate"></div>
       </div>
     </div>
   </div>

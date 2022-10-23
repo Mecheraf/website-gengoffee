@@ -55,8 +55,8 @@ export class EventItemComponent implements OnInit {
   public isPastEvent(): string {
     // TODO : translate
     return new Date(this.event.date) < new Date()
-      ? this.translateService.instant('past')
-      : this.translateService.instant('incoming');
+      ? this.translateService.instant('events.past')
+      : this.translateService.instant('events.incoming');
   }
 
   public getTranslatedDate() {
