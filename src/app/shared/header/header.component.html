@@ -9,19 +9,19 @@
       md:flex-row md:text-base md:gap-10 md:relative md:pt-5 md:ml-auto"
   >
     <div class="">
-      <a [routerLink]="['/']" (click)="closeMenu();">Home</a>
+      <a [routerLink]="['/']" (click)="closeMenu();">{{'header.menu.home'|translate}}</a>
     </div>
     <div class="header__link">
-      <a [routerLink]="['/events']" (click)="closeMenu();">{{'events.title'|translate}}</a>
+      <a [routerLink]="['/events']" (click)="closeMenu();">{{'header.menu.events'|translate}}</a>
     </div>
     <div class="">
-      <a href="#" (click)="closeMenu();">News</a>
+      <a href="#" (click)="closeMenu();">{{'header.menu.news'|translate}}</a>
     </div>
     <div class="">
-      <a [routerLink]="['/about']" (click)="closeMenu();">About</a>
+      <a [routerLink]="['/about']" (click)="closeMenu();">{{'header.menu.about'|translate}}</a>
     </div>
     <div class="">
-      <a href="#" (click)="closeMenu();">Contact</a>
+      <a href="#" (click)="closeMenu();">{{'header.menu.contact'|translate}}</a>
     </div>
     <img *ngIf="isMobile()" class="pt-6" (click)="closeMenu();" src="assets/images/close.svg" />
   </nav>

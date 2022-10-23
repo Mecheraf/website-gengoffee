@@ -11,7 +11,7 @@ export class LanguageSwitcherComponent implements OnInit {
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'fr', 'jp']);
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('fr');
   }
 
   switchLanguage(lang: string){
