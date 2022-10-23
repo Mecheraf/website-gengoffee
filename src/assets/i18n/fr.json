@@ -1,7 +1,8 @@
 {
     "title" : "Français",
     "contact_us":"Contactez-nous",
-    "date":"{{day}} {{dayNumber}} {{month}} {{year}}",
+    "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
+    "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optionnal":"Optionnel",
     "days": {
         "1":"Lundi",
@@ -84,6 +85,7 @@
     "register":{
         "title":"Inscription",
         "savethedate":"SAVE THE DATE !",
+        "optionnal":"facultatif",
         "nextevent":"Inscrivez-vous également à nos prochains événements :)",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",

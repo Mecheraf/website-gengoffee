@@ -1,32 +1,31 @@
 {
     "title" : "English",
     "contact_us":"Contactez-nous",
-    "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
-    "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
+    "fullDate":"{{day}}, {{dayNumber}} of {{month}} {{year}}",
+    "dateWithoutYear":"{{day}}, {{dayNumber}} {{month}}",
     "optionnal":"Optionnal",
     "days": {
-        "1":"Lundi",
-        "2":"Mardi",
-        "3":"Mercredi",
-        "4":"Jeudi",
-        "5":"Vendredi",
-        "6":"Samedi",
-        "0":"Dimanche"
+        "1":"Monday",
+        "2":"Tuesday",
+        "3":"Wednesday",
+        "4":"Thursday",
+        "5":"Friday",
+        "6":"Saturday",
+        "0":"Sunday"
     },
     "months":{
-        "0":"Janvier",
-        "1":"Février",
-        "2":"Mars",
-        "3":"Avril",
-        "4":"Mai",
-        "5":"Juin",
-        "6":"Juillet",
-        "7":"Août",
-        "8":"Septembre",
-        "9":"Octobre",
-        "10":"Novembre",
-        "11":"Décembre"
-        
+        "0":"January",
+        "1":"February",
+        "2":"March",
+        "3":"April",
+        "4":"May",
+        "5":"June",
+        "6":"July",
+        "7":"August",
+        "8":"September",
+        "9":"October",
+        "10":"November",
+        "11":"December"
     },
     "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
     "header":{
@@ -85,6 +84,7 @@
     "register":{
         "title":"Inscription",
         "savethedate":"SAVE THE DATE !",
+        "optionnal":"optionnal",
         "nextevent":"inscrivez-vous également à nos prochains événements :)",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
