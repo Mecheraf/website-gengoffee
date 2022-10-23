@@ -1,31 +1,31 @@
 {
     "title": "日本語",
     "contact_us": "お問い合わせ",
-    "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
-    "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
+    "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
+    "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
     "optionnal":"Optionnal",
     "days": {
-        "1":"Lundi",
-        "2":"Mardi",
-        "3":"Mercredi",
-        "4":"Jeudi",
-        "5":"Vendredi",
-        "6":"Samedi",
-        "0":"Dimanche"
+        "1":"月曜日",
+        "2":"火曜日",
+        "3":"水曜日",
+        "4":"木曜日",
+        "5":"金曜日",
+        "6":"土曜日",
+        "0":"日曜日"
     },
     "months":{
-        "0":"Janvier",
-        "1":"Février",
-        "2":"Mars",
-        "3":"Avril",
-        "4":"Mai",
-        "5":"Juin",
-        "6":"Juillet",
-        "7":"Août",
-        "8":"Septembre",
-        "9":"Octobre",
-        "10":"Novembre",
-        "11":"Décembre"
+        "0":"1月",
+        "1":"2月",
+        "2":"3月",
+        "3":"4月",
+        "4":"5月",
+        "5":"6月",
+        "6":"7月",
+        "7":"8月",
+        "8":"9月",
+        "9":"10月",
+        "10":"11月",
+        "11":"12月"
         
     },
     "headbanner": "ただいまサイトリニューアル中です。近日公開！",
@@ -57,7 +57,7 @@
         "description": "毎週気軽に一杯飲みながら交流できる言語交換を開催しています。次回のイベントはこちら"
     },
     "partners": {
-        "title": "",
+        "title": "パートナー",
         "description": "Gengoffeeを支援または次回のセッションを開催したい？",
         "partner": {
             "berthom": {
@@ -70,18 +70,21 @@
     "events": {
         "title": "イベント",
         "description": "ご自身のフランス語、英語または日本語を上達したいですか?<br>私たちのイベントに参加してください!",
-        "past": {
+        "pastevents": {
             "title": "過去に行ったイベント"
-        }
+        },
+        "nextevents":"次回のイベント",
+        "incoming":"次回",
+        "past":"過去"
     },
     "explaination": {
         "title": "どのようにGengoffeeのイベントを行うか?",
         "uptitle": "詳細はこちら",
-        "1": "1. 6−８人の1グループでテーブルに座ります",
-        "2": "2. フランス語、英語または日本語で15分ディスカッションを行います。",
-        "3": "3. 15分ごとに言語を交換してディスカッションを続けていきます。",
+        "1": "1. <span class=\"font-semibold\">6−８人</span>の1グループでテーブルに座ります",
+        "2": "2. フランス語、英語または日本語で<span class=\"font-semibold\">15分</span>ディスカッションを行います。",
+        "3": "3. 15分ごとに<span class=\"font-semibold\">言語を交換</span>してディスカッションを続けていきます。",
         "4": "4. 様々な相手と会話することによって言語が身につきます。"
-    },
+       },
     "register": {
         "title": "申し込み",
         "savethedate": "SAVE THE DATE !",
@@ -110,7 +113,8 @@
                 "casher": "カシェル",
                 "halal": "ハラル",
                 "other": "その他"
-            }
+            },
+            "register":"参加する"
         }
     },
     "about": {
@@ -140,5 +144,8 @@
         "message": "メッセージ",
         "button": "送信",
         "followus": "SNSも是非ご覧ください"
-    }
+    },
+    "en": "英語",
+    "fr": "フランス語",
+    "jp": "日本語"
 }
