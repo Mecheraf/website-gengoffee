@@ -1,100 +1,117 @@
 {
-    "title" : "Français",
-    "contact_us":"Contactez-nous",
-    "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
-    "header":{
-        "menu":{
-            "home":"Accueil",
-            "events":"Évènements",
-            "news":"News",
-            "about":"À Propos",
-            "contact":"Contact"
+    "title": "日本語",
+    "contact_us": "お問い合わせ",
+    "headbanner": "ただいまサイトリニューアル中です。近日公開！",
+    "header": {
+        "menu": {
+            "home": "ホーム",
+            "events": "イベント",
+            "news": "ニュース",
+            "about": "概要",
+            "contact": "お問い合わせ"
         }
     },
-    "footer":{
-        "questions":"Des questions ?",
-        "followus":"Abonnez-vous sur les réseaux !",
-        "conditions":"Conditions générales"
+    "footer": {
+        "questions": "質問",
+        "followus": "SNS",
+        "conditions": "利用規約"
     },
-    "hero":{
-        "tilte":"La culture Japonaise",
-        "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
-        "subtitle":"À VOTRE RENCONTRE",
-        "buttons":{
-            "subscription":"Inscription",
-            "more":"En savoir plus"
+    "hero": {
+        "tilte": "フランスの文化",
+        "description": "Gengoffeeはパリで日仏交流と仏英交流のイベントを企画、運営しています。",
+        "subtitle": "触れ合う場所",
+        "buttons": {
+            "subscription": "申し込み",
+            "more": "詳細"
         }
     },
-    "carrousel":{
-        "title":"Nos événements, votre échanges",
-        "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
+    "carrousel": {
+        "title": "イベント交流",
+        "description": "毎週気軽に一杯飲みながら交流できる言語交換を開催しています。次回のイベントはこちら"
     },
-    "partners":{
-        "title":"",
-        "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
-        "partner":{
-            "berthom":{
-                "title":"Un grand merci à Les Berthom qui accueille nos évènements.",
-                "name":"Les Berthom",
-                "address":"35 Boulevard Voltaire\n75011 Paris"
+    "partners": {
+        "title": "",
+        "description": "Gengoffeeを支援または次回のセッションを開催したい？",
+        "partner": {
+            "berthom": {
+                "title": "私たちのイベントの開催に協力してくださるLes Berthomに感謝申し上げます。",
+                "name": "Les Berthom",
+                "address": "35 Boulevard Voltaire\n75011 Paris"
             }
         }
     },
-    "events":{
-        "title":"Évènements",
-        "description":"Vous voulez améliorer votre français, anglais ou japonais ?\nParticiper à notre prochain évènement !",
-        "past":{
-            "title":"Nos évènements passés"
-        }        
+    "events": {
+        "title": "イベント",
+        "description": "ご自身のフランス語、英語または日本語を上達したいですか?<br>私たちのイベントに参加してください!",
+        "past": {
+            "title": "過去に行ったイベント"
+        }
     },
-    "explaination":{
-        "title":"Comment se déroule\nun évènement Gengoffee ?",
-        "uptitle":"En savoir un peu plus",
-        "1":"1.  On vous installe à une table numérotée de 6 à 8 personnes.",
-        "2":"2.  Français, anglais ou japonais,\nvous discutez dans la langue indiquée\npendant 15min.",
-        "3":"3.  Au bout de 15min, on change de langue.\nContinuez la conversation !",
-        "4":"4.  Améliorez ainsi votre language\ngrâce aux différents interlocuteurs !"
+    "explaination": {
+        "title": "どのようにGengoffeeのイベントを行うか?",
+        "uptitle": "詳細はこちら",
+        "1": "1. 6−８人の1グループでテーブルに座ります",
+        "2": "2. フランス語、英語または日本語で15分ディスカッションを行います。",
+        "3": "3. 15分ごとに言語を交換してディスカッションを続けていきます。",
+        "4": "4. 様々な相手と会話することによって言語が身につきます。"
     },
-    "register":{
-        "title":"Inscription",
-        "savethedate":"SAVE THE DATE !",
-        "nextevent":"inscrivez-vous également à nos prochains événements :)",
-        "form":{
-            "title":"Participer au prochain évènement Gengoffee",
-            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
-            "name":"Nom & Prénom",
-            "mail":"Adresse e-mail",
-            "phone":"Numéro de Téléphone",
-            "language":{
-                "title":"Langues parlées",
-                "english":"Anglais",
-                "french":"Japonais",
-                "japanese":"Japonais",
-                "lv1":"Débutant",
-                "lv2":"intérmédiaire",
-                "lv3":"Courant"
+    "register": {
+        "title": "申し込み",
+        "savethedate": "SAVE THE DATE !",
+        "nextevent": "次回のイベントに申し込み :)",
+        "form": {
+            "title": "次のGengoffeeに参加する",
+            "description": "私たちと一杯飲みながら言語レベルを上達しよう！ ",
+            "name": "姓 & 名",
+            "mail": "メールアドレス",
+            "phone": "電話番号",
+            "language": {
+                "title": "言語",
+                "english": "英語",
+                "french": "フランス語",
+                "japanese": "日本語",
+                "lv1": "初級",
+                "lv2": "中級",
+                "lv3": "上級"
             },
-            "diet":{
-                "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
-                "description":"Si vous avez des allergies veuillez nous le préciser par message ci-dessous.",
-                "none":"Aucun",
-                "vegan":"Vegan",
-                "vegetarian":"Végétarien",
-                "casher":"Casher",
-                "halal":"Halal",
-                "other":"Autres"
+            "diet": {
+                "title": "食品に関するアレルギーについて",
+                "description": "アレルギーの有無について下の中かお選びください。",
+                "none": "無し",
+                "vegan": "ヴィーガン",
+                "vegetarian": "ヴェジタリアン",
+                "casher": "カシェル",
+                "halal": "ハラル",
+                "other": "その他"
             }
         }
     },
-    "contact":{
-        "title":"N'hésitez pas à nous écrire",
-        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
-        "name":"Nom & Prénom",
-        "mail":"Adresse e-mail",
-        "phone":"Numéro de Téléphone",
-        "objet":"Objet",
-        "message":"Message",
-        "button":"Envoyer",
-        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
+    "about": {
+        "title": "",
+        "subtitle": "",
+        "description": "",
+        "followus": "",
+        "persons": {
+            "alan": {
+                "title": "",
+                "description": "",
+                "link": {
+                    "linkedin": "",
+                    "website": ""
+                }
+            }
+        },
+        "stats": {}
+    },
+    "contact": {
+        "title": "気軽にお問い合わせください",
+        "description": "以下の情報を明記の上 contact@gengoffee.fr　までご連絡下さい",
+        "name": "姓 & 名",
+        "mail": "メールアドレス",
+        "phone": "電話番号",
+        "objet": "題名",
+        "message": "メッセージ",
+        "button": "送信",
+        "followus": "SNSも是非ご覧ください"
     }
 }
