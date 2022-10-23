@@ -1,7 +1,8 @@
 {
     "title" : "Français",
     "contact_us":"Contactez-nous",
-    "date":"{{day}} {{dayNumber}} {{month}} {{year}}",
+    "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
+    "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optionnal":"Optionnel",
     "days": {
         "1":"Lundi",
