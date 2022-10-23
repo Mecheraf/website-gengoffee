@@ -3,10 +3,10 @@
     <h1 class="text-[2.25rem] md:text-[2.625rem]">{{'events.title'|translate}}</h1>
     <div class="md:text-xl pt-14 md:pt-10" [innerHtml]="'events.description' | translate"></div>
     <div class="pt-5">
-      <button class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
+      <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
       </button>
-      <button class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+      <button [routerLink]="['/about']"  class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
         {{'hero.buttons.more'|translate}}
       </button>
     </div>
