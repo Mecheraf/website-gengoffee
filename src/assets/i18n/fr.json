@@ -57,7 +57,7 @@
         "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
     },
     "partners":{
-        "title":"",
+        "title":"Nos partenaires",
         "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
         "partner":{
             "berthom":{
@@ -116,7 +116,7 @@
                 "halal":"Halal",
                 "other":"Autres/Allergies"
             },
-            "register":"participer"
+            "register":"Participer"
         }
     },
     "about":{

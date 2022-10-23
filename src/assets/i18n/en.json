@@ -1,6 +1,6 @@
 {
     "title" : "English",
-    "contact_us":"Contactez-nous",
+    "contact_us":"Contact us",
     "fullDate":"{{day}}, {{dayNumber}} of {{month}} {{year}}",
     "dateWithoutYear":"{{day}}, {{dayNumber}} {{month}}",
     "optionnal":"Optionnal",
@@ -38,12 +38,12 @@
         }
     },
     "footer":{
-        "questions":"Des questions ?",
+        "questions":"Any questions ?",
         "followus":"Abonnez-vous sur les réseaux !",
         "conditions":"Conditions générales"
     },
     "hero":{
-        "tilte":"La culture Japonaise",
+        "title":"The Japanese Culture",
         "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
@@ -56,7 +56,7 @@
         "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
     },
     "partners":{
-        "title":"",
+        "title":"The Partners",
         "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
         "partner":{
             "berthom":{
@@ -69,17 +69,20 @@
     "events":{
         "title":"Events",
         "description":"Want to practice your french, english or japanese ? <br>Register to our next event !",
-        "past":{
+        "pastevents":{
             "title":"Our passed events"
-        }        
+        },
+        "nextevents":"Our next dates",
+        "incoming":"Incoming",
+        "past":"Past"     
     },
     "explaination":{
         "title":"Comment se déroule\nun évènement Gengoffee ?",
         "uptitle":"En savoir un peu plus",
-        "1":"1.  On vous installe à une table numérotée de 6 à 8 personnes.",
-        "2":"2.  Français, anglais ou japonais,\nvous discutez dans la langue indiquée\npendant 15min.",
-        "3":"3.  Au bout de 15min, on change de langue.\nContinuez la conversation !",
-        "4":"4.  Améliorez ainsi votre language\ngrâce aux différents interlocuteurs !"
+        "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
+        "2":"<span class=\"font-semibold\">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
+        "3":"<span class=\"font-semibold\">3.</span> Au bout de 15min, <span class=\"font-semibold\">on change de langue.</span> <br>Continuez la conversation !",
+        "4":"<span class=\"font-semibold\">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !"
     },
     "register":{
         "title":"Inscription",
@@ -111,7 +114,27 @@
                 "casher":"Casher",
                 "halal":"Halal",
                 "other":"Autres"
+            },
+            "register":"Register"
+        }
+    },
+    "about":{
+        "title":"",
+        "subtitle":"",
+        "description":"",
+        "followus":"",
+        "persons":{
+            "alan":{
+                "title":"",
+                "description":"",
+                "link":{
+                    "linkedin":"",
+                    "website":""
+                }
             }
+        },
+        "stats":{
+
         }
     },
     "contact":{
