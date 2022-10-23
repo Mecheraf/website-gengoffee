@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  API_URL: "https://gengoffeeapi.azurewebsites.net/api/",
+  //API_URL: "http://localhost:7071/api/",
   production: false
 };
 

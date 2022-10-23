@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Event } from 'src/app/models/event';
+
 
 const localeToFlag: any = {
   'jp' : '🇯🇵',
@@ -12,12 +14,14 @@ const localeToFlag: any = {
   styleUrls: ['./event-item.component.css']
 })
 export class EventItemComponent implements OnInit {
+  
 
   private defaultLanguage: string = '🇫🇷';
   public flags: string = '';
   public hour: string = '';
 
-  @Input() language: string = "jp"; // Use locale e.g. fr, en, jp
+  @Input() event: Event = {} as Event; 
+  @Input() language: string = "en"; // Use locale e.g. fr, en, jp
   @Input() active: boolean = false;
   @Input() participateLink: boolean = true;
   @Input() date: string = "";
@@ -25,11 +29,12 @@ export class EventItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.createFlags();
+    console.log(this.event.date)
   }
 
-  private createFlags(): void {
-    this.flags = this.defaultLanguage + localeToFlag[this.language];
+  public renderFlags(): string {
+//    this.flags = this.defaultLanguage + localeToFlag[this.language];
+    return this.defaultLanguage + localeToFlag[this.event.type];
   }
 
 }
