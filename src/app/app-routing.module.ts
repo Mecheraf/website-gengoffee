@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'events', component: EventsComponent},
   { path: 'about', component: AboutUsComponent},
   { path: 'register',component: RegisterComponent},
-  { path: 'createevent',component: CreateeventComponent}
+  { path: 'createevent',component: CreateeventComponent},
+  { path: 'register',component: RegisterComponent}
 
 ];
 
