@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   public showMobileMenu: boolean = false;
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,10 @@ export class HeaderComponent implements OnInit {
 
   closeMenu() {
     this.showMobileMenu = false;
+  }
+
+  switchLanguage(lang: string){
+    this.translate.use(lang);
   }
 
   @HostListener('window:resize', ['$event'])
