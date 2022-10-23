@@ -44,11 +44,11 @@
         "conditions": "利用規約"
     },
     "hero": {
-        "tilte": "フランスの文化",
+        "title": "フランスの文化",
         "description": "Gengoffeeはパリで日仏交流と仏英交流のイベントを企画、運営しています。",
         "subtitle": "触れ合う場所",
         "buttons": {
-            "subscription": "申し込み",
+            "register": "申し込み",
             "more": "詳細"
         }
     },
@@ -88,6 +88,7 @@
     "register": {
         "title": "申し込み",
         "savethedate": "SAVE THE DATE !",
+        "optionnal":"任意",
         "nextevent": "次回のイベントに申し込み :)",
         "form": {
             "title": "次のGengoffeeに参加する",
@@ -97,6 +98,7 @@
             "phone": "電話番号",
             "language": {
                 "title": "言語",
+                "add":"言語を追加",
                 "english": "英語",
                 "french": "フランス語",
                 "japanese": "日本語",
