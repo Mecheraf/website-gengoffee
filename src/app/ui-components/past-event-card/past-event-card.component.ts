@@ -12,18 +12,31 @@ export class PastEventCardComponent implements OnInit {
   public language:string ="";
   @Input() event: Event = {} as Event; 
 
-  constructor(public translate: TranslateService) {}
+  constructor(public translateService: TranslateService) {}
 
   ngOnInit(): void {
-    this.switchLanguage()
   }
 
-  public switchLanguage(){
-    if(this.event.type) {
-      this.translate.get(this.event.type).subscribe((language: string) => {
-        this.language = language;
-      });
+  public getLanguageByLocale(){
+    if (!this.event.type) return '';
+    return this.translateService.instant(this.event.type);
+  }
+
+  public getColorByCountry(): string {
+    if (this.event.type === 'jp') {
+      return "light-red";
     }
+    
+    return "light-blue";
+  }
+
+  public getTranslatedDate() {
+    const eventDate = new Date(this.event.date);
+    const translatedDay = this.translateService.instant('days.' + eventDate.getDay().toString());
+    const translatedMonth = this.translateService.instant('months.' + eventDate.getMonth().toString());
+    const dayNumber = eventDate.getDate();
+
+    return this.translateService.instant('dateWithoutYear', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber });
   }
   
 }
