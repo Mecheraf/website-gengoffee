@@ -1,7 +1,9 @@
 <header class="header h-20 md:flex md:pr-20 md:pl-16">
-  <div class="hidden md:block pt-8 px-4 pb-6 gengoffee-blue-bg">
-    <img class="w-28 h-6" src="assets/images/gengoffee-logo.svg" />
-  </div>
+  <a [routerLink]="['/']">
+    <div class="hidden md:block pt-8 px-4 pb-6 gengoffee-blue-bg">
+      <img class="w-28 h-6" src="assets/images/gengoffee-logo.svg" />
+    </div>
+  </a>
   <nav
     [ngClass]="{ 'hidden': !showMobileMenu && isMobile() }"
     class="
@@ -13,9 +15,6 @@
     </div>
     <div class="header__link">
       <a [routerLink]="['/events']" (click)="closeMenu();">{{'header.menu.events'|translate}}</a>
-    </div>
-    <div class="">
-      <a href="#" (click)="closeMenu();">{{'header.menu.news'|translate}}</a>
     </div>
     <div class="">
       <a [routerLink]="['/about']" (click)="closeMenu();">{{'header.menu.about'|translate}}</a>

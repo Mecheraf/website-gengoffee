@@ -1,7 +1,7 @@
 <div class="gengoffee-blue-bg pt-12 pb-5 px-10 md:px-20 text-white">
   <div class="flex flex-col place-items-center">
     <div class="font-semibold text-lg">{{'footer.questions'|translate}}</div>
-    <button class="gengoffee-btn gengoffee-btn-primary text-sm mt-3">{{'contact_us'|translate}}</button>
+    <button [routerLink]="['/contact']" class="gengoffee-btn gengoffee-btn-primary text-sm mt-3">{{'contact_us'|translate}}</button>
     <div class="flex gap-2 mt-4">
       <span class="text-sm place-self-end">{{'footer.followus'|translate}}</span>
       <img src="assets/images/right-arrow-white.svg" />
