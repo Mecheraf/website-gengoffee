@@ -8,8 +8,8 @@
             <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
             <div class="mt-10 md:mt-16 flex gap-8 md:gap-10">
-                <app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card>
-                <app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card>
+                <button type="button" (click)="switchEvent(1)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
+                <button type="button" (click)="switchEvent(2)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
             </div>
         </div>
         <div class="pl-24 pt-6">
@@ -45,7 +45,7 @@
                 <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>
                 <div class="">
-                    <button type="button" (click)="toggleDiet('None')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('None')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.none'|translate}}</button>
+                    <!-- <button type="button" (click)="toggleDiet('None')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('None')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.none'|translate}}</button> -->
                     <button type="button" (click)="toggleDiet('vegetarian')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('vegetarian')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.vegetarian'|translate}}</button>
                     <button type="button" (click)="toggleDiet('vegan')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('vegan')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.vegan'|translate}}</button>
                     <button type="button" (click)="toggleDiet('halal')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('halal')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.halal'|translate}}</button>

@@ -25,6 +25,7 @@ export class RegisterComponent implements OnInit {
   public selectedLanguages: userLanguage[] = [];
 
   public registerForm: FormGroup = new FormGroup({
+    id_event: new FormControl<string>(''),
     name: new FormControl<string>(''),
     mail: new FormControl<string>(''),
     phone: new FormControl<string>(''),
@@ -47,12 +48,9 @@ export class RegisterComponent implements OnInit {
   }
 
   toggleDiet (selectedDiet: string) {
+    
     const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
-    if(selectedDiet === "None"){
-      dietList.splice(0, 4)
-      this.toggleOther()
-    }
-    else if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
+    if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
       this.registerForm.patchValue({'dietList': dietList.filter(diet => selectedDiet !== diet)});
     }
     else {
@@ -78,12 +76,21 @@ export class RegisterComponent implements OnInit {
   onSubmit(){
     const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
     dietList.push(this.otherText);
+    this.registerForm.patchValue({'id_event':this.nextEvents[0].id});
     this.registerForm.patchValue({'dietList': dietList});
 
     this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
+    console.log(this.registerForm.value);
     this.registerservice.post(this.registerForm.value).subscribe();
     this.registerForm.reset();
     this.selectedLanguages = [];
+  }
+
+  switchEvent(idEvent: number) {
+    const tmp:any = this.nextEvents[idEvent];
+    this.nextEvents[idEvent] = this.nextEvents[0];
+    this.nextEvents[0] = tmp;
+    console.log(this.nextEvents[0].id);
   }
 
 }
