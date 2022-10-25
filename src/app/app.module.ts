@@ -31,6 +31,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { DatePipe } from '@angular/common';
     AnimatedQuoteComponent,
     AboutUsComponent,
     RegisterComponent,
-    CreateeventComponent
+    CreateeventComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

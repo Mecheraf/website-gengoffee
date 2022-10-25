@@ -24,10 +24,10 @@ export class PastEventCardComponent implements OnInit {
 
   public getColorByCountry(): string {
     if (this.event.type === 'jp') {
-      return "light-red";
+      return "gengoffee-lightred-bg";
     }
     
-    return "light-blue";
+    return "gengoffee-lightblue-bg";
   }
 
   public getTranslatedDate() {
