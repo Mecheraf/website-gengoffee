@@ -20,7 +20,7 @@
       <a [routerLink]="['/about']" (click)="closeMenu();">{{'header.menu.about'|translate}}</a>
     </div>
     <div class="">
-      <a [routerLink]="['/contact']" (click)="closeMenu();">Contact</a>
+      <a [routerLink]="['/contact']" (click)="closeMenu();">{{'header.menu.contact'|translate}}</a>
     </div>
     <div *ngIf="isMobile()" class="text-[#1F3D87] place-self-center">
       <button (click)="switchLanguage('en')" class="">ENG</button>
