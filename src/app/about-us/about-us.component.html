@@ -1,6 +1,6 @@
 <section class="max-w-xs md:max-w-6xl mx-auto">
   <div class="relative mt-14 md:mt-28 w-fit mx-auto">
-    <h1 class="text-center text-4xl md:text-[2.625rem]">À propos<span class="hidden md:inline"> de Gengoffee</span></h1>
+    <h1 class="text-center text-4xl md:text-[2.625rem]">{{'about.title'|translate}}<span class="hidden md:inline"> de Gengoffee</span></h1>
     <app-animated-quote class="absolute top-10 -left-28 md:top-16 scale-[65%] md:scale-[105%]" [width]="215" content="What is Gengoffee ?"></app-animated-quote>
     <app-animated-quote class="absolute -top-10 -right-24 md:-top-16 md:-right-16 scale-75 md:scale-[115%]" [width]="170" content="これは何ですか" [revert]="true"></app-animated-quote>
   </div>
@@ -11,17 +11,10 @@
         <app-waves class="hidden md:block" top="30%" left="-40%" color="red"></app-waves>
       </div>
       <div class="md:w-[49%] text-center md:text-left">
-        <h2 class="text-xl md:text-2xl font-medium">Qui sommes-nous ?</h2>
-        <div class="md:text-lg mt-8">
-          Nous sommes un groupe rassemblant les Japonais & Français vivant en France.
-          <br><br>
-          Nous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.
-          Dans cet esprit, nous faisons nos évènements dans des cafés et dans des bars afin de converser autour d’un verre ! 
-          <br><br>
-          Nous organisons plusieurs évènements par mois et acceptons tous niveaux dès lors que le respect est présent.
-        </div>
+        <h2 class="text-xl md:text-2xl font-medium">{{'about.subtitle'|translate}}</h2>
+        <div class="md:text-lg mt-8">{{'about.description'|translate}}</div>
         <div class="flex flex-wrap md:flex-nowrap gap-2 mt-4 place-content-center">
-          <div class="basis-full text-sm place-self-end font-semibold md:font-normal">Vous pouvez évidemment nous joindre sur nos réseaux sociaux</div>
+          <div class="basis-full text-sm place-self-end font-semibold md:font-normal">{{'about.followus'|translate}}</div>
           <img src="assets/images/right-arrow-black.svg" />
           <a href="https://www.instagram.com/gengoffee"><img width="20" src="assets/images/instagram-black.svg" /></a>
           <a href="https://www.facebook.com/groups/gengoffee"><img width="20" src="assets/images/facebook-black.svg" /></a>
