@@ -30,7 +30,7 @@ export class ContactComponent implements OnInit {
     Object.keys(data).forEach(field => {
       formData.append(field, this.formGroup.get(field)?.value);    
     });
-    formData.append('_captcha', 'true');
+    formData.append('_captcha', 'false');
     this.contactService.sendEmail(formData).subscribe({
       next: () => {
         this.success = true;
