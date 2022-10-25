@@ -15,8 +15,7 @@
 <section class="mt-12 md:mt-20">
   <h2 class="text-lg md:text-[1.375rem] text-center font-light">{{'events.nextevents'|translate}}</h2>
   <div class="flex justify-center place-items-center flex-col md:flex-row mt-5 gap-7 md:gap-14">
-    <app-event-item [active]="true"></app-event-item>
-    <app-event-item [active]="true"></app-event-item>
+    <app-event-item *ngFor="let event of nextEvents" [event]="event" [active]="true"></app-event-item>
   </div>
 </section>
 <section class="w-fit mt-16 md:mt-28 mx-auto">

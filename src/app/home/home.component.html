@@ -13,6 +13,7 @@
     <div class="pt-10 md:text-xl w-10/12 text-center md:text-left">
       {{'hero.description'|translate}}
     </div>
+    <!-- DESKTOP BUTTONS -->
     <div class="pt-9 hidden md:block">
       <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
@@ -34,6 +35,7 @@
         <app-animated-quote class="hidden md:block absolute scale-150 z-10 bottom-20 -right-16" content="Hello :)" [revert]="true"></app-animated-quote>
       </div>
     </div>
+    <!-- MOBILE BUTTONS -->
     <div class="pt-9 md:hidden flex place-content-center">
       <button class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.more'|translate}}
