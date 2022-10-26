@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ContactService {
-  private mailThisApi = 'https://formsubmit.co/4c829c560b64967a3ac2d6197e314f22';
+  private mailThisApi = 'https://formsubmit.co/49be6a6fc11f35df3a0c8b9ac748f9f7'; // 4c829c560b64967a3ac2d6197e314f22
   constructor(private http: HttpClient) { }
 
   sendEmail(data: FormData) {

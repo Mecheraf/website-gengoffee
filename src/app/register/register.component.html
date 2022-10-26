@@ -8,8 +8,8 @@
             <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
             <div class="mt-10 md:mt-16 flex gap-8 md:gap-10">
-                <button type="button" (click)="switchEvent(1)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
-                <button type="button" (click)="switchEvent(2)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
+                <button type="button" (click)="switchEvent(nextEvents[1]?.id)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
+                <button type="button" (click)="switchEvent(nextEvents[2]?.id)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
             </div>
         </div>
         <div class="pl-24 pt-6">
@@ -40,7 +40,7 @@
                     </select>
                     <button type="button" (click)="removeLanguage(language)" class="p-1 border-x-2 border-y-2">X</button>
                 </div>
-                <button type="button" (click)="addLanguage()" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
+                <button type="button" (click)="addLanguage()" [disabled]="this.selectedLanguages.length >= 3" [ngClass]="{'opacity-50': this.selectedLanguages.length >= 3}" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
                 
                 <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>
