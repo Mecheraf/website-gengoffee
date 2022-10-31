@@ -39,15 +39,15 @@
     },
     "footer":{
         "questions":"Any questions ?",
-        "followus":"Abonnez-vous sur les réseaux !",
+        "followus":"Follow us !",
         "conditions":"Conditions générales"
     },
     "hero":{
         "title":"The Japanese Culture",
-        "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
+        "description":"Gengoffee est un collectif organisant des événements Franco-Japanese et French-English à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
-            "subscription":"Inscription",
+            "subscription":"Register",
             "more":"En savoir plus"
         }
     },
@@ -80,12 +80,12 @@
         "title":"Comment se déroule\nun évènement Gengoffee ?",
         "uptitle":"En savoir un peu plus",
         "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
-        "2":"<span class=\"font-semibold\">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
+        "2":"<span class=\"font-semibold\">2.</span> French, English ou Japanese,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
         "3":"<span class=\"font-semibold\">3.</span> Au bout de 15min, <span class=\"font-semibold\">on change de langue.</span> <br>Continuez la conversation !",
         "4":"<span class=\"font-semibold\">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !"
     },
     "register":{
-        "title":"Inscription",
+        "title":"Register",
         "savethedate":"SAVE THE DATE !",
         "optionnal":"optionnal",
         "nextevent":"inscrivez-vous également à nos prochains événements :)",
@@ -97,10 +97,10 @@
             "phone":"Numéro de Téléphone",
             "language":{
                 "title":"Langues parlées",
-                "english":"Anglais",
-                "add":"Ajouter une langue",
-                "french":"Français",
-                "japanese":"Japonais",
+                "english":"English",
+                "add":"Add a language",
+                "french":"French",
+                "japanese":"Japanese",
                 "lv1":"Débutant",
                 "lv2":"intérmédiaire",
                 "lv3":"Courant"
@@ -121,7 +121,7 @@
     "about":{
         "title":"About us",
         "subtitle":"Who are we ?",
-        "description":"Nous sommes un groupe rassemblant les Japonais & Français vivant en France.\n\nNous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos évènements dans des cafés et dans des bars afin de converser autour d’un verre !\n\nNous organisons plusieurs évènements par mois et acceptons tous niveaux dès lors que le respect est présent.",
+        "description":"Nous sommes un groupe rassemblant les Japanese & French vivant en France.\n\nNous avons pour concept d’organiser des échanges de langues Franco-Japanese dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos évènements dans des cafés et dans des bars afin de converser autour d’un verre !\n\nNous organisons plusieurs évènements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "persons":{
             "alan":{
@@ -134,6 +134,19 @@
             }
         },
         "stats":{
+            "title":"En quelques chiffres...",
+            "1":{
+                "title":"Événements",
+                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">2000 d'inscriptions</span>!"
+            },
+            "2":{
+                "title":"Communauté",
+                "description":"Un total de plus de <span class=\"font-semibold\">2600 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
+            },            
+            "3":{
+                "title":"Collaborateurs",
+                "description":"Aujourd'hui, l'association est soutenue par <span class=\"font-semibold\">11</span> coopérateurs actifs ! Sans oublier les partenaires de l'association !"
+            }
 
         }
     },
