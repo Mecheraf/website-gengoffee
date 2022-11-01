@@ -21,8 +21,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getNextEvents(NB_EVENTS)
     this.getPastEvents(NB_EVENTS)
-    //this.formateDate(this.nextEvents[0].date)
-    this.formate()
   }
 
   getNextEvents(limit:number) {
@@ -34,18 +32,7 @@ export class HomeComponent implements OnInit {
   getPastEvents(limit:number) {
     this.eventservice.getPastEvents({params:{limit: limit}}).subscribe((data) => {
       this.pastEvents = data;
-      console.log(this.pastEvents[1].date)
     })
   }
 
-  formateDate(theDate:Date){
-    this.newDate = this.datePipe.transform(theDate, 'dd/MM/yyyy');
-    console.log(this.newDate)
-  }
-
-  formate(){
-    let tmp:String;
-    
-    console.log("hey")
-  }
 }

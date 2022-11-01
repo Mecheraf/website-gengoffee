@@ -1,18 +1,20 @@
 <div class="register">
-    <div class="flex max-w-screen-2xl mx-auto pt-24">
-        <div class="pr-24 pl-24 pt-2 border-r border-solid border-[#]/50">
-            <h1 class="text-[2.625rem]">{{'register.title'|translate}}</h1>
-            <h2 class="text-white"
-                style="text-shadow: 1px 0 0 #262829, 0 -1px 0 #262829, 0 1px 0 #262829, -1px 0 0 #262829;">
-                {{'register.savethedate'|translate}}</h2>
-            <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
+    <div class="block md:flex max-w-xs md:max-w-5xl mx-auto pt-24 pb-8">
+        <div class="pt-2 md:border-r md:border-solid md:border-[#]/50">
+            <div class="md:pl-12">
+                <h1 class="text-[2.625rem] pl-12">{{'register.title'|translate}}</h1>
+                <h2 class="text-white pl-6"
+                    style="text-shadow: 1px 0 0 #262829, 0 -1px 0 #262829, 0 1px 0 #262829, -1px 0 0 #262829;">
+                    {{'register.savethedate'|translate}}</h2>
+                <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
+            </div>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
-            <div class="mt-10 md:mt-16 flex gap-8 md:gap-10">
+            <div class="mt-10 md:mt-12 flex gap-4 md:gap-10">
                 <button type="button" (click)="switchEvent(1)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
                 <button type="button" (click)="switchEvent(2)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
             </div>
         </div>
-        <div class="pl-24 pt-6">
+        <div class="md:pl-14 pt-6">
             <p class="font-bold">{{'register.form.title'|translate}}</p>
             <p class="pt-6">{{'register.form.description'|translate}}</p>
             <form class="pt-2" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
