@@ -21,7 +21,7 @@
   /* --mask-width: 100px; */
   content: '';
   width: var(--mask-width);
-  height: 20px;
+  height: 28px;
   background: #F5F7F9;
   position: absolute;
   left: 0;

@@ -153,6 +153,7 @@
     },
     "contact":{
         "title":"N'hésitez pas à nous écrire",
+        "titleResponsive":"Ecrivez-nous",
         "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
         "name":"Nom & Prénom",
         "mail":"Adresse e-mail",
