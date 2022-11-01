@@ -32,7 +32,7 @@
     "header":{
         "menu":{
             "home":"Accueil",
-            "events":"Évènements",
+            "events":"Événements",
             "news":"News",
             "about":"À Propos",
             "contact":"Contact"
@@ -45,7 +45,7 @@
     },
     "hero":{
         "title":"La culture Japonaise",
-        "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
+        "description":"Gengoffee est une association Franco-Japonaise organisant des événements Franco-Japonais et Franco-Anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
             "register":"Inscription",
@@ -61,17 +61,17 @@
         "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
         "partner":{
             "berthom":{
-                "title":"Un grand merci à Les Berthom qui accueille nos évènements.",
+                "title":"Un grand merci à Les Berthom qui accueille nos événements.",
                 "name":"Les Berthom",
                 "address":"35 Boulevard Voltaire\n75011 Paris"
             }
         }
     },
     "events":{
-        "title":"Évènements",
+        "title":"Événements",
         "description":"Vous voulez améliorer votre français, anglais ou japonais ?<br>Participer à notre prochain évènement !",
         "pastevents":{
-            "title":"Nos évènements passés"
+            "title":"Nos événements passés"
         },
         "nextevents":"Nos prochains rendez-vous",
         "incoming":"À venir",
@@ -122,7 +122,7 @@
     "about":{
         "title":"À propos",
         "subtitle":"Qui sommes-nous ?",
-        "description":"Nous sommes un groupe rassemblant les Japonais & Français vivant en France.\n\nNous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos évènements dans des cafés et dans des bars afin de converser autour d’un verre !\n\nNous organisons plusieurs évènements par mois et acceptons tous niveaux dès lors que le respect est présent.",
+        "description":"Nous sommes un groupe rassemblant les Japonais & Français vivant en France.<br><br>Nous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "persons":{
             "alan":{
@@ -135,11 +135,25 @@
             }
         },
         "stats":{
+            "title":"En quelques chiffres...",
+            "1":{
+                "title":"Événements",
+                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">2000 d'inscriptions</span>!"
+            },
+            "2":{
+                "title":"Communauté",
+                "description":"Un total de plus de <span class=\"font-semibold\">2600 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
+            },            
+            "3":{
+                "title":"Collaborateurs",
+                "description":"Aujourd'hui, l'association est soutenue par <span class=\"font-semibold\">11</span> coopérateurs actifs ! Sans oublier les partenaires de l'association !"
+            }
 
         }
     },
     "contact":{
         "title":"N'hésitez pas à nous écrire",
+        "titleResponsive":"Ecrivez-nous",
         "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
         "name":"Nom & Prénom",
         "mail":"Adresse e-mail",

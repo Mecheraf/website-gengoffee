@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,10 +9,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
 
   public showMobileMenu: boolean = false;
+  public isMobile: boolean = false;
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, private cdRef:ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    this.getWindowSize();
+    this.cdRef.detectChanges();
   }
 
   openMenu() {
@@ -28,7 +31,7 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  isMobile() {
-    return window.innerWidth < 768;
+  getWindowSize() {
+    this.isMobile = window.innerWidth < 768;
   }
 }
