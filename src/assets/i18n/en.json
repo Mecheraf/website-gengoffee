@@ -44,23 +44,23 @@
     },
     "hero":{
         "title":"The Japanese Culture",
-        "description":"Gengoffee est un collectif organisant des événements Franco-Japanese et French-English à Paris",
+        "description":"Gengoffee is an association organizing French-Japanese and French-English events in Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
             "subscription":"Register",
-            "more":"En savoir plus"
+            "more":"Know more"
         }
     },
     "carrousel":{
-        "title":"Nos événements, votre échanges",
-        "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
+        "title":"Our events, your experiences",
+        "description":"An every week's event to share with friendly people while practicing French, English or Japanese. Find out our next sessions !"
     },
     "partners":{
         "title":"The Partners",
-        "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
+        "description":"Want to help Gengoffee or host our next events ?",
         "partner":{
             "berthom":{
-                "title":"Un grand merci à Les Berthom qui accueille nos évènements.",
+                "title":"We would like to present our thanks to Les Berthom for hosting our events!",
                 "name":"Les Berthom",
                 "address":"35 Boulevard Voltaire\n75011 Paris"
             }
@@ -88,32 +88,32 @@
         "title":"Register",
         "savethedate":"SAVE THE DATE !",
         "optionnal":"optionnal",
-        "nextevent":"inscrivez-vous également à nos prochains événements :)",
+        "nextevent":"You can also register to our next events :)",
         "form":{
-            "title":"Participer au prochain évènement Gengoffee",
-            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
-            "name":"Nom & Prénom",
-            "mail":"Adresse e-mail",
-            "phone":"Numéro de Téléphone",
+            "title":"Register to the next Gengoffee's event",
+            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue !",
+            "name":"Full name",
+            "mail":"E-mail",
+            "phone":"Phone",
             "language":{
                 "title":"Langues parlées",
                 "english":"English",
                 "add":"Add a language",
                 "french":"French",
                 "japanese":"Japanese",
-                "lv1":"Débutant",
-                "lv2":"intérmédiaire",
-                "lv3":"Courant"
+                "lv1":"Beginner",
+                "lv2":"Intermediate",
+                "lv3":"Fluent"
             },
             "diet":{
                 "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
                 "description":"Si vous avez des allergies veuillez nous le préciser par message ci-dessous.",
-                "none":"Aucun",
+                "none":"None",
                 "vegan":"Vegan",
-                "vegetarian":"Végétarien",
+                "vegetarian":"Vegetarian",
                 "casher":"Casher",
                 "halal":"Halal",
-                "other":"Autres"
+                "other":"Other"
             },
             "register":"Register"
         }
@@ -122,7 +122,7 @@
         "title":"About us",
         "subtitle":"Who are we ?",
         "description":"Nous sommes un groupe rassemblant les Japanese & French vivant en France.\n\nNous avons pour concept d’organiser des échanges de langues Franco-Japanese dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos évènements dans des cafés et dans des bars afin de converser autour d’un verre !\n\nNous organisons plusieurs évènements par mois et acceptons tous niveaux dès lors que le respect est présent.",
-        "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
+        "followus":"You can also follow us on social medias !",
         "persons":{
             "alan":{
                 "title":"",
@@ -134,32 +134,33 @@
             }
         },
         "stats":{
-            "title":"En quelques chiffres...",
+            "title":"Some stats...",
             "1":{
-                "title":"Événements",
+                "title":"Events",
                 "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">2000 d'inscriptions</span>!"
             },
             "2":{
-                "title":"Communauté",
+                "title":"Community",
                 "description":"Un total de plus de <span class=\"font-semibold\">2600 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
             },            
             "3":{
-                "title":"Collaborateurs",
+                "title":"Collaborators",
                 "description":"Aujourd'hui, l'association est soutenue par <span class=\"font-semibold\">11</span> coopérateurs actifs ! Sans oublier les partenaires de l'association !"
             }
-
         }
     },
     "contact":{
-        "title":"N'hésitez pas à nous écrire",
-        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
-        "name":"Nom & Prénom",
-        "mail":"Adresse e-mail",
-        "phone":"Numéro de Téléphone",
-        "objet":"Objet",
+        "title":"Feel free to write us something",
+        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
+        "name":"Full name",
+        "mail":"E-mail",
+        "phone":"Phone",
+        "object":"Subject",
         "message":"Message",
-        "button":"Envoyer",
-        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
+        "button":"Send",
+        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux",
+        "p_object":"Mail's subject",
+        "p_message":"I have a really good idea to share with your association and I'd like to work with you ! <3"
     },
     "en": "English",
     "fr": "French",

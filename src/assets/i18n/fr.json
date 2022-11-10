@@ -122,7 +122,7 @@
     "about":{
         "title":"À propos",
         "subtitle":"Qui sommes-nous ?",
-        "description":"Nous sommes un groupe rassemblant les Japonais & Français vivant en France.<br><br>Nous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
+        "description":"Gengoffee est une association Franco-Japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "persons":{
             "alan":{
@@ -153,14 +153,15 @@
     },
     "contact":{
         "title":"N'hésitez pas à nous écrire",
-        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
+        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
         "name":"Nom & Prénom",
         "mail":"Adresse e-mail",
         "phone":"Numéro de Téléphone",
-        "objet":"Objet",
+        "object":"Objet",
         "message":"Message",
         "button":"Envoyer",
-        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
+        "p_object":"Objet du mail",
+        "p_message":"Je suis des cours de japonais depuis 5 ans mais j’ai encore des difficultés à m’exprimer :("
     },
     "en": "Anglais",
     "fr": "Français",
