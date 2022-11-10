@@ -153,6 +153,7 @@
     },
     "contact": {
         "title": "気軽にお問い合わせください",
+        "titleResponsive":"気軽にお問い合わせください",
         "description": "以下の情報を明記の上<br>contact@gengoffee.fr　までご連絡下さい",
         "name": "姓 & 名",
         "mail": "メールアドレス",

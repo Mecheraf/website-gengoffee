@@ -2,6 +2,7 @@ const NEXT_EVENTS = 3
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
 
@@ -35,15 +36,23 @@ export class RegisterComponent implements OnInit {
   public events:any;
   public nextEvents:any;
 
-  constructor(private eventservice: EventService, private registerservice:RegisterService) { }
+  constructor(
+    private eventservice: EventService,
+    private registerservice:RegisterService,
+    ) {
+  }
 
   ngOnInit(): void {
-    this.getNextEvents(NEXT_EVENTS)
+    this.getNextEvents(NEXT_EVENTS);
   }
 
   getNextEvents(limit:number) {
     this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
       this.nextEvents = data;
+      console.log(this.nextEvents);
+      if(window.history.state?.id) {
+        this.switchEvent(window.history.state.id);
+      } 
     })
   }
 
@@ -57,7 +66,6 @@ export class RegisterComponent implements OnInit {
       dietList.push(selectedDiet);
       this.registerForm.patchValue({'dietList': dietList});
     }
-    console.log(dietList)
   } 
 
   toggleOther(){
@@ -65,6 +73,7 @@ export class RegisterComponent implements OnInit {
   }
 
   addLanguage(){
+    if (this.selectedLanguages.length >= 3) return;
     const language: userLanguage = {language: "fr", level: "lv1"};
     this.selectedLanguages.push(language);
   }
@@ -80,17 +89,18 @@ export class RegisterComponent implements OnInit {
     this.registerForm.patchValue({'dietList': dietList});
 
     this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
-    console.log(this.registerForm.value);
     this.registerservice.post(this.registerForm.value).subscribe();
     this.registerForm.reset();
     this.selectedLanguages = [];
   }
 
-  switchEvent(idEvent: number) {
-    const tmp:any = this.nextEvents[idEvent];
-    this.nextEvents[idEvent] = this.nextEvents[0];
-    this.nextEvents[0] = tmp;
-    console.log(this.nextEvents[0].id);
+  switchEvent(id: string) {
+    this.nextEvents.map((event: Event, index: number) => {
+      if (event.id === id) {
+        this.nextEvents[index] = this.nextEvents[0];
+        this.nextEvents[0] = event;
+      }
+    });
   }
 
 }

@@ -5,7 +5,7 @@
     </div>
   </a>
   <nav
-    [ngClass]="{ 'hidden': !showMobileMenu && isMobile() }"
+    *ngIf="showMobileMenu || !isMobile"
     class="
       ppmori flex place-items-center fixed flex-col pt-24 gap-5 text-xl inset-0 bg-white z-50 
       md:flex-row md:text-base md:gap-10 md:relative md:pt-5 md:ml-auto"
@@ -22,13 +22,13 @@
     <div class="">
       <a [routerLink]="['/contact']" (click)="closeMenu();">{{'header.menu.contact'|translate}}</a>
     </div>
-    <div *ngIf="isMobile()" class="text-[#1F3D87] place-self-center">
+    <div *ngIf="isMobile" class="text-[#1F3D87] place-self-center">
       <button (click)="switchLanguage('en')" class="">ENG</button>
       <button (click)="switchLanguage('fr')" class="ml-8 mr-6">FR</button>
       <button (click)="switchLanguage('jp')" class="">日本語</button>
     </div>
-    <img *ngIf="isMobile()" class="pt-6" (click)="closeMenu();" src="assets/images/close.svg" />
+    <img *ngIf="isMobile" class="pt-6" (click)="closeMenu();" src="assets/images/close.svg" />
 
   </nav>
-  <img *ngIf="!showMobileMenu && isMobile()" class="pt-5 m-auto" (click)="openMenu();" src="assets/images/hamburger-menu.svg">
+  <img *ngIf="!showMobileMenu && isMobile" class="pt-5 m-auto" (click)="openMenu();" src="assets/images/hamburger-menu.svg">
 </header>

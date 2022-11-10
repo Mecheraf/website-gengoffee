@@ -151,12 +151,12 @@
     },
     "contact":{
         "title":"Feel free to write us something",
+        "titleResponsive":"Contact Us",
         "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
         "name":"Full name",
         "mail":"E-mail",
         "phone":"Phone",
         "object":"Subject",
-        "message":"Message",
         "button":"Send",
         "followus":"Vous pouvez également nous joindre sur les réseaux sociaux",
         "p_object":"Mail's subject",
