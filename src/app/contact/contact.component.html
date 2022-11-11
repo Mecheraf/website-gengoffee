@@ -26,7 +26,7 @@
           <div class="flex flex-col">
             <label class="font-semibold" for="phone">
               {{'contact.phone'|translate}}
-              <p class="text-gray-400 inline">({{'register.optionnal'|translate}})</p>
+              <p class="text-gray-400 inline">({{'register.optional'|translate}})</p>
             </label>
             <input type="number" class="border-b border-[#262829]/50 border-solid pt-4 appearance-none" name="phone" placeholder="+33 XX XX XX XX" formControlName="phone">
           </div>
@@ -42,7 +42,7 @@
         </div>
         <button [ngClass]="{'!text-[#BF292E] spin': loading}" type="submit" class="relative spin flex mx-auto gengoffee-btn gengoffee-btn-primary mt-8" [disabled]="!formGroup.valid">{{'contact.button'|translate}}</button>
         <div class="flex gap-2 mt-20 mb-24 place-content-center">
-          <div class="text-lg">{{'contact.followus'|translate}}</div>
+          <div class="text-lg">{{'about.followus'|translate}}</div>
           <img class="mx-3" src="assets/images/right-arrow-black.svg" />
           <img width="20" src="assets/images/instagram-black.svg" />
           <img width="20" src="assets/images/facebook-black.svg" />

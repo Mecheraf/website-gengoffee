@@ -3,7 +3,7 @@
     "contact_us":"Contactez-nous",
     "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
     "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
-    "optionnal":"Optionnel",
+    "optional":"Optionnel",
     "days": {
         "1":"Lundi",
         "2":"Mardi",
@@ -52,8 +52,8 @@
             "more":"En savoir plus"
         }
     },
-    "carrousel":{
-        "title":"Nos événements, votre échanges",
+    "carousel":{
+        "title":"Nos événements, vos échanges",
         "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
     },
     "partners":{
@@ -77,7 +77,7 @@
         "incoming":"À venir",
         "past":"Passé"
     },
-    "explaination":{
+    "explanation":{
         "title":"Comment se déroule\nun évènement Gengoffee ?",
         "uptitle":"En savoir un peu plus",
         "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
@@ -88,7 +88,7 @@
     "register":{
         "title":"Inscription",
         "savethedate":"SAVE THE DATE !",
-        "optionnal":"facultatif",
+        "optional":"facultatif",
         "nextevent":"Inscrivez-vous également à nos prochains événements :)",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
@@ -112,7 +112,7 @@
                 "none":"Aucun",
                 "vegan":"Vegan",
                 "vegetarian":"Végétarien",
-                "casher":"Casher",
+                "kosher":"kosher",
                 "halal":"Halal",
                 "other":"Autres/Allergies"
             },
@@ -124,7 +124,7 @@
         "subtitle":"Qui sommes-nous ?",
         "description":"Gengoffee est une association Franco-Japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
-        "persons":{
+        "people":{
             "alan":{
                 "title":"",
                 "description":"",

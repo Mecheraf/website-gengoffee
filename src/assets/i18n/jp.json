@@ -3,7 +3,7 @@
     "contact_us": "お問い合わせ",
     "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
     "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
-    "optionnal":"Optionnal",
+    "optional":"optional",
     "days": {
         "1":"月曜日",
         "2":"火曜日",
@@ -52,7 +52,7 @@
             "more": "詳細"
         }
     },
-    "carrousel": {
+    "carousel": {
         "title": "イベント交流",
         "description": "毎週気軽に一杯飲みながら交流できる言語交換を開催しています。次回のイベントはこちら"
     },
@@ -77,7 +77,7 @@
         "incoming":"次回",
         "past":"過去"
     },
-    "explaination": {
+    "explanation": {
         "title": "どのようにGengoffeeのイベントを行うか?",
         "uptitle": "詳細はこちら",
         "1": "1. <span class=\"font-semibold\">6−８人</span>の1グループでテーブルに座ります",
@@ -88,7 +88,7 @@
     "register": {
         "title": "申し込み",
         "savethedate": "SAVE THE DATE !",
-        "optionnal":"任意",
+        "optional":"任意",
         "nextevent": "次回のイベントに申し込み :)",
         "form": {
             "title": "次のGengoffeeに参加する",
@@ -112,7 +112,7 @@
                 "none": "無し",
                 "vegan": "ヴィーガン",
                 "vegetarian": "ヴェジタリアン",
-                "casher": "カシェル",
+                "kosher": "カシェル",
                 "halal": "ハラル",
                 "other": "その他"
             },
@@ -124,7 +124,7 @@
         "subtitle":" 私たちについて",
         "description":"私たちはフランスで活動するフランス人と日本人のグループです。<br><br>フランス語と日本語の言語交換の企画運営を通して、お互いの文化交流や友好関係を築くのが目的としています<br><br>このような意図を持つイベントを、カフェやバーで飲み物片手に気軽に行っています！月に何回かのイベントを開催し、敬意とリスペクトを持つ全ての方を受け入れています",
         "followus":"もちろん私たちのSNSもご覧頂けます。",
-        "persons":{
+        "people":{
             "alan":{
                 "title":"",
                 "description":"",
