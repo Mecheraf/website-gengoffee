@@ -1,166 +1,166 @@
 {
-    "title" : "English",
-    "contact_us":"Contact us",
-    "fullDate":"{{day}}, {{dayNumber}} of {{month}} {{year}}",
-    "dateWithoutYear":"{{day}}, {{dayNumber}} {{month}}",
-    "optionnal":"Optionnal",
+    "title": "English",
+    "contact_us": "Contact us",
+    "fullDate": "{{day}}, {{dayNumber}} of {{month}} {{year}}",
+    "dateWithoutYear": "{{day}}, {{dayNumber}} {{month}}",
+    "optional": "optional",
     "days": {
-        "1":"Monday",
-        "2":"Tuesday",
-        "3":"Wednesday",
-        "4":"Thursday",
-        "5":"Friday",
-        "6":"Saturday",
-        "0":"Sunday"
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday",
+        "0": "Sunday"
     },
-    "months":{
-        "0":"January",
-        "1":"February",
-        "2":"March",
-        "3":"April",
-        "4":"May",
-        "5":"June",
-        "6":"July",
-        "7":"August",
-        "8":"September",
-        "9":"October",
-        "10":"November",
-        "11":"December"
+    "months": {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
     },
-    "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
-    "header":{
-        "menu":{
-            "home":"Home",
-            "events":"Events",
-            "news":"News",
-            "about":"About",
-            "contact":"Contact"
+    "headbanner": "Le site web est actuellement en construction. Revenez bientôt !",
+    "header": {
+        "menu": {
+            "home": "Home",
+            "events": "Events",
+            "news": "News",
+            "about": "About",
+            "contact": "Contact"
         }
     },
-    "footer":{
-        "questions":"Any questions ?",
-        "followus":"Follow us !",
-        "conditions":"Conditions générales"
+    "footer": {
+        "questions": "Any questions?",
+        "followus": "Follow us on social media!",
+        "conditions": "Terms and conditions"
     },
-    "hero":{
-        "title":"The Japanese Culture",
-        "description":"Gengoffee is an association organizing French-Japanese and French-English events in Paris",
-        "subtitle":"À VOTRE RENCONTRE",
-        "buttons":{
-            "subscription":"Register",
-            "more":"Know more"
+    "hero": {
+        "title": "Japanese culture",
+        "description": "Gengoffee is a Franco-Japanese group that organises events in French/Japanese and French/English in Paris.",
+        "subtitle": "AWAITS YOU", 
+        "buttons": {
+            "register": "Sign up",
+            "more": "Learn more"
         }
     },
-    "carrousel":{
-        "title":"Our events, your experiences",
-        "description":"An every week's event to share with friendly people while practicing French, English or Japanese. Find out our next sessions !"
+    "carousel": {
+        "title": "Our events, your interaction",
+        "description": "We meet every week to chat over a drink. Find our next events."
     },
-    "partners":{
-        "title":"The Partners",
-        "description":"Want to help Gengoffee or host our next events ?",
-        "partner":{
-            "berthom":{
-                "title":"We would like to present our thanks to Les Berthom for hosting our events!",
-                "name":"Les Berthom",
-                "address":"35 Boulevard Voltaire\n75011 Paris"
+    "partners": {
+        "title": "Our partners",
+        "description": "Do you want to support Gengoffee or host our next event?",
+        "partner": {
+            "berthom": {
+                "title": "A huge thank you to Les Berthom for hosting our events.",
+                "name": "Les Berthom",
+                "address": "35 Boulevard Voltaire<br>75011 Paris"
             }
         }
     },
-    "events":{
-        "title":"Events",
-        "description":"Want to practice your french, english or japanese ? <br>Register to our next event !",
-        "pastevents":{
-            "title":"Our passed events"
+    "events": {
+        "title": "Events",
+        "description": "Do you want to improve your French, English or Japanese?<br>Join our next event!",
+        "pastevents": {
+            "title": "Previous events"
         },
-        "nextevents":"Our next dates",
-        "incoming":"Incoming",
-        "past":"Past"     
+        "nextevents": "Our next events",
+        "incoming": "Soon",
+        "past": "Past"
     },
-    "explaination":{
-        "title":"Comment se déroule\nun évènement Gengoffee ?",
-        "uptitle":"En savoir un peu plus",
-        "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
-        "2":"<span class=\"font-semibold\">2.</span> French, English ou Japanese,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
-        "3":"<span class=\"font-semibold\">3.</span> Au bout de 15min, <span class=\"font-semibold\">on change de langue.</span> <br>Continuez la conversation !",
-        "4":"<span class=\"font-semibold\">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !"
+    "explanation": {
+        "title": "How does the event work?",
+        "uptitle": "Find out more",
+        "1": "<span class=\"font-semibold\">1.</span> We'll find you a seat<br> at a table of <span class=\"font-semibold\">6 to 8 people.</span>",
+        "2": "<span class=\"font-semibold\">2.</span> French, English or Japanese,<br>you'll speak in one language for<br><span class=\"font-semibold\">15 mins.</span>",
+        "3": "<span class=\"font-semibold\">3.</span> After 15 mins, <span class=\"font-semibold\">we switch language.</span> <br>The conversation continues!",
+        "4": "<span class=\"font-semibold\">4.</span> Improve your language skills<br> with a range of conversation partners!"
     },
-    "register":{
-        "title":"Register",
-        "savethedate":"SAVE THE DATE !",
-        "optionnal":"optionnal",
-        "nextevent":"You can also register to our next events :)",
-        "form":{
-            "title":"Register to the next Gengoffee's event",
-            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue !",
-            "name":"Full name",
-            "mail":"E-mail",
-            "phone":"Phone",
-            "language":{
-                "title":"Langues parlées",
-                "english":"English",
-                "add":"Add a language",
-                "french":"French",
-                "japanese":"Japanese",
-                "lv1":"Beginner",
-                "lv2":"Intermediate",
-                "lv3":"Fluent"
+    "register": {
+        "title": "Sign up",
+        "savethedate": "SAVE THE DATE !",
+        "optional": "optional",
+        "nextevent": "Sign up for our upcoming events :)",
+        "form": {
+            "title": "Sign up for the next Gengoffee event",
+            "description": "Join us for a conversation over a drink while improving your language skills!",
+            "name": "Full name",
+            "mail": "Email",
+            "phone": "Phone",
+            "language": {
+                "title": "Languages spoken",
+                "add": "Add a language",
+                "english": "English",
+                "french": "French",
+                "japanese": "Japanese",
+                "lv1": "Beginner",
+                "lv2": "Intermediate",
+                "lv3": "Fluent"
             },
-            "diet":{
-                "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
-                "description":"Si vous avez des allergies veuillez nous le préciser par message ci-dessous.",
-                "none":"None",
-                "vegan":"Vegan",
-                "vegetarian":"Vegetarian",
-                "casher":"Casher",
-                "halal":"Halal",
-                "other":"Other"
+            "diet": {
+                "title": "Do you have any allergies or dietary requirements?",
+                "description": "Please tell us about any allergies in the box below.",
+                "none": "None",
+                "vegan": "Vegan",
+                "vegetarian": "Vegetarian",
+                "kosher": "Kosher",
+                "halal": "Halal",
+                "other": "Other/Allergies"
             },
-            "register":"Register"
+            "register": "Sign up"
         }
     },
-    "about":{
-        "title":"About us",
-        "subtitle":"Who are we ?",
-        "description":"Nous sommes un groupe rassemblant les Japanese & French vivant en France.\n\nNous avons pour concept d’organiser des échanges de langues Franco-Japanese dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos évènements dans des cafés et dans des bars afin de converser autour d’un verre !\n\nNous organisons plusieurs évènements par mois et acceptons tous niveaux dès lors que le respect est présent.",
-        "followus":"You can also follow us on social medias !",
-        "persons":{
-            "alan":{
-                "title":"",
-                "description":"",
-                "link":{
-                    "linkedin":"",
-                    "website":""
+    "about": {
+        "title": "About",
+        "subtitle": "Who are we?",
+        "description": "Gengoffee is a Franco-Japanese group based in Paris, bringing together a multiclutural and multilinguistic community during our events. <br><br>We organise French-Japanese and French-English language exchanges in a friendly and supportive environment. Our events are hosted in cafés and bars allowing us to relax and chat over a drink! <br><br>We host multiple events every month and welcome all levels of fluency.",
+        "followus": "You can also contact us on social media!",
+        "people": {
+            "alan": {
+                "title": "",
+                "description": "",
+                "link": {
+                    "linkedin": "",
+                    "website": ""
                 }
             }
         },
-        "stats":{
-            "title":"Some stats...",
-            "1":{
-                "title":"Events",
-                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">2000 d'inscriptions</span>!"
+        "stats": {
+            "title": "Gengoffee in figures...",
+            "1": {
+                "title": "Events",
+                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">2000 sign-ups </span> and counting!"
             },
-            "2":{
-                "title":"Community",
-                "description":"Un total de plus de <span class=\"font-semibold\">2600 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
-            },            
-            "3":{
-                "title":"Collaborators",
-                "description":"Aujourd'hui, l'association est soutenue par <span class=\"font-semibold\">11</span> coopérateurs actifs ! Sans oublier les partenaires de l'association !"
+            "2": {
+                "title": "Community",
+                "description": "A total of more than<span class=\"font-semibold\">2600 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
+            },
+            "3": {
+                "title": "Collaborators",
+                "description": "The group is currently organised by <span class=\"font-semibold\">11</span> active collaborators. Not forgetting our external partners!"
             }
         }
     },
-    "contact":{
-        "title":"Feel free to write us something",
-        "titleResponsive":"Contact Us",
-        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
-        "name":"Full name",
-        "mail":"E-mail",
-        "phone":"Phone",
-        "object":"Subject",
-        "button":"Send",
-        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux",
-        "p_object":"Mail's subject",
-        "p_message":"I have a really good idea to share with your association and I'd like to work with you ! <3"
+    "contact": {
+        "title": "Write to us!",
+        "titleResponsive": "Write to us!",
+        "description": "Fill out the form below or email us directly on contact@gengoffee.fr",
+        "name": "Full name",
+        "mail": "Email",
+        "phone": "Phone",
+        "object": "Subject",
+        "message": "Message",
+        "button": "Send",
+        "p_object": "Email subject",
+        "p_message": "I have a really good idea to share with your organisation and I'd like to work with you ! <3"
     },
     "en": "English",
     "fr": "French",
