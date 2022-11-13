@@ -2,9 +2,12 @@ const NEXT_EVENTS = 3
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 interface userLanguage {
   language: string,
@@ -39,6 +42,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private eventservice: EventService,
     private registerservice:RegisterService,
+    private translateService: TranslateService,
+    private _snackBar: MatSnackBar
     ) {
   }
 
@@ -49,7 +54,6 @@ export class RegisterComponent implements OnInit {
   getNextEvents(limit:number) {
     this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
       this.nextEvents = data;
-      console.log(this.nextEvents);
       if(window.history.state?.id) {
         this.switchEvent(window.history.state.id);
       } 
@@ -83,15 +87,25 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
-    const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
-    dietList.push(this.otherText);
-    this.registerForm.patchValue({'id_event':this.nextEvents[0].id});
-    this.registerForm.patchValue({'dietList': dietList});
+    if(this.registerForm.get('name')?.value as string !== "" && this.registerForm.get('mail')?.value as string !== "" ){
+      const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
+      dietList.push(this.otherText);
+      this.registerForm.patchValue({'id_event':this.nextEvents[0].id});
+      this.registerForm.patchValue({'dietList': dietList});
+      this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
+      this.registerservice.post(this.registerForm.value).subscribe();
+      this.registerForm.reset();
+      this.selectedLanguages = [];
 
-    this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
-    this.registerservice.post(this.registerForm.value).subscribe();
-    this.registerForm.reset();
-    this.selectedLanguages = [];
+    } else {
+      /*this._snackBar.open(this.translateService.instant('errorRegister'), "fermer", {
+        duration: 3000,
+        horizontalPosition: 'center',
+        verticalPosition: 'top'
+      });*/
+      alert(this.translateService.instant('errorRegister'))
+    }
+    
   }
 
   switchEvent(id: string) {

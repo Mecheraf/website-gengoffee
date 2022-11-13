@@ -32,6 +32,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 
 
 @NgModule({
@@ -53,7 +56,7 @@ import { ContactComponent } from './contact/contact.component';
     RegisterComponent,
     CreateeventComponent,
     ContactComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -74,12 +77,14 @@ import { ContactComponent } from './contact/contact.component';
     MatButtonModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    NgxMatNativeDateModule
+    NgxMatNativeDateModule,
+    MatSnackBarModule
 
   ],
   providers: [
     MatDatepickerModule,
-    DatePipe
+    DatePipe,
+    MatSnackBarModule
   ],
   bootstrap: [AppComponent]
 })

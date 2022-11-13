@@ -4,6 +4,7 @@
     "fullDate": "{{day}}, {{dayNumber}} of {{month}} {{year}}",
     "dateWithoutYear": "{{day}}, {{dayNumber}} {{month}}",
     "optional": "optional",
+    "errorRegister":"Please fill all required fields",
     "days": {
         "1": "Monday",
         "2": "Tuesday",
