@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 
 interface userLanguage {
@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
     private eventservice: EventService,
     private registerservice:RegisterService,
     private translateService: TranslateService,
-    private _snackBar: MatSnackBar
+    public _snackBar: MatSnackBar
     ) {
   }
 
@@ -87,6 +87,10 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
+    const configSnack = new MatSnackBarConfig();
+    configSnack.panelClass = [''];
+    configSnack.horizontalPosition = 'center';
+
     if(this.registerForm.get('name')?.value as string !== "" && this.registerForm.get('mail')?.value as string !== "" ){
       const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
       dietList.push(this.otherText);
@@ -96,16 +100,9 @@ export class RegisterComponent implements OnInit {
       this.registerservice.post(this.registerForm.value).subscribe();
       this.registerForm.reset();
       this.selectedLanguages = [];
-
     } else {
-      /*this._snackBar.open(this.translateService.instant('errorRegister'), "fermer", {
-        duration: 3000,
-        horizontalPosition: 'center',
-        verticalPosition: 'top'
-      });*/
-      alert(this.translateService.instant('errorRegister'))
+      this._snackBar.open(this.translateService.instant('errorRegister'), "fermer", configSnack);
     }
-    
   }
 
   switchEvent(id: string) {
@@ -116,5 +113,4 @@ export class RegisterComponent implements OnInit {
       }
     });
   }
-
 }
