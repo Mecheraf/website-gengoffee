@@ -1,101 +1,169 @@
 {
-    "title" : "English",
-    "contact_us":"Contactez-nous",
-    "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
-    "header":{
-        "menu":{
-            "home":"Home",
-            "events":"Events",
-            "news":"News",
-            "about":"About",
-            "contact":"Contact"
+    "title": "English",
+    "contact_us": "Contact us",
+    "fullDate": "{{day}}, {{dayNumber}} of {{month}} {{year}}",
+    "dateWithoutYear": "{{day}}, {{dayNumber}} {{month}}",
+    "optional": "optional",
+    "errorRegister":"Please fill all required fields",
+    "days": {
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday",
+        "0": "Sunday"
+    },
+    "months": {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
+    },
+    "headbanner": "Le site web est actuellement en construction. Revenez bientôt !",
+    "header": {
+        "menu": {
+            "home": "Home",
+            "events": "Events",
+            "news": "News",
+            "about": "About",
+            "contact": "Contact"
         }
     },
-    "footer":{
-        "questions":"Des questions ?",
-        "followus":"Abonnez-vous sur les réseaux !",
-        "conditions":"Conditions générales"
+    "footer": {
+        "questions": "Any questions?",
+        "followus": "Follow us on social media!",
+        "conditions": "Terms and conditions"
     },
-    "hero":{
-        "tilte":"La culture Japonaise",
-        "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
-        "subtitle":"À VOTRE RENCONTRE",
-        "buttons":{
-            "subscription":"Inscription",
-            "more":"En savoir plus"
+    "hero": {
+        "title": "Japanese culture",
+        "description": "Gengoffee is a Franco-Japanese group that organises events in French/Japanese and French/English in Paris.",
+        "subtitle": "AWAITS YOU", 
+        "buttons": {
+            "register": "Sign up",
+            "more": "Learn more"
         }
     },
-    "carrousel":{
-        "title":"Nos événements, votre échanges",
-        "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
+    "carousel": {
+        "title": "Our events, your interaction",
+        "description": "We meet every week to chat over a drink. Find our next events."
     },
-    "partners":{
-        "title":"",
-        "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
-        "partner":{
-            "berthom":{
-                "title":"Un grand merci à Les Berthom qui accueille nos évènements.",
-                "name":"Les Berthom",
-                "address":"35 Boulevard Voltaire\n75011 Paris"
+    "partners": {
+        "title": "Our partners",
+        "description": "Do you want to support Gengoffee or host our next event?",
+        "partner": {
+            "berthom": {
+                "title": "A huge thank you to Les Berthom for hosting our events.",
+                "name": "Les Berthom",
+                "address": "35 Boulevard Voltaire<br>75011 Paris"
             }
         }
     },
-    "events":{
-        "title":"Events",
-        "description":"Want to practice your french, english or japanese ? <br>Register to our next event !",
-        "past":{
-            "title":"Our passed events"
-        }        
+    "events": {
+        "title": "Events",
+        "description": "Do you want to improve your French, English or Japanese?<br>Join our next event!",
+        "pastevents": {
+            "title": "Previous events"
+        },
+        "nextevents": "Our next events",
+        "incoming": "Soon",
+        "past": "Past"
     },
-    "explaination":{
-        "title":"Comment se déroule\nun évènement Gengoffee ?",
-        "uptitle":"En savoir un peu plus",
-        "1":"1.  On vous installe à une table numérotée de 6 à 8 personnes.",
-        "2":"2.  Français, anglais ou japonais,\nvous discutez dans la langue indiquée\npendant 15min.",
-        "3":"3.  Au bout de 15min, on change de langue.\nContinuez la conversation !",
-        "4":"4.  Améliorez ainsi votre language\ngrâce aux différents interlocuteurs !"
+    "explanation": {
+        "title": "How does the event work?",
+        "uptitle": "Find out more",
+        "1": "<span class=\"font-semibold\">1.</span> We'll find you a seat<br> at a table of <span class=\"font-semibold\">6 to 8 people.</span>",
+        "2": "<span class=\"font-semibold\">2.</span> French, English or Japanese,<br>you'll speak in one language for<br><span class=\"font-semibold\">15 mins.</span>",
+        "3": "<span class=\"font-semibold\">3.</span> After 15 mins, <span class=\"font-semibold\">we switch language.</span> <br>The conversation continues!",
+        "4": "<span class=\"font-semibold\">4.</span> Improve your language skills<br> with a range of conversation partners!"
     },
-    "register":{
-        "title":"Inscription",
-        "savethedate":"SAVE THE DATE !",
-        "nextevent":"inscrivez-vous également à nos prochains événements :)",
-        "form":{
-            "title":"Participer au prochain évènement Gengoffee",
-            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
-            "name":"Nom & Prénom",
-            "mail":"Adresse e-mail",
-            "phone":"Numéro de Téléphone",
-            "language":{
-                "title":"Langues parlées",
-                "english":"Anglais",
-                "add":"Ajouter une langue",
-                "french":"Français",
-                "japanese":"Japonais",
-                "lv1":"Débutant",
-                "lv2":"intérmédiaire",
-                "lv3":"Courant"
+    "register": {
+        "title": "Sign up",
+        "savethedate": "SAVE THE DATE !",
+        "optional": "optional",
+        "nextevent": "Sign up for our upcoming events :)",
+        "form": {
+            "title": "Sign up for the next Gengoffee event",
+            "description": "Join us for a conversation over a drink while improving your language skills!",
+            "name": "Full name",
+            "mail": "Email",
+            "phone": "Phone",
+            "language": {
+                "title": "Languages spoken",
+                "add": "Add a language",
+                "english": "English",
+                "french": "French",
+                "japanese": "Japanese",
+                "lv1": "Beginner",
+                "lv2": "Intermediate",
+                "lv3": "Fluent"
             },
-            "diet":{
-                "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
-                "description":"Si vous avez des allergies veuillez nous le préciser par message ci-dessous.",
-                "none":"Aucun",
-                "vegan":"Vegan",
-                "vegetarian":"Végétarien",
-                "casher":"Casher",
-                "halal":"Halal",
-                "other":"Autres"
+            "diet": {
+                "title": "Do you have any allergies or dietary requirements?",
+                "description": "Please tell us about any allergies in the box below.",
+                "none": "None",
+                "vegan": "Vegan",
+                "vegetarian": "Vegetarian",
+                "kosher": "Kosher",
+                "halal": "Halal",
+                "other": "Other/Allergies"
+            },
+            "register": "Sign up"
+        }
+    },
+    "about": {
+        "title": "About",
+        "subtitle": "Who are we?",
+        "description": "Gengoffee is a Franco-Japanese group based in Paris, bringing together a multiclutural and multilinguistic community during our events. <br><br>We organise French-Japanese and French-English language exchanges in a friendly and supportive environment. Our events are hosted in cafés and bars allowing us to relax and chat over a drink! <br><br>We host multiple events every month and welcome all levels of fluency.",
+        "followus": "You can also contact us on social media!",
+        "people": {
+            "alan": {
+                "title": "",
+                "description": "",
+                "link": {
+                    "linkedin": "",
+                    "website": ""
+                }
+            }
+        },
+        "stats": {
+            "title": "Gengoffee in figures...",
+            "1": {
+                "title": "Events",
+                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">2000 sign-ups </span> and counting!"
+            },
+            "2": {
+                "title": "Community",
+                "description": "A total of more than<span class=\"font-semibold\">2600 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
+            },
+            "3": {
+                "title": "Collaborators",
+                "description": "The group is currently organised by <span class=\"font-semibold\">11</span> active collaborators. Not to mention our external partners!"
             }
         }
     },
-    "contact":{
-        "title":"N'hésitez pas à nous écrire",
-        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
-        "name":"Nom & Prénom",
-        "mail":"Adresse e-mail",
-        "phone":"Numéro de Téléphone",
-        "objet":"Objet",
-        "message":"Message",
-        "button":"Envoyer",
-        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
-    }
+    "contact": {
+        "title": "Write to us!",
+        "titleResponsive": "Write to us!",
+        "description": "Fill out the form below or email us directly on contact@gengoffee.fr",
+        "name": "Full name",
+        "mail": "Email",
+        "phone": "Phone",
+        "object": "Subject",
+        "message": "Message",
+        "button": "Send",
+        "p_object": "Email subject",
+        "p_message": "I have a really good idea to share with your organisation and I'd like to work with you ! <3"
+    },
+    "en": "English",
+    "fr": "French",
+    "jp": "Japanese"
 }

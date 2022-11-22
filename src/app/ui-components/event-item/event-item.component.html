@@ -1,20 +1,20 @@
 <!-- TODO : Add parameters for content and a proper database interaction -->
 <!-- Event wrapper -->
-<div [ngClass]="{'opacity-100': active}" class="w-[22rem] p-5 opacity-50 rounded-[0.625rem] border border-solid border-[#262829] border-opacity-50">
+<div [ngClass]="{'opacity-100': active}" class="w-[22rem] p-4 opacity-50 rounded-[0.625rem] border border-solid border-[#262829] border-opacity-50">
   <!-- Event box -->
-  <div class="p-4 bg-[#F8E7E7] rounded-[0.625rem]">
+  <div class="p-4 {{getColorByCountry()}} rounded-[0.625rem]">
     <!-- Event informations -->
     <div class="flex justify-between ppmori">
-      <div class="text-xl italic font-thin tracking-[0.05em]">Passé</div>
+      <div class="text-xl italic font-thin tracking-[0.05em]">{{isPastEvent()}}</div>
       <div class="flex flex-col">
-        <div class="text-sm font-semibold">{{event.date}}</div>
-        <div class="text-xs">{{renderFlags()}} {{event.place}} - {{hour}}</div>
+        <div class="text-sm font-semibold">{{getTranslatedDate()}}</div>
+        <div class="text-xs">{{renderFlags()}} {{event.place}} - {{getDayHour()}}</div>
       </div>
     </div>
     <!-- Event image -->
-    <img class="pt-4 m-auto w-full" src="assets/images/gengoffee_event-1.png" />
-    <button *ngIf="active && participateLink" class="place-content-center flex mx-auto mt-3 gengoffee-btn gengoffee-btn-secondary">
-      Participer
+    <img class="pt-4 m-auto w-full" [src]="'assets/images/' + getImageByCountry()" />
+    <button [routerLink]="['/register']" [state]="{ id: event.id }" *ngIf="active && participateLink" class="place-content-center flex mx-auto mt-3 gengoffee-btn gengoffee-btn-secondary">
+      {{'register.form.register'|translate}}
     </button>
   </div>
 </div>

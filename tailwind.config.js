@@ -4,7 +4,9 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      'gengoffee-black': '#262829'
+    },
   },
   plugins: [],
 }
