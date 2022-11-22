@@ -43,8 +43,7 @@ export class RegisterComponent implements OnInit {
     private eventservice: EventService,
     private registerservice:RegisterService,
     private translateService: TranslateService,
-    public _snackBar: MatSnackBar,
-    private snackBar: MatSnackBar
+    public _snackBar: MatSnackBar
     ) {
   }
 
@@ -89,8 +88,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(){
     const configSnack = new MatSnackBarConfig();
-    configSnack.panelClass = ['background-red'];
-    configSnack.verticalPosition = 'top';
+    configSnack.panelClass = [''];
     configSnack.horizontalPosition = 'center';
 
     if(this.registerForm.get('name')?.value as string !== "" && this.registerForm.get('mail')?.value as string !== "" ){
@@ -104,7 +102,6 @@ export class RegisterComponent implements OnInit {
       this.selectedLanguages = [];
     } else {
       this._snackBar.open(this.translateService.instant('errorRegister'), "fermer", configSnack);
-      //alert(this.translateService.instant('errorRegister'))
     }
   }
 
@@ -116,5 +113,4 @@ export class RegisterComponent implements OnInit {
       }
     });
   }
-
 }
