@@ -6,7 +6,8 @@
     <app-animated-quote class="absolute md:hidden top-10 -left-20 scale-75 text-[12px]" [width]="210" content="wanna say something ?"></app-animated-quote>
     <app-animated-quote class="absolute md:hidden -top-10 -right-16 scale-[65%] text-[16px]" [width]="150" content="お問い合わせ" [revert]="true"></app-animated-quote>
   </h1>
-  <div class="relative text-center text-xl mt-20 md:mt-14 w-fit mx-auto" [innerHtml]="'contact.description'|translate">
+  <div class="relative w-fit mx-auto mt-20 md:mt-14">
+    <div class="text-center text-xl" [innerHtml]="'contact.description' | translate"></div>
     <app-animated-quote class="hidden md:block absolute -left-64 top-0 scale-100 text-[16px]" [width]="235" content="wanna say something ?"></app-animated-quote>
     <app-animated-quote class="hidden md:block absolute -top-0 -right-52 scale-[110%] text-[19px]" [width]="175" content="お問い合わせ" [revert]="true"></app-animated-quote>
   </div>

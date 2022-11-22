@@ -1,5 +1,5 @@
 <div class="register">
-    <div class="block md:flex max-w-xs md:max-w-5xl mx-auto pt-24 pb-8">
+    <div class="block md:flex px-3 md:px-0 md:max-w-5xl mx-auto pt-24 pb-8">
         <div class="pt-2 md:border-r md:border-solid md:border-[#]/50">
             <div class="md:pl-12">
                 <h1 class="text-[2.625rem] pl-12">{{'register.title'|translate}}</h1>
@@ -9,7 +9,7 @@
                 <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
             </div>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
-            <div class="mt-10 md:mt-16 flex gap-4 md:gap-10">
+            <div class="mt-10 md:mt-16 flex justify-center gap-4 md:gap-10">
                 <button type="button" (click)="switchEvent(nextEvents[1]?.id)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
                 <button type="button" (click)="switchEvent(nextEvents[2]?.id)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
             </div>
