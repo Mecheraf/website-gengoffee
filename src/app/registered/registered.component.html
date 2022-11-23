@@ -1,2 +1,11 @@
-<div>
-</div>>
+<div class="w-10/12 m-auto mb-80">
+    <div *ngFor="let event of events; let i = index" [ngStyle]="{'border-color': i === nextEvent ? 'red' : 'grey'}" class="m-4 border-4 border-solid w-64 inline-block">
+        <h3>{{event.id}}</h3>
+        <div *ngFor="let registered of event.registeredList" >
+            <span class="">
+                <p class="inline-block pr-2">{{registered.firstName}} </p>
+                <p class="inline-block">{{registered.lastName}}</p>
+            </span>
+        </div>
+    </div>
+</div>
