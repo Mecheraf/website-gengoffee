@@ -5,6 +5,7 @@
     "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optional":"Optionnel",
     "errorRegister":"Veuillez remplir tous les champs nécessaires",
+    "noevents":"Pas d'événement annoncé pour le moment",
     "days": {
         "1":"Lundi",
         "2":"Mardi",
