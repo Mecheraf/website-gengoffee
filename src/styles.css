@@ -119,6 +119,11 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
+.gengoffee-btn:disabled {
+  opacity: .7;
+  cursor: default;
+}
+
 .gengoffee-dropdown {
   box-shadow: 0 0.5px #383445;
   position: relative;
