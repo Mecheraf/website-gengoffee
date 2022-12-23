@@ -3,13 +3,9 @@
     "contact_us": "お問い合わせ",
     "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
     "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
-<<<<<<< HEAD
     "optional":"任意",
     "errorRegister":"必要事項はすべて記入してください",
-=======
-    "optional":"optional",
-    "noevent":"まだ次のイベントの詳細は発表していません",
->>>>>>> aea1c6a (No events)
+    "noevents":"まだ次のイベントの詳細は発表していません",
     "days": {
         "1":"月曜日",
         "2":"火曜日",
