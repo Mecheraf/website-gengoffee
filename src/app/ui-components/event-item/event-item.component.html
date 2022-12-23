@@ -14,7 +14,7 @@
       <!-- If no next events are available, we want to display a fallback card -->
       <ng-container *ngIf="fallback">
         <!-- TODO : Translate -->
-        <div class="text-sm">No events available at the moment, stay tuned.</div>
+        <div class="text-sm">{{'noevents' | translate}}</div>
       </ng-container>
     </div>
     <!-- Event image -->
