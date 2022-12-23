@@ -1,6 +1,7 @@
 import { ListKeyManager } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 import { __values } from 'tslib';
+import { RegisteredService } from '../services/registered.service';
 
 interface registeredUser {
   firstName:string,
@@ -24,6 +25,7 @@ export class RegisteredComponent implements OnInit {
 
   public today = new Date()
   public nextEvent = 0;
+  public registeredList: any = [];
  
   public alanUser:registeredUser = {
     firstName:"Alan",
@@ -76,10 +78,13 @@ export class RegisteredComponent implements OnInit {
     {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2}
   ];
 
-  constructor() { }
+  constructor(
+    private registeredService: RegisteredService
+  ) { }
 
   ngOnInit(): void {
     this.getNextEvent(this.events);
+    this.getRegistered();
   }
 
   private getNextEvent(listEvents:eventsList[]){
@@ -90,4 +95,15 @@ export class RegisteredComponent implements OnInit {
     this.nextEvent = i;
   }
 
+  private getRegistered(): void {
+    this.registeredService.get().subscribe((registeredList) => {
+      this.registeredList = registeredList;
+      console.log(registeredList)
+    });
+  }
+
+  public DisplayList(){
+    console.log(this.registeredList)
+  }
+  
 }
