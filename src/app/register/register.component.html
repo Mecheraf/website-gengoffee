@@ -7,6 +7,7 @@
                     style="text-shadow: 1px 0 0 #262829, 0 -1px 0 #262829, 0 1px 0 #262829, -1px 0 0 #262829;">
                     {{'register.savethedate'|translate}}</h2>
                 <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
+                <app-event-item *ngIf="nextEvents?.length === 0" [fallback]="true"></app-event-item>
             </div>
             <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
             <div class="mt-10 md:mt-16 flex justify-center gap-4 md:gap-10">
@@ -54,7 +55,7 @@
                     <button type="button" (click)="toggleOther()" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.other'|translate}}</button>
                     <textarea [(ngModel)]="otherText" [ngModelOptions]="{standalone: true}" *ngIf="showText" name="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
                 </div>
-                <button type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
                 </button>                             
             </form>
