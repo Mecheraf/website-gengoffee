@@ -4,7 +4,11 @@
     "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
     "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optional":"Optionnel",
+<<<<<<< HEAD
     "errorRegister":"Veuillez remplir tous les champs nécessaires",
+=======
+    "noevent":"Pas d'événement annoncé pour le moment",
+>>>>>>> aea1c6a (No events)
     "days": {
         "1":"Lundi",
         "2":"Mardi",
