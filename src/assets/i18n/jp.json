@@ -4,6 +4,7 @@
     "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
     "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
     "optional":"optional",
+    "noevent":"まだ次のイベントの詳細は発表していません",
     "days": {
         "1":"月曜日",
         "2":"火曜日",

@@ -4,6 +4,7 @@
     "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
     "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optional":"Optionnel",
+    "noevent":"Pas d'événement annoncé pour le moment",
     "days": {
         "1":"Lundi",
         "2":"Mardi",
