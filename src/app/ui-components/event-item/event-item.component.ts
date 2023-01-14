@@ -71,7 +71,7 @@ export class EventItemComponent implements OnInit {
 
   public getDayHour() {
     const eventDate = new Date(this.event.date);
-    return eventDate.getUTCHours() + ':' + eventDate.getMinutes();
+    return eventDate.getUTCHours() + ':' + eventDate.getMinutes().toString();
   }
 
 }
