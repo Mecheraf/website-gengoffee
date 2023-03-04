@@ -6,6 +6,7 @@
     "optional":"Optionnel",
     "errorRegister":"Veuillez remplir tous les champs nécessaires",
     "noevents":"Pas d'événement annoncé pour le moment",
+    "hello":"Hello",
     "days": {
         "1":"Lundi",
         "2":"Mardi",
@@ -44,10 +45,10 @@
         "questions":"Des questions ?",
         "followus":"Abonnez-vous sur les réseaux !",
         "conditions":"Conditions générales"
-    },
+    },  
     "hero":{
         "title":"La culture Japonaise",
-        "description":"Gengoffee est une association Franco-Japonaise organisant des événements Franco-Japonais et Franco-Anglais à Paris",
+        "description":"Gengoffee est une association franco-japonaise organisant des événements franco-japonais et franco-anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
             "register":"Inscription",
@@ -124,7 +125,7 @@
     "about":{
         "title":"À propos",
         "subtitle":"Qui sommes-nous ?",
-        "description":"Gengoffee est une association Franco-Japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d’organiser des échanges de langues Franco-Japonais dans un but d’entraide, amical et culturel.Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
+        "description":"Gengoffee est une association franco-japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d’organiser des échanges de langues franco-japonais dans un but d’entraide, amical et culturel. Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "people":{
             "alan":{
@@ -140,11 +141,11 @@
             "title":"En quelques chiffres...",
             "1":{
                 "title":"Événements",
-                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">2000 d'inscriptions</span>!"
+                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">3000 d'inscriptions</span>!"
             },
             "2":{
                 "title":"Communauté",
-                "description":"Un total de plus de <span class=\"font-semibold\">2600 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
+                "description":"Un total de plus de <span class=\"font-semibold\">3000 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
             },            
             "3":{
                 "title":"Collaborateurs",

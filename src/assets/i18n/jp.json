@@ -4,8 +4,8 @@
     "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
     "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
     "optional":"任意",
-    "errorRegister":"必要事項はすべて記入してください",
-    "noevents":"まだ次のイベントの詳細は発表していません",
+    "noevent":"まだ次のイベントの詳細は発表していません",
+    "hello":"Bonjour",
     "days": {
         "1":"月曜日",
         "2":"火曜日",
