@@ -4,7 +4,8 @@
     "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
     "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optional":"Optionnel",
-    "noevent":"Pas d'événement annoncé pour le moment",
+    "errorRegister":"Veuillez remplir tous les champs nécessaires",
+    "noevents":"Pas d'événement annoncé pour le moment",
     "hello":"Hello",
     "days": {
         "1":"Lundi",
@@ -156,7 +157,7 @@
     "contact":{
         "title":"N'hésitez pas à nous écrire",
         "titleResponsive":"Ecrivez-nous",
-        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
+        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
         "name":"Nom & Prénom",
         "mail":"Adresse e-mail",
         "phone":"Numéro de Téléphone",

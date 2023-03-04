@@ -3,7 +3,7 @@
     "contact_us": "お問い合わせ",
     "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
     "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
-    "optional":"optional",
+    "optional":"任意",
     "noevent":"まだ次のイベントの詳細は発表していません",
     "hello":"Bonjour",
     "days": {
@@ -147,7 +147,7 @@
                 "description":"全グループの合計<span class=\"font-semibold\">2600人突破</span>！ MeetupやInstagramのフォローもお願いします"
             },            
             "3":{
-                "title":"Collaborateurs",
+                "title":"スタッフ",
                 "description":"現在11人のスタッフで運営しています。イベントパートナーの存在も忘れてはなりません。"
             }
 

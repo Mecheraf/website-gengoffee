@@ -1,7 +1,9 @@
 <section class="mt-16 md:mt-28 flex place-items-center text-center">
-  <div class="m-auto">
+  <div class="relative m-auto">
     <h1 class="text-[2.25rem] md:text-[2.625rem]">{{'events.title'|translate}}</h1>
-    <div class="md:text-xl pt-14 md:pt-10" [innerHtml]="'events.description' | translate"></div>
+    <app-animated-quote class="absolute top-12 left-9 md:-top-10 md:-left-8 scale-[65%] md:scale-[105%]" [width]="120" content="events !"></app-animated-quote>
+    <app-animated-quote class="absolute -top-9 right-9 md:top-8 md:-right-6 scale-75 md:scale-[115%]" [width]="120" content="イベント" [revert]="true"></app-animated-quote>
+    <div class="md:text-xl pt-16 md:pt-10" [innerHtml]="'events.description' | translate"></div>
     <div class="pt-5">
       <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
@@ -16,6 +18,7 @@
   <h2 class="text-lg md:text-[1.375rem] text-center font-light">{{'events.nextevents'|translate}}</h2>
   <div class="flex justify-center place-items-center flex-col md:flex-row mt-5 gap-7 md:gap-14">
     <app-event-item *ngFor="let event of nextEvents" [event]="event" [active]="true"></app-event-item>
+    <app-event-item *ngIf="nextEvents?.length === 0" [fallback]="true"></app-event-item>
   </div>
 </section>
 <section class="w-fit mt-16 md:mt-28 mx-auto">
@@ -23,7 +26,9 @@
     <div class="md:flex-1"></div>
     <div class="md:m-auto md:flex-1 text-center text-lg font-light md:text-[1.375rem]">{{'events.pastevents.title' | translate}}</div>
     <div class="md:flex-1 md:justify-end">
-      <!-- TODO : Fill dropdown and add the animation -->
+      <!-- TODO : Fill dropdown and add the animation
+                  Edit : Do we really want this dropdown ?
+       -->
       <div class="gengoffee-dropdown mt-5 mx-auto md:mt-0 md:ml-auto md:mr-0 hidden">Les plus récents</div>
     </div>
   </div>
