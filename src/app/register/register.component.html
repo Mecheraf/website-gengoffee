@@ -46,7 +46,6 @@
                 <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>
                 <div class="">
-                    <!-- <button type="button" (click)="toggleDiet('None')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('None')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.none'|translate}}</button> -->
                     <button type="button" (click)="toggleDiet('vegetarian')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value?.includes('vegetarian')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.vegetarian'|translate}}</button>
                     <button type="button" (click)="toggleDiet('vegan')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value?.includes('vegan')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.vegan'|translate}}</button>
                     <button type="button" (click)="toggleDiet('halal')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value?.includes('halal')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.halal'|translate}}</button>
