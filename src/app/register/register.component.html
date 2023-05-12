@@ -11,7 +11,7 @@
             <p class="pt-6">{{'register.form.description'|translate}}</p>
             <p class="pt-14 ppmori-bold text-left md:w-2/3 w-4/5 m-auto">{{'register.eventDate'|translate}}</p>
             <div class="mt-4 gap-8 flex flex-wrap justify-center w-4/5 m-auto md:w-full">
-                <button type="button" (click)="selectEvent(nextEvents[0]?.id)" [ngClass]="nextEvents[0]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]"></app-past-event-card></button>
+                <button type="button" (click)="selectEvent(nextEvents[0]?.id)" [ngClass]="nextEvents[0]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="nextEvents[0]"></app-past-event-card></button>
                 <button type="button" (click)="selectEvent(nextEvents[1]?.id)" [ngClass]="nextEvents[1]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
                 <button type="button" (click)="selectEvent(nextEvents[2]?.id)" [ngClass]="nextEvents[2]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
             </div>

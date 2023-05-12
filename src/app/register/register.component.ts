@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
   });
   public events:any;
   public nextEvents:any;
-  public selectedEvent:any = 0;
+  public selectedEvent:string = "0";
 
   constructor(
     private eventservice: EventService,
@@ -55,9 +55,6 @@ export class RegisterComponent implements OnInit {
   getNextEvents(limit:number) {
     this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
       this.nextEvents = data;
-      if(window.history.state?.id) {
-        this.switchEvent(window.history.state.id);
-      } 
     })
   }
 
@@ -96,9 +93,6 @@ export class RegisterComponent implements OnInit {
     const name:string = this.registerForm.get('name')?.value;
     const mail:string = this.registerForm.get('mail')?.value;
 
-
-
-
     if(name.length === 0  || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
       console.log("Failed")
@@ -115,14 +109,6 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  switchEvent(id: string) {
-    this.nextEvents.map((event: Event, index: number) => {
-      if (event.id === id) {
-        this.nextEvents[index] = this.nextEvents[0];
-        this.nextEvents[0] = event;
-      }
-    });
-  }
 
   selectEvent(id:string) {
     this.selectedEvent = id;
