@@ -126,7 +126,6 @@ export class RegisterComponent implements OnInit {
 
   selectEvent(id:string) {
     this.selectedEvent = id;
-    console.log(this.selectedEvent);
   }
   
 }
