@@ -186,6 +186,14 @@ h1, h2, h3, h4, h5 {
   font-family: 'PPMori';
 }
 
+.ppmori-bold {
+  font-family: 'PPMori-bold';
+}
+
+.ppmori-light {
+  font-family: 'PPMori-light';
+}
+
 .divider {
   border-top-width: 1px;
   border-color: rgba(38,40,41,0.5);

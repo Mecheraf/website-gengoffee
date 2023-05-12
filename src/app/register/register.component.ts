@@ -38,6 +38,7 @@ export class RegisterComponent implements OnInit {
   });
   public events:any;
   public nextEvents:any;
+  public selectedEvent:any = 0;
 
   constructor(
     private eventservice: EventService,
@@ -86,23 +87,31 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
-    if (this.nextEvents.length === 0) return;
+    const validConfigSnack = new MatSnackBarConfig();
+    validConfigSnack.panelClass = ['valid-snackbar'];
+    validConfigSnack.horizontalPosition = 'center';
+    const invalidConfigSnack = new MatSnackBarConfig();
+    invalidConfigSnack.panelClass = ['invalid-snackbar'];
+    invalidConfigSnack.horizontalPosition = 'center';
+    const name:string = this.registerForm.get('name')?.value;
+    const mail:string = this.registerForm.get('mail')?.value;
 
-    const configSnack = new MatSnackBarConfig();
-    configSnack.panelClass = [''];
-    configSnack.horizontalPosition = 'center';
 
-    if(this.registerForm.get('name')?.value as string !== "" && this.registerForm.get('mail')?.value as string !== "" ){
+
+
+    if(name.length === 0  || mail.length === 0){
+      this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
+      console.log("Failed")
+    } else {
       const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
       dietList.push(this.otherText);
-      this.registerForm.patchValue({'id_event':this.nextEvents[0].id});
+      this.registerForm.patchValue({'id_event':this.selectedEvent});
       this.registerForm.patchValue({'dietList': dietList});
       this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
       this.registerservice.post(this.registerForm.value).subscribe();
       this.registerForm.reset();
       this.selectedLanguages = [];
-    } else {
-      this._snackBar.open(this.translateService.instant('errorRegister'), "fermer", configSnack);
+      this._snackBar.open(this.translateService.instant('registered'), "Fermer", validConfigSnack);
     }
   }
 
@@ -114,4 +123,10 @@ export class RegisterComponent implements OnInit {
       }
     });
   }
+
+  selectEvent(id:string) {
+    this.selectedEvent = id;
+    console.log(this.selectedEvent);
+  }
+  
 }

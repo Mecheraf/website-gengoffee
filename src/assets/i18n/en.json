@@ -4,6 +4,7 @@
     "fullDate": "{{day}}, {{dayNumber}} of {{month}} {{year}}",
     "dateWithoutYear": "{{day}}, {{dayNumber}} {{month}}",
     "optional": "optional",
+    "registered":"You have been registered successfully !",
     "errorRegister":"Please fill all required fields",
     "noevent":"No events availible at the moment, stay tuned",
     "hello":"Bonjour",
@@ -92,6 +93,7 @@
         "savethedate": "SAVE THE DATE !",
         "optional": "optional",
         "nextevent": "Sign up for our upcoming events :)",
+        "eventDate":"Date of the event you're attending",
         "form": {
             "title": "Sign up for the next Gengoffee event",
             "description": "Join us for a conversation over a drink while improving your language skills!",
