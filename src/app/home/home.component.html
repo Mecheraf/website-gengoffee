@@ -23,24 +23,22 @@
       </button>
     </div>
   </div>
-  <!-- TODO : Improve responsive for the mountain image -->
-  <!-- TODO : Add gray tooltip animations -->
   <div class="md:w-6/12">
     <div class="flex pt-10 md:pt-0 place-content-center md:place-content-end">
       <div class="relative w-[24rem] h-[29rem]">
         <img class="absolute bottom-0" src="assets/images/mountain-view.png" />
         <img class="absolute top-0" src="assets/images/red-shaped-mask.png" />
         <div class="absolute outline-1 outline-offset-[-1rem] outline-white outline-double z-10 w-full h-full"></div>
-        <app-animated-quote class="hidden md:block absolute scale-150 z-10 top-16 -left-16" content="Hello :)"></app-animated-quote>
-        <app-animated-quote class="hidden md:block absolute scale-150 z-10 bottom-20 -right-16" content="Hello :)" [revert]="true"></app-animated-quote>
+        <app-animated-quote class="hidden md:block absolute scale-150 z-10 top-16 -left-16" content="{{'hello'|translate}} :)"></app-animated-quote>
+        <app-animated-quote class="hidden md:block absolute scale-150 z-10 bottom-20 -right-16" content="こんにちは" [revert]="true"></app-animated-quote>
       </div>
     </div>
     <!-- MOBILE BUTTONS -->
     <div class="pt-9 md:hidden flex place-content-center">
-      <button class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
+      <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
       </button>
-      <button class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+      <button [routerLink]="['/about']" class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
         {{'hero.buttons.more'|translate}} 
       </button>
     </div>

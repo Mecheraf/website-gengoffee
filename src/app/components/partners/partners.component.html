@@ -1,8 +1,10 @@
 <div class="flex place-items-center flex-col text-center">
-  <h4 class="font-medium text-base md:text-2xl">{{'partners.title'|translate}}</h4>
-  <div class="ppmori font-semibold mt-8 relative">
+  <div class="relative">
+    <h4 class="font-medium text-base md:text-2xl">{{'partners.title'|translate}}</h4>
+    <app-animated-quote class="absolute z-10 top-4 -right-24 md:-right-60 scale-[70%] md:scale-100" content="thank you!" [empty]="emptyQuote"></app-animated-quote>
+  </div>
+  <div class="ppmori font-semibold mt-8">
     {{'partners.partner.berthom.title'|translate}}
-    <app-animated-quote class="hidden md:block absolute z-10 -top-12 -right-24" content="thank you!" [empty]="emptyQuote"></app-animated-quote>
   </div>
   <div class="flex mt-10">
     <img class="mr-10" src="assets/images/berthom-logo.svg"/>

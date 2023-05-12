@@ -1,7 +1,7 @@
 const NEXT_EVENTS = 3
 
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
@@ -30,8 +30,8 @@ export class RegisterComponent implements OnInit {
 
   public registerForm: FormGroup = new FormGroup({
     id_event: new FormControl<string>(''),
-    name: new FormControl<string>(''),
-    mail: new FormControl<string>(''),
+    name: new FormControl<string>('', [Validators.required]),
+    mail: new FormControl<string>('', [Validators.required]),
     phone: new FormControl<string>(''),
     selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
     dietList: new FormControl<string[]>([]),
@@ -62,7 +62,6 @@ export class RegisterComponent implements OnInit {
   }
 
   toggleDiet (selectedDiet: string) {
-    
     const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
     if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
       this.registerForm.patchValue({'dietList': dietList.filter(diet => selectedDiet !== diet)});
@@ -96,6 +95,7 @@ export class RegisterComponent implements OnInit {
     invalidConfigSnack.horizontalPosition = 'center';
     const name:string = this.registerForm.get('name')?.value;
     const mail:string = this.registerForm.get('mail')?.value;
+
 
 
 
