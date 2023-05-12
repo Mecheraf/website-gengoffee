@@ -4,6 +4,7 @@
     "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
     "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
     "optional":"Optionnel",
+    "registered":"Votre inscription a été prise en compte !",
     "errorRegister":"Veuillez remplir tous les champs nécessaires",
     "days": {
         "1":"Lundi",
@@ -91,6 +92,7 @@
         "savethedate":"SAVE THE DATE !",
         "optional":"facultatif",
         "nextevent":"Inscrivez-vous également à nos prochains événements :)",
+        "eventDate":"Date de l'événement auquel vous vous inscrivez",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
             "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",

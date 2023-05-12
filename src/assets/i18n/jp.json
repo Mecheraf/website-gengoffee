@@ -4,6 +4,7 @@
     "fullDate":"{{year}} {{month}} {{dayNumber}}日 {{day}}",
     "dateWithoutYear":"{{month}} {{dayNumber}}日 {{day}}",
     "optional":"任意",
+    "registered":"申し込み完了致しました !",
     "errorRegister":"必要事項はすべて記入してください",
     "days": {
         "1":"月曜日",
@@ -91,6 +92,7 @@
         "savethedate": "SAVE THE DATE !",
         "optional":"任意",
         "nextevent": "次回のイベントに申し込み :)",
+        "eventDate":"登録しているイベントの日付",
         "form": {
             "title": "次のGengoffeeに参加する",
             "description": "私たちと一杯飲みながら言語レベルを上達しよう！ ",
