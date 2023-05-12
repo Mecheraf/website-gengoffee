@@ -6,6 +6,8 @@
     "optional":"任意",
     "registered":"申し込み完了致しました !",
     "errorRegister":"必要事項はすべて記入してください",
+    "noevent":"まだ次のイベントの詳細は発表していません",
+    "hello":"Bonjour",
     "days": {
         "1":"月曜日",
         "2":"火曜日",

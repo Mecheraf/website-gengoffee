@@ -6,6 +6,8 @@
     "optional": "optional",
     "registered":"You have been registered successfully !",
     "errorRegister":"Please fill all required fields",
+    "noevent":"No events availible at the moment, stay tuned",
+    "hello":"Bonjour",
     "days": {
         "1": "Monday",
         "2": "Tuesday",
@@ -124,7 +126,7 @@
     "about": {
         "title": "About",
         "subtitle": "Who are we?",
-        "description": "Gengoffee is a Franco-Japanese group based in Paris, bringing together a multiclutural and multilinguistic community during our events. <br><br>We organise French-Japanese and French-English language exchanges in a friendly and supportive environment. Our events are hosted in cafés and bars allowing us to relax and chat over a drink! <br><br>We host multiple events every month and welcome all levels of fluency.",
+        "description": "Gengoffee is a Franco-Japanese group based in Paris, bringing together a multicultural and multilinguistic community during our events. <br><br>We organise French-Japanese and French-English language exchanges in a friendly and supportive environment. Our events are hosted in cafés and bars allowing us to relax and chat over a drink! <br><br>We host multiple events every month and welcome all levels of fluency.",
         "followus": "You can also contact us on social media!",
         "people": {
             "alan": {
@@ -140,11 +142,11 @@
             "title": "Gengoffee in figures...",
             "1": {
                 "title": "Events",
-                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">2000 sign-ups </span> and counting!"
+                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">3000 sign-ups </span> and counting!"
             },
             "2": {
                 "title": "Community",
-                "description": "A total of more than<span class=\"font-semibold\">2600 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
+                "description": "A total of more than <span class=\"font-semibold\">3000 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
             },
             "3": {
                 "title": "Collaborators",
