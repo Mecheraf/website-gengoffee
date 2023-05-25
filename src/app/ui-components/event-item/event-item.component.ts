@@ -24,6 +24,7 @@ export class EventItemComponent implements OnInit {
   @Input() event: Event = {} as Event;
   @Input() active: boolean = false;
   @Input() participateLink: boolean = true;
+  @Input() fallback: boolean = false;
   constructor(private translateService: TranslateService) { }
 
   ngOnInit(): void {
@@ -53,7 +54,6 @@ export class EventItemComponent implements OnInit {
   }
 
   public isPastEvent(): string {
-    // TODO : translate
     return new Date(this.event.date) < new Date()
       ? this.translateService.instant('events.past')
       : this.translateService.instant('events.incoming');
@@ -71,7 +71,7 @@ export class EventItemComponent implements OnInit {
 
   public getDayHour() {
     const eventDate = new Date(this.event.date);
-    return eventDate.getUTCHours() + ':' + eventDate.getMinutes();
+    return eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0');
   }
 
 }

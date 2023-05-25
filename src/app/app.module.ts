@@ -56,6 +56,9 @@ import { RegisteredComponent } from './registered/registered.component';
     AboutUsComponent,
     RegisterComponent,
     CreateeventComponent,
+    ContactComponent
+    ],
+    CreateeventComponent,
     ContactComponent,
     RegisteredComponent
     ],
@@ -81,10 +84,14 @@ import { RegisteredComponent } from './registered/registered.component';
     MatNativeDateModule,
     NgxMatNativeDateModule,
     MatSnackBarModule
+    NgxMatNativeDateModule,
+    MatSnackBarModule
 
   ],
   providers: [
     MatDatepickerModule,
+    DatePipe,
+    MatSnackBarModule
     DatePipe,
     MatSnackBarModule
   ],

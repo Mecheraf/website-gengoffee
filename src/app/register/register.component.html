@@ -1,33 +1,32 @@
 <div class="register">
-    <div class="block md:flex max-w-xs md:max-w-5xl mx-auto pt-24 pb-8">
-        <div class="pt-2 md:border-r md:border-solid md:border-[#]/50">
-            <div class="md:pl-12">
-                <h1 class="text-[2.625rem] pl-12">{{'register.title'|translate}}</h1>
-                <h2 class="text-white pl-6"
+    <div class="max-w-xs md:max-w-5xl mx-auto pt-4 pb-8 text-center">
+        <div class="md:pl-14 pt-6">
+            <div class="">
+                <h1 class="text-[2.625rem]">{{'register.title'|translate}}</h1>
+                <h2 class="text-white"
                     style="text-shadow: 1px 0 0 #262829, 0 -1px 0 #262829, 0 1px 0 #262829, -1px 0 0 #262829;">
                     {{'register.savethedate'|translate}}</h2>
-                <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" [participateLink]="false"></app-event-item>
             </div>
-            <p class="text-center pt-8 text-[1.5rem]">{{'register.nextevent'|translate}}</p>
-            <div class="mt-10 md:mt-16 flex gap-4 md:gap-10">
-                <button type="button" (click)="switchEvent(nextEvents[1]?.id)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[1]"></app-past-event-card></button>
-                <button type="button" (click)="switchEvent(nextEvents[2]?.id)" ><app-past-event-card *ngIf="nextEvents?.length > 0" [event]="nextEvents[2]"></app-past-event-card></button>
-            </div>
-        </div>
-        <div class="md:pl-14 pt-6">
-            <p class="font-bold">{{'register.form.title'|translate}}</p>
+            <p class="font-bold text-2xl pt-10">{{'register.form.title'|translate}}</p>
             <p class="pt-6">{{'register.form.description'|translate}}</p>
-            <form class="pt-2" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <p class="pt-14 ppmori-bold text-left md:w-2/3 w-4/5 m-auto">{{'register.eventDate'|translate}}</p>
+            <div class="mt-4 gap-8 flex flex-wrap justify-center w-4/5 m-auto md:w-full" *ngIf="nextEvents?.length > 0">
+                <button type="button" (click)="selectEvent(nextEvents[0]?.id)" [ngClass]="nextEvents[0]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="nextEvents[0]"></app-past-event-card></button>
+                <button type="button" (click)="selectEvent(nextEvents[1]?.id)" [ngClass]="nextEvents[1]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="nextEvents[1]"></app-past-event-card></button>
+                <button type="button" (click)="selectEvent(nextEvents[2]?.id)" [ngClass]="nextEvents[2]?.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="nextEvents[2]"></app-past-event-card></button>
+            </div>
+            
+            <form class="pt-2 md:w-2/3 m-auto text-left" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                 <p class="pt-6">{{'register.form.name'|translate}}</p>
-                <input type="text" formControlName="name" name="name" placeholder="GENGOFFEE San" class="border-b border-solid pt-4">
+                <input type="text" formControlName="name" name="name" placeholder="GENGOFFEE San" class="w-full border-b border-solid pt-4">
                 <p class="pt-6">{{'register.form.mail'|translate}}</p>
                 <input type="text"  formControlName="mail" name="mail" placeholder="san-gengoffee@gengoffee.fr"
-                    class="border-b border-solid pt-4">
+                    class="w-full border-b border-solid pt-4">
                 <div class="pt-6 whitespace-pre-wrap">
                     <p class="inline">{{'register.form.phone'|translate}} </p>
                     <p class="text-gray-400 inline">({{'register.optional'|translate}})</p>
                 </div>
-                <input type="text" formControlName="phone" name="phone" placeholder="+33X XX XX XX XX" class="border-b border-solid pt-4">
+                <input type="text" formControlName="phone" name="phone" placeholder="+33X XX XX XX XX" class="w-full border-b border-solid pt-4">
                 <p class="pt-8">{{'register.form.language.title'|translate}}</p>
                 <div *ngFor="let language of selectedLanguages; let index = index;" class="flex gap-4 pl-4 my-4">
                     <select [(ngModel)]="language.language" [ngModelOptions]="{standalone: true}" name="language + {{index}}" id="language + {{index}}" class="bg-white border-b-2">
@@ -47,16 +46,15 @@
                 <p class="font-semibold">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>
                 <div class="">
-                    <!-- <button type="button" (click)="toggleDiet('None')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value.includes('None')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.none'|translate}}</button> -->
                     <button type="button" (click)="toggleDiet('vegetarian')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value?.includes('vegetarian')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.vegetarian'|translate}}</button>
                     <button type="button" (click)="toggleDiet('vegan')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value?.includes('vegan')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.vegan'|translate}}</button>
                     <button type="button" (click)="toggleDiet('halal')" [ngClass]="{'border-black' : registerForm.get('dietList')?.value?.includes('halal')}" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.halal'|translate}}</button>
                     <button type="button" (click)="toggleOther()" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.other'|translate}}</button>
                     <textarea [(ngModel)]="otherText" [ngModelOptions]="{standalone: true}" *ngIf="showText" name="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
                 </div>
-                <button type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
-                </button>                
+                </button>                             
             </form>
         </div>
     </div>
