@@ -55,9 +55,6 @@ export class RegisterComponent implements OnInit {
   getNextEvents(limit:number) {
     this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
       this.nextEvents = data;
-      if(window.history.state?.id) {
-        this.switchEvent(window.history.state.id);
-      } 
     })
   }
 

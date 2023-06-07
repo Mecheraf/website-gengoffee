@@ -2,6 +2,8 @@ import { ListKeyManager } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 import { __values } from 'tslib';
 import { RegisteredService } from '../services/registered.service';
+import { EventService } from '../services/event.service';
+
 
 interface registeredUser {
   firstName:string,
@@ -10,11 +12,14 @@ interface registeredUser {
   diet:string[]
 }
 
-interface eventsList {
+interface eventsAttendees {
   id:number,
   date:Date,
+  type:string,
   registeredList:registeredUser[]
 }
+
+
 
 @Component({
   selector: 'app-registered',
@@ -23,9 +28,12 @@ interface eventsList {
 })
 export class RegisteredComponent implements OnInit {
 
+
+
   public today = new Date()
-  public nextEvent = 0;
+  public nextEvents:any;
   public registeredList: any = [];
+  public events:eventsAttendees[] = [];
  
   public alanUser:registeredUser = {
     firstName:"Alan",
@@ -67,38 +75,50 @@ export class RegisteredComponent implements OnInit {
 
 
 
-  public events:eventsList[] = [
-    {id:51, date:new Date("2022-11-20"), registeredList:this.registeredList1}, 
-    {id:52, date: new Date("2022-11-27"), registeredList:this.registeredList2},
-    {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
-    {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
-    {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
-    {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
-    {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
-    {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2}
-  ];
+  // public events:eventsAttendees[] = [
+  //   {id:51, date:new Date("2022-11-20"), registeredList:this.registeredList1}, 
+  //   {id:52, date: new Date("2022-11-27"), registeredList:this.registeredList2},
+  //   {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
+  //   {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
+  //   {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
+  //   {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
+  //   {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2},
+  //   {id:53, date: new Date("2022-12-04"), registeredList:this.registeredList2}
+  // ];
 
   constructor(
-    private registeredService: RegisteredService
+    private registeredService: RegisteredService,
+    private eventservice: EventService,
+
   ) { }
 
+
+
   ngOnInit(): void {
-    this.getNextEvent(this.events);
     this.getRegistered();
+    this.getNextEvent(3);
   }
 
-  private getNextEvent(listEvents:eventsList[]){
-    let i = 0;
-    while( i < listEvents.length && listEvents[i].date < this.today){
-      i++
-    }
-    this.nextEvent = i;
+  getNextEvent(limit:number) {
+    this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
+      this.nextEvents = data;
+      console.log(this.nextEvents)
+      this.nextEvents.forEach((element: any, index:number) => {
+        this.events[index] = {
+          id: element.id,
+          date: element.date,
+          type: element.type,
+          registeredList: this.registeredList
+        } ;
+        console.log(element.id);       
+      });
+      console.log(this.events);
+    })
   }
 
   private getRegistered(): void {
-    this.registeredService.get().subscribe((registeredList) => {
+    this.registeredService.getEventAttendees().subscribe((registeredList) => {
       this.registeredList = registeredList;
-      console.log(registeredList)
     });
   }
 

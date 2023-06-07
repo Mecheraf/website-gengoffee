@@ -11,8 +11,8 @@ export class RegisteredService {
   constructor(private http: HttpClient) { }
   private url = environment.API_URL
 
-  public get(options?: any) { 
-    return this.http.get<Event>(this.url+"getRegisteredList", options); 
+  public getEventAttendees(options?: any) { 
+    return this.http.get<Event>(this.url+"getEventAttendees", options); 
   }
 
 }

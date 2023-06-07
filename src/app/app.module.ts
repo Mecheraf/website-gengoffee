@@ -37,7 +37,6 @@ import { RegisteredComponent } from './registered/registered.component';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,9 +54,6 @@ import { RegisteredComponent } from './registered/registered.component';
     AnimatedQuoteComponent,
     AboutUsComponent,
     RegisterComponent,
-    CreateeventComponent,
-    ContactComponent
-    ],
     CreateeventComponent,
     ContactComponent,
     RegisteredComponent
@@ -84,14 +80,9 @@ import { RegisteredComponent } from './registered/registered.component';
     MatNativeDateModule,
     NgxMatNativeDateModule,
     MatSnackBarModule
-    NgxMatNativeDateModule,
-    MatSnackBarModule
-
   ],
   providers: [
     MatDatepickerModule,
-    DatePipe,
-    MatSnackBarModule
     DatePipe,
     MatSnackBarModule
   ],

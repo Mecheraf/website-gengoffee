@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'createevent', component: CreateeventComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'createevent', component: CreateeventComponent},
   { path: 'contact', component: ContactComponent},
