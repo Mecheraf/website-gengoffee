@@ -31,7 +31,7 @@ export class CreateeventComponent implements OnInit {
   public touchUi = false;
   public enableMeridian = false;
   public minDate: Date = new Date("2022-09-04");
-  public maxDate?: Date = new Date("2023-06-30");
+  public maxDate?: Date = new Date("2025-06-30");
   public stepHour = 1;
   public stepMinute = 1;
   public stepSecond = 1;
