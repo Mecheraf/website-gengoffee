@@ -101,7 +101,7 @@ export class RegisterComponent implements OnInit {
       dietList.push(this.otherText);
       this.registerForm.patchValue({'id_event':this.selectedEvent});
       this.registerForm.patchValue({'dietList': dietList});
-      this.registerForm.patchValue({'languages': this.selectedLanguages});
+      this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
       this.registerservice.post(this.registerForm.value).subscribe();
       this.registerForm.reset();
       this.selectedLanguages = [];
