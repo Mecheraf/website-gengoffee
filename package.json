@@ -26,6 +26,7 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "angular-material": "^1.2.5",
+    "bcrypt": "^5.1.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
