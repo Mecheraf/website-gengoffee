@@ -33,6 +33,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 
 
 
@@ -55,7 +56,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AboutUsComponent,
     RegisterComponent,
     CreateeventComponent,
-    ContactComponent
+    ContactComponent,
+    LoginAdminComponent
     ],
   imports: [
     BrowserModule,
