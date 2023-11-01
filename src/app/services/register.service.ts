@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { CookieService } from 'ngx-cookie-service';
+
 
 
 @Injectable({
@@ -24,7 +26,7 @@ export class RegisterService {
    return this.http.put(url, data, options); 
   } 
   public delete(url: string, options?: any) { 
-  return this.http.delete(url, options); 
+    return this.http.delete(url, options); 
   } 
 
 }

@@ -1,0 +1,11 @@
+<form class="pt-2 md:w-2/3 m-auto text-left" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <p class="pt-6">Username</p>
+    <input type="text" formControlName="username" name="username" placeholder="admin" class="w-full border-b border-solid pt-4">
+    <p class="pt-6">Password</p>
+    <input type="password"  formControlName="password" name="password" placeholder="himitsupasswordo"
+        class="w-full border-b border-solid pt-4">
+
+    <button [disabled]="!loginForm.valid" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+        {{'register.form.register'|translate}}
+    </button>                             
+</form>
