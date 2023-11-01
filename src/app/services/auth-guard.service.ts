@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Observable, filter, map } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,20 +11,18 @@ import { CookieService } from 'ngx-cookie-service';
 export class AuthService {
   isLoggedIn = false;
   constructor(
+    private http: HttpClient,
     private cookieService : CookieService
   ) { }
+  private url = environment.API_URL
 
-  async checkToken(){
-    let token = this.cookieService.get('token')
-    if(token){
-      //Si valide, isloggedin = true
-      
-      this.isLoggedIn = true;
+  public isAuthorized(options?: any):Observable<any> { 
+    options = {
+      ...options,
+      headers: {
+        "Authorization":"Bearer "+this.cookieService.get("token")
+      }
     }
-  }
-  
-  async isAuthenticated(){
-    await this.checkToken()
-    return this.isLoggedIn;
+    return this.http.get<any>(this.url+"authorize", options);
   }
 }
