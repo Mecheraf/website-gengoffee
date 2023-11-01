@@ -26,7 +26,7 @@ export class RegisterService {
    return this.http.put(url, data, options); 
   } 
   public delete(url: string, options?: any) { 
-  return this.http.delete(url, options); 
+    return this.http.delete(url, options); 
   } 
 
 }

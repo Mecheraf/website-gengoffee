@@ -59,8 +59,7 @@ import {CookieService} from 'ngx-cookie-service';
     AboutUsComponent,
     RegisterComponent,
     CreateeventComponent,
-    ContactComponent,
-    LoginAdminComponent
+    ContactComponent
     ],
   imports: [
     BrowserModule,
@@ -84,7 +83,6 @@ import {CookieService} from 'ngx-cookie-service';
     MatNativeDateModule,
     NgxMatNativeDateModule,
     MatSnackBarModule
-
   ],
   providers: [
     MatDatepickerModule,
