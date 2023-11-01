@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as bcrypt from 'bcrypt';
 import { environment } from 'src/environments/environment';
 import { LoginService } from '../services/login.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-loginAdmin',
@@ -18,6 +19,7 @@ export class LoginAdminComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
+    private cookieService: CookieService
   ) { }
 
   ngOnInit(): void {
@@ -27,8 +29,19 @@ export class LoginAdminComponent implements OnInit {
   onSubmit(){
     const username:string = this.loginForm.get('username')?.value
     const password:string = this.loginForm.get('password')?.value;
-    console.log(username, password)
-    this.loginService.post(this.loginForm.value).subscribe();
+    this.loginService.post(this.loginForm.value).subscribe((response:any) => {
+      if(response){
+        console.log(response.token)
+        this.cookieService.set('token', response.token, {secure:true})
+      }
+    }); 
+  }
+
+  isAdmin(){
+    if(1==1){
+      return true
+    }
+    return false
   }
 
 }

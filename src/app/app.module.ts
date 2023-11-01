@@ -34,6 +34,9 @@ import { DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
+import {CookieService} from 'ngx-cookie-service';
+
+
 
 
 
@@ -86,7 +89,8 @@ import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
   providers: [
     MatDatepickerModule,
     DatePipe,
-    MatSnackBarModule
+    MatSnackBarModule,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
