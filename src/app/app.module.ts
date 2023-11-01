@@ -34,7 +34,8 @@ import { DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
-import {CookieService} from 'ngx-cookie-service';
+import { CookieService } from 'ngx-cookie-service';
+import { RegisteredComponent } from './registered/registered.component';
 
 
 
@@ -59,7 +60,9 @@ import {CookieService} from 'ngx-cookie-service';
     AboutUsComponent,
     RegisterComponent,
     CreateeventComponent,
-    ContactComponent
+    ContactComponent,
+    LoginAdminComponent,
+    RegisteredComponent
     ],
   imports: [
     BrowserModule,

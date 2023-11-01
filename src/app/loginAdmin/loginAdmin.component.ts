@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import * as bcrypt from 'bcrypt';
 import { environment } from 'src/environments/environment';
 import { LoginService } from '../services/login.service';
 import { CookieService } from 'ngx-cookie-service';

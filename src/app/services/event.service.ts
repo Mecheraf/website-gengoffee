@@ -13,12 +13,6 @@ export class EventService {
   constructor(private http: HttpClient, private cookieService:CookieService) { }
   private url = environment.API_URL
 
-  private options = {
-   headers: {
-    "Authorization":"Bearer "+this.cookieService.get("token")
-   }
-  }
-
 
   public getPastEvents(options?: any) { 
     return this.http.get<Event[]>(this.url+"getPastEvents", options);
@@ -30,6 +24,12 @@ export class EventService {
     return this.http.get<Event[]>(this.url+"getNextEvents", options); 
   }
   public post(data: any, options?: any) { 
+    options = {
+      ...options,
+      headers: {
+        "Authorization":"Bearer "+this.cookieService.get("token")
+      }
+    }
     return this.http.post(this.url+"insertevent", data, options); 
   } 
   public put(url: string, data: any, options?: any) { 

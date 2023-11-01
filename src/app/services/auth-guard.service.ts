@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class AuthService {
       //Validation du token à faire dans le back
       console.log(token)
       //Si valide, isloggedin = true
-      
+
       this.isLoggedIn = true;
     }
   }
