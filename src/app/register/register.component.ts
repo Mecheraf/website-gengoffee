@@ -95,7 +95,6 @@ export class RegisterComponent implements OnInit {
 
     if(name.length === 0  || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
-      console.log("Failed")
     } else {
       const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
       dietList.push(this.otherText);

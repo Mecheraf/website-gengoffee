@@ -13,10 +13,8 @@ export class AuthService {
   async checkToken(){
     let token = this.cookieService.get('token')
     if(token){
-      //Validation du token à faire dans le back
-      console.log(token)
       //Si valide, isloggedin = true
-
+      
       this.isLoggedIn = true;
     }
   }

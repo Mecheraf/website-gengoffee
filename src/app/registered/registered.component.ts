@@ -69,7 +69,6 @@ export class RegisteredComponent implements OnInit {
           registeredList: currentList
         } ;      
       });
-      console.log(this.events);
     })
   }
 

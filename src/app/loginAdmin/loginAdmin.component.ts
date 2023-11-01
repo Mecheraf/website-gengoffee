@@ -30,7 +30,6 @@ export class LoginAdminComponent implements OnInit {
     const password:string = this.loginForm.get('password')?.value;
     this.loginService.post(this.loginForm.value).subscribe((response:any) => {
       if(response){
-        console.log(response.token)
         this.cookieService.set('token', response.token, {secure:true})
       }
     }); 
