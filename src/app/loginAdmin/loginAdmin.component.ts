@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { LoginService } from '../services/login.service';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loginAdmin',
@@ -18,7 +19,8 @@ export class LoginAdminComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +33,7 @@ export class LoginAdminComponent implements OnInit {
     this.loginService.post(this.loginForm.value).subscribe((response:any) => {
       if(response){
         this.cookieService.set('token', response.token, {secure:true})
+        this.router.navigate(['registered']);
       }
     }); 
   }
