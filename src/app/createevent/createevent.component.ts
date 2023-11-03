@@ -31,7 +31,7 @@ export class CreateeventComponent implements OnInit {
   public touchUi = false;
   public enableMeridian = false;
   public minDate: Date = new Date("2022-09-04");
-  public maxDate?: Date = new Date("2023-06-30");
+  public maxDate?: Date = new Date("2025-06-30");
   public stepHour = 1;
   public stepMinute = 1;
   public stepSecond = 1;
@@ -62,8 +62,7 @@ export class CreateeventComponent implements OnInit {
     this.formGroup.type = this.type
     this.formGroup.date = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
-    console.log(this.formGroup)
-    this.eventservice.post(this.formGroup).subscribe()
+    this.eventservice.post(this.formGroup).subscribe();
   }
 
   toggleMinDate(evt: any) {

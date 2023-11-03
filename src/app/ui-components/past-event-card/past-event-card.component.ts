@@ -9,32 +9,34 @@ import { Event } from 'src/app/models/event';
 })
 export class PastEventCardComponent implements OnInit {
 
-  
-
   public language:string ="";
   @Input() event: Event = {} as Event; 
 
-  constructor(public translate: TranslateService) { 
-
-    
-  }
-  
-  
-  
+  constructor(public translateService: TranslateService) {}
 
   ngOnInit(): void {
-    this.switchLanguage()
   }
 
-  public switchLanguage(){
-      
-    /*if(this.event.type == "en"){
-      this.language = this.translate.get('foo.bar').subscribe((res: string) => {
-        return res;;
-      } 
-    } else {
-      this.language = "japanese"
-    }TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  public getLanguageByLocale(){
+    if (!this.event.type) return '';
+    return this.translateService.instant(this.event.type);
+  }
+
+  public getColorByCountry(): string {
+    if (this.event.type === 'jp') {
+      return "gengoffee-lightred-bg";
+    }
+    
+    return "gengoffee-lightblue-bg";
+  }
+
+  public getTranslatedDate() {
+    const eventDate = new Date(this.event.date);
+    const translatedDay = this.translateService.instant('days.' + eventDate.getDay().toString());
+    const translatedMonth = this.translateService.instant('months.' + eventDate.getMonth().toString());
+    const dayNumber = eventDate.getDate();
+
+    return this.translateService.instant('dateWithoutYear', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber });
   }
   
 }

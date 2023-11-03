@@ -1,21 +1,23 @@
 <div class="flex place-items-center flex-col text-center">
-  <h4 class="font-medium text-base md:text-2xl">Nos partenaires</h4>
-  <div class="ppmori font-semibold mt-8 relative">
-    Un grand merci à Les Berthom qui accueille nos évènements.
-    <app-animated-quote class="hidden md:block absolute z-10 -top-12 -right-24" content="thank you!" [empty]="emptyQuote"></app-animated-quote>
+  <div class="relative">
+    <h4 class="font-medium text-base md:text-2xl">{{'partners.title'|translate}}</h4>
+    <app-animated-quote class="absolute z-10 top-4 -right-24 md:-right-60 scale-[70%] md:scale-100" content="thank you!" [empty]="emptyQuote"></app-animated-quote>
+  </div>
+  <div class="ppmori font-semibold mt-8">
+    {{'partners.partner.berthom.title'|translate}}
   </div>
   <div class="flex mt-10">
     <img class="mr-10" src="assets/images/berthom-logo.svg"/>
     <div class="">
-      <p>Les Berthom</p>
+      <p>{{'partners.partner.berthom.name'|translate}}</p>
       <p class="ppmori font-thin">35 Bd Voltaire</p>
       <p class="ppmori font-thin">75011 Paris</p>
     </div>
   </div>
   <div class="mt-10">
-    Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?
+    {{'partners.description'|translate}}
   </div>
-  <button class="gengoffee-btn gengoffee-btn-primary mt-8">
-    Contactez-nous
+  <button [routerLink]="['/contact']" class="gengoffee-btn gengoffee-btn-primary mt-8">
+    {{'contact_us'|translate}}
   </button>
 </div>

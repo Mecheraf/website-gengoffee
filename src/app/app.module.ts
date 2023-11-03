@@ -31,6 +31,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DatePipe } from '@angular/common';
+import { ContactComponent } from './contact/contact.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
+import { CookieService } from 'ngx-cookie-service';
+import { RegisteredComponent } from './registered/registered.component';
+
+
+
+
 
 
 @NgModule({
@@ -50,8 +59,11 @@ import { DatePipe } from '@angular/common';
     AnimatedQuoteComponent,
     AboutUsComponent,
     RegisterComponent,
-    CreateeventComponent
-  ],
+    CreateeventComponent,
+    ContactComponent,
+    LoginAdminComponent,
+    RegisteredComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -72,12 +84,14 @@ import { DatePipe } from '@angular/common';
     MatButtonModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    NgxMatNativeDateModule
-
+    NgxMatNativeDateModule,
+    MatSnackBarModule
   ],
   providers: [
     MatDatepickerModule,
-    DatePipe
+    DatePipe,
+    MatSnackBarModule,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

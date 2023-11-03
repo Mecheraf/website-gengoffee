@@ -1,6 +1,8 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 /* Globals */
 
@@ -19,6 +21,19 @@ body {
 a {
   text-decoration: none;
   color: #262829;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 /* Colors */
@@ -104,6 +119,11 @@ a {
   color: white;
 }
 
+.gengoffee-btn:disabled {
+  opacity: .7;
+  cursor: default;
+}
+
 .gengoffee-dropdown {
   box-shadow: 0 0.5px #383445;
   position: relative;
@@ -166,6 +186,14 @@ h1, h2, h3, h4, h5 {
   font-family: 'PPMori';
 }
 
+.ppmori-bold {
+  font-family: 'PPMori-bold';
+}
+
+.ppmori-light {
+  font-family: 'PPMori-light';
+}
+
 .divider {
   border-top-width: 1px;
   border-color: rgba(38,40,41,0.5);
@@ -174,5 +202,28 @@ h1, h2, h3, h4, h5 {
 .relative {
   position: relative;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spin::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 3px #eee;
+  border-bottom-color: #1F3D87;
+  border-radius: 50%;
+  content: "";
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 20px;
+  will-change: transform;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}

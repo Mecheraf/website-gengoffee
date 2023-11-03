@@ -1,11 +1,42 @@
 {
     "title" : "Français",
     "contact_us":"Contactez-nous",
+    "fullDate":"{{day}} {{dayNumber}} {{month}} {{year}}",
+    "dateWithoutYear":"{{day}} {{dayNumber}} {{month}}",
+    "optional":"Optionnel",
+    "registered":"Votre inscription a été prise en compte !",
+    "errorRegister":"Veuillez remplir tous les champs nécessaires",
+    "noevents":"Pas d'événement annoncé pour le moment",
+    "hello":"Hello",
+    "days": {
+        "1":"Lundi",
+        "2":"Mardi",
+        "3":"Mercredi",
+        "4":"Jeudi",
+        "5":"Vendredi",
+        "6":"Samedi",
+        "0":"Dimanche"
+    },
+    "months":{
+        "0":"Janvier",
+        "1":"Février",
+        "2":"Mars",
+        "3":"Avril",
+        "4":"Mai",
+        "5":"Juin",
+        "6":"Juillet",
+        "7":"Août",
+        "8":"Septembre",
+        "9":"Octobre",
+        "10":"Novembre",
+        "11":"Décembre"
+        
+    },
     "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
     "header":{
         "menu":{
             "home":"Accueil",
-            "events":"Évènements",
+            "events":"Événements",
             "news":"News",
             "about":"À Propos",
             "contact":"Contact"
@@ -15,50 +46,55 @@
         "questions":"Des questions ?",
         "followus":"Abonnez-vous sur les réseaux !",
         "conditions":"Conditions générales"
-    },
+    },  
     "hero":{
         "title":"La culture Japonaise",
-        "description":"Gengoffee est un collectif organisant des événements Franco-Japonais et Franco-Anglais à Paris",
+        "description":"Gengoffee est une association franco-japonaise organisant des événements franco-japonais et franco-anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
         "buttons":{
-            "subscription":"Inscription",
+            "register":"Inscription",
             "more":"En savoir plus"
         }
     },
-    "carrousel":{
-        "title":"Nos événements, votre échanges",
+    "carousel":{
+        "title":"Nos événements, vos échanges",
         "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
     },
     "partners":{
-        "title":"",
+        "title":"Nos partenaires",
         "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
         "partner":{
             "berthom":{
-                "title":"Un grand merci à Les Berthom qui accueille nos évènements.",
+                "title":"Un grand merci à Les Berthom qui accueille nos événements.",
                 "name":"Les Berthom",
                 "address":"35 Boulevard Voltaire\n75011 Paris"
             }
         }
     },
     "events":{
-        "title":"Évènements",
+        "title":"Événements",
         "description":"Vous voulez améliorer votre français, anglais ou japonais ?<br>Participer à notre prochain évènement !",
-        "past":{
-            "title":"Nos évènements passés"
-        }        
+        "pastevents":{
+            "title":"Nos événements passés"
+        },
+        "nextevents":"Nos prochains rendez-vous",
+        "incoming":"À venir",
+        "past":"Passé"
     },
-    "explaination":{
+    "explanation":{
         "title":"Comment se déroule\nun évènement Gengoffee ?",
         "uptitle":"En savoir un peu plus",
-        "1":"1.  On vous installe à une table numérotée de 6 à 8 personnes.",
-        "2":"2.  Français, anglais ou japonais,\nvous discutez dans la langue indiquée\npendant 15min.",
-        "3":"3.  Au bout de 15min, on change de langue.\nContinuez la conversation !",
-        "4":"4.  Améliorez ainsi votre language\ngrâce aux différents interlocuteurs !"
+        "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
+        "2":"<span class=\"font-semibold\">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
+        "3":"<span class=\"font-semibold\">3.</span> Au bout de 15min, <span class=\"font-semibold\">on change de langue.</span> <br>Continuez la conversation !",
+        "4":"<span class=\"font-semibold\">4.</span> Améliorez ainsi votre language<br> grâce aux différents interlocuteurs !"
     },
     "register":{
         "title":"Inscription",
         "savethedate":"SAVE THE DATE !",
+        "optional":"facultatif",
         "nextevent":"Inscrivez-vous également à nos prochains événements :)",
+        "eventDate":"Date de l'événement auquel vous vous inscrivez",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
             "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
@@ -81,19 +117,19 @@
                 "none":"Aucun",
                 "vegan":"Vegan",
                 "vegetarian":"Végétarien",
-                "casher":"Casher",
+                "kosher":"kosher",
                 "halal":"Halal",
                 "other":"Autres/Allergies"
-            }
-        },
-        "optionnal":"facultatif"
+            },
+            "register":"Participer"
+        }
     },
     "about":{
-        "title":"",
-        "subtitle":"",
-        "description":"",
-        "followus":"",
-        "persons":{
+        "title":"À propos",
+        "subtitle":"Qui sommes-nous ?",
+        "description":"Gengoffee est une association franco-japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d’organiser des échanges de langues franco-japonais dans un but d’entraide, amical et culturel. Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
+        "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
+        "people":{
             "alan":{
                 "title":"",
                 "description":"",
@@ -104,18 +140,36 @@
             }
         },
         "stats":{
+            "title":"En quelques chiffres...",
+            "1":{
+                "title":"Événements",
+                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">3000 d'inscriptions</span>!"
+            },
+            "2":{
+                "title":"Communauté",
+                "description":"Un total de plus de <span class=\"font-semibold\">3000 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
+            },            
+            "3":{
+                "title":"Collaborateurs",
+                "description":"Aujourd'hui, l'association est soutenue par <span class=\"font-semibold\">11</span> coopérateurs actifs ! Sans oublier les partenaires de l'association !"
+            }
 
         }
     },
     "contact":{
         "title":"N'hésitez pas à nous écrire",
-        "description":"En remplissant le formulaire ci-dessous\nou directement sur : contact@gengoffee.fr",
+        "titleResponsive":"Ecrivez-nous",
+        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
         "name":"Nom & Prénom",
         "mail":"Adresse e-mail",
         "phone":"Numéro de Téléphone",
-        "objet":"Objet",
+        "object":"Objet",
         "message":"Message",
         "button":"Envoyer",
-        "followus":"Vous pouvez également nous joindre sur les réseaux sociaux"
-    }
+        "p_object":"Objet du mail",
+        "p_message":"Je suis des cours de japonais depuis 5 ans mais j’ai encore des difficultés à m’exprimer :("
+    },
+    "en": "Anglais",
+    "fr": "Français",
+    "jp": "Japonais"
 }
