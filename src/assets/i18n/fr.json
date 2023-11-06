@@ -121,7 +121,8 @@
                 "halal":"Halal",
                 "other":"Autres/Allergies"
             },
-            "register":"Participer"
+            "register":"Participer",
+            "warning":"Cet événement a un nombre de places limité. Un e-mail vous sera envoyé sous 72H pour confirmer votre inscription."
         }
     },
     "about":{

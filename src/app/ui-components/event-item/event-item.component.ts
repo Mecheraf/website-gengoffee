@@ -41,15 +41,16 @@ export class EventItemComponent implements OnInit {
   public getImageByCountry(): string {
     if (this.event.type === 'jp') {
       return 'gengoffee_event-1.png';
+    } else if (this.event.type === 'karaoke') {
+      return 'gengoffee_event-karaoke.png';
     }
     return 'gengoffee_event-2.png';
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp') {
+    if (this.event.type === 'jp' || this.event.type === 'karaoke') {
       return "gengoffee-lightred-bg";
-    }
-    
+    } 
     return "gengoffee-lightblue-bg";
   }
 

@@ -9,6 +9,7 @@ import { RegisterService } from '../services/register.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 
+
 interface userLanguage {
   language: string,
   level: string,
@@ -39,6 +40,7 @@ export class RegisterComponent implements OnInit {
   public events:any;
   public nextEvents:any;
   public selectedEvent:string = "0";
+  public warning = 1;
 
   constructor(
     private eventservice: EventService,
@@ -55,6 +57,7 @@ export class RegisterComponent implements OnInit {
   getNextEvents(limit:number) {
     this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
       this.nextEvents = data;
+      console.log(this.nextEvents)
     })
   }
 
@@ -111,6 +114,15 @@ export class RegisterComponent implements OnInit {
 
   selectEvent(id:string) {
     this.selectedEvent = id;
+    for(let event in this.nextEvents){
+      if(this.nextEvents[event].id === id){
+        if(this.nextEvents[event].subscribe === 0){
+          this.warning = 0
+        } else {
+          this.warning = 1
+        }
+      }
+    }
   }
   
 }
