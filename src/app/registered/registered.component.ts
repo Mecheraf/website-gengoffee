@@ -4,6 +4,7 @@ import { RegisteredService } from '../services/registered.service';
 import { EventService } from '../services/event.service';
 import { switchMap, tap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -12,7 +13,8 @@ interface registeredUser {
   languages:string[],
   mail:string,
   diet:string[], 
-  id_event:number
+  id_event:number,
+  date_registered:Date
 }
 
 interface eventsAttendees {
@@ -27,7 +29,8 @@ interface eventsAttendees {
 @Component({
   selector: 'app-registered',
   templateUrl: './registered.component.html',
-  styleUrls: ['./registered.component.css']
+  styleUrls: ['./registered.component.css'],
+  providers: [DatePipe]
 })
 export class RegisteredComponent implements OnInit {
 
@@ -40,7 +43,8 @@ export class RegisteredComponent implements OnInit {
   constructor(
     private registeredService: RegisteredService,
     private eventservice: EventService,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private datepipe: DatePipe
 
   ) { }
 
@@ -50,6 +54,10 @@ export class RegisteredComponent implements OnInit {
         return  this.registeredService.getRegisteredList()
       }), 
       tap((registeredList)=>{
+        registeredList.forEach((element: any, index:number) => {
+          element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
+          console.log(element.date_registered)
+        })
         this.getNextEvent(3, registeredList)
       })
     ).subscribe() 
