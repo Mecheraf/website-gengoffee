@@ -8,5 +8,9 @@ module.exports = {
       'gengoffee-black': '#262829'
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+    }
+  ],
 }

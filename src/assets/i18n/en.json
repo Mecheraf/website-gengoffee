@@ -167,6 +167,10 @@
         "p_object": "Email subject",
         "p_message": "I have a really good idea to share with your organisation and I'd like to work with you ! <3"
     },
+    "job":{
+        "title":"",
+        "description":""
+    },
     "en": "English",
     "fr": "French",
     "jp": "Japanese"

@@ -36,6 +36,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 import { CookieService } from 'ngx-cookie-service';
 import { RegisteredComponent } from './registered/registered.component';
+import { JobboardComponent } from './jobboard/jobboard.component';
 
 
 
@@ -62,7 +63,8 @@ import { RegisteredComponent } from './registered/registered.component';
     CreateeventComponent,
     ContactComponent,
     LoginAdminComponent,
-    RegisteredComponent
+    RegisteredComponent,
+    JobboardComponent
     ],
   imports: [
     BrowserModule,
