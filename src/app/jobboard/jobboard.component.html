@@ -1,5 +1,8 @@
 <div class="register">
     <div class="max-w-xs md:max-w-7xl mx-auto pt-4 pb-8">
+        <div *ngFor="let job of jobsList; let index = index">
+            <p class="text-base font-semibold">{{job.title}}</p>
+        </div>
         <div class="text-center">
             <h1 class="text-[2.625rem]">{{'job.title'|translate}}</h1>
             <div class="md:text-xl pt-16 md:pt-10 w-[80%] m-auto" [innerHtml]="'job.description' | translate"></div>

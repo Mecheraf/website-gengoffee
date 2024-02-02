@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from '../services/jobs.service';
 
 @Component({
   selector: 'app-jobboard',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private jobService: JobsService) { }
 
+  public jobsList:any;
 
   public skills:string[] = [
     "Anglais - Japonais (niveau B2 minimum)",
@@ -23,6 +25,14 @@ export class JobboardComponent implements OnInit {
   "Gestion des Réservations"]
 
   ngOnInit(): void {
+    this.getJobs()
+  }
+
+
+  getJobs() {
+    this.jobService.getJobs().subscribe((data) => {
+      this.jobsList = data;
+    })
   }
 
 }
