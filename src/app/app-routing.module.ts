@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'registered', component: RegisteredComponent, canActivate:[AuthGuard]},
   { path: 'loginadmin', component: LoginAdminComponent},
-  { path: 'jobs', component: JobboardComponent}
+  //{ path: 'jobs', component: JobboardComponent}
 
 
 ];
