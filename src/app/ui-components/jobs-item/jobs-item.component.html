@@ -1,0 +1,28 @@
+<div class="border-b border-b-black pb-3">
+    <p class="ppmori-bold text-xl mb-1">{{job.title}}- {{job.location}}</p>
+    <p class="ppmori text-lg">{{job.title}} - {{job.location}} - {{job.contract}} </p>
+</div>
+<div class="child:mt-7 ">
+    <div>
+        <p class="ppmori-bold text-lg mb-3">{{'job.item.description'|translate}}</p>
+        <p class="ppmori text-sm">{{job.description}}</p>
+    </div>
+    <div>
+        <p class="ppmori-bold text-lg mb-3">{{'job.item.missions'|translate}}</p>
+        <li *ngFor="let mission of job.missions" class="list-disc ml-2 text-sm">{{mission}}</li>
+    </div>
+    <div>
+        <p class="ppmori-bold text-lg mb-3">{{'job.item.requirements'|translate}}</p>
+        <li *ngFor="let skill of job.requirements" class="list-disc ml-2 text-sm">{{skill}}</li>
+    </div>
+    <div>
+        <p class="ppmori-bold text-lg mb-3">{{'job.item.salary'|translate}}</p>
+        <p class="ppmori text-sm">{{job.salary}}</p>
+
+    </div>
+    <div>
+        <p class="ppmori-bold text-lg mb-3">{{'job.item.more'|translate}}</p>
+    </div>
+
+</div>
+    

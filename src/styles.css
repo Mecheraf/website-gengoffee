@@ -219,6 +219,18 @@ h1, h2, h3, h4, h5 {
   will-change: transform;
 }
 
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+  /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
+
 @keyframes spinner {
   0% {
     transform: translate3d(-50%, -50%, 0) rotate(0deg);

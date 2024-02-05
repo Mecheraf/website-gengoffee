@@ -1,0 +1,27 @@
+<div class="jobboard">
+    <div class="max-w-xs md:max-w-7xl mx-auto pt-4 pb-8">
+        
+        <div class="text-center">
+            <h1 class="text-[2.625rem]">{{'job.title'|translate}}</h1>
+            <div class="md:text-xl pt-16 md:pt-10 w-[80%] m-auto" [innerHtml]="'job.description' | translate"></div>
+        </div>
+        <div class="flex flex-col md:flex-row h-fit max-h-[480px] mt-16 rounded-t-xl">
+            <div class="w-6/12 h-24">
+                <div *ngFor="let job of jobsList">
+                    <button type="button" (click)="selectJob(job.id)" class="w-full text-left" [ngClass]="job.id === jobsList[selectedJob].id ? 'bg-[#F5F7F9]' : 'bg-white'"><app-jobs-row [job]="job"></app-jobs-row></button>
+                </div>
+            </div>
+            <div class="md:ml-[3%] w-6/12 bg-[#F5F7F9] rounded-xl p-6 overflow-scroll no-scrollbar">
+                <app-jobs-item [job]="jobsList[selectedJob]"></app-jobs-item>
+            </div>
+        </div>
+
+        <div class="flex gap-2 mt-20 mb-24 place-content-center">
+            <div class="text-lg">{{'about.followus'|translate}}</div>
+            <img class="mx-3" src="assets/images/right-arrow-black.svg" />
+            <img width="20" src="assets/images/instagram-black.svg" />
+            <img width="20" src="assets/images/facebook-black.svg" />
+            <img width="20" src="assets/images/meetup-black.svg" />
+        </div>
+    </div>
+</div>
