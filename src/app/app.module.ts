@@ -37,6 +37,8 @@ import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 import { CookieService } from 'ngx-cookie-service';
 import { RegisteredComponent } from './registered/registered.component';
 import { JobboardComponent } from './jobboard/jobboard.component';
+import { JobsRowComponent } from './ui-components/jobs-row/jobs-row.component';
+import { JobsItemComponent } from './ui-components/jobs-item/jobs-item.component';
 
 
 
@@ -64,7 +66,9 @@ import { JobboardComponent } from './jobboard/jobboard.component';
     ContactComponent,
     LoginAdminComponent,
     RegisteredComponent,
-    JobboardComponent
+    JobboardComponent,
+    JobsRowComponent,
+    JobsItemComponent
     ],
   imports: [
     BrowserModule,

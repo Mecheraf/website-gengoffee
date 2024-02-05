@@ -172,8 +172,15 @@
         "p_message":"フランスに来て数ヶ月経ちますが、まだまだフランス語でコミュニケーションとるのが難しいので、練習したいです^^"
     },
     "job":{
-        "title":"",
-        "description":""
+        "title":"Découvrez de nouvelles opportunités",
+        "description":"Rejoignez-nous pour trouver votre prochaine grande opportunité ou découvrir le candidat parfait pour votre équipe !",
+        "item":{
+            "description":"Description",
+            "missions":"Missions",
+            "requirements":"Qualifications requises",
+            "salary":"Rémunérations",
+            "more":"Informations complémentaires"
+        }
     },
     "en": "英語",
     "fr": "フランス語",

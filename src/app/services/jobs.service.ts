@@ -16,6 +16,7 @@ export class JobsService {
   public getJobs(options?: any) { 
     return this.http.get<Event[]>(this.url+"getjobs", options);
   }
+  
   public insertJob(data: any, options?: any) { 
     /*options = {
       ...options,

@@ -11,27 +11,30 @@ export class JobboardComponent implements OnInit {
   constructor(private jobService: JobsService) { }
 
   public jobsList:any;
+  public selectedJob:number = 0;
 
-  public skills:string[] = [
-    "Anglais - Japonais (niveau B2 minimum)",
-    "Capacité à travailler avec grâce et courtoisie, même sous pression.",
-    "Bonnes compétences en gestion du temps et en organisation.",
-    "Souci du détail et sens aigu de l'hospitalité.",
-    "Capacité à travailler en équipe et à collaborer avec d'autres membres du personnel."
-  ]
-  public missions:string[] = ["Accueil et Orientation",
-  "Service à la Clientèle",
-  "Communication",
-  "Gestion des Réservations"]
 
   ngOnInit(): void {
     this.getJobs()
+    this.selectedJob = this.jobsList[0].id
   }
 
 
   getJobs() {
     this.jobService.getJobs().subscribe((data) => {
       this.jobsList = data;
+      this.jobsList.forEach((element:any) => {
+        element.missions = element.missions.split(";")
+        element.requirements = element.requirements.split(";")
+      });
+    })
+  }
+
+  selectJob(id:string) {
+    this.jobsList.forEach((element:any, index:number) => {
+      if(element.id === id){
+        this.selectedJob = index;
+      }
     })
   }
 

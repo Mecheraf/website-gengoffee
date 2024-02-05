@@ -1,47 +1,18 @@
-<div class="register">
+<div class="jobboard">
     <div class="max-w-xs md:max-w-7xl mx-auto pt-4 pb-8">
-        <div *ngFor="let job of jobsList; let index = index">
-            <p class="text-base font-semibold">{{job.title}}</p>
-        </div>
+        
         <div class="text-center">
             <h1 class="text-[2.625rem]">{{'job.title'|translate}}</h1>
             <div class="md:text-xl pt-16 md:pt-10 w-[80%] m-auto" [innerHtml]="'job.description' | translate"></div>
         </div>
         <div class="flex flex-col md:flex-row h-fit max-h-[480px] mt-16 rounded-t-xl">
-            <div class="w-6/12 h-24 bg-[#F5F7F9] flex auto-rows-min p-4 border-b-black border-solid border-b">
-                <div class="">
-                    <p class="ppmori-bold">Hôte d’accueil - Tokyo (Japon)</p>
-                    <p class="ppmori">Hôtellerie - Tokyo (Japon) - CDD</p>
+            <div class="w-6/12 h-24">
+                <div *ngFor="let job of jobsList">
+                    <button type="button" (click)="selectJob(job.id)" class="w-full text-left" [ngClass]="job.id === jobsList[selectedJob].id ? 'bg-[#F5F7F9]' : 'bg-white'"><app-jobs-row [job]="job"></app-jobs-row></button>
                 </div>
-                <img class="right-0 ml-auto" width="30" src="assets/images/simple-arrow.svg"/>
             </div>
-            <div class="md:ml-[5%] w-6/12 bg-[#F5F7F9] rounded-xl p-6 overflow-scroll no-scrollbar">
-                <div class="border-b border-b-black pb-3">
-                    <p class="ppmori-bold text-xl mb-1">Hôte d’accueil - Tokyo (Japon)</p>
-                    <p class="ppmori text-lg">Hôtellerie - Tokyo (Japon) - CDD </p>
-                </div>
-                <div class="child:mt-7 ">
-                    <div>
-                        <p class="ppmori-bold text-lg mb-3">Description</p>
-                        <p class="ppmori text-sm">En tant qu'hôte d'accueil, vous jouerez un rôle essentiel dans l'industrie de l'accueil et du service à la clientèle. Votre principale mission sera de garantir une expérience mémorable et chaleureuse à tous les visiteurs et clients de votre établissement.</p>
-                    </div>
-                    <div>
-                        <p class="ppmori-bold text-lg mb-3">Missions</p>
-                        <li *ngFor="let mission of missions" class="list-disc ml-2 text-sm">{{mission}}</li>
-                    </div>
-                    <div>
-                        <p class="ppmori-bold text-lg mb-3">Qualifications requises</p>
-                        <li *ngFor="let skill of skills" class="list-disc ml-2 text-sm">{{skill}}</li>
-                    </div>
-                    <div>
-                        <p class="ppmori-bold text-lg mb-3">Rémunérations</p>
-                    </div>
-                    <div>
-                        <p class="ppmori-bold text-lg mb-3">Informations complémentaires</p>
-                    </div>
-
-                </div>
-                
+            <div class="md:ml-[3%] w-6/12 bg-[#F5F7F9] rounded-xl p-6 overflow-scroll no-scrollbar">
+                <app-jobs-item [job]="jobsList[selectedJob]"></app-jobs-item>
             </div>
         </div>
 
