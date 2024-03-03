@@ -23,7 +23,7 @@ export class PastEventCardComponent implements OnInit {
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
     }
     

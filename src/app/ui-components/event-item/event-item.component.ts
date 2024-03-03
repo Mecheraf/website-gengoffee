@@ -20,6 +20,7 @@ export class EventItemComponent implements OnInit {
   private defaultLanguage: string = '🇫🇷';
   public flags: string = '';
   public hour: string = '';
+  private photoEnglishId : number = 0;
 
   @Input() event: Event = {} as Event;
   @Input() active: boolean = false;
@@ -38,17 +39,17 @@ export class EventItemComponent implements OnInit {
     return this.defaultLanguage;
   }
 
-  public getImageByCountry(): string {
+  public getImageByCountry(id:string): string {
     if (this.event.type === 'jp') {
-      return 'gengoffee_event-1.png';
+      return 'gengoffee_event-'+Number(id)%2+'.png';
     } else if (this.event.type === 'karaoke') {
       return 'gengoffee_event-karaoke.png';
     }
-    return 'gengoffee_event-2.png';
+    return 'photo-en-'+ Number(id)%4 +'.png';
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
     } 
     return "gengoffee-lightblue-bg";
