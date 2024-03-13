@@ -15,7 +15,6 @@ export class PastEventCardComponent implements OnInit {
   constructor(public translateService: TranslateService) {}
 
   ngOnInit(): void {
-    console.log(this.event)
   }
 
   public getLanguageByLocale(){

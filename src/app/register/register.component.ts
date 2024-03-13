@@ -58,7 +58,6 @@ export class RegisterComponent implements OnInit {
 
   getNextEvents(limit:number, position:number, location:string) {
     this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
-      console.log(data)
       this.nextEvents[position] = data;
     })
   }
@@ -129,7 +128,6 @@ export class RegisterComponent implements OnInit {
 
   selectLocation(location:number) {
     this.location = location;
-    console.log(this.nextEvents[this.location])
   }
   
 }
