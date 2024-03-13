@@ -15,6 +15,7 @@ export class PastEventCardComponent implements OnInit {
   constructor(public translateService: TranslateService) {}
 
   ngOnInit(): void {
+    console.log(this.event)
   }
 
   public getLanguageByLocale(){
@@ -22,8 +23,15 @@ export class PastEventCardComponent implements OnInit {
     return this.translateService.instant(this.event.type);
   }
 
+  public getMainLanguage(){
+    if(this.event.location.toLocaleLowerCase() === "tokyo"){
+      return this.translateService.instant("jp");
+    }
+    return this.translateService.instant("fr");
+  }
+
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type.toLocaleLowerCase() === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type === 'fr' || this.event.type.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
     }
     

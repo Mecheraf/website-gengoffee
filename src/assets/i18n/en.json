@@ -8,6 +8,8 @@
     "errorRegister":"Please fill all required fields",
     "noevent":"No events availible at the moment, stay tuned",
     "hello":"Bonjour",
+    "paris":"PARIS",
+    "tokyo":"TOKYO",
     "days": {
         "1": "Monday",
         "2": "Tuesday",

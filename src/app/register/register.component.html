@@ -9,8 +9,16 @@
             </div>
             <p class="font-bold text-2xl pt-10">{{'register.form.title'|translate}}</p>
             <p class="pt-6">{{'register.form.description'|translate}}</p>
+            <div name="location" class="flex flex-row md:w-1/2 m-auto gap-6 mt-5">
+                <button type="button" [ngClass]="this.location === 0 ? 'opacity-100' : 'opacity-40'" (click)="selectLocation(0)" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
+                    {{'paris'|translate}}
+                </button>      
+                <button  type="button" [ngClass]="this.location === 1 ? 'opacity-100' : 'opacity-40'"  (click)="selectLocation(1)" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
+                    {{'tokyo'|translate}}
+                </button> 
+            </div>
             <p class="pt-14 ppmori-bold text-left md:w-2/3 w-4/5 m-auto">{{'register.eventDate'|translate}}</p>
-            <div class="mt-4 gap-8 flex flex-wrap justify-center w-4/5 m-auto md:w-full" *ngFor="let event of nextEvents">
+            <div class="mt-4 gap-8 flex flex-wrap justify-center w-4/5 m-auto md:w-full" *ngFor="let event of nextEvents[this.location]">
                 <button type="button" (click)="selectEvent(event.id)" [ngClass]="event.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="event"></app-past-event-card></button>
             </div>
             
