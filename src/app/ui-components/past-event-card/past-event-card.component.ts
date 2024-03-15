@@ -45,5 +45,11 @@ export class PastEventCardComponent implements OnInit {
 
     return this.translateService.instant('dateWithoutYear', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber });
   }
+
+  public getDayHour() {
+    const eventDate = new Date(this.event.date);
+    const tmp:string = eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0') + ' - ' + (eventDate.getUTCHours()+3).toString().padStart(2, '0')+':'+eventDate.getMinutes().toString().padStart(2, '0');
+    return tmp
+  }
   
 }
