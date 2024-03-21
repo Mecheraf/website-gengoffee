@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "website-gengoffee:build:production"
+              "buildTarget": "website-gengoffee:build:production"
             },
             "development": {
-              "browserTarget": "website-gengoffee:build:development"
+              "buildTarget": "website-gengoffee:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "website-gengoffee:build"
+            "buildTarget": "website-gengoffee:build"
           }
         },
         "test": {
