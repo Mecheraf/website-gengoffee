@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar, MatLegacySnackBarConfig as MatSnackBarConfig } from '@angular/material/legacy-snack-bar';
 
 
 

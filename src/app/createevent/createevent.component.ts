@@ -8,7 +8,8 @@ import { DatePipe } from '@angular/common'
 interface formParams {
   type:string,
   date:string|null,
-  place:string
+  place:string,
+  location:string
 }
 
 @Component({
@@ -38,6 +39,7 @@ export class CreateeventComponent implements OnInit {
   public color: ThemePalette = 'primary';
   public disableMinute = false;
   public hideTime = false;
+  public location = "PARIS"
 
   public dateControl = new FormControl<Date>(new Date());
 
@@ -62,6 +64,7 @@ export class CreateeventComponent implements OnInit {
     this.formGroup.type = this.type
     this.formGroup.date = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
+    this.formGroup.location = this.location
     this.eventservice.post(this.formGroup).subscribe();
   }
 
@@ -98,5 +101,8 @@ export class CreateeventComponent implements OnInit {
     this.maxDate.setDate(now.getDate() + 1);
   }
 
+  changeLocation(location:string) {
+    this.location = location
+  }
 
 }
