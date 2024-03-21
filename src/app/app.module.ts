@@ -30,7 +30,7 @@ import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy
 import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
@@ -88,6 +88,7 @@ import { JobsItemComponent } from './ui-components/jobs-item/jobs-item.component
     MatInputModule,
     ReactiveFormsModule,
     MatButtonModule,
+    CommonModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
     NgxMatNativeDateModule,
