@@ -9,6 +9,9 @@
     "test": "ng test"
   },
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@angular-material-components/datetime-picker": "^16.0.1",
     "@angular/animations": "^17.3.1",
