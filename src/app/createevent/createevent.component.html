@@ -1,4 +1,4 @@
-<div class="mb-32">
+<div class="mb-32 w-11/12 m-auto">
     <form class="pt-2">
         <p class="pt-10">Type de l'événement</p>
         <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="border-b border-solid pt-4">
@@ -6,7 +6,7 @@
         <p class="pt-10">Lieu de l'événement</p>
         <input type="text" name="number"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
         
-        <mat-form-field>
+        <mat-form-field class="mt-8">
             <input matInput [ngxMatDatetimePicker]="picker" [formControl]="dateControl"
             [min]="minDate" [max]="maxDate" [disabled]="disabled">
             <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
@@ -16,7 +16,7 @@
             [disableMinute]="disableMinute" [hideTime]="hideTime">
             </ngx-mat-datetime-picker>
         </mat-form-field>
-        <div class="mt-8">
+        <div class="mt-12">
             <button type="button" [ngClass]="location === 'PARIS' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('PARIS')" class="gengoffee-btn gengoffee-btn-primary rounded-none">PARIS</button>
             <button type="button" [ngClass]="location === 'TOKYO' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('TOKYO')" class="gengoffee-btn gengoffee-btn-primary rounded-none">TOKYO</button>
 
