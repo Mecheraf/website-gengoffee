@@ -4,6 +4,7 @@ import { Event } from 'src/app/models/event';
 
 
 const localeToFlag: any = {
+  'fr' : '🇫🇷',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
   'es' : '🇪🇸'
