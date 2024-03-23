@@ -119,20 +119,6 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 
-.gengoffee-btn-tertiary {
-  background: #1F3D87;
-  color: white;
-  font-family: 'PPMori-bold';
-  height: 64px;
-  width: 144px;
-  padding: 32px 30px;
-}
-
-.gengoffee-btn-quaternary {
-  background: #1F3D87;
-  color: white;
-}
-
 .gengoffee-btn:disabled {
   opacity: .7;
   cursor: default;

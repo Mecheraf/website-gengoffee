@@ -13,7 +13,7 @@ interface userLanguage {
   language: string,
   level: string,
 }
-
+ 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -37,10 +37,9 @@ export class RegisterComponent implements OnInit {
     dietList: new FormControl<string[]>([]),
   });
   public events:any;
-  public nextEvents:any[] = [];
+  public nextEvents:any;
   public selectedEvent:string = "0";
   public warning = 1;
-  public location = 0; //Setup as Paris
 
   constructor(
     private eventservice: EventService,
@@ -51,13 +50,13 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
-    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
+    this.getNextEvents(NEXT_EVENTS);
   }
 
-  getNextEvents(limit:number, position:number, location:string) {
-    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
-      this.nextEvents[position] = data;
+  getNextEvents(limit:number) {
+    this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
+      this.nextEvents = data;
+      console.log(this.nextEvents)
     })
   }
 
@@ -123,10 +122,6 @@ export class RegisterComponent implements OnInit {
         }
       }
     }
-  }
-
-  selectLocation(location:number) {
-    this.location = location;
   }
   
 }
