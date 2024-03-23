@@ -22,15 +22,8 @@ export class PastEventCardComponent implements OnInit {
     return this.translateService.instant(this.event.type);
   }
 
-  public getMainLanguage(){
-    if(this.event.location.toLocaleLowerCase() === "tokyo"){
-      return this.translateService.instant("jp");
-    }
-    return this.translateService.instant("fr");
-  }
-
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type === 'fr' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
     }
     
@@ -44,12 +37,6 @@ export class PastEventCardComponent implements OnInit {
     const dayNumber = eventDate.getDate();
 
     return this.translateService.instant('dateWithoutYear', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber });
-  }
-
-  public getDayHour() {
-    const eventDate = new Date(this.event.date);
-    const tmp:string = eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0') + ' - ' + (eventDate.getUTCHours()+3).toString().padStart(2, '0')+':'+eventDate.getMinutes().toString().padStart(2, '0');
-    return tmp
   }
   
 }

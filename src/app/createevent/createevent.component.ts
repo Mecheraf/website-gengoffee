@@ -23,6 +23,7 @@ export class CreateeventComponent implements OnInit {
   @ViewChild('picker') picker: any;
 
   constructor(private eventservice: EventService, private datepipe: DatePipe) { }
+  public type:string ="";
   public place:string ="";
 
   public disabled = false;
@@ -38,8 +39,7 @@ export class CreateeventComponent implements OnInit {
   public color: ThemePalette = 'primary';
   public disableMinute = false;
   public hideTime = false;
-  public type:string ="en";
-  public location:string = "PARIS"
+  public location = "PARIS"
 
   public dateControl = new FormControl<Date>(new Date());
 
@@ -103,11 +103,6 @@ export class CreateeventComponent implements OnInit {
 
   changeLocation(location:string) {
     this.location = location
-  }
-
-  changeType(type:string) {
-    this.type = type
-    console.log(this.type)
   }
 
 }

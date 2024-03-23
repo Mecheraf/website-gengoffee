@@ -7,5 +7,4 @@ export interface Job {
     missions:string;
     contract:string;
     salary:string;
-    more:string;
 }
