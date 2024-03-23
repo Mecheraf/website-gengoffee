@@ -187,6 +187,12 @@
             "more":"Informations complémentaires"
         }
     },
+    "create":{
+        "title":"Création d'événement",
+        "type":"Type de l'événement (défini la langue secondaire)",
+        "place":"Date et Lieu de l'événement",
+        "city":"Ville de l'événement (défini la langue principale)"
+    },
     "en": "英語",
     "fr": "フランス語",
     "jp": "日本語"

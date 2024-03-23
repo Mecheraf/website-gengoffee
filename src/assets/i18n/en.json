@@ -183,6 +183,12 @@
             "more":"More Informations"
         }
     },
+    "create":{
+        "title":"Create event",
+        "type":"Type of the event (define the second language)",
+        "place":"Date and place of the event",
+        "city":"City of the event (Define the main language)"
+    },
     "en": "English",
     "fr": "French",
     "jp": "Japanese"
