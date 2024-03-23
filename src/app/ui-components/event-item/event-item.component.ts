@@ -30,6 +30,7 @@ export class EventItemComponent implements OnInit {
   constructor(private translateService: TranslateService) { }
 
   ngOnInit(): void {
+    console.log(this.active)
   }
 
   public renderFlags(): string {
@@ -43,14 +44,14 @@ export class EventItemComponent implements OnInit {
   public getImageByCountry(id:string): string {
     if (this.event.type === 'jp') {
       return 'gengoffee_event-'+Number(id)%2+'.webp';
-    } else if (this.event.type.toLocaleLowerCase() === 'karaoke') {
+    } else if (this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return 'gengoffee_event_karaoke2.webp';
     }
     return 'photo-en-'+ Number(id)%4 +'.webp';
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type.toLocaleLowerCase() === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
     } 
     return "gengoffee-lightblue-bg";
