@@ -71,7 +71,7 @@ export class EventItemComponent implements OnInit {
     return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
   }
 
-  public getDayHour() {
+  public getDayHour(type:string) {
     const eventDate = new Date(this.event.date);
     return eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0');
   }

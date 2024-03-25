@@ -8,7 +8,7 @@
         <div class="text-xl italic font-thin tracking-[0.05em]">{{isPastEvent()}}</div>
         <div class="flex flex-col">
           <div class="text-sm font-semibold">{{getTranslatedDate()}}</div>
-          <div class="text-xs">{{renderFlags()}} {{event.place}} - {{getDayHour()}}</div>
+          <div class="text-xs">{{renderFlags()}} {{event.place}} - {{getDayHour(event.type)}}</div>
         </div>
       </ng-container>
       <!-- If no next events are available, we want to display a fallback card -->
