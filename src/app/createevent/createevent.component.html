@@ -1,23 +1,38 @@
-<form class="pt-2">
-    <p class="pt-10">Type de l'événement</p>
-    <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="border-b border-solid pt-4">
+<div class="mb-32 w-11/12 m-auto">
+    <h2 class="mt-12 m-auto w-fit">{{'create.title'|translate}}</h2>
+    <form class="pt-2">
+        <p class="pt-10 ppmori-bold">{{'create.type'|translate}}</p>
+        <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="hidden border-b border-solid pt-4">
+        <div class="ml-6 flex gap-6 pt-6">
+            <button type="button" [ngClass]="type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn gengoffee-btn-quaternary">{{'fr'|translate}}</button>
+            <button type="button" [ngClass]="type === 'en' ? 'opacity-100' : 'opacity-50'" (click)="changeType('en')" class="gengoffee-btn gengoffee-btn-quaternary">{{'en'|translate}}</button>
+            <button type="button" [ngClass]="type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn gengoffee-btn-quaternary">{{'jp'|translate}}</button>
 
-    <p class="pt-10">Lieu de l'événement</p>
-    <input type="text" name="number"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
-    
-    <mat-form-field>
-        <input matInput [ngxMatDatetimePicker]="picker" [formControl]="dateControl"
-           [min]="minDate" [max]="maxDate" [disabled]="disabled">
-        <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
-        <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
-           [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
-           [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian" 
-           [disableMinute]="disableMinute" [hideTime]="hideTime">
-        </ngx-mat-datetime-picker>
-     </mat-form-field>
+        </div>
 
-     
-    <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
-        Send
-    </button>                
-</form>
+        <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
+        <input type="text" name="number"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
+        
+        <mat-form-field class="mt-8">
+            <input matInput [ngxMatDatetimePicker]="picker" [formControl]="dateControl"
+            [min]="minDate" [max]="maxDate" [disabled]="disabled">
+            <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+            <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+            [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+            [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian" 
+            [disableMinute]="disableMinute" [hideTime]="hideTime">
+            </ngx-mat-datetime-picker>
+        </mat-form-field>
+        <div class="mt-12">
+            <p class="text-base ppmori-bold mb-8">{{'create.city'|translate}}</p>
+            <div class="ml-6 flex gap-6">
+                <button type="button" [ngClass]="location === 'PARIS' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('PARIS')" class="gengoffee-btn gengoffee-btn-primary rounded-none">{{'paris'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('TOKYO')" class="gengoffee-btn gengoffee-btn-primary rounded-none">{{'tokyo'|translate}}</button>
+            </div>
+        </div>
+        
+        <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-32 gengoffee-btn gengoffee-btn-primary">
+            Send
+        </button>                 
+    </form>
+</div>

@@ -8,6 +8,8 @@
     "errorRegister":"必要事項はすべて記入してください",
     "noevent":"まだ次のイベントの詳細は発表していません",
     "hello":"Bonjour",
+    "paris":"パリ",
+    "tokyo":"東京",
     "days": {
         "1":"月曜日",
         "2":"火曜日",
@@ -147,7 +149,7 @@
             "title":"様々な統計数...",
             "1":{
                 "title":"イベント                ",
-                "description":"団体開設後、現在まで開催したイベント合計数！登録者は<span class=\"font-semibold\">5000人</span>突破！"
+                "description":"団体開設後、現在まで開催したイベント合計数！登録者は<span class=\"font-semibold\">6000</span>突破！"
             },
             "2":{
                 "title":"コミュニティ",
@@ -175,15 +177,21 @@
         "p_message":"フランスに来て数ヶ月経ちますが、まだまだフランス語でコミュニケーションとるのが難しいので、練習したいです^^"
     },
     "job":{
-        "title":"Découvrez de nouvelles opportunités",
-        "description":"Rejoignez-nous pour trouver votre prochaine grande opportunité ou découvrir le candidat parfait pour votre équipe !",
+        "title":"新たなチャンスを見つける",
+        "description":"私たちと一緒に次の大きなチャンスを見つけたり、あなたのチームに最適な人材を見つけましょう！",
         "item":{
-            "description":"Description",
-            "missions":"Missions",
-            "requirements":"Qualifications requises",
-            "salary":"Rémunérations",
-            "more":"Informations complémentaires"
+            "description":"記述",
+            "missions":"ミッション",
+            "requirements":"必要な資格",
+            "salary":"報酬",
+            "more":"更なる詳細"
         }
+    },
+    "create":{
+        "title":"イベントを作る",
+        "type":"イベントのタイプ (défini la langue secondaire)",
+        "place":"Date et Lieu de l'événement",
+        "city":"街 (défini la langue principale)"
     },
     "en": "英語",
     "fr": "フランス語",

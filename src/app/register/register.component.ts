@@ -3,10 +3,9 @@ const NEXT_EVENTS = 3
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { MatLegacySnackBar as MatSnackBar, MatLegacySnackBarConfig as MatSnackBarConfig } from '@angular/material/legacy-snack-bar';
 
 
 
@@ -14,7 +13,7 @@ interface userLanguage {
   language: string,
   level: string,
 }
- 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -38,9 +37,10 @@ export class RegisterComponent implements OnInit {
     dietList: new FormControl<string[]>([]),
   });
   public events:any;
-  public nextEvents:any;
+  public nextEvents:any[] = [];
   public selectedEvent:string = "0";
   public warning = 1;
+  public location = 0; //Setup as Paris
 
   constructor(
     private eventservice: EventService,
@@ -51,13 +51,13 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getNextEvents(NEXT_EVENTS);
+    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
+    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
   }
 
-  getNextEvents(limit:number) {
-    this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
-      this.nextEvents = data;
-      console.log(this.nextEvents)
+  getNextEvents(limit:number, position:number, location:string) {
+    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
+      this.nextEvents[position] = data;
     })
   }
 
@@ -123,6 +123,10 @@ export class RegisterComponent implements OnInit {
         }
       }
     }
+  }
+
+  selectLocation(location:number) {
+    this.location = location;
   }
   
 }

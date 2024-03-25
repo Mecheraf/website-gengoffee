@@ -12,11 +12,11 @@ export class JobboardComponent implements OnInit {
 
   public jobsList:any;
   public selectedJob:number = 0;
+  public jobBtnStyle:boolean = false;
 
 
   ngOnInit(): void {
     this.getJobs()
-    this.selectedJob = this.jobsList[0].id
   }
 
 
@@ -27,6 +27,7 @@ export class JobboardComponent implements OnInit {
         element.missions = element.missions.split(";")
         element.requirements = element.requirements.split(";")
       });
+      this.selectedJob = this.jobsList[0].id
     })
   }
 
@@ -36,6 +37,13 @@ export class JobboardComponent implements OnInit {
         this.selectedJob = index;
       }
     })
+    this.jobBtnStyle = true
+    console.log("Here in selectJob: "+this.jobBtnStyle)
   }
 
+  closeJobItem(){
+    this.jobBtnStyle = false
+
+    console.log("Here in closeJobItem: "+this.jobBtnStyle)
+  }
 }

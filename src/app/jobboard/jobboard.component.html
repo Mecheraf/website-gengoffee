@@ -1,18 +1,18 @@
-<div class="jobboard">
+<div class="jobboard relative">
     <div class="max-w-xs md:max-w-7xl mx-auto pt-4 pb-8">
-        
         <div class="text-center">
             <h1 class="text-[2.625rem]">{{'job.title'|translate}}</h1>
             <div class="md:text-xl pt-16 md:pt-10 w-[80%] m-auto" [innerHtml]="'job.description' | translate"></div>
         </div>
-        <div class="flex flex-col md:flex-row h-fit max-h-[480px] mt-16 rounded-t-xl">
-            <div class="w-6/12 h-24">
+        <div class="flex flex-col md:flex-row h-fit md:max-h-[480px] mt-16 rounded-t-xl w-4/5 xl:w-full mx-auto">
+            <div class="w-full md:w-6/12 h-fit md:h-24">
                 <div *ngFor="let job of jobsList">
                     <button type="button" (click)="selectJob(job.id)" class="w-full text-left" [ngClass]="job.id === jobsList[selectedJob].id ? 'bg-[#F5F7F9]' : 'bg-white'"><app-jobs-row [job]="job"></app-jobs-row></button>
                 </div>
             </div>
-            <div class="md:ml-[3%] w-6/12 bg-[#F5F7F9] rounded-xl p-6 overflow-scroll no-scrollbar">
-                <app-jobs-item [job]="jobsList[selectedJob]"></app-jobs-item>
+            <div name="job-item" [ngClass]="jobBtnStyle ? 'block' : 'hidden'" class="md:block md:ml-[3%] top-0 left-0 bottom-0 md:top-0 absolute min-h-[calc(100vh - 100px)] min-w-full md:min-w-0 md:min-h-0 md:max-h-[480px] md:relative md:w-6/12 md:rounded-xl p-6 overflow-scroll no-scrollbar bg-[#F5F7F9]">
+                <button  (click)="closeJobItem()" class="md:hidden"><img src="assets/images/arrow-left.svg" class="w-5 mb-8"></button>
+                <app-jobs-item class="" [job]="jobsList[selectedJob]"></app-jobs-item>
             </div>
         </div>
 
