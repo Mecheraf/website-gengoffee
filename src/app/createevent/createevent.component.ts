@@ -10,8 +10,6 @@ interface formParams {
   date:string|null,
   place:string,
   location:string
-  place:string,
-  location:string
 }
 
 @Component({
@@ -26,7 +24,6 @@ export class CreateeventComponent implements OnInit {
 
   constructor(private eventservice: EventService, private datepipe: DatePipe) { }
   public place:string ="";
-
   public disabled = false;
   public showSpinners = true;
   public showSeconds = false;
