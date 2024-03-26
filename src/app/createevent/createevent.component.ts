@@ -10,6 +10,8 @@ interface formParams {
   date:string|null,
   place:string,
   location:string
+  place:string,
+  location:string
 }
 
 @Component({
@@ -64,6 +66,7 @@ export class CreateeventComponent implements OnInit {
     this.formGroup.type = this.type
     this.formGroup.date = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
+    this.formGroup.location = this.location
     this.formGroup.location = this.location
     this.eventservice.post(this.formGroup).subscribe();
   }
