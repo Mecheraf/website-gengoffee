@@ -107,7 +107,6 @@ export class CreateeventComponent implements OnInit {
 
   changeType(type:string) {
     this.type = type
-    console.log(this.type)
   }
 
 }
