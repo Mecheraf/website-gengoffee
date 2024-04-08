@@ -39,7 +39,6 @@ export class PastEventCardComponent implements OnInit {
 
   public getTranslatedDate() {
     const eventDate = new Date(this.event.date);
-    console.log(eventDate)
     const translatedDay = this.translateService.instant('days.' + eventDate.getUTCDay().toString());
     const translatedMonth = this.translateService.instant('months.' + eventDate.getUTCMonth().toString());
     const dayNumber = eventDate.getUTCDate();
