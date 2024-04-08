@@ -1,0 +1,25 @@
+<div class="mb-32 w-11/12 m-auto">
+    <h2 class="mt-12 m-auto w-fit">{{'create.title'|translate}}</h2>
+    <form class="pt-2">
+        <p class="pt-10 ppmori-bold">Titre du poste</p>
+        <input type="text" [(ngModel)]="title" name="title" placeholder="Animateur, DevOps, ..." class="xœborder-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">Description</p>
+        <input type="text" name="description"  [(ngModel)]="description"  placeholder="Le boulot consiste à ..." class="border-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">Contrat</p>
+        <input type="text" name="contract"  [(ngModel)]="contract"  placeholder="CDI/CDI 4 Mois, période... " class="border-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
+        <input type="text" name="location"  [(ngModel)]="location"  placeholder="Nagano" class="border-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">Salaire</p>
+        <input type="text" name="salary"  [(ngModel)]="salary"  placeholder="12€/h" class="border-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">Missions</p>
+        <input type="text" name="missions"  [(ngModel)]="missions"  placeholder="Nagano" class="border-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">Compétences exigées</p>
+        <input type="text" name="requirements"  [(ngModel)]="requirements"  placeholder="12€/h" class="border-b border-solid pt-4">
+        <p class="pt-10 ppmori-bold">Plus d'infos</p>
+        <input type="text" name="more"  [(ngModel)]="more"  placeholder="12€/h" class="border-b border-solid pt-4">
+
+        <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-32 gengoffee-btn gengoffee-btn-primary">
+            Send
+        </button>                 
+    </form>
+</div>
