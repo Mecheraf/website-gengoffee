@@ -10,6 +10,7 @@ import { RegisteredComponent } from './registered/registered.component';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 import { AuthGuard } from './auth/auth.guard';
 import { JobboardComponent } from './jobboard/jobboard.component';
+import { CreatejobComponent } from './createjob/createjob.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'createevent', component: CreateeventComponent, canActivate:[AuthGuard]},
   { path: 'contact', component: ContactComponent},
   { path: 'registered', component: RegisteredComponent, canActivate:[AuthGuard]},
+  { path: 'createjob', component:CreatejobComponent, canActivate:[AuthGuard]},
   { path: 'loginadmin', component: LoginAdminComponent},
   //{ path: 'jobs', component: JobboardComponent}
 
