@@ -10,7 +10,8 @@
                     <button type="button" (click)="selectJob(job.id)" class="w-full text-left" [ngClass]="job.id === jobsList[selectedJob].id ? 'bg-[#F5F7F9]' : 'bg-white'"><app-jobs-row [job]="job"></app-jobs-row></button>
                 </div>
             </div>
-            <div name="job-item" [ngClass]="jobBtnStyle ? 'block' : 'hidden'" class="md:block md:ml-[3%] top-0 left-0 bottom-0 md:top-0 absolute min-h-[calc(100vh - 100px)] min-w-full md:min-w-0 md:min-h-0 md:max-h-[480px] md:relative md:w-6/12 md:rounded-xl p-6 overflow-scroll no-scrollbar bg-[#F5F7F9]">
+            <div name="job-item" [ngClass]="jobBtnStyle ? 'block' : 'hidden'" 
+            class="md:block md:ml-[3%] top-0 left-0 bottom-0 md:top-0 absolute min-h-[calc(100vh - 100px)] min-w-full md:min-w-0 md:min-h-0 md:max-h-[480px] md:relative md:w-6/12 rounded-xl p-6 overflow-scroll no-scrollbar bg-[#F5F7F9]">
                 <button  (click)="closeJobItem()" class="md:hidden"><img src="assets/images/arrow-left.svg" class="w-5 mb-8"></button>
                 <app-jobs-item class="" [job]="jobsList[selectedJob]"></app-jobs-item>
             </div>
