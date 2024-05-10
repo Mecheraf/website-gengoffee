@@ -7,6 +7,7 @@ import { Event } from '../models/event';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
 import { MatLegacySnackBar as MatSnackBar, MatLegacySnackBarConfig as MatSnackBarConfig } from '@angular/material/legacy-snack-bar';
+import { Meta } from '@angular/platform-browser';
 
 
 
@@ -46,12 +47,14 @@ export class RegisterComponent implements OnInit {
     private eventservice: EventService,
     private registerservice:RegisterService,
     private translateService: TranslateService,
-    public _snackBar: MatSnackBar
+    public _snackBar: MatSnackBar,
+    private meta: Meta
     ) {
   }
 
   ngOnInit(): void {
     this.getNextEvents(NEXT_EVENTS);
+    this.allTags()
   }
 
   getNextEvents(limit:number) {
@@ -123,6 +126,11 @@ export class RegisterComponent implements OnInit {
         }
       }
     }
+  }
+
+  allTags(){
+    this.meta.addTag({ name: 'title', content: 'Inscrivez-vous à nos échanges linguistique Gengoffee'});
+    this.meta.addTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
   }
   
 }
