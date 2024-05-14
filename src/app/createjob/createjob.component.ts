@@ -15,7 +15,7 @@ interface formParams {
 @Component({
   selector: 'app-createjob',
   templateUrl: './createjob.component.html',
-  styleUrl: './createjob.component.css'
+  styleUrls: ['./createjob.component.css']
 })
 
 
