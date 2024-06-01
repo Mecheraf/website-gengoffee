@@ -39,6 +39,8 @@ export class RegisteredComponent implements OnInit {
   public nextEvents:any;
   public registeredList: any = [];
   public events:eventsAttendees[] = [];
+  public nbEventFr:number = 3;
+  public nbEventJp:number = 1;
 
   constructor(
     private registeredService: RegisteredService,
@@ -58,24 +60,25 @@ export class RegisteredComponent implements OnInit {
           element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
           console.log(element.date_registered)
         })
-        this.getNextEvent(3, registeredList)
+        this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
+        this.getNextEvent(this.nbEventJp, registeredList, 'TOKYO')
       })
-    ).subscribe() 
+    ).subscribe()
   }
 
-  getNextEvent(limit:number, registeredList:any) {
-    this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
+  getNextEvent(limit:number, registeredList:any, location:string) {
+    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
       this.nextEvents = data;
       this.nextEvents.forEach((element: any, index:number) => {
         const currentList:any = registeredList.filter((registered: { id_event: any; }) => 
           registered.id_event == element.id
         )
-        this.events[index] = {
+        this.events.push({
           id: element.id,
           date: element.date,
           type: element.type,
           registeredList: currentList
-        } ;      
+        });
       });
     })
   }
@@ -87,7 +90,7 @@ export class RegisteredComponent implements OnInit {
   }
   
   public getColorByCountry(eventType:string): string {
-    if (eventType === 'jp') {
+    if (eventType === 'jp' || eventType === 'fr') {
       return "gengoffee-lightred-bg";
     }
     
@@ -102,6 +105,13 @@ export class RegisteredComponent implements OnInit {
     const year = eventDate.getFullYear();
 
     return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
+  }
+
+  public getLocation(type:string){
+    if(type === 'fr'){
+      return "TOKYO"
+    }
+    return "PARIS"
   }
 
 }

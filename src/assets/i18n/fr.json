@@ -8,6 +8,8 @@
     "errorRegister":"Veuillez remplir tous les champs nécessaires",
     "noevents":"Pas d'événement annoncé pour le moment",
     "hello":"Hello",
+    "paris":"PARIS",
+    "tokyo":"TOKYO",
     "days": {
         "1":"Lundi",
         "2":"Mardi",
@@ -183,6 +185,12 @@
             "salary":"Rémunérations",
             "more":"Informations complémentaires"
         }
+    },
+    "create":{
+        "title":"Création d'événement",
+        "type":"Type de l'événement (défini la langue secondaire)",
+        "place":"Date et Lieu de l'événement",
+        "city":"Ville de l'événement (défini la langue principale)"
     },
     "en": "Anglais",
     "fr": "Français",

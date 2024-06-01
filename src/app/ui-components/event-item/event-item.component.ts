@@ -4,6 +4,7 @@ import { Event } from 'src/app/models/event';
 
 
 const localeToFlag: any = {
+  'fr' : '🇫🇷',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
   'es' : '🇪🇸'
@@ -33,6 +34,9 @@ export class EventItemComponent implements OnInit {
 
   public renderFlags(): string {
     if (localeToFlag[this.event.type]) {
+      if(String(this.event.location)?.toLocaleLowerCase() === "tokyo"){
+        this.defaultLanguage = "🇯🇵"
+      }
       return this.defaultLanguage + ' ' + localeToFlag[this.event.type] 
     }
 
@@ -63,15 +67,15 @@ export class EventItemComponent implements OnInit {
 
   public getTranslatedDate() {
     const eventDate = new Date(this.event.date);
-    const translatedDay = this.translateService.instant('days.' + eventDate.getDay().toString());
-    const translatedMonth = this.translateService.instant('months.' + eventDate.getMonth().toString());
-    const dayNumber = eventDate.getDate();
+    const translatedDay = this.translateService.instant('days.' + eventDate.getUTCDay().toString());
+    const translatedMonth = this.translateService.instant('months.' + eventDate.getUTCMonth().toString());
+    const dayNumber = eventDate.getUTCDate();
     const year = eventDate.getFullYear();
 
     return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
   }
 
-  public getDayHour() {
+  public getDayHour(location:string) {
     const eventDate = new Date(this.event.date);
     return eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0');
   }
