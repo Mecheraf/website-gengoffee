@@ -39,8 +39,10 @@ export class EventsComponent implements OnInit {
     });
   }
 
+
   private allTags(){
-    this.meta.addTag({ name: 'title', content: 'Nos événements franco-japonais ou franco-anglais à Paris et à Tokyo.'});
-    this.meta.addTag({ name: 'description', content: 'Rejoignez-nous lors nos événements pour pratiquer le japonais ou l’anglais que vous souhaitez apprendre ou améliorer autour d\'un verre à Paris ou à Tokyo.'});
+    this.meta.updateTag({ name: 'title', content: 'Nos événements franco-japonais ou franco-anglais à Paris et à Tokyo.'});
+    this.meta.updateTag({ name: 'description', content: 'Rejoignez-nous lors nos événements pour pratiquer le japonais ou l’anglais que vous souhaitez apprendre ou améliorer autour d\'un verre à Paris ou à Tokyo.'});
+    console.log("update")
   }
 }

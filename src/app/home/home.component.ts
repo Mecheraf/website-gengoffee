@@ -39,8 +39,8 @@ export class HomeComponent implements OnInit {
   }
 
   allTags(){
-    this.meta.addTag({ name: 'title', content: 'Gengoffee association franco-japonaise pour des échanges de langue à Paris et à Tokyo.'});
-    this.meta.addTag({ name: 'description', content: 'Gengoffee propose des échanges linguistiques pour parler à des étrangers japonais ou anglais lors de ses évènements organisés à Paris et à Tokyo. Faites vous des amis étrangers.'});
+    this.meta.updateTag({ name: 'title', content: 'Gengoffee association franco-japonaise pour des échanges de langue à Paris et à Tokyo.'});
+    this.meta.updateTag({ name: 'description', content: 'Gengoffee propose des échanges linguistiques pour parler à des étrangers japonais ou anglais lors de ses évènements organisés à Paris et à Tokyo. Faites vous des amis étrangers.'});
   }
 
 

@@ -24,7 +24,7 @@ export class AboutUsComponent implements OnInit {
   }
 
   private allTags(){
-    this.meta.addTag({ name: 'title', content: 'Association France/Japon. Participez à nos échanges de langue à Paris ou à Tokyo.'});
-    this.meta.addTag({ name: 'description', content: 'Gengoffee est une association franco-japonaise qui permet à ses participants de rencontrer des Japonais ou anglophones lors de ses échanges de langue à Paris ou à Tokyo.'});
+    this.meta.updateTag({ name: 'title', content: 'Association France/Japon. Participez à nos échanges de langue à Paris ou à Tokyo.'});
+    this.meta.updateTag({ name: 'description', content: 'Gengoffee est une association franco-japonaise qui permet à ses participants de rencontrer des Japonais ou anglophones lors de ses échanges de langue à Paris ou à Tokyo.'});
   }
 }

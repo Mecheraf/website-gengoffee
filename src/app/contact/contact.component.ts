@@ -44,8 +44,8 @@ export class ContactComponent implements OnInit {
   }
 
   allTags(){
-    this.meta.addTag({ name: 'title', content: 'Contactez l’association franco-japonais Gengoffee via le formulaire'});
-    this.meta.addTag({ name: 'description', content: 'Futur participant ? Futur partenaire ? Contactez-nous pour nous expliquer vos envies ou projets à propos de nos échanges de langue à Paris ou Tokyo.'});
+    this.meta.updateTag({ name: 'title', content: 'Contactez l’association franco-japonais Gengoffee via le formulaire'});
+    this.meta.updateTag({ name: 'description', content: 'Futur participant ? Futur partenaire ? Contactez-nous pour nous expliquer vos envies ou projets à propos de nos échanges de langue à Paris ou Tokyo.'});
   }
 
 }
