@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
 import { MatLegacySnackBar as MatSnackBar, MatLegacySnackBarConfig as MatSnackBarConfig } from '@angular/material/legacy-snack-bar';
+import { Meta } from '@angular/platform-browser';
 
 
 
@@ -46,11 +47,13 @@ export class RegisterComponent implements OnInit {
     private eventservice: EventService,
     private registerservice:RegisterService,
     private translateService: TranslateService,
-    public _snackBar: MatSnackBar
+    public _snackBar: MatSnackBar,
+    private meta: Meta
     ) {
   }
 
   ngOnInit(): void {
+    this.allTags()
     this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
     this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
   }
@@ -125,6 +128,11 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  allTags(){
+    this.meta.updateTag({ name: 'title', content: 'Inscrivez-vous à nos échanges linguistique Gengoffee'});
+    this.meta.updateTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
+  } 
+   
   selectLocation(location:number) {
     this.location = location;
   }
