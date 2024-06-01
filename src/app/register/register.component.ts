@@ -53,7 +53,6 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getNextEvents(NEXT_EVENTS);
     this.allTags()
     this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
     this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
@@ -130,8 +129,8 @@ export class RegisterComponent implements OnInit {
   }
 
   allTags(){
-    this.meta.addTag({ name: 'title', content: 'Inscrivez-vous à nos échanges linguistique Gengoffee'});
-    this.meta.addTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
+    this.meta.updateTag({ name: 'title', content: 'Inscrivez-vous à nos échanges linguistique Gengoffee'});
+    this.meta.updateTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
   } 
    
   selectLocation(location:number) {
