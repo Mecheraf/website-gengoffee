@@ -11,6 +11,7 @@ import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 import { AuthGuard } from './auth/auth.guard';
 import { JobboardComponent } from './jobboard/jobboard.component';
 import { CreatejobComponent } from './createjob/createjob.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'registered', component: RegisteredComponent, canActivate:[AuthGuard]},
   { path: 'createjob', component:CreatejobComponent, canActivate:[AuthGuard]},
   { path: 'loginadmin', component: LoginAdminComponent},
+  { path: 'legal-notice', component: LegalNoticeComponent},
   //{ path: 'jobs', component: JobboardComponent}
 
 

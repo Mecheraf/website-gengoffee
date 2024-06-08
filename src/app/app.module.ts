@@ -41,6 +41,7 @@ import { JobsRowComponent } from './ui-components/jobs-row/jobs-row.component';
 import { JobsItemComponent } from './ui-components/jobs-item/jobs-item.component';
 import { Meta } from '@angular/platform-browser';
 import { CreatejobComponent } from './createjob/createjob.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 
 
@@ -71,7 +72,8 @@ import { CreatejobComponent } from './createjob/createjob.component';
     JobboardComponent,
     JobsRowComponent,
     JobsItemComponent,
-    CreatejobComponent
+    CreatejobComponent,
+    LegalNoticeComponent
     ],
   imports: [
     BrowserModule,

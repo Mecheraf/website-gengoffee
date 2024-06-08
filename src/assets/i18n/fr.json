@@ -68,9 +68,7 @@
         "partner":{
             "berthom":{
                 "title":"Un grand merci à Les Berthom qui accueille nos événements.",
-                "name":"Les Berthom",
-                "address":"35 Boulevard Voltaire\n75011 Paris"
-            },
+                "name":"Les Berthom"            },
             "obrkof":{
                 "title":"Nous remercions le Café Obrkof qui permit la création du projet Gengoffee tout en étant un partenaire de qualité !"
             }
@@ -87,7 +85,7 @@
         "past":"Passé"
     },
     "explanation":{
-        "title":"Comment se déroule\nun évènement Gengoffee ?",
+        "title":"Comment se déroule un évènement Gengoffee ?",
         "uptitle":"En savoir un peu plus",
         "1":"<span class=\"font-semibold\">1.</span> On vous installe à une table<br> numérotée de <span class=\"font-semibold\">6 à 8 personnes.</span>",
         "2":"<span class=\"font-semibold\">2.</span> Français, anglais ou japonais,<br>vous discutez dans la langue indiquée <br><span class=\"font-semibold\">pendant 15min.</span>",
@@ -191,6 +189,61 @@
         "type":"Type de l'événement (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
         "city":"Ville de l'événement (défini la langue principale)"
+    },
+    "legal":{
+        "title":"Mentions Légales",
+        "association": {
+            "description":"Les sites « www.gengoffee.fr » et « www.gengoffee.com » sont des propriétés de l'Association Gengoffee, Association loi de 1901 à but non lucratif.",
+            "siret":"Numéro Siret : 91385763700015",
+            "address":"Siège de l'Association : 50 B AVENUE MAURICE THOREZ 94200 IVRY-SUR-SEINE, France",
+            "headchef":"Représentant légal de l'association France : Alan MECHERAF",
+            "host":"Hébergeurs : OVH & Microsoft",
+            "developpers": {
+                "developpers":"Les développeurs : Alan MECHERAF & Salim BAROUDI",
+                "design":"La direction artistique : Catherine T.",
+                "text":"Rédaction des textes : Alan MECHERAF, Catherine T. & Alexane LACOUTURE",
+                "seo": "Référencement du site : Alan MECHERAF & Alexane LACOUTURE"
+            },
+            "credits":"Crédits : <br><br>Tout le contenu des sites www.gengoffee.fr et www.gengoffee.com (les graphismes, images, textes, logos...) ainsi que leur mise en forme sont la propriété exclusive de l'Association Gengoffee, à l'exception des visuels ou logos appartenant à d'autres sociétés partenaires ou auteurs/photographes. Toute reproduction, distribution, modification, retransmission ou publication de ces différents éléments est strictement interdite sans notre accord exprès par écrit. Pour toute demande d'autorisation ou d'information, envoyez-nous un e-mail à web@gengoffee.fr"
+        },
+        "data":{
+            "title":"CHARTE DE PROTECTION DES DONNÉES PERSONNELLES DES UTILISATEURS",
+            "subtitle":"GÉNÉRALITÉS :",
+            "description":"L'Association Gengoffee, dont le siège social est situé au  50 Avenue Maurice Thorez, 94200 Ivry sur Seine FRANCE, en sa qualité de responsable de traitement, attache une importance et une attention toute particulière au respect des droits des personnes, respect de la vie privée et protection des données notamment à caractère personnel.<br><br>Ce présent document vise à informer nos utilisateurs et toute personne susceptible d'être concernée par une collecte de données de la part de Gengoffee ou d'un de ses sous-traitants (traitant des données à caractère personnel), de l'utilisation ou encore du partage et/ou du transfert de données, de leurs droits, des procédures mises en places par Gengoffee et présente la manière dont nous traitons les données personnelles que nous collectons ou bien que vous nous fournissez.<br><br>Gengoffee s'est engagé dans une démarche de protection des données permanente depuis sa création et ce, en conformité avec la Loi Informatique et Libertés du 6 janvier 1978 et du Règlement Européen sur la Protection des Données (RGPD) du 27 avril 2016 entré en application le 25 mai 2018.",
+            "glossary":{
+                "title":"GLOSSAIRE",
+                "description":"DONNÉES À CARACTÈRE PERSONNEL (DCP) : Les Données à caractère personnel, ci-après DCP, sont toutes les informations se rapportant à une personne physique identifiée ou identifiable (par un croisement de données)."
+            },
+            "notions":{
+                "title":"NOTION DE TRAITEMENT :",
+                "description":"Il s'agit de l'ensemble des opérations réalisées par des moyens automatiques ou non, relatif à la collecte, l'enregistrement, l'élaboration, la modification, la conservation, la destruction, l'édition de données et d'une façon générale de leur exploitation."
+            },
+            "responsability":{
+                "title":"RESPONSABLE DE TRAITEMENT :",
+                "description":"Il s'agit de la personne physique ou morale qui détermine les finalités et les moyens de traitement."
+            },
+            "dataCollected":{
+                "title":"LES DONNÉES QUE NOUS COLLECTONS :",
+                "fromUs":{
+                    "title":"LES DONNÉES QUE VOUS NOUS TRANSMETTEZ :",
+                    "description":"Lorsque vous interagissez avec Gengoffee, de quelque manière que ce soit, vous êtes susceptibles de nous transmettre des informations dont des données à caractère personnel. C'est notamment le cas lorsque vous remplissez participez à un jeu concours, complétez une fiche de contact ou encore lorsque vous nous envoyez un mail pour nous faire part d'une situation vous concernant, grâce à l'adresse web@gengoffee.fr par exemple.<br><br>Dans le cadre d'une adhésion, il vous sera demandé votre nom, nom d'usage, prénom, adresse mail, numéro de téléphone, réseaux sociaux, pièce d'identité. Dans les autres cadres les données sont principalement votre nom, prénom, adresse e-mail et numéro de téléphone.<br><br>Les données relatives à la participation à des jeux concours et sondages. Ces données sont principalement une copie de l'ensemble des échanges et réponses apportées entre vous et Gengoffee. Ces informations étant susceptibles d'être collectées, rassemblées et utilisées pour des analyses et des recherches relatives aux finalités exposées sur les différents supports au moment de la participation.Les données que nous sommes susceptibles de vous demander en réponse à des questions, problèmes et réclamations ; notamment dans les échanges et réponses entre vous et Gengoffee.<br><br>Les données recueillies dans le cadre de l'exercice de vos droits. Exception faite de l'exercice du droit à l'oubli. Vous retrouverez l'ensemble de vos droits au point 13. de la présente charte.<br>Et d'autres informations que vous souhaitez nous communiquer, telles qu'une situation personnelle particulière, vos habitudes de vie.<br><br>Chaque personne reste maître de ses données, Gengoffee n'en dispose pas librement. Toutes les données collectées et traitées sont soumises à votre consentement ou à une obligation contractuelle et respectent la Loi Informatique et Libertés ainsi que le Règlement Général sur la Protection des Données. Ces données seront toujours traitées conformément à la politique en vigueur au moment de leur collecte, sauf modifications légales qui auraient une application rétroactive."  
+                },
+                "minor":{
+                    "title":"2. LA PROTECTION DES MINEURS",
+                    "description":"Il peut arriver que Gengoffee traite des données relatives à des mineurs dans le cadre de la prise de contact de mineurs sur notre site www.gengoffee.fr ou www.gengoffee.com, néanmoins, conformément à l'article 8 du Règlement Général sur la Protection des Données, la collecte et le traitement de ces données ne s'opèrent qu'avec l'autorisation expresse donnée par le titulaire de la responsabilité parentale à l'égard du mineur."
+                },
+                "collection":{
+                    "title":"3. LES MOYENS DE LA COLLECTE DES DONNÉES",
+                    "description":"Les données sont collectées numériquement ou de façon manuscrite par un collaborateur, un sous traitant pour le compte de Gengoffee ou renseignées par vos soins. Sur nos sites et applications mobiles, ces données peuvent être collectées par le biais de formulaires que vous pouvez être amenés à compléter de manière manuscrite ou sous format numérique (choix déroulants, sondages...)."
+                },
+                "reason":{
+                    "firstTitle":"LES FINALITÉS DE LA COLLECTE DE DONNÉES",
+                    "title":"4. POURQUOI Gengoffee COLLECTE VOS DONNÉES ?",
+                    "description":"Gengoffee collecte vos données pour les finalités suivantes :<br><br>Communication relatives aux événements.<br><br>Permettre d'adapter nos événements aux membres (repas, organisaiton, ...)."
+                }
+            }
+        }
+
     },
     "en": "Anglais",
     "fr": "Français",

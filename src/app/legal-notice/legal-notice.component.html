@@ -1,0 +1,32 @@
+<div class="max-w-xs md:max-w-4xl mx-auto mb-8">
+    <h1 class="w-fit mx-auto mb-12">{{'legal.title'|translate}}</h1>
+
+    <div class="space-y-6 md:space-y-8 mb-8">
+        <p>{{'legal.association.description'|translate}}</p>
+        <p>{{'legal.association.siret'|translate}}</p>
+        <p>{{'legal.association.address'|translate}}</p>
+        <p>{{'legal.association.headchef'|translate}}</p>
+    </div>
+    <div class="space-y-1 mb-8">
+        <p>{{'legal.association.developpers.developpers'|translate}}</p>
+        <p>{{'legal.association.developpers.design'|translate}}</p>
+        <p>{{'legal.association.developpers.text'|translate}}</p>
+        <p>{{'legal.association.developpers.seo'|translate}}</p>
+    </div>
+    <div [innerHtml]="'legal.association.credits'|translate"></div>
+
+    <div class="mt-12">
+        <p class="text-xl">{{'legal.data.title'|translate}}</p>
+        <p class="my-8">{{'legal.data.subtitle'|translate}}</p>
+        <div [innerHtml]="'legal.data.description'|translate"></div>
+        <p class="mt-8 text-xl">{{'legal.data.dataCollected.title'|translate}}</p>
+        <p class="my-8">{{'legal.data.dataCollected.fromUs.title'|translate}}</p>
+        <div [innerHtml]="'legal.data.dataCollected.fromUs.description'|translate"></div>
+        <p class="my-8">{{'legal.data.dataCollected.reason.firstTitle'|translate}}</p>
+        <p class="">{{'legal.data.dataCollected.reason.title'|translate}}</p>
+        <div [innerHtml]="'legal.data.dataCollected.reason.description'|translate"></div>
+
+    </div>
+
+
+</div>
