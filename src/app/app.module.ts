@@ -24,7 +24,6 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateeventComponent } from './createevent/createevent.component';
-import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
 import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
@@ -84,8 +83,6 @@ import { CreatejobComponent } from './createjob/createjob.component';
             deps: [HttpClient] 
         }
     }),
-    NgxMatDatetimePickerModule,
-    NgxMatTimepickerModule,
     MatDatepickerModule,
     MatInputModule,
     ReactiveFormsModule,
@@ -93,7 +90,6 @@ import { CreatejobComponent } from './createjob/createjob.component';
     CommonModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    NgxMatNativeDateModule,
     MatSnackBarModule
   ],
   providers: [
