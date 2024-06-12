@@ -8,7 +8,6 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
-      - deployment
 
 jobs:
   build_and_deploy_job:
@@ -32,7 +31,6 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "dist/website-gengoffee" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-          app_build_command: 'npm run build:ssr'
         env:
           NPM_CONFIG_LEGACY_PEER_DEPS: true
 
