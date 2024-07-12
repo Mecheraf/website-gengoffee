@@ -60,8 +60,8 @@ export class RegisteredComponent implements OnInit {
           element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
           console.log(element.date_registered)
         })
-        this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
-        this.getNextEvent(this.nbEventJp, registeredList, 'TOKYO')
+        //this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
+        //this.getNextEvent(this.nbEventJp, registeredList, 'TOKYO')
       })
     ).subscribe()
   }
