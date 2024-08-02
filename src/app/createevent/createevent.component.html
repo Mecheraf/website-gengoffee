@@ -13,16 +13,7 @@
         <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
         <input type="text" name="place"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
         
-        <mat-form-field class="mt-8">
-            <input matInput [ngxMatDatetimePicker]="picker" [formControl]="dateControl"
-            [min]="minDate" [max]="maxDate" [disabled]="disabled">
-            <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
-            <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
-            [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
-            [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian" 
-            [disableMinute]="disableMinute" [hideTime]="hideTime">
-            </ngx-mat-datetime-picker>
-        </mat-form-field>
+
         <div class="mt-12">
             <p class="text-base ppmori-bold mb-8">{{'create.city'|translate}}</p>
             <div class="ml-6 flex gap-6">
