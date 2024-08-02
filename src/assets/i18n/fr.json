@@ -239,7 +239,12 @@
                 "reason":{
                     "firstTitle":"LES FINALITÉS DE LA COLLECTE DE DONNÉES",
                     "title":"4. POURQUOI Gengoffee COLLECTE VOS DONNÉES ?",
-                    "description":"Gengoffee collecte vos données pour les finalités suivantes :<br><br>Communication relatives aux événements.<br><br>Permettre d'adapter nos événements aux membres (repas, organisaiton, ...)."
+                    "description":"Gengoffee collecte vos données pour les finalités suivantes :<br><br>Communication relatives aux événements.<br><br>Permettre d'adapter nos événements aux membres (repas, organisaiton, ...).<br><br>Permettre la navigation sur notre site."
+                }
+                ,
+                "interest":{
+                    "title":"5. L'INTÉRET LÉGITIME",
+                    "description":"Gengoffee peut collecter et traiter des données dans le cadre de son intérêt légitime à :<br<<br>Assurer le développement et l'amélioration de nos offres ;<br<<br>Développer de nouveaux produits et vous en informer ;<br<<br>A des fins d'analyses statistiques ;<br<<br>Améliorer la navigation sur notre site web ;<br<<br>Prévenir la fraude, tentative de fraude, faux, usage de faux ;<br<<br>Et toutes les mises à jour de son site."
                 }
             }
         }
