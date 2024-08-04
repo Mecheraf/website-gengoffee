@@ -54,8 +54,8 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.allTags()
-    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
-    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
+    //this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
+    //this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
   }
 
   getNextEvents(limit:number, position:number, location:string) {

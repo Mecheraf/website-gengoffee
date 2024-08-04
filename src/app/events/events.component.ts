@@ -23,7 +23,7 @@ export class EventsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPastEvents();
-    this.getNextEvents();
+    //this.getNextEvents();
     this.allTags()
   }
 
