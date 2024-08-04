@@ -41,6 +41,7 @@ import { CreatejobComponent } from './createjob/createjob.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 
 
@@ -71,7 +72,8 @@ import { MatInputModule } from '@angular/material/input';
     JobboardComponent,
     JobsRowComponent,
     JobsItemComponent,
-    CreatejobComponent
+    CreatejobComponent,
+    LegalNoticeComponent
     ],
   imports: [
     BrowserModule,
