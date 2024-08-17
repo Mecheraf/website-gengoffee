@@ -102,7 +102,8 @@
         "form": {
             "title": "Sign up for the next Gengoffee event",
             "description": "Join us for a conversation over a drink while improving your language skills!",
-            "name": "Full name",
+            "lastname": "Lastname",
+            "firstname": "Firstname",
             "mail": "Email",
             "phone": "Phone",
             "language": {
@@ -112,8 +113,10 @@
                 "french": "French",
                 "japanese": "Japanese",
                 "lv1": "Beginner",
-                "lv2": "Intermediate",
-                "lv3": "Fluent"
+                "lv2": "Lower intermediate",
+                "lv3": "Intermediate",
+                "lv4": "Advenced",
+                "lv5": "Fluent"
             },
             "diet": {
                 "title": "Do you have any allergies or dietary requirements?",

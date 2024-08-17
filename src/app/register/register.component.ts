@@ -30,8 +30,9 @@ export class RegisterComponent implements OnInit {
   public selectedLanguages: userLanguage[] = [];
 
   public registerForm: FormGroup = new FormGroup({
-    id_event: new FormControl<string>(''),
-    name: new FormControl<string>('', [Validators.required]),
+    idEvent: new FormControl<string>(''),
+    lastname: new FormControl<string>('', [Validators.required]),
+    firstname: new FormControl<string>('', [Validators.required]),
     mail: new FormControl<string>('', [Validators.required]),
     phone: new FormControl<string>(''),
     selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
@@ -81,11 +82,13 @@ export class RegisterComponent implements OnInit {
 
   addLanguage(){
     if (this.selectedLanguages.length >= 3) return;
-    const language: userLanguage = {language: "fr", level: "lv1"};
+    const language: userLanguage = {language: this.languages[0], level: "1"};
     this.selectedLanguages.push(language);
+    this.languages.shift()
   }
 
   removeLanguage(language: userLanguage){
+    this.languages.unshift(language.language)
     this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
   }
 
@@ -96,22 +99,58 @@ export class RegisterComponent implements OnInit {
     const invalidConfigSnack = new MatSnackBarConfig();
     invalidConfigSnack.panelClass = ['invalid-snackbar'];
     invalidConfigSnack.horizontalPosition = 'center';
-    const name:string = this.registerForm.get('name')?.value;
+    const firstname:string = this.registerForm.get('firstname')?.value;
     const mail:string = this.registerForm.get('mail')?.value;
 
-    if(name.length === 0  || mail.length === 0){
+    if(firstname.length === 0  || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
     } else {
-      const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
-      dietList.push(this.otherText);
-      this.registerForm.patchValue({'id_event':this.selectedEvent});
-      this.registerForm.patchValue({'dietList': dietList});
+      this.registerForm.patchValue({'idEvent':this.selectedEvent});
+      this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
       this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
       this.registerservice.post(this.registerForm.value).subscribe();
       this.registerForm.reset();
       this.selectedLanguages = [];
       this._snackBar.open(this.translateService.instant('registered'), "Fermer", validConfigSnack);
     }
+  }
+
+  displayInfo(){
+    /*const validConfigSnack = new MatSnackBarConfig();
+    validConfigSnack.panelClass = ['valid-snackbar'];
+    validConfigSnack.horizontalPosition = 'center';
+    const invalidConfigSnack = new MatSnackBarConfig();
+    invalidConfigSnack.panelClass = ['invalid-snackbar'];
+    invalidConfigSnack.horizontalPosition = 'center';
+    const firstname:string = this.registerForm.get('firstname')?.value;
+    const mail:string = this.registerForm.get('mail')?.value;
+
+    if(firstname.length === 0  || mail.length === 0){
+      this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
+    } else {
+      this.registerForm.patchValue({'idEvent':this.selectedEvent});
+      this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
+      this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
+    }
+
+    console.log(this.registerForm)*/
+
+    console.log(this.selectedLanguages)
+    console.log(this.languages)
+    if(this.checkLanguage("fr", this.selectedLanguages)){
+      console.log("French is in")
+    } else {
+      console.log("No french")
+    }
+  }
+
+  public checkLanguage(language:string, languages:userLanguage[]){
+    for(let element of languages){
+      if(element.language === language){
+        return true
+      }
+    }
+    return false
   }
 
 
@@ -135,6 +174,7 @@ export class RegisterComponent implements OnInit {
    
   selectLocation(location:number) {
     this.location = location;
+    console.log(this.nextEvents)
   }
   
 }

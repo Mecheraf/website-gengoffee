@@ -101,7 +101,8 @@
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
             "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
-            "name":"Nom & Prénom",
+            "lastname":"Nom",
+            "firstname":"Prénom",
             "mail":"Adresse e-mail",
             "phone":"Numéro de Téléphone",
             "language":{
@@ -111,8 +112,10 @@
                 "french":"Français",
                 "japanese":"Japonais",
                 "lv1":"Débutant",
-                "lv2":"intérmédiaire",
-                "lv3":"Courant"
+                "lv2":"Pré-Intérmédiaire",
+                "lv3":"Intérmédiaire",
+                "lv4":"Avancé",
+                "lv5":"Courant"
             },
             "diet":{
                 "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
