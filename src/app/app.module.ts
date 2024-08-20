@@ -42,7 +42,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
-
+import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
 
 
 
@@ -73,7 +73,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     JobsRowComponent,
     JobsItemComponent,
     CreatejobComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    SelectLanguageComponent
     ],
   imports: [
     BrowserModule,

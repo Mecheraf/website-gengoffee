@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   constructor(private eventservice: EventService, private datePipe: DatePipe, private meta: Meta) { }
 
   ngOnInit(): void {
-    //this.getNextEvents(NB_EVENTS)
+    this.getNextEvents(NB_EVENTS)
     this.getPastEvents(NB_EVENTS)
     this.allTags()
   }

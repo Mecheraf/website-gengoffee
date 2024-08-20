@@ -101,7 +101,8 @@
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
             "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
-            "name":"Nom & Prénom",
+            "lastname":"Nom",
+            "firstname":"Prénom",
             "mail":"Adresse e-mail",
             "phone":"Numéro de Téléphone",
             "language":{
@@ -111,8 +112,10 @@
                 "french":"Français",
                 "japanese":"Japonais",
                 "lv1":"Débutant",
-                "lv2":"intérmédiaire",
-                "lv3":"Courant"
+                "lv2":"Pré-Intérmédiaire",
+                "lv3":"Intérmédiaire",
+                "lv4":"Avancé",
+                "lv5":"Courant"
             },
             "diet":{
                 "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
@@ -243,7 +246,7 @@
                 },
                 "interest":{
                     "title":"5. L'INTÉRET LÉGITIME",
-                    "description":"Gengoffee peut collecter et traiter des données dans le cadre de son intérêt légitime à :<br<<br>Assurer le développement et l'amélioration de nos offres ;<br<<br>Développer de nouveaux produits et vous en informer ;<br<<br>A des fins d'analyses statistiques ;<br<<br>Améliorer la navigation sur notre site web ;<br<<br>Prévenir la fraude, tentative de fraude, faux, usage de faux ;<br<<br>Et toutes les mises à jour de son site."
+                    "description":"Gengoffee peut collecter et traiter des données dans le cadre de son intérêt légitime à :<br><br>Assurer le développement et l'amélioration de nos offres ;<br><br>Développer de nouveaux produits et vous en informer ;<br><br>A des fins d'analyses statistiques ;<br><br>Améliorer la navigation sur notre site web ;<br><br>Prévenir la fraude, tentative de fraude, faux, usage de faux ;<br><br>Et toutes les mises à jour de son site."
                 },
                 "timespan":{
                     "firstTitle":"COMBIEN DE TEMPS Gengoffee CONSERVE-T-IL VOS DONNÉES ?",
