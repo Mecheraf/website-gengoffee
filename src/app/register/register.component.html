@@ -53,7 +53,7 @@
                     <textarea [(ngModel)]="otherText" [ngModelOptions]="{standalone: true}" *ngIf="showText" name="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
                 </div>
                 <p *ngIf="this.warning === 0" class="ppmori-bold gengoffee-red">{{'register.form.warning'|translate}}</p>
-                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0 || selectedEvent === '0'" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
                 </button>                             
             </form>   
