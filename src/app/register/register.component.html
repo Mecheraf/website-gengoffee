@@ -39,23 +39,9 @@
                 </div>
                 <input type="text" formControlName="phone" name="phone" placeholder="+33X XX XX XX XX" class="w-full border-b border-solid pt-4">
                 <p class="pt-8">{{'register.form.language.title'|translate}}</p>
-                <div *ngFor="let language of selectedLanguages; let index = index;" class="flex gap-4 pl-4 my-4">
-                    <select ng-options=" language | unique:'language.language'" [(ngModel)]="language.language" [ngModelOptions]="{standalone: true}" name="language + {{index}}" id="language + {{index}}" class="bg-white border-b-2">
-                        <option *ngIf="checkLanguage('fr', selectedLanguages)" value="fr" [selected]="'fr' === language.language">{{'register.form.language.french'|translate}}</option>
-                        <option *ngIf="checkLanguage('en', selectedLanguages)" value="en" [selected]="'en' === language.language">{{'register.form.language.english'|translate}}</option>
-                        <option *ngIf="checkLanguage('jp', selectedLanguages)" value="jp" [selected]="'jp' === language.language">{{'register.form.language.japanese'|translate}}</option>
-                    </select>
-                    <select [(ngModel)]="language.level" [ngModelOptions]="{standalone: true}" name="level + {{index}}" id="level + {{index}}" class="bg-white border-b-2">
-                        <option value="1" [selected]="'1' === language.level">{{'register.form.language.lv1'|translate}}</option>
-                        <option value="2" [selected]="'2' === language.level">{{'register.form.language.lv2'|translate}}</option>
-                        <option value="3" [selected]="'3' === language.level">{{'register.form.language.lv3'|translate}}</option>
-                        <option value="4" [selected]="'4' === language.level">{{'register.form.language.lv4'|translate}}</option>
-                        <option value="5" [selected]="'5' === language.level">{{'register.form.language.lv5'|translate}}</option>
-
-                    </select>
-                    <button type="button" (click)="removeLanguage(language)" class="p-1 border-x-2 border-y-2">X</button>
-                </div>
-                <button type="button" (click)="addLanguage()" [disabled]="this.selectedLanguages.length >= 3" [ngClass]="{'opacity-50': this.selectedLanguages.length >= 3}" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
+                
+                <app-select-language [selectedLanguages]="selectedLanguages"></app-select-language>
+                
                 
                 <p class="font-semibold mt-12 mb-2">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>

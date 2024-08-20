@@ -23,21 +23,14 @@ interface userLanguage {
 
 export class RegisterComponent implements OnInit {
 
-  public languages: string[] = ["fr", "jp", "en"];
+  //public languages: string[] = ["fr", "jp", "en"];
 
   public showText:boolean = false;
   public otherText:string = "";
   public selectedLanguages: userLanguage[] = [];
 
-  public registerForm: FormGroup = new FormGroup({
-    idEvent: new FormControl<string>(''),
-    lastname: new FormControl<string>('', [Validators.required]),
-    firstname: new FormControl<string>('', [Validators.required]),
-    mail: new FormControl<string>('', [Validators.required]),
-    phone: new FormControl<string>(''),
-    selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
-    dietList: new FormControl<string[]>([]),
-  });
+  public registerForm: FormGroup = new FormGroup({})
+
   public events:any;
   public nextEvents:any[] = [];
   public selectedEvent:string = "0";
@@ -53,8 +46,21 @@ export class RegisterComponent implements OnInit {
     ) {
   }
 
+  initForm(){
+    this.registerForm = new FormGroup({
+      idEvent: new FormControl<string>(''),
+      lastname: new FormControl<string>(''),
+      firstname: new FormControl<string>(''),
+      mail: new FormControl<string>('', [Validators.required]),
+      phone: new FormControl<string>(''),
+      selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
+      dietList: new FormControl<string[]>([]),
+    });
+  }
+
   ngOnInit(): void {
     this.allTags()
+    this.initForm()
     this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
     this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
   }
@@ -80,17 +86,17 @@ export class RegisterComponent implements OnInit {
     this.showText = !this.showText;
   }
 
-  addLanguage(){
-    if (this.selectedLanguages.length >= 3) return;
-    const language: userLanguage = {language: this.languages[0], level: "1"};
-    this.selectedLanguages.push(language);
-    this.languages.shift()
-  }
+  // addLanguage(){
+  //   if (this.selectedLanguages.length >= 3) return;
+  //   const language: userLanguage = {language: this.languages[0], level: "1"};
+  //   this.selectedLanguages.push(language);
+  //   this.languages.shift()
+  // }
 
-  removeLanguage(language: userLanguage){
-    this.languages.unshift(language.language)
-    this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
-  }
+  // removeLanguage(language: userLanguage){
+  //   this.languages.unshift(language.language)
+  //   this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
+  // }
 
   onSubmit(){
     const validConfigSnack = new MatSnackBarConfig();
@@ -109,7 +115,7 @@ export class RegisterComponent implements OnInit {
       this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
       this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
       this.registerservice.post(this.registerForm.value).subscribe();
-      this.registerForm.reset();
+      this.initForm()
       this.selectedLanguages = [];
       this._snackBar.open(this.translateService.instant('registered'), "Fermer", validConfigSnack);
     }
@@ -133,7 +139,6 @@ export class RegisterComponent implements OnInit {
       this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
     }
 
-    console.log(this.registerForm)*/
 
     console.log(this.selectedLanguages)
     console.log(this.languages)
@@ -142,6 +147,9 @@ export class RegisterComponent implements OnInit {
     } else {
       console.log("No french")
     }
+    */
+    console.log(this.registerForm)
+
   }
 
   public checkLanguage(language:string, languages:userLanguage[]){
