@@ -108,7 +108,7 @@ export class RegisterComponent implements OnInit {
     const firstname:string = this.registerForm.get('firstname')?.value;
     const mail:string = this.registerForm.get('mail')?.value;
 
-    if(firstname.length === 0  || mail.length === 0){
+    if(this.selectedEvent === "0" || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
     } else {
       this.registerForm.patchValue({'idEvent':this.selectedEvent});
