@@ -121,37 +121,6 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  displayInfo(){
-    /*const validConfigSnack = new MatSnackBarConfig();
-    validConfigSnack.panelClass = ['valid-snackbar'];
-    validConfigSnack.horizontalPosition = 'center';
-    const invalidConfigSnack = new MatSnackBarConfig();
-    invalidConfigSnack.panelClass = ['invalid-snackbar'];
-    invalidConfigSnack.horizontalPosition = 'center';
-    const firstname:string = this.registerForm.get('firstname')?.value;
-    const mail:string = this.registerForm.get('mail')?.value;
-
-    if(firstname.length === 0  || mail.length === 0){
-      this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
-    } else {
-      this.registerForm.patchValue({'idEvent':this.selectedEvent});
-      this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
-      this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
-    }
-
-
-    console.log(this.selectedLanguages)
-    console.log(this.languages)
-    if(this.checkLanguage("fr", this.selectedLanguages)){
-      console.log("French is in")
-    } else {
-      console.log("No french")
-    }
-    */
-    console.log(this.registerForm)
-
-  }
-
   public checkLanguage(language:string, languages:userLanguage[]){
     for(let element of languages){
       if(element.language === language){
@@ -182,7 +151,6 @@ export class RegisterComponent implements OnInit {
    
   selectLocation(location:number) {
     this.location = location;
-    console.log(this.nextEvents)
   }
   
 }
