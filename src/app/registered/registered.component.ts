@@ -9,12 +9,12 @@ import { DatePipe } from '@angular/common';
 
 
 interface registeredUser {
-  name:string,
-  languages:string[],
+  firstname:string,
+  lastname:string
   mail:string,
   diet:string[], 
-  id_event:number,
-  date_registered:Date
+  idEvent:number,
+  languages:any
 }
 
 interface eventsAttendees {
@@ -57,21 +57,25 @@ export class RegisteredComponent implements OnInit {
       }), 
       tap((registeredList)=>{
         registeredList.forEach((element: any, index:number) => {
-          element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
-          console.log(element.date_registered)
+          //element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
+          //console.log(element.date_registered)
+          registeredList[index].languages = this.getLanguages(element.languages)
+          console.log(registeredList[index].languages)
         })
         this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
         this.getNextEvent(this.nbEventJp, registeredList, 'TOKYO')
       })
     ).subscribe()
+    console.log(this.events)
   }
 
   getNextEvent(limit:number, registeredList:any, location:string) {
     this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
       this.nextEvents = data;
       this.nextEvents.forEach((element: any, index:number) => {
-        const currentList:any = registeredList.filter((registered: { id_event: any; }) => 
-          registered.id_event == element.id
+        
+        const currentList:any = registeredList.filter((registered: { idEvent: any; }) => 
+          registered.idEvent == element.id
         )
         this.events.push({
           id: element.id,
@@ -87,6 +91,7 @@ export class RegisteredComponent implements OnInit {
     this.registeredService.getRegisteredList().subscribe((registeredList) => {
       this.registeredList = registeredList
     });
+    console.log(this.registeredList)
   }
   
   public getColorByCountry(eventType:string): string {
@@ -105,6 +110,25 @@ export class RegisteredComponent implements OnInit {
     const year = eventDate.getFullYear();
 
     return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
+  }
+
+  public getLanguages(languages:string){
+    let result = JSON.parse(languages)
+    result.forEach((element:any, index:number) => {
+      switch(element.language) {
+        case 1:
+          result[index].language = "fr"
+          break;
+        case 2:
+          result[index].language = "en"
+          break;
+        case 3:
+          result[index].language = "jp"
+          break;
+      }
+
+    });
+    return result
   }
 
   public getLocation(type:string){
