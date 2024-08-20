@@ -13,8 +13,9 @@
                 </div>
                 <div *ngFor="let language of registered.languages" class="flex text-xs">
                     <p class="font-semibold">{{language.language | translate}}</p>
-                     : {{'register.form.language.lv'+language.level | translate}}
+                        : {{'register.form.language.lv'+language.level | translate}}
                 </div>
+            </div>
         </div>
     </div>
 </div>
