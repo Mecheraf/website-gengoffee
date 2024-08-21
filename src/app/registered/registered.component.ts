@@ -59,7 +59,9 @@ export class RegisteredComponent implements OnInit {
         registeredList.forEach((element: any, index:number) => {
           //element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
           //console.log(element.date_registered)
-          registeredList[index].languages = this.getLanguages(element.languages)
+          if(element.languages){
+            registeredList[index].languages = this.getLanguages(element.languages)
+          }
           console.log(registeredList[index].languages)
         })
         this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
@@ -73,7 +75,7 @@ export class RegisteredComponent implements OnInit {
     this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
       this.nextEvents = data;
       this.nextEvents.forEach((element: any, index:number) => {
-        
+
         const currentList:any = registeredList.filter((registered: { idEvent: any; }) => 
           registered.idEvent == element.id
         )
