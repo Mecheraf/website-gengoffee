@@ -128,6 +128,10 @@
                 "other":"Autres/Allergies"
             },
             "register":"Participer",
+            "general-conditions": {
+                "1":"En vous inscrivant à nos événements, vous acceptez nos ",
+                "2":"conditions générales d'utilisations."
+            },
             "warning":"Cet événement a un nombre de places limité. Un e-mail vous sera envoyé sous 72H pour confirmer votre inscription."
         }
     },
@@ -299,6 +303,89 @@
                 "title":"CONTACTS",
                 "description":"Si vous souhaitez nous contacter, afin de répondre à d'éventuelles questions ou réclamations, vous pouvez le faire par écrit à l'adresse suivante : par mail à l'adresse <span class=\"font-semibold\">contact@gengoffee.fr</span> . Si vous souhaitez nous contacter afin de nous fournir des recommandations ou émettre des commentaires visant à améliorer la qualité de ce document, vous pouvez également contacter le service."
             }
+        }
+
+    },
+    "conditions":{
+        "title":"Conditions générales d'utilisations",
+        "object":{
+            "title":"Objet",
+            "description":"Les présentes conditions générales de vente (CGV) régissent les modalités de participation aux échanges de langues organisés par Gengoffee, ci-après dénommée \"l'Association\". En participant à nos événements, vous acceptez implicitement ces CGV."
+        },
+        "register":{
+            "title":"Inscription",
+            "description":"L'inscription à nos événements d'échange de langues se fait en ligne selon les disponibilités. L'inscription est ouverte à toute personne majeure intéressée par la pratique ou le perfectionnement d'une langue étrangère. Ainsi, un niveau minimum de langue peut être requis pour la participation des événements."
+        },
+        "terms":{
+            "title":"Modalités de Participaton",
+            "description":{
+                "1":"Les participants s'engagent à respecter les règles de courtoisie et de respect envers les autres membres.",
+                "2":"Les échanges se font de manière équitable entre les participants afin de favoriser l'apprentissage mutuel.",
+                "3":"L'Association se réserve le droit de refuser l'accès à ses événements à toute personne ne respectant pas ces règles."
+            }
+        },
+        "price":{
+            "title":"Tarifs",
+            "description":"La participation aux événements d'échange de langues est de 10€ en espèce et de 11€ par carte bancaire afin de couvrir les coûts de traitement par les fournisseurs de services de paiement. Les prix indiqués s’entendent toutes taxes comprises. Le paiement des services s’effectue sur place au moment de l’achat."
+        },
+        "cancel":{
+            "title":"Annulations et Remboursement",
+            "association":{
+                "title":"Annulation par l'Assocation",
+                "description": {
+                    "1":"L'Association se réserve le droit de modifier le lieu, la date ou l'horaire d'un événement, et s'engage à en informer les participants dans les meilleurs délais.",
+                    "2":"En cas d'annulation d'un événement pour des raisons indépendantes de sa volonté (conditions météorologiques, problème technique, etc.), l'Association s'efforcera de reporter l'événement à une date ultérieure."
+                }
+            },
+            "client":{
+                "title":"Annulation par le Client",
+                "description":"En cas d'annulation de la part du client avant la prestation du service, aucun remboursement ne sera accordé."
+            },
+            "refund":{
+                "title":"Remboursement",
+                "description": {
+                    "title":"Les remboursements sont effectués selon les modalités suivantes :",
+                    "1":"Si le service n'a pas été utilisé et que l'annulation est effectuée avant le début de la participation d’un événement un remboursement intégral sera accordé. Lors d'une réservation d'un événement dit exceptionnel, un remboursement partiel sera accordé.",
+                    "2":"Si le service a été partiellement utilisé, le montant du remboursement peut être calculé au prorata de la portion non utilisée du service."
+                }
+            },
+            "exception":{
+                "title":"Exception",
+                "description":"L'Association se réserve le droit de faire des exceptions à sa politique de remboursement dans des circonstances exceptionnelles telles que des situations de force majeure ou des circonstances imprévues."
+            },
+            "communication":{
+                "title":"Communication",
+                "description":"Les présentes conditions de remboursement sont communiquées au client avant l'achat du service et sont également disponibles sur demande."
+            }
+
+        },
+        "data":{
+            "title":"Données utilisateur",
+            "description":"En vous inscrivant, vous acceptez de partager vos informations avec Gengoffee. Pour plus d'informations sur l'utilisation des données, veuillez vous référer aux ",
+            "legal-notice":"mentions légales."
+        },
+        "responsability":{
+            "title":"Responsabilité",
+            "description":{
+                "1":"L'Association décline toute responsabilité en cas de perte, de vol ou de dommage des effets personnels des participants sur le lieu de l'événement.",
+                "2":"Les participants sont responsables de leur propre sécurité et sont tenus de respecter les consignes de sécurité émises par l'Association ou le lieu d'accueil."
+            }
+        },
+        "image":{
+            "title":"Droit à l'image",
+            "description":"En participant aux événements de l'Association, vous consentez à ce que des photographies ou des vidéos prises pendant les événements puissent être utilisées à des fins de communication de l'Association, sauf avis contraire de votre part. Faites par de votre avis contraire sur place ou par e-mail à contact@gengoffee.fr"
+        },
+        "rights":{
+            "title":"Droit Applicable",
+            "description":"Les présentes CGV sont régies par le droit français. Tout litige relatif à leur interprétation ou à leur exécution sera soumis aux tribunaux compétents du 50 B Avenue Maurice Thorez, 94200 Ivry-Sur-Seine."
+        },
+        "exceptions":{
+            "title":"Exceptions",
+            "description":"L'Association se réserve le droit de faire des exceptions à sa politique de remboursement dans des circonstances exceptionnelles telles que des situations de force majeure ou des circonstances imprévues."
+        },
+        "communication":{
+            "title":"Communication",
+            "description":"Les présentes conditions de remboursement sont communiquées au client avant l'achat du service et sont également disponibles sur demande. En acceptant ces Conditions Générales d'Utilisation, le client reconnaît avoir pris connaissance et accepté les conditions de remboursement énoncées ci-dessus."
         }
 
     },

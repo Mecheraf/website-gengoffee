@@ -41,9 +41,9 @@ import { CreatejobComponent } from './createjob/createjob.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.component';
 import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
-
+import { ConditionsComponent } from './legal/conditions/conditions.component';
 
 
 

@@ -128,7 +128,11 @@
                 "halal": "Halal",
                 "other": "Other/Allergies"
             },
-            "register": "Sign up"
+            "register": "Sign up",
+            "general-conditions": {
+                "1":"By registering to our events, you accept our ",
+                "2":"terms and conditions."
+            }
         }
     },
     "about": {
