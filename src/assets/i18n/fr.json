@@ -204,7 +204,11 @@
             "siret":"Numéro Siret : 91385763700015",
             "address":"Siège de l'Association : 50 B AVENUE MAURICE THOREZ 94200 IVRY-SUR-SEINE, France",
             "headchef":"Représentant légal de l'association France : Alan MECHERAF",
-            "host":"Hébergeurs : OVH & Microsoft",
+            "host": {
+                "name":"Hébergeurs : OVH & Microsoft",
+                "addressOVH":"Addresse OVH : 2, rue Kellermann, 59100 Roubaix.",
+                "addressMicrosoft":"Addresse Microsoft : 37 Quai du Président Roosevelt, 92130 Issy-les-Moulineaux"
+            },
             "developpers": {
                 "developpers":"Les développeurs : Alan MECHERAF & Salim BAROUDI",
                 "design":"La direction artistique : Catherine T.",
