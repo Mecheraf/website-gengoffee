@@ -14,7 +14,8 @@ interface registeredUser {
   mail:string,
   diet:string[], 
   idEvent:number,
-  languages:any
+  languages:any,
+  date_registered:Date
 }
 
 interface eventsAttendees {
@@ -62,13 +63,11 @@ export class RegisteredComponent implements OnInit {
           if(element.languages){
             registeredList[index].languages = this.getLanguages(element.languages)
           }
-          console.log(registeredList[index].languages)
         })
         this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
         this.getNextEvent(this.nbEventJp, registeredList, 'TOKYO')
       })
     ).subscribe()
-    console.log(this.events)
   }
 
   getNextEvent(limit:number, registeredList:any, location:string) {
@@ -93,7 +92,6 @@ export class RegisteredComponent implements OnInit {
     this.registeredService.getRegisteredList().subscribe((registeredList) => {
       this.registeredList = registeredList
     });
-    console.log(this.registeredList)
   }
   
   public getColorByCountry(eventType:string): string {

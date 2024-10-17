@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'createevent', component: CreateeventComponent, canActivate:[AuthGuard]},
   { path: 'contact', component: ContactComponent},
   { path: 'registered', component: RegisteredComponent, canActivate:[AuthGuard]},
+  { path: 'registered', component: RegisteredComponent},
   { path: 'createjob', component:CreatejobComponent, canActivate:[AuthGuard]},
   { path: 'loginadmin', component: LoginAdminComponent},
   { path: 'legal-notice', component: LegalNoticeComponent},

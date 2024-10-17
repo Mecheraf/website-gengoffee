@@ -15,6 +15,9 @@
                     <p class="font-semibold">{{language.language | translate}}</p>
                         : {{'register.form.language.lv'+language.level | translate}}
                 </div>
+                <div class="gengoffee-red">
+                    {{registered.date_registered | date: 'dd/MM/YYYY  HH:mm:ss'}}
+                </div>
             </div>
         </div>
     </div>
