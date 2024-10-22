@@ -9,7 +9,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class JobsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cookieService: CookieService) { }
   private url = environment.API_URL
 
 
@@ -18,12 +18,12 @@ export class JobsService {
   }
   
   public insertJob(data: any, options?: any) { 
-    /*options = {
+    options = {
       ...options,
       headers: {
         "Authorization":"Bearer "+this.cookieService.get("token")
       }
-    }*/
+    }
     return this.http.post(this.url+"insertjob", data, options); 
   } 
   

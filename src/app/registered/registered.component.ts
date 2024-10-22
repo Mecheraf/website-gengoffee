@@ -9,11 +9,12 @@ import { DatePipe } from '@angular/common';
 
 
 interface registeredUser {
-  name:string,
-  languages:string[],
+  firstname:string,
+  lastname:string
   mail:string,
   diet:string[], 
-  id_event:number,
+  idEvent:number,
+  languages:any,
   date_registered:Date
 }
 
@@ -39,6 +40,8 @@ export class RegisteredComponent implements OnInit {
   public nextEvents:any;
   public registeredList: any = [];
   public events:eventsAttendees[] = [];
+  public nbEventFr:number = 3;
+  public nbEventJp:number = 1;
 
   constructor(
     private registeredService: RegisteredService,
@@ -55,27 +58,32 @@ export class RegisteredComponent implements OnInit {
       }), 
       tap((registeredList)=>{
         registeredList.forEach((element: any, index:number) => {
-          element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
-          console.log(element.date_registered)
+          //element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
+          //console.log(element.date_registered)
+          if(element.languages){
+            registeredList[index].languages = this.getLanguages(element.languages)
+          }
         })
-        this.getNextEvent(3, registeredList)
+        this.getNextEvent(this.nbEventFr, registeredList, 'PARIS')
+        this.getNextEvent(this.nbEventJp, registeredList, 'TOKYO')
       })
-    ).subscribe() 
+    ).subscribe()
   }
 
-  getNextEvent(limit:number, registeredList:any) {
-    this.eventservice.getNextEvents({params:{limit: limit}}).subscribe((data) => {
+  getNextEvent(limit:number, registeredList:any, location:string) {
+    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
       this.nextEvents = data;
       this.nextEvents.forEach((element: any, index:number) => {
-        const currentList:any = registeredList.filter((registered: { id_event: any; }) => 
-          registered.id_event == element.id
+
+        const currentList:any = registeredList.filter((registered: { idEvent: any; }) => 
+          registered.idEvent == element.id
         )
-        this.events[index] = {
+        this.events.push({
           id: element.id,
           date: element.date,
           type: element.type,
           registeredList: currentList
-        } ;      
+        });
       });
     })
   }
@@ -87,7 +95,7 @@ export class RegisteredComponent implements OnInit {
   }
   
   public getColorByCountry(eventType:string): string {
-    if (eventType === 'jp') {
+    if (eventType === 'jp' || eventType === 'fr') {
       return "gengoffee-lightred-bg";
     }
     
@@ -102,6 +110,32 @@ export class RegisteredComponent implements OnInit {
     const year = eventDate.getFullYear();
 
     return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
+  }
+
+  public getLanguages(languages:string){
+    let result = JSON.parse(languages)
+    result.forEach((element:any, index:number) => {
+      switch(element.language) {
+        case 1:
+          result[index].language = "fr"
+          break;
+        case 2:
+          result[index].language = "en"
+          break;
+        case 3:
+          result[index].language = "jp"
+          break;
+      }
+
+    });
+    return result
+  }
+
+  public getLocation(type:string){
+    if(type === 'fr'){
+      return "TOKYO"
+    }
+    return "PARIS"
   }
 
 }

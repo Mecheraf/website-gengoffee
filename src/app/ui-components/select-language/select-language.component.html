@@ -1,0 +1,15 @@
+<div *ngFor="let language of selectedLanguages" class="flex gap-4 pl-4 my-4">
+    <select [(ngModel)]="language.language" [ngModelOptions]="{standalone: true}" class="bg-white border-b-2 w-24" (ngModelChange)="filterAvailableLanguages()">
+        <option [value]="language.language">{{ getLanguageTranslation(language.language) | translate}}</option>
+        <option *ngFor="let availableLanguage of availableLanguages" [value]="availableLanguage.value">{{ availableLanguage.translationKey | translate}}</option>
+    </select>
+    <select [(ngModel)]="language.level" [ngModelOptions]="{standalone: true}" class="bg-white border-b-2">
+        <option value="1">{{'register.form.language.lv1'|translate}}</option>
+        <option value="2">{{'register.form.language.lv2'|translate}}</option>
+        <option value="3">{{'register.form.language.lv3'|translate}}</option>
+        <option value="4">{{'register.form.language.lv4'|translate}}</option>
+        <option value="5">{{'register.form.language.lv5'|translate}}</option>
+    </select>
+    <button type="button" (click)="removeLanguage(language)" class="p-1 border-x-2 border-y-2">X</button>
+</div>
+<button type="button" (click)="addLanguage()" [disabled]="this.selectedLanguages.length >= 3" [ngClass]="{'opacity-50': this.selectedLanguages.length >= 3}" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>

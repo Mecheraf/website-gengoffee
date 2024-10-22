@@ -18,13 +18,17 @@
       <div class="flex justify-center flex-1">
         <img src="assets/images/gengoffee-logo.svg" />
       </div>
-      <div class="flex justify-end flex-1 text-sm">{{'footer.conditions'|translate}}</div>
+      <div class="flex justify-end flex-1 text-sm">
+        <a class="text-white" [routerLink]="['/legal-notice']">{{'legal.title'|translate}}</a>
+      </div>
     </div>
     <!-- Footer copyright Mobile layout -->
     <div class="md:hidden">
       <div class="flex justify-between">
         <div class="text-sm">© 2024</div>
-        <div class="text-sm">{{'footer.conditions'|translate}}</div>
+        <div class="flex justify-end flex-1 text-sm">
+          <a class="text-white" [routerLink]="['/legal-notice']">{{'legal.title'|translate}}</a>
+        </div>
       </div>
       <div class="border-t border-white border-solid mt-3"></div>
       <div class="flex place-content-center mt-3">

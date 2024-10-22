@@ -102,7 +102,8 @@
         "form": {
             "title": "Sign up for the next Gengoffee event",
             "description": "Join us for a conversation over a drink while improving your language skills!",
-            "name": "Full name",
+            "lastname": "Lastname",
+            "firstname": "Firstname",
             "mail": "Email",
             "phone": "Phone",
             "language": {
@@ -112,8 +113,10 @@
                 "french": "French",
                 "japanese": "Japanese",
                 "lv1": "Beginner",
-                "lv2": "Intermediate",
-                "lv3": "Fluent"
+                "lv2": "Lower intermediate",
+                "lv3": "Intermediate",
+                "lv4": "Advenced",
+                "lv5": "Fluent"
             },
             "diet": {
                 "title": "Do you have any allergies or dietary requirements?",
@@ -125,7 +128,11 @@
                 "halal": "Halal",
                 "other": "Other/Allergies"
             },
-            "register": "Sign up"
+            "register": "Sign up",
+            "general-conditions": {
+                "1":"By registering to our events, you accept our ",
+                "2":"terms and conditions."
+            }
         }
     },
     "about": {
@@ -147,7 +154,7 @@
             "title": "Gengoffee in figures...",
             "1": {
                 "title": "Events",
-                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">5000 sign-ups </span> and counting!"
+                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">6000 sign-ups </span> and counting!"
             },
             "2": {
                 "title": "Community",
@@ -173,8 +180,8 @@
         "p_message": "I have a really good idea to share with your organisation and I'd like to work with you ! <3"
     },
     "job":{
-        "title":"Découvrez de nouvelles opportunités",
-        "description":"Rejoignez-nous pour trouver votre prochaine grande opportunité ou découvrir le candidat parfait pour votre équipe !",
+        "title":"Discover our new job postings!",
+        "description":"Contact us to find your next career opportunity on our team or to discover the ideal candidate for your team!",
         "item":{
             "description":"Description",
             "missions":"Missions",
@@ -182,6 +189,12 @@
             "salary":"Salary",
             "more":"More Informations"
         }
+    },
+    "create":{
+        "title":"Create event",
+        "type":"Type of the event (define the second language)",
+        "place":"Date and place of the event",
+        "city":"City of the event (Define the main language)"
     },
     "en": "English",
     "fr": "French",

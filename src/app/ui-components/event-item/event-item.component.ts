@@ -34,6 +34,9 @@ export class EventItemComponent implements OnInit {
 
   public renderFlags(): string {
     if (localeToFlag[this.event.type]) {
+      if(String(this.event.location)?.toLocaleLowerCase() === "tokyo"){
+        this.defaultLanguage = "🇯🇵"
+      }
       return this.defaultLanguage + ' ' + localeToFlag[this.event.type] 
     }
 
@@ -42,15 +45,15 @@ export class EventItemComponent implements OnInit {
 
   public getImageByCountry(id:string): string {
     if (this.event.type === 'jp') {
-      return 'gengoffee_event-'+Number(id)%2+'.png';
-    } else if (this.event.type.toLocaleLowerCase() === 'karaoke') {
-      return 'gengoffee_event-karaoke.png';
+      return 'gengoffee_event-'+Number(id)%2+'.webp';
+    } else if (this.event.type?.toLocaleLowerCase() === 'karaoke') {
+      return 'gengoffee_event_karaoke2.webp';
     }
-    return 'photo-en-'+ Number(id)%4 +'.png';
+    return 'photo-en-'+ Number(id)%4 +'.webp';
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type.toLocaleLowerCase() === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
     } 
     return "gengoffee-lightblue-bg";
@@ -64,15 +67,15 @@ export class EventItemComponent implements OnInit {
 
   public getTranslatedDate() {
     const eventDate = new Date(this.event.date);
-    const translatedDay = this.translateService.instant('days.' + eventDate.getDay().toString());
-    const translatedMonth = this.translateService.instant('months.' + eventDate.getMonth().toString());
-    const dayNumber = eventDate.getDate();
+    const translatedDay = this.translateService.instant('days.' + eventDate.getUTCDay().toString());
+    const translatedMonth = this.translateService.instant('months.' + eventDate.getUTCMonth().toString());
+    const dayNumber = eventDate.getUTCDate();
     const year = eventDate.getFullYear();
 
     return this.translateService.instant('fullDate', {day: translatedDay, month: translatedMonth, dayNumber: dayNumber, year: year });
   }
 
-  public getDayHour() {
+  public getDayHour(location:string) {
     const eventDate = new Date(this.event.date);
     return eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0');
   }
