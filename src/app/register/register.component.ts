@@ -80,7 +80,7 @@ export class RegisterComponent implements OnInit {
       dietList.push(selectedDiet);
       this.registerForm.patchValue({'dietList': dietList});
     }
-  } 
+  }
 
   toggleOther(){
     this.showText = !this.showText;
@@ -133,24 +133,27 @@ export class RegisterComponent implements OnInit {
 
   selectEvent(id:string) {
     this.selectedEvent = id;
-    for(let event in this.nextEvents){
-      if(this.nextEvents[event].id === id){
-        if(this.nextEvents[event].subscribe === 0){
-          this.warning = 0
-        } else {
-          this.warning = 1
+    for(let city in this.nextEvents){ //For the city
+      for(let event in this.nextEvents[city]){
+        if(this.nextEvents[city][event].id === id){
+          if(this.nextEvents[city][event].type == "karaoke"){
+            this.warning = 0
+          } else {
+            this.warning = 1
+          }
         }
       }
     }
+    console.log(this.warning)
   }
 
   allTags(){
     this.meta.updateTag({ name: 'title', content: 'Inscrivez-vous à nos échanges linguistique Gengoffee'});
     this.meta.updateTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
-  } 
-   
+  }
+
   selectLocation(location:number) {
     this.location = location;
   }
-  
+
 }
