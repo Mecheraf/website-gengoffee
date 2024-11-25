@@ -41,6 +41,10 @@ export class CreateeventComponent implements OnInit {
   public location:string = "PARIS"
 
   public dateControl = new FormControl<Date>(new Date());
+  public dateDay = new Date();
+  public dateTime:string = "18:00"
+
+
 
   public options = [
     { value: true, label: 'True' },
@@ -60,10 +64,11 @@ export class CreateeventComponent implements OnInit {
   }
 
   submitForm(){
+    const [ h, m ] = this.dateTime.split(":");
+    this.dateDay.setHours(Number(h), Number(m))
     this.formGroup.type = this.type
-    this.formGroup.date = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
+    this.formGroup.date = this.datepipe.transform(this.dateDay, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
-    this.formGroup.location = this.location
     this.formGroup.location = this.location
     this.eventservice.post(this.formGroup).subscribe();
   }

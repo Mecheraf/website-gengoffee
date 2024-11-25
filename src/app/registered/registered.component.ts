@@ -59,7 +59,6 @@ export class RegisteredComponent implements OnInit {
       tap((registeredList)=>{
         registeredList.forEach((element: any, index:number) => {
           //element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
-          //console.log(element.date_registered)
           if(element.languages){
             registeredList[index].languages = this.getLanguages(element.languages)
           }
