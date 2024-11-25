@@ -3,11 +3,20 @@
         <h3 class="pb-1 text-sm font-semibold">{{getTranslatedDate(event.date)}} - <span [ngClass]="event.type === 'fr' ? 'gengoffee-red':'gengoffee-blue'">{{getLocation(event.type)}}</span></h3>
         <div class="{{getColorByCountry(event.type)}} rounded-[0.625rem]">
             <div *ngFor="let registered of event.registeredList; let index = index" class="m-3 p-1 border-4 border-solid w-64 inline-block">
-                <p class="text-base font-semibold">{{registered.name}}</p>
+                <div class="flex gap-1">
+                    <p class="text-base font-semibold">{{registered.firstname}}</p>
+                    <p class="text-base font-semibold">{{registered.lastname}}</p>
+                </div>
                 <p class="text-sm font-semibold">{{registered.mail}}</p>
                 <div class="text-sm gengoffee-red">
                     <p>{{registered.diet}}</p>
-                    <p>{{registered.date_registered}}</p>
+                </div>
+                <div *ngFor="let language of registered.languages" class="flex text-xs">
+                    <p class="font-semibold">{{language.language | translate}}</p>
+                        : {{'register.form.language.lv'+language.level | translate}}
+                </div>
+                <div class="gengoffee-red">
+                    {{registered.date_registered | date: 'dd/MM/YYYY  HH:mm:ss'}}
                 </div>
             </div>
         </div>
