@@ -26,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateeventComponent } from './createevent/createevent.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -44,8 +44,7 @@ import { MatInputModule } from '@angular/material/input';
 import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.component';
 import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
 import { ConditionsComponent } from './legal/conditions/conditions.component';
-
-
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 
 @NgModule({
@@ -95,7 +94,8 @@ import { ConditionsComponent } from './legal/conditions/conditions.component';
     CommonModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [
     MatDatepickerModule,
@@ -103,7 +103,9 @@ import { ConditionsComponent } from './legal/conditions/conditions.component';
     MatSnackBarModule,
     CookieService,
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }
+
   ],
   bootstrap: [AppComponent]
 })
