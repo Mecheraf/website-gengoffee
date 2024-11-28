@@ -192,6 +192,7 @@
     },
     "create":{
         "title":"イベントを作る",
+        "change":"イベントを変わる",
         "type":"イベントのタイプ (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
         "city":"街 (défini la langue principale)"

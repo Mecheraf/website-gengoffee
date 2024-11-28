@@ -192,6 +192,7 @@
     },
     "create":{
         "title":"Create event",
+        "change":"Change events",
         "type":"Type of the event (define the second language)",
         "place":"Date and place of the event",
         "city":"City of the event (Define the main language)"

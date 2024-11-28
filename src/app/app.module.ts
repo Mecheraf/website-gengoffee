@@ -36,6 +36,8 @@ import { RegisteredComponent } from './registered/registered.component';
 import { JobboardComponent } from './jobboard/jobboard.component';
 import { JobsRowComponent } from './ui-components/jobs-row/jobs-row.component';
 import { JobsItemComponent } from './ui-components/jobs-item/jobs-item.component';
+import { EventRowComponent } from './ui-components/event-row/event-row.component';
+
 import { Meta, provideClientHydration } from '@angular/platform-browser';
 import { CreatejobComponent } from './createjob/createjob.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -73,7 +75,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     JobsItemComponent,
     CreatejobComponent,
     LegalNoticeComponent,
-    SelectLanguageComponent
+    SelectLanguageComponent,
+    EventRowComponent
     ],
   imports: [
     BrowserModule,
