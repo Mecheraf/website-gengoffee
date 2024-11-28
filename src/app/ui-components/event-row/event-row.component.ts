@@ -33,4 +33,26 @@ export class EventRowComponent {
     return eventDate.getUTCHours().toString().padStart(2, '0') + ':' + eventDate.getMinutes().toString().padStart(2, '0');
   }
 
+  updateEvent(type:string, value:any){
+    switch (type){
+      case "type":{
+        this.event.type = value
+        console.log(this.event.type)
+        break;
+      }
+      case "location":{
+        this.event.location = value
+        console.log(this.event.location)
+
+        break;
+      }
+      case "place":{
+        this.event.place = value.target.value
+        break;
+      }
+    }
+
+
+  }
+
 }

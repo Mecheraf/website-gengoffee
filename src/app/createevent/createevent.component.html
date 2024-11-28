@@ -38,24 +38,27 @@
 
             <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
                 Send
-            </button>                 
+            </button>            
         </form>
     </div>
     
-    <div class="md:w-6/12 md:pr-8">
+    <div class="md:w-6/12 md:pr-4 border-l-2 p-3">
         <h2 class="text-3xl w-fit">{{'create.change'|translate}}</h2>
-        <div class="h-fit max-h-[480px] mt-16 rounded-t-xl xl:w-full mx-auto">
-            <div class="md:w-3/4 md:h-14">
-                <div *ngFor="let city of nextEvents">
+        <div class="min-h-[calc(100vh - 100px)] max-h-[450px] mt-16 rounded-t-xl mx-auto overflow-scroll no-scrollbar">
+            <div class="md:w-3/4">
+                <div class="max-h-[480px]" *ngFor="let city of nextEvents">
                     <div *ngFor="let event of city">
-                        <button type="button" (click)="selectEvent(event.id)" class="w-full text-left" [ngClass]="selectedEvent === event.id ? 'bg-[#F5F7F9]' : 'bg-white'"><app-event-row [event]="event"></app-event-row></button>
+                        <button type="button" (click)="selectEvent(event.id)" class="w-full text-left" [ngClass]="selectedEvent === event.id ? 'bg-white' : 'bg-[#F5F7F9]' "><app-event-row [event]="event"></app-event-row></button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mt-[490px]">
-            <button type="submit" (click)="refreshNextEvents()" class="m-auto flex gengoffee-btn gengoffee-btn-primary">
+        <div class="mt-16 flex flex-row gap-x-6 m-auto">
+            <button type="submit" (click)="refreshNextEvents()" class="flex gengoffee-btn gengoffee-btn-quaternary">
                 Refresh
+            </button>
+            <button type="submit" (click)="updateEvents()" class="flex gengoffee-btn gengoffee-btn-primary">
+                Update
             </button>
         </div>
 

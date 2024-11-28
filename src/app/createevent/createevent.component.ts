@@ -76,4 +76,9 @@ export class CreateeventComponent implements OnInit {
     console.log(this.selectedEvent)
   }
 
+  updateEvents(){
+    console.log(this.nextEvents)
+    this.eventservice.put(this.nextEvents).subscribe();
+  }
+
 }

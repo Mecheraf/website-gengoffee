@@ -23,6 +23,7 @@ export class EventService {
   public getNextEvents(options?: any) { 
     return this.http.get<Event[]>(this.url+"getNextEvents", options); 
   }
+
   public post(data: any, options?: any) { 
     options = {
       ...options,
@@ -32,8 +33,15 @@ export class EventService {
     }
     return this.http.post(this.url+"insertevent", data, options); 
   } 
-  public put(url: string, data: any, options?: any) { 
-   return this.http.put(url, data, options); 
+
+  public put(data: any, options?: any) { 
+    options = {
+      ...options,
+      headers: {
+        "Authorization":"Bearer "+this.cookieService.get("token")
+      }
+    }
+   return this.http.put(this.url+"updateEvent", data, options); 
   } 
   public delete(url: string, options?: any) { 
   return this.http.delete(url, options); 
