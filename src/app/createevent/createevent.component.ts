@@ -77,7 +77,15 @@ export class CreateeventComponent implements OnInit {
   }
 
   updateEvents(){
-    console.log(this.nextEvents)
+    //console.log(this.nextEvents)
+    var values: any[] = []
+    this.nextEvents.forEach(groups => {
+      groups.forEach((element: any) => {
+        element.date = this.datepipe.transform(element.date, 'yyyy-MM-dd HH:mm:ss')
+        values.push(element)
+      })
+    })
+    console.log(values)
     this.eventservice.put(this.nextEvents).subscribe();
   }
 
