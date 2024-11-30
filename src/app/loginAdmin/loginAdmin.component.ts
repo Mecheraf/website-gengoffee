@@ -33,7 +33,7 @@ export class LoginAdminComponent implements OnInit {
     this.loginService.post(this.loginForm.value).subscribe((response:any) => {
       if(response){
         this.cookieService.set('token', response.token, {secure:true})
-        this.router.navigate(['registered']);
+        this.router.navigate(['admin/registered']);
       }
     }); 
   }
