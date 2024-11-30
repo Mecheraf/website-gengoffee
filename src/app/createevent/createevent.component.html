@@ -1,46 +1,66 @@
-<div class="mb-32 w-11/12 m-auto">
-    <h2 class="mt-12 m-auto w-fit">{{'create.title'|translate}}</h2>
-    <form class="pt-2">
+<div class="w-11/12 flex flex-col md:flex-row mb-32 m-auto mt-12 ">
+    <div class="md:w-6/12">
+        <h2 class="text-3xl w-fit">{{'create.title'|translate}}</h2>
+        <form class="pt-2">
 
-        <div class="mt-12">
-            <p class="text-base ppmori-bold mb-8">{{'create.city'|translate}}</p>
-            <div class="ml-6 flex gap-6">
-                <button type="button" [ngClass]="location === 'PARIS' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('PARIS')" class="gengoffee-btn gengoffee-btn-primary rounded-none">{{'paris'|translate}}</button>
-                <button type="button" [ngClass]="location === 'TOKYO' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('TOKYO')" class="gengoffee-btn gengoffee-btn-primary rounded-none">{{'tokyo'|translate}}</button>
+            <div class="mt-12">
+                <p class="text-base ppmori-bold mb-8">{{'create.city'|translate}}</p>
+                <div class="ml-6 flex gap-6">
+                    <button type="button" [ngClass]="location === 'PARIS' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('PARIS')" class="gengoffee-btn gengoffee-btn-primary rounded-none">{{'paris'|translate}}</button>
+                    <button type="button" [ngClass]="location === 'TOKYO' ? 'opacity-100' : 'opacity-50'" (click)="changeLocation('TOKYO')" class="gengoffee-btn gengoffee-btn-primary rounded-none">{{'tokyo'|translate}}</button>
+                </div>
+            </div>
+            
+            <p class="pt-10 ppmori-bold">{{'create.type'|translate}}</p>
+            <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="hidden border-b border-solid pt-4">
+            <div class="ml-3 md:ml-6 flex gap-4 md:gap-6 pt-6">
+                <button type="button" [ngClass]="type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn gengoffee-btn-quaternary">{{'fr'|translate}}</button>
+                <button type="button" [ngClass]="type === 'en' ? 'opacity-100' : 'opacity-50'" (click)="changeType('en')" class="gengoffee-btn gengoffee-btn-quaternary">{{'en'|translate}}</button>
+                <button type="button" [ngClass]="type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn gengoffee-btn-quaternary">{{'jp'|translate}}</button>
+
+            </div>
+            <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
+            <input type="text" name="place"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
+
+            <div class="mt-12 flex gap-x-10">
+                <mat-form-field>
+                    <mat-label>Choose a date</mat-label>
+                    <input [(ngModel)]="dateDay" name="dateDay" matInput [matDatepicker]="picker">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="border-2 w-16 p-2 my-auto">
+                    <input class="w-full m-auto" [(ngModel)]="dateTime" name="dateTime" aria-label="default time" [ngxTimepicker]="fullTime" [format]="24">
+                    <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+            </div>
+            </div>
+
+            <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
+                Send
+            </button>            
+        </form>
+    </div>
+    
+    <div class="md:w-6/12 border-l-2 p-3">
+        <h2 class="text-3xl w-fit">{{'create.change'|translate}}</h2>
+        <div class="min-h-[calc(100vh - 100px)] max-h-[450px] mt-16 rounded-t-xl mx-auto overflow-scroll no-scrollbar">
+            <div class="md:w-11/12">
+                <div class="max-h-[480px]" *ngFor="let city of nextEvents">
+                    <div *ngFor="let event of city">
+                        <button type="button" (click)="selectEvent(event.id)" class="w-full text-left" [ngClass]="selectedEvent === event.id ? 'bg-white' : 'bg-[#F5F7F9]' "><app-event-row [event]="event"></app-event-row></button>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <p class="pt-10 ppmori-bold">{{'create.type'|translate}}</p>
-        <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="hidden border-b border-solid pt-4">
-        <div class="ml-6 flex gap-6 pt-6">
-            <button type="button" [ngClass]="type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn gengoffee-btn-quaternary">{{'fr'|translate}}</button>
-            <button type="button" [ngClass]="type === 'en' ? 'opacity-100' : 'opacity-50'" (click)="changeType('en')" class="gengoffee-btn gengoffee-btn-quaternary">{{'en'|translate}}</button>
-            <button type="button" [ngClass]="type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn gengoffee-btn-quaternary">{{'jp'|translate}}</button>
-
+        <div class="mt-16 flex flex-row gap-x-6 m-auto">
+            <button type="submit" (click)="refreshNextEvents()" class="flex gengoffee-btn gengoffee-btn-quaternary">
+                Refresh
+            </button>
+            <button type="submit" (click)="updateEvents()" class="flex gengoffee-btn gengoffee-btn-primary">
+                Update
+            </button>
         </div>
 
-        <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
-        <input type="text" name="place"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
-        
-
-
-
-        <div class="mt-12 flex gap-x-10">
-            <mat-form-field>
-                <mat-label>Choose a date</mat-label>
-                <input [(ngModel)]="dateDay" name="dateDay" matInput [matDatepicker]="picker">
-                <mat-hint>DD/MM/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <div class="border-2 w-16 p-2 my-auto">
-                <input class="w-full m-auto" [(ngModel)]="dateTime" name="dateTime" aria-label="default time" [ngxTimepicker]="fullTime" [format]="24">
-                <ngx-material-timepicker #fullTime></ngx-material-timepicker>
-           </div>
-        </div>
-
-        <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
-            Send
-        </button>                 
-    </form>
+    </div>
 </div>

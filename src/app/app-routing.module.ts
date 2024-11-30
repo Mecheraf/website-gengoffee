@@ -26,8 +26,8 @@ const routes: Routes = [
   { path: 'createjob', component:CreatejobComponent, canActivate:[AuthGuard]},
   { path: 'loginadmin', component: LoginAdminComponent},
   { path: 'legal-notice', component: LegalNoticeComponent},
-  { path: 'general-conditions', component: ConditionsComponent}
-  //{ path: 'jobs', component: JobboardComponent}
+  { path: 'general-conditions', component: ConditionsComponent},
+  { path: 'jobs', component: JobboardComponent}
 
 
 ];

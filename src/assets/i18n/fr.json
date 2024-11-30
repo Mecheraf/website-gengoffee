@@ -195,6 +195,7 @@
     },
     "create":{
         "title":"Création d'événement",
+        "change":"Modifier événement",
         "type":"Type de l'événement (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
         "city":"Ville de l'événement (défini la langue principale)"
