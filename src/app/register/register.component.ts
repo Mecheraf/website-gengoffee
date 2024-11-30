@@ -139,11 +139,6 @@ export class RegisterComponent implements OnInit {
         if(this.nextEvents[city][event].id === id){
           this.warning = this.nextEvents[city][event].type == "karaoke" ? 0 : 1;
           this.subscribe = this.nextEvents[city][event].subscribe
-          // if(this.nextEvents[city][event].type == "karaoke"){
-          //   this.warning = 0
-          // } else {
-          //   this.warning = 1
-          // }
         }
       }
     }
