@@ -73,11 +73,9 @@ export class CreateeventComponent implements OnInit {
   
   selectEvent(id:string){
     this.selectedEvent = id
-    console.log(this.selectedEvent)
   }
 
   updateEvents(){
-    //console.log(this.nextEvents)
     var values: any[] = []
     this.nextEvents.forEach(groups => {
       groups.forEach((element: any) => {

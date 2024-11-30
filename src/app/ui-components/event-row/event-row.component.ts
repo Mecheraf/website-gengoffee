@@ -37,13 +37,10 @@ export class EventRowComponent {
     switch (type){
       case "type":{
         this.event.type = value
-        console.log(this.event.type)
         break;
       }
       case "location":{
         this.event.location = value
-        console.log(this.event.location)
-
         break;
       }
       case "place":{
@@ -52,7 +49,10 @@ export class EventRowComponent {
       }
     }
 
+  }
 
+  toggleSubscribe(){
+    this.event.subscribe = 1 - this.event.subscribe
   }
 
 }

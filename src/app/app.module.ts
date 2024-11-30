@@ -47,6 +47,8 @@ import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.componen
 import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
 import { ConditionsComponent } from './legal/conditions/conditions.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 
 @NgModule({
@@ -98,7 +100,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     BrowserAnimationsModule,
     MatNativeDateModule,
     MatSnackBarModule,
-    NgxMaterialTimepickerModule
+    NgxMaterialTimepickerModule,
+    MatSlideToggleModule
   ],
   providers: [
     MatDatepickerModule,
