@@ -132,7 +132,9 @@
             "general-conditions": {
                 "1":"By registering to our events, you accept our ",
                 "2":"terms and conditions."
-            }
+            },
+            "warningSubscribe":"The registrations for the selected event has been closed. For more informations, please contact us via mail or on our social networks."
+
         }
     },
     "about": {

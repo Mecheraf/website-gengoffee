@@ -34,6 +34,7 @@ export class RegisterComponent implements OnInit {
   public events:any;
   public nextEvents:any[] = [];
   public selectedEvent:string = "0";
+  public subscribe = 1;
   public warning = 1;
   public location = 0; //Setup as Paris
 
@@ -136,11 +137,13 @@ export class RegisterComponent implements OnInit {
     for(let city in this.nextEvents){ //For the city
       for(let event in this.nextEvents[city]){
         if(this.nextEvents[city][event].id === id){
-          if(this.nextEvents[city][event].type == "karaoke"){
-            this.warning = 0
-          } else {
-            this.warning = 1
-          }
+          this.warning = this.nextEvents[city][event].type == "karaoke" ? 0 : 1;
+          this.subscribe = this.nextEvents[city][event].subscribe
+          // if(this.nextEvents[city][event].type == "karaoke"){
+          //   this.warning = 0
+          // } else {
+          //   this.warning = 1
+          // }
         }
       }
     }

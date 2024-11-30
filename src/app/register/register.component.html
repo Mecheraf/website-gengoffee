@@ -57,7 +57,8 @@
                     <div class="inline underline"><a [routerLink]="['/general-conditions']">{{'register.form.general-conditions.2'|translate}}</a></div>
                 </div>
                 <p *ngIf="this.warning === 0" class="ppmori-bold gengoffee-red">{{'register.form.warning'|translate}}</p>
-                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0 || selectedEvent === '0'" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <p *ngIf="this.subscribe === 0" class="ppmori-bold gengoffee-red">{{'register.form.warningSubscribe'|translate}}</p>
+                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0 || selectedEvent === '0' || this.subscribe === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
                 </button>                             
             </form>   
