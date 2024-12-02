@@ -396,6 +396,11 @@
         }
 
     },
+    "admin":{
+        "event":"Évent",
+        "registered":"Liste"
+    },
+
     "en": "Anglais",
     "fr": "Français",
     "jp": "Japonais"
