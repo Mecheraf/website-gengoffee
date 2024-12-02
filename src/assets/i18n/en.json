@@ -199,6 +199,10 @@
         "place":"Date and place of the event",
         "city":"City of the event (Define the main language)"
     },
+    "admin":{
+        "event":"Event",
+        "registered":"List"
+    },
     "en": "English",
     "fr": "French",
     "jp": "Japanese"
