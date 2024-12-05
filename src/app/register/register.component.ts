@@ -7,7 +7,7 @@ import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Meta } from '@angular/platform-browser';
-
+import { SharedDataService } from '../shared/shared-data/shared-data.service';
 
 
 interface userLanguage {
@@ -32,18 +32,18 @@ export class RegisterComponent implements OnInit {
   public registerForm: FormGroup = new FormGroup({})
 
   public events:any;
-  public nextEvents:any[] = [];
   public selectedEvent:string = "0";
   public subscribe = 1;
   public warning = 1;
-  public location = 0; //Setup as Paris
+  public location = 'PARIS'; //Setup as Paris
 
   constructor(
     private eventservice: EventService,
     private registerservice:RegisterService,
     private translateService: TranslateService,
     public _snackBar: MatSnackBar,
-    private meta: Meta
+    private meta: Meta,
+    public sharedEvents: SharedDataService
     ) {
   }
 
@@ -62,14 +62,13 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.allTags()
     this.initForm()
-    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
-    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
+
+    this.sharedEvents.getCityEvents("PARIS")
+    this.sharedEvents.getCityEvents("TOKYO")
   }
 
-  getNextEvents(limit:number, position:number, location:string) {
-    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
-      this.nextEvents[position] = data;
-    })
+  getNextEvents(location:string) {
+    this.sharedEvents.getCityEvents(location)
   }
 
   toggleDiet (selectedDiet: string) {
@@ -86,18 +85,6 @@ export class RegisterComponent implements OnInit {
   toggleOther(){
     this.showText = !this.showText;
   }
-
-  // addLanguage(){
-  //   if (this.selectedLanguages.length >= 3) return;
-  //   const language: userLanguage = {language: this.languages[0], level: "1"};
-  //   this.selectedLanguages.push(language);
-  //   this.languages.shift()
-  // }
-
-  // removeLanguage(language: userLanguage){
-  //   this.languages.unshift(language.language)
-  //   this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
-  // }
 
   onSubmit(){
     const validConfigSnack = new MatSnackBarConfig();
@@ -134,11 +121,12 @@ export class RegisterComponent implements OnInit {
 
   selectEvent(id:string) {
     this.selectedEvent = id;
-    for(let city in this.nextEvents){ //For the city
-      for(let event in this.nextEvents[city]){
-        if(this.nextEvents[city][event].id === id){
-          this.warning = this.nextEvents[city][event].type == "karaoke" ? 0 : 1;
-          this.subscribe = this.nextEvents[city][event].subscribe
+    for(let city in this.sharedEvents.next){ //For the city
+      console.log(city)
+      for(let event in this.sharedEvents.next[city]){
+        if(this.sharedEvents.next[city][event].id === id){
+          this.warning = this.sharedEvents.next[city][event].type == "karaoke" ? 0 : 1;
+          this.subscribe = this.sharedEvents.next[city][event].subscribe
         }
       }
     }
@@ -149,8 +137,9 @@ export class RegisterComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
   }
 
-  selectLocation(location:number) {
+  selectLocation(location:string) {
     this.location = location;
+    console.log(this.sharedEvents.next[this.location])
   }
 
 }

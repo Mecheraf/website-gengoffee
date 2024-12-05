@@ -4,7 +4,6 @@ import { RegisteredService } from '../services/registered.service';
 import { EventService } from '../services/event.service';
 import { switchMap, tap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { DatePipe } from '@angular/common';
 
 
 
@@ -30,8 +29,7 @@ interface eventsAttendees {
 @Component({
   selector: 'app-registered',
   templateUrl: './registered.component.html',
-  styleUrls: ['./registered.component.css'],
-  providers: [DatePipe]
+  styleUrls: ['./registered.component.css']
 })
 export class RegisteredComponent implements OnInit {
 
@@ -47,8 +45,6 @@ export class RegisteredComponent implements OnInit {
     private registeredService: RegisteredService,
     private eventservice: EventService,
     private translateService: TranslateService,
-    private datepipe: DatePipe
-
   ) { }
 
   async ngOnInit() {
@@ -58,7 +54,6 @@ export class RegisteredComponent implements OnInit {
       }), 
       tap((registeredList)=>{
         registeredList.forEach((element: any, index:number) => {
-          //element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
           if(element.languages){
             registeredList[index].languages = this.getLanguages(element.languages)
           }

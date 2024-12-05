@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { EventService } from '../services/event.service';
 import { DatePipe } from '@angular/common'
+import { SharedDataService } from '../shared/shared-data/shared-data.service';
+
 
 const NEXT_EVENTS = 10
 
@@ -22,7 +24,12 @@ interface formParams {
 export class CreateeventComponent implements OnInit {
   @ViewChild('picker') picker: any;
 
-  constructor(private eventservice: EventService, private datepipe: DatePipe) { }
+  constructor(
+    private eventservice: EventService, 
+    private datepipe: DatePipe,
+    public sharedEvents: SharedDataService
+  ) { }
+
   public place:string ="";
   public type:string ="en";
   public location:string = "PARIS"
@@ -61,6 +68,7 @@ export class CreateeventComponent implements OnInit {
   refreshNextEvents(){
     this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
     this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");  
+    console.log(this.sharedEvents.past)
   }
 
   changeLocation(location:string) {

@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { Event } from '../models/event';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { Meta } from '@angular/platform-browser';
-
+import { SharedDataService } from '../shared/shared-data/shared-data.service';
 
 const PAST_EVENT_QUANTITY = 10;
 const NEXT_EVENT_QUANTITY = 2;
@@ -13,30 +11,37 @@ const NEXT_EVENT_QUANTITY = 2;
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
+
+@Injectable({
+  providedIn: 'root'
+})
+
 export class EventsComponent implements OnInit {
   public pastEvents: any = [];
   public nextEvents: any = [];
 
-  constructor(private eventService: EventService, private meta: Meta){
+  constructor(
+    private eventService: EventService, 
+    private meta: Meta,
+    public sharedEvents:SharedDataService
+
+  ){
 
   }
 
   ngOnInit(): void {
-    this.getPastEvents();
-    this.getNextEvents();
+    this.getPastEvents()
+    this.getNextEvents()
     this.allTags()
+    
   }
 
   private getPastEvents(): void {
-    this.eventService.getPastEvents({params: {limit: PAST_EVENT_QUANTITY}}).subscribe((pastEvents) => {
-      this.pastEvents = pastEvents;
-    });
+    this.sharedEvents.getPastEvents();
   }
 
   private getNextEvents(): void {
-    this.eventService.getNextEvents({params: {limit: NEXT_EVENT_QUANTITY}}).subscribe((nextEvents) => {
-      this.nextEvents = nextEvents;
-    });
+    this.sharedEvents.getNextEvents();
   }
 
 

@@ -55,10 +55,10 @@
     </div>
   </div>
   <div class="w-fit m-auto md:w-auto md:m-0 pt-12 flex flex-col md:flex-row gap-7 justify-center overflow-x-clip md:mt-14">
-    <app-event-item *ngIf="pastEvents?.length > 1" [event]="pastEvents[1]" class="hidden md:block"></app-event-item>
-    <app-event-item *ngIf="pastEvents?.length > 0" [event]="pastEvents[0]" class="hidden md:block"></app-event-item>
-    <app-event-item *ngIf="nextEvents?.length > 0" [event]="nextEvents[0]" [active]="true" class="md:scale-[115%] md:mx-6 md:-translate-y-10"></app-event-item>
-    <app-event-item *ngIf="nextEvents?.length > 1" [event]="nextEvents[1]"></app-event-item>
+    <app-event-item *ngIf="sharedEvents.past?.length > 1" [event]="sharedEvents.past[1]" class="hidden md:block"></app-event-item>
+    <app-event-item *ngIf="sharedEvents.past?.length > 0" [event]="sharedEvents.past[0]" class="hidden md:block"></app-event-item>
+    <app-event-item *ngIf="sharedEvents.next['next']?.length > 0" [event]="sharedEvents.next['next'][0]" [active]="true" class="md:scale-[115%] md:mx-6 md:-translate-y-10"></app-event-item>
+    <app-event-item *ngIf="sharedEvents.next['next']?.length > 1" [event]="sharedEvents.next['next'][1]"></app-event-item>
   </div>
 </section>
 <!-- Partners -->
