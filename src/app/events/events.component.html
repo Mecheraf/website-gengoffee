@@ -17,8 +17,10 @@
 <section class="mt-12 md:mt-20">
   <h2 class="text-lg md:text-[1.375rem] text-center font-light">{{'events.nextevents'|translate}}</h2>
   <div class="flex justify-center place-items-center flex-col md:flex-row mt-5 gap-7 md:gap-14">
-    <app-event-item *ngFor="let event of nextEvents" [event]="event" [active]="true"></app-event-item>
-    <app-event-item *ngIf="nextEvents?.length === 0" [fallback]="true"></app-event-item>
+    <div *ngFor="let event of sharedEvents.next['upcoming']; index as i">
+      <app-event-item *ngIf="i<2" class="flex" [event]="event" [active]="true"></app-event-item>
+      <app-event-item *ngIf="sharedEvents.next['next'].length === 0" [fallback]="true"></app-event-item>
+    </div>
   </div>
 </section>
 <section class="w-fit mt-16 md:mt-28 mx-auto">
@@ -33,7 +35,7 @@
     </div>
   </div>
   <div class="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-10">
-    <app-past-event-card *ngFor="let event of pastEvents" [event]="event"></app-past-event-card>
+    <app-past-event-card *ngFor="let event of sharedEvents.past['past']" [event]="event"></app-past-event-card>
   </div>
 </section>
 <section class="mt-16 md:mt-40">
