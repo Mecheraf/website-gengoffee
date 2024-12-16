@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { response } from 'express';
+import { BehaviorSubject, switchMap } from 'rxjs';
 import { EventService } from 'src/app/services/event.service';
 
 
@@ -59,22 +60,19 @@ export class SharedDataService {
   public getPastEvents(): any {
     if(this.past.value.length === 0){
       this.eventService.getPastEvents({params:{limit: PAST_EVENT_QUANTITY}}).subscribe((pastEvents) => {
-        this.past = pastEvents
+        this.past["past"] = pastEvents
       }); 
     }
   }
 
-  public getNextEvents(location?:string): any {
-    if(this.next.value.length === 0){
-      this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY}}).subscribe((nextEvents) => {
-        this.next["next"] = nextEvents
-      }); 
-    }
+  public getNextEvents(): any {
+    this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY}}).subscribe((nextEvents) => {
+      this.next["upcoming"] = nextEvents
+    }); 
   }
 
   public getCityEvents(location:string): any {
     this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY, location:location}}).subscribe((nextEvents) => {
-      console.log(nextEvents)
       this.next[location] = nextEvents
     }); 
   }

@@ -65,6 +65,8 @@ export class RegisterComponent implements OnInit {
 
     this.sharedEvents.getCityEvents("PARIS")
     this.sharedEvents.getCityEvents("TOKYO")
+
+    console.log(this.sharedEvents.next)
   }
 
   getNextEvents(location:string) {
@@ -122,7 +124,6 @@ export class RegisterComponent implements OnInit {
   selectEvent(id:string) {
     this.selectedEvent = id;
     for(let city in this.sharedEvents.next){ //For the city
-      console.log(city)
       for(let event in this.sharedEvents.next[city]){
         if(this.sharedEvents.next[city][event].id === id){
           this.warning = this.sharedEvents.next[city][event].type == "karaoke" ? 0 : 1;
@@ -139,7 +140,6 @@ export class RegisterComponent implements OnInit {
 
   selectLocation(location:string) {
     this.location = location;
-    console.log(this.sharedEvents.next[this.location])
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { Meta } from '@angular/platform-browser';
 import { SharedDataService } from '../shared/shared-data/shared-data.service';
+import { BehaviorSubject } from 'rxjs';
 
 const PAST_EVENT_QUANTITY = 10;
 const NEXT_EVENT_QUANTITY = 2;
@@ -17,8 +18,8 @@ const NEXT_EVENT_QUANTITY = 2;
 })
 
 export class EventsComponent implements OnInit {
-  public pastEvents: any = [];
-  public nextEvents: any = [];
+  public pastEvents: any = new BehaviorSubject<any>([]);
+  public nextEvents: any = new BehaviorSubject<any>([]);
 
   constructor(
     private eventService: EventService, 
@@ -32,8 +33,7 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void {
     this.getPastEvents()
     this.getNextEvents()
-    this.allTags()
-    
+    this.allTags()    
   }
 
   private getPastEvents(): void {
@@ -41,7 +41,7 @@ export class EventsComponent implements OnInit {
   }
 
   private getNextEvents(): void {
-    this.sharedEvents.getNextEvents();
+    this.sharedEvents.getNextEvents()
   }
 
 
