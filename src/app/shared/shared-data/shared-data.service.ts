@@ -58,7 +58,7 @@ export class SharedDataService {
   // }
 
   public getPastEvents(): any {
-    if(this.past.value.length === 0){
+    if(!this.past["past"]){
       this.eventService.getPastEvents({params:{limit: PAST_EVENT_QUANTITY}}).subscribe((pastEvents) => {
         this.past["past"] = pastEvents
       }); 
@@ -66,14 +66,18 @@ export class SharedDataService {
   }
 
   public getNextEvents(): any {
-    this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY}}).subscribe((nextEvents) => {
-      this.next["upcoming"] = nextEvents
-    }); 
+    if(!this.next["upcoming"]){
+      this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY}}).subscribe((nextEvents) => {
+        this.next["upcoming"] = nextEvents
+      }); 
+    }
   }
 
   public getCityEvents(location:string): any {
-    this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY, location:location}}).subscribe((nextEvents) => {
-      this.next[location] = nextEvents
-    }); 
+    if(!this.next[location]){
+      this.eventService.getNextEvents({params:{limit: NEXT_EVENT_QUANTITY, location:location}}).subscribe((nextEvents) => {
+        this.next[location] = nextEvents
+      }); 
+    }
   }
 }
