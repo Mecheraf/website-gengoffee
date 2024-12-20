@@ -23,8 +23,6 @@ interface userLanguage {
 
 export class RegisterComponent implements OnInit {
 
-  //public languages: string[] = ["fr", "jp", "en"];
-
   public showText:boolean = false;
   public otherText:string = "";
   public selectedLanguages: userLanguage[] = [];
@@ -141,5 +139,9 @@ export class RegisterComponent implements OnInit {
   selectLocation(location:string) {
     this.location = location;
   }
+  printInformation(){
+    console.log(this.selectedLanguages)
+  }
+
 
 }

@@ -60,7 +60,10 @@
                 <p *ngIf="this.subscribe === 0" class="ppmori-bold gengoffee-red">{{'register.form.warningSubscribe'|translate}}</p>
                 <button [disabled]="!registerForm.valid || this.sharedEvents.next.length === 0 || selectedEvent === '0' || this.subscribe === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
-                </button>                             
+                </button>   
+                <button (click)="printInformation()" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                        PRINT
+                </button>                              
             </form>   
         </div>
     </div>
