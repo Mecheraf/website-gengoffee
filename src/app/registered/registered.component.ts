@@ -8,13 +8,15 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 interface registeredUser {
+  id:number,
   firstname:string,
   lastname:string
   mail:string,
   diet:string[], 
   idEvent:number,
   languages:any,
-  date_registered:Date
+  date_registered:Date,
+  paid:number
 }
 
 interface eventsAttendees {
@@ -22,6 +24,13 @@ interface eventsAttendees {
   date:Date,
   type:string,
   registeredList:registeredUser[]
+}
+
+interface updatedUser {
+  idUser:number,
+  idEvent:number,
+  paid:number, 
+  mail:string
 }
 
 
@@ -33,10 +42,11 @@ interface eventsAttendees {
 })
 export class RegisteredComponent implements OnInit {
 
-
   public today = new Date()
   public nextEvents:any;
   public registeredList: any = [];
+  public updatedList:updatedUser[]  = []
+
   public events:eventsAttendees[] = [];
   public nbEventFr:number = 3;
   public nbEventJp:number = 1;
@@ -87,6 +97,35 @@ export class RegisteredComponent implements OnInit {
       this.registeredList = registeredList
     });
   }
+
+  printRegistered(value?:any){
+
+    console.log(this.updatedList)
+  }
+
+  updateList(indexUser:number, indexEvent:number, paid:number, mail:string){ //on update la liste des inscrits ou non
+    this.events[indexEvent].registeredList[indexUser].paid = -1 - paid  
+
+    let idUser = this.events[indexEvent].registeredList[indexUser].id;
+    let idEvent = this.events[indexEvent].id;
+    paid = this.events[indexEvent].registeredList[indexUser].paid
+    let tmp = 0
+
+    this.updatedList.filter((element, index) => { //We check if the pair idUser and idEvent are already entered
+        if(idUser === element.idUser && idEvent === element.idEvent){
+          this.updatedList.splice(index, 1)
+          tmp = 1
+        }
+      }
+    )
+    if(!tmp){ //If we didnt change it, we just change the value.
+      this.updatedList.push({idUser, idEvent, paid, mail})
+    }
+  }
+
+  updateAttendee(){
+    this.registeredService.updateAttendee({"attendees":this.updatedList, "mail":1}).subscribe()
+  }
   
   public getColorByCountry(eventType:string): string {
     if (eventType === 'jp' || eventType === 'fr') {
@@ -120,7 +159,6 @@ export class RegisteredComponent implements OnInit {
           result[index].language = "jp"
           break;
       }
-
     });
     return result
   }
