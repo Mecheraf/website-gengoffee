@@ -29,4 +29,8 @@ export class RegisteredService {
     return this.http.get<Event>(this.url+"getRegisteredList", options)
   }
 
+  public updateAttendee(data: any, options?: any) { 
+    return this.http.put(this.url+"updateAttendee", data, options); 
+  } 
+
 }
