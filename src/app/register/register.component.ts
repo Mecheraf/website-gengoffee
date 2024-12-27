@@ -63,8 +63,6 @@ export class RegisterComponent implements OnInit {
 
     this.sharedEvents.getCityEvents("PARIS")
     this.sharedEvents.getCityEvents("TOKYO")
-
-    console.log(this.sharedEvents.next)
   }
 
   getNextEvents(location:string) {
@@ -138,9 +136,6 @@ export class RegisterComponent implements OnInit {
 
   selectLocation(location:string) {
     this.location = location;
-  }
-  printInformation(){
-    console.log(this.selectedLanguages)
   }
 
 
