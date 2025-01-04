@@ -6,7 +6,7 @@
                 <div class="flex gap-1">
                     <p class="text-base font-semibold">{{registered.firstname}}</p>
                     <p class="text-base font-semibold">{{registered.lastname}}</p>
-                    <mat-slide-toggle (click)="updateList(jndex, index, registered.paid, registered.mail)" [checked]="registered.paid != -1"></mat-slide-toggle>
+                    <mat-slide-toggle (click)="updateList(jndex, index, registered.paid, registered.mail, event.date, event.location, event.type)" [checked]="registered.paid != -1"></mat-slide-toggle>
                 </div>
                 <p class="text-sm font-semibold">{{registered.mail}}</p>
                 <div class="text-sm gengoffee-red">

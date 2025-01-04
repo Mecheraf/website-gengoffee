@@ -23,6 +23,7 @@ interface eventsAttendees {
   id:number,
   date:Date,
   type:string,
+  location:string,
   registeredList:registeredUser[]
 }
 
@@ -30,7 +31,10 @@ interface updatedUser {
   idUser:number,
   idEvent:number,
   paid:number, 
-  mail:string
+  mail:string,
+  date:Date,
+  main:string,
+  second:string
 }
 
 
@@ -86,6 +90,7 @@ export class RegisteredComponent implements OnInit {
           id: element.id,
           date: element.date,
           type: element.type,
+          location:element.location,
           registeredList: currentList
         });
       });
@@ -103,13 +108,14 @@ export class RegisteredComponent implements OnInit {
     console.log(this.updatedList)
   }
 
-  updateList(indexUser:number, indexEvent:number, paid:number, mail:string){ //on update la liste des inscrits ou non
+  updateList(indexUser:number, indexEvent:number, paid:number, mail:string, date:Date, location:string, second:string){ //on update la liste des inscrits ou non
     this.events[indexEvent].registeredList[indexUser].paid = -1 - paid  
 
     let idUser = this.events[indexEvent].registeredList[indexUser].id;
     let idEvent = this.events[indexEvent].id;
     paid = this.events[indexEvent].registeredList[indexUser].paid
     let tmp = 0
+    const main:string = location === "PARIS" ? "fr" : "jp"
 
     this.updatedList.filter((element, index) => { //We check if the pair idUser and idEvent are already entered
         if(idUser === element.idUser && idEvent === element.idEvent){
@@ -119,7 +125,7 @@ export class RegisteredComponent implements OnInit {
       }
     )
     if(!tmp){ //If we didnt change it, we just change the value.
-      this.updatedList.push({idUser, idEvent, paid, mail})
+      this.updatedList.push({idUser, idEvent, paid, mail, date, main, second})
     }
   }
 
