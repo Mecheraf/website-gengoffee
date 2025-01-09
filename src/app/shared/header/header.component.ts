@@ -1,13 +1,15 @@
-import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthGuard } from 'src/app/auth/auth.guard';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import {Location,LocationStrategy,PathLocationStrategy } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     Location,
     { provide: LocationStrategy, useClass: PathLocationStrategy }
@@ -18,6 +20,7 @@ export class HeaderComponent implements OnInit {
   public showMobileMenu: boolean = false;
   public isMobile: boolean = false;
   public onAdmin:boolean = false;
+  public isAdmin:boolean = false;
 
   constructor(
     public translate: TranslateService, 
@@ -48,16 +51,14 @@ export class HeaderComponent implements OnInit {
     this.isMobile = window.innerWidth < 768;
   }
 
-  onAdminPage():boolean{
-    console.log(this.router.url)
-    if(this.router.url === "/admin/events" || this.router.url === "/admin/registered"){
-      console.log("Hello")
+  onAdminPage(url:string):boolean{
+    if(url === "/admin/events" || url === "/admin/registered"){
       return true
-    } 
+    }
     return false
   }
 
   isAdvancedRoute(): boolean {
-    return this.location.path().indexOf('/admin/events') > -1;
+    return this.onAdminPage(this.location.path())
   }
 }
