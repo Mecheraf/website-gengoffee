@@ -1,6 +1,6 @@
 <div class="w-10/12 m-auto mb-80">
     <div *ngFor="let event of events; let index = index" class="text-sm p-4 m-4 rounded-[0.625rem] border border-solid border-[#262829] border-opacity-50 w-80 inline-block align-top">
-        <h3 class="pb-1 text-sm font-semibold">{{getTranslatedDate(event.date)}} - <span [ngClass]="event.type === 'fr' ? 'gengoffee-red':'gengoffee-blue'">{{getLocation(event.type)}}</span></h3>
+        <h3 class="pb-1 text-sm font-semibold">{{getTranslatedDate(event.date)}} - <span [ngClass]="event.location === 'TOKYO' ? 'gengoffee-red':'gengoffee-blue'">{{event.location}}</span></h3>
         <div class="{{getColorByCountry(event.type)}} rounded-[0.625rem]">
             <div *ngFor="let registered of event.registeredList; let jndex = index" class="m-3 p-1 border-4 border-solid w-64 inline-block">
                 <div class="flex gap-1">
