@@ -169,11 +169,4 @@ export class RegisteredComponent implements OnInit {
     return result
   }
 
-  public getLocation(type:string){
-    if(type === 'fr'){
-      return "TOKYO"
-    }
-    return "PARIS"
-  }
-
 }

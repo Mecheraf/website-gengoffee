@@ -91,7 +91,6 @@ export class CreateeventComponent implements OnInit {
         values.push(element)
       })
     })
-    console.log(values)
     this.eventservice.put(this.nextEvents).subscribe();
   }
 
