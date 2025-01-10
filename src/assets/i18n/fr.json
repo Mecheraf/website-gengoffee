@@ -117,8 +117,8 @@
                 "lv1":"Débutant",
                 "lv2":"Pré-Intérmédiaire",
                 "lv3":"Intérmédiaire",
-                "lv4":"Avancé",
-                "lv5":"Courant"
+                "lv4":"Courant",
+                "lv5":"Langue maternelle"
             },
             "diet":{
                 "title":"Suivez-vous un régime alimentaire particulier ou des allergies ?",
