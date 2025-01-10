@@ -54,7 +54,8 @@ export class RegisterComponent implements OnInit {
       mail: new FormControl<string>('', [Validators.required]),
       phone: new FormControl<string>(''),
       selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
-      dietList: new FormControl<string[]>([])
+      dietList: new FormControl<string[]>([]),
+      types: new FormControl<string[]>([])
     });
   }
 
