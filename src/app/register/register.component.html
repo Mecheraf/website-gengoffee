@@ -18,8 +18,8 @@
                 </button> 
             </div>
             <p class="pt-14 ppmori-bold text-left md:w-2/3 w-4/5 m-auto">{{'register.eventDate'|translate}}</p>
-            <div class="mt-4 flex flex-col gap-y-5 md:flex-row md:w-9/12 m-auto">
-                <div class="justify-center m-auto" *ngFor="let event of sharedEvents.next[this.location]">
+            <div class="mt-4 flex flex-col md:flex-row md:w-9/12 m-auto">
+                <div class="justify-center gap-y-5 m-auto" *ngFor="let event of returnSliced">
                     <button type="button" (click)="selectEvent(event.id)" [ngClass]="event.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="event"></app-past-event-card></button>
                 </div>
             </div>
