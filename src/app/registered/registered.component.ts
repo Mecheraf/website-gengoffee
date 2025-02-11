@@ -53,7 +53,7 @@ export class RegisteredComponent implements OnInit {
 
   public events:eventsAttendees[] = [];
   public nbEventFr:number = 3;
-  public nbEventJp:number = 1;
+  public nbEventJp:number = 2;
 
   constructor(
     private registeredService: RegisteredService,

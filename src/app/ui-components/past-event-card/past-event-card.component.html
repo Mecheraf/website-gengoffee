@@ -3,7 +3,8 @@
   <div class="px-3 py-5 text-center text-[9px] md:text-base">
     <div class="font-semibold text-[10px] md:text-sm">{{getTranslatedDate()}}</div>
     <div class="font-semibold text-[10px] md:text-sm">{{getDayHour()}}</div>
-    <div class="font-extralight">{{getMainLanguage()}} - {{getLanguageByLocale()}}</div>
+    <div class="font-extralight" *ngIf="this.event.type.toLocaleLowerCase() != 'karaoke'">{{getMainLanguage()}} - {{getLanguageByLocale()}}</div>
+    <div class="font-extralight" *ngIf="this.event.type.toLocaleLowerCase() == 'karaoke'">{{getLanguageByLocale()}}</div>
     <div class="font-semibold text-[10px] md:text-sm">{{event.place}}</div>
   </div>
 </div>
