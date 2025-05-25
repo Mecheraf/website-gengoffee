@@ -30,6 +30,9 @@ export class RegisteredService {
   }
 
   public updateAttendee(data: any, options?: any) { 
+    options =  {...options, 
+      headers: {'Authorization':'Bearer '+this.cookieService.get("token")}
+    }
     return this.http.put(this.url+"updateAttendee", data, options); 
   } 
 
