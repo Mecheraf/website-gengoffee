@@ -5,12 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './partners.component.html',
   styleUrls: ['./partners.component.css']
 })
-export class PartnersComponent implements OnInit {
+export class PartnersComponent {
 
   @Input() emptyQuote: boolean = false;
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,5 +1,3 @@
-const NEXT_EVENTS = 3
-
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
@@ -29,7 +27,6 @@ export class RegisterComponent implements OnInit {
 
   public registerForm: FormGroup = new FormGroup({})
 
-  public events:any;
   public selectedEvent:string = "0";
   public subscribe = 1;
   public warning = 1;
@@ -67,10 +64,6 @@ export class RegisterComponent implements OnInit {
     this.sharedEvents.getCityEvents("TOKYO")
   }
 
-  getNextEvents(location:string) {
-    this.sharedEvents.getCityEvents(location)
-  }
-
   toggleDiet (selectedDiet: string) {
     const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
     if (this.registerForm.get('dietList')?.value.includes(selectedDiet)) {
@@ -82,7 +75,7 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  toggleOther(){
+  toggleOther(){ 
     this.showText = !this.showText;
   }
 

@@ -22,7 +22,6 @@ export class EventItemComponent implements OnInit {
   private defaultLanguage: string = '🇫🇷';
   public flags: string = '';
   public hour: string = '';
-  private photoEnglishId : number = 0;
 
   @Input() event: Event = {} as Event;
   @Input() active: boolean = false;

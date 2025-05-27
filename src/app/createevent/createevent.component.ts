@@ -68,11 +68,11 @@ export class CreateeventComponent implements OnInit {
   refreshNextEvents(){
     this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
     this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");  
-    console.log(this.sharedEvents.past)
   }
 
   changeLocation(location:string) {
     this.location = location
+    this.type = ""
   }
 
   changeType(type:string) {

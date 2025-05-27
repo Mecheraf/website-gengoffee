@@ -14,9 +14,10 @@
             <p class="pt-10 ppmori-bold">{{'create.type'|translate}}</p>
             <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="hidden border-b border-solid pt-4">
             <div class="ml-3 md:ml-6 flex gap-4 md:gap-6 pt-6">
-                <button type="button" [ngClass]="type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn gengoffee-btn-quaternary">{{'fr'|translate}}</button>
+                <button type="button" [ngClass]="location === 'PARIS' ? 'hidden' : type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn gengoffee-btn-quaternary">{{'fr'|translate}}</button>
                 <button type="button" [ngClass]="type === 'en' ? 'opacity-100' : 'opacity-50'" (click)="changeType('en')" class="gengoffee-btn gengoffee-btn-quaternary">{{'en'|translate}}</button>
-                <button type="button" [ngClass]="type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn gengoffee-btn-quaternary">{{'jp'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn gengoffee-btn-quaternary">{{'jp'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'karaoke' ? 'opacity-100' : 'opacity-50'" (click)="changeType('karaoke')" class="gengoffee-btn gengoffee-btn-quaternary">{{'create.types.karaoke'|translate}}</button>
 
             </div>
             <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
@@ -36,7 +37,7 @@
             </div>
             </div>
 
-            <button type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
+            <button [disabled]="this.type === ''" type="submit" (click)="submitForm()" class="place-content-center flex mx-auto my-20 gengoffee-btn gengoffee-btn-primary">
                 Send
             </button>            
         </form>

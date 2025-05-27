@@ -200,7 +200,10 @@
         "change":"イベントを変わる",
         "type":"イベントのタイプ (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
-        "city":"街 (défini la langue principale)"
+        "city":"街 (défini la langue principale)",
+        "types": {
+            "karaoke": "カラオケ"
+        }
     },
     "admin":{
         "event":"イベント",
