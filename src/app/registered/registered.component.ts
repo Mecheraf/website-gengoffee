@@ -5,8 +5,6 @@ import { EventService } from '../services/event.service';
 import { switchMap, tap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 
-
-
 interface registeredUser {
   id:number,
   firstname:string,
@@ -44,6 +42,7 @@ interface updatedUser {
   templateUrl: './registered.component.html',
   styleUrls: ['./registered.component.css']
 })
+
 export class RegisteredComponent implements OnInit {
 
   public today = new Date()
@@ -101,11 +100,6 @@ export class RegisteredComponent implements OnInit {
     this.registeredService.getRegisteredList().subscribe((registeredList) => {
       this.registeredList = registeredList
     });
-  }
-
-  printRegistered(value?:any){
-
-    console.log(this.updatedList)
   }
 
   updateList(indexUser:number, indexEvent:number, paid:number, mail:string, date:Date, location:string, second:string){ //on update la liste des inscrits ou non

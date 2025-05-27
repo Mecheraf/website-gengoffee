@@ -37,12 +37,4 @@ export class LoginAdminComponent implements OnInit {
       }
     }); 
   }
-
-  isAdmin(){
-    if(1==1){
-      return true
-    }
-    return false
-  }
-
 }

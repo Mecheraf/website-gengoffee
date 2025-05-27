@@ -103,7 +103,7 @@
         "eventDate":"Date de l'événement auquel vous vous inscrivez",
         "form":{
             "title":"Participer au prochain évènement Gengoffee",
-            "description":"Rejoignez-nous et échangez autour d’un verre afin de d’améliorer votre niveau en langue ! ",
+            "description":"Rejoignez-nous et échangez autour d’un verre afin d’améliorer votre niveau en langue ! ",
             "lastname":"Nom",
             "firstname":"Prénom",
             "mail":"Adresse e-mail",
@@ -143,7 +143,7 @@
     "about":{
         "title":"À propos",
         "subtitle":"Qui sommes-nous ?",
-        "description":"Gengoffee est une association franco-japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d’organiser des échanges de langues franco-japonais dans un but d’entraide, amical et culturel. Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d’un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
+        "description":"Gengoffee est une association franco-japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d'organiser des échanges de langues franco-japonais dans un but d'entraide, amical et culturel. Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d'un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "people":{
             "alan":{
@@ -183,7 +183,7 @@
         "message":"Message",
         "button":"Envoyer",
         "p_object":"Objet du mail",
-        "p_message":"Je suis des cours de japonais depuis 5 ans mais j’ai encore des difficultés à m’exprimer :("
+        "p_message":"Je suis des cours de japonais depuis 5 ans mais j'ai encore des difficultés à m'exprimer :("
     },
     "job":{
         "title":"Découvrez de nouvelles opportunités",
@@ -201,7 +201,10 @@
         "change":"Modifier événement",
         "type":"Type de l'événement (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
-        "city":"Ville de l'événement (défini la langue principale)"
+        "city":"Ville de l'événement (défini la langue principale)",
+        "types": {
+            "karaoke": "Karaoke"
+        }
     },
     "legal":{
         "title":"Mentions Légales",
@@ -336,7 +339,7 @@
         },
         "price":{
             "title":"Tarifs",
-            "description":"La participation aux événements d'échange de langues est de 10€ en espèce et de 11€ par carte bancaire afin de couvrir les coûts de traitement par les fournisseurs de services de paiement. Les prix indiqués s’entendent toutes taxes comprises. Le paiement des services s’effectue sur place au moment de l’achat."
+            "description":"La participation aux événements d'échange de langues est de 10€ en espèce et de 11€ par carte bancaire afin de couvrir les coûts de traitement par les fournisseurs de services de paiement. Les prix indiqués s'entendent toutes taxes comprises. Le paiement des services s'effectue sur place au moment de l'achat."
         },
         "cancel":{
             "title":"Annulations et Remboursement",
@@ -355,7 +358,7 @@
                 "title":"Remboursement",
                 "description": {
                     "title":"Les remboursements sont effectués selon les modalités suivantes :",
-                    "1":"Si le service n'a pas été utilisé et que l'annulation est effectuée avant le début de la participation d’un événement un remboursement intégral sera accordé. Lors d'une réservation d'un événement dit exceptionnel, un remboursement partiel sera accordé.",
+                    "1":"Si le service n'a pas été utilisé et que l'annulation est effectuée avant le début de la participation d'un événement un remboursement intégral sera accordé. Lors d'une réservation d'un événement dit exceptionnel, un remboursement partiel sera accordé.",
                     "2":"Si le service a été partiellement utilisé, le montant du remboursement peut être calculé au prorata de la portion non utilisée du service."
                 }
             },

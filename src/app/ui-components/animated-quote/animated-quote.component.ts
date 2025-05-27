@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './animated-quote.component.html',
   styleUrls: ['./animated-quote.component.css']
 })
-export class AnimatedQuoteComponent implements OnInit {
+export class AnimatedQuoteComponent {
 
   @Input() content: string = "";
   @Input() revert: boolean = false;
@@ -13,8 +13,5 @@ export class AnimatedQuoteComponent implements OnInit {
   @Input() width: number = 126;
   @Input() height: number = 43;
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
