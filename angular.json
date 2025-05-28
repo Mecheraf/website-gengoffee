@@ -26,8 +26,13 @@
               "src/favicon.ico",
               "src/assets",
               "src/web.config",
-              "src/staticwebapp.config.json"
-            ],
+              "src/staticwebapp.config.json",
+              {
+                "glob": "robots.txt",
+                "input": "src/assets/maping/",
+                "output": "./"
+              }
+            ],  
             "styles": [
               "src/styles.css",
               "src/assets/css/fonts.css"
@@ -94,7 +99,12 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "robots.txt",
+                "input": "src/assets/maping/",
+                "output": "./"
+              }
             ],
             "styles": [
               "src/styles.css"
