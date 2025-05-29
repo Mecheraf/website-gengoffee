@@ -8,9 +8,11 @@
       <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
       </button>
-      <button [routerLink]="['/about']"  class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+      <a href="events/#notice">
+        <button class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
         {{'hero.buttons.more'|translate}}
-      </button>
+        </button>
+      </a>
     </div>
   </div>
 </section>
@@ -34,5 +36,5 @@
   </div>
 </section>
 <section class="mt-16 md:mt-40">
-  <app-gengoffee-notice [redWave]="true"></app-gengoffee-notice>
+  <app-gengoffee-notice id="notice" [redWave]="true"></app-gengoffee-notice>
 </section>
