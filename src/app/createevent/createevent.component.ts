@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ThemePalette } from '@angular/material/core';
 import { EventService } from '../services/event.service';
 import { DatePipe } from '@angular/common'
+import { SharedDataService } from '../shared/shared-data/shared-data.service';
 
+
+const NEXT_EVENTS = 10
 
 interface formParams {
   type:string,
@@ -22,91 +24,74 @@ interface formParams {
 export class CreateeventComponent implements OnInit {
   @ViewChild('picker') picker: any;
 
-  constructor(private eventservice: EventService, private datepipe: DatePipe) { }
+  constructor(
+    private eventservice: EventService, 
+    private datepipe: DatePipe,
+    public sharedEvents: SharedDataService
+  ) { }
+
   public place:string ="";
-  public disabled = false;
-  public showSpinners = true;
-  public showSeconds = false;
-  public touchUi = false;
-  public enableMeridian = false;
-  public minDate: Date = new Date("2022-09-04");
-  public maxDate?: Date = new Date("2025-06-30");
-  public stepHour = 1;
-  public stepMinute = 1;
-  public stepSecond = 1;
-  public color: ThemePalette = 'primary';
-  public disableMinute = false;
-  public hideTime = false;
   public type:string ="en";
   public location:string = "PARIS"
 
   public dateControl = new FormControl<Date>(new Date());
-
-  public options = [
-    { value: true, label: 'True' },
-    { value: false, label: 'False' }
-  ];
-
-  public listColors = ['primary', 'accent', 'warn'];
-
-  public stepHours = [1, 2, 3, 4, 5];
-  public stepMinutes = [1, 5, 10, 15, 20, 25];
-  public stepSeconds = [1, 5, 10, 15, 20, 25];
-
-
   public formGroup = {} as formParams;
 
+  public dateDay = new Date();
+  public dateTime:string = "18:00"
+
+  public nextEvents:any[] = [];
+  public selectedEvent:string = "0";
+
+
   ngOnInit(): void {
+    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
+    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
+  }
+
+  getNextEvents(limit:number, position:number, location:string) {
+    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
+      this.nextEvents[position] = data;
+    })
   }
 
   submitForm(){
+    const [ h, m ] = this.dateTime.split(":");
+    this.dateDay.setHours(Number(h), Number(m))
     this.formGroup.type = this.type
-    this.formGroup.date = this.datepipe.transform(this.dateControl.value, 'yyyy-MM-dd HH:mm:ss')
+    this.formGroup.date = this.datepipe.transform(this.dateDay, 'yyyy-MM-dd HH:mm:ss')
     this.formGroup.place = this.place
-    this.formGroup.location = this.location
     this.formGroup.location = this.location
     this.eventservice.post(this.formGroup).subscribe();
   }
 
-  toggleMinDate(evt: any) {
-    if (evt.checked) {
-      this._setMinDate();
-    } else {
-      this.minDate = new Date(0);
-    }
-  }
-
-  toggleMaxDate(evt: any) {
-    if (evt.checked) {
-      this._setMaxDate();
-    } else {
-      this.maxDate = new Date(0);
-    }
-  }
-
-  closePicker() {
-    this.picker.cancel();
-  }
-
-  private _setMinDate() {
-    const now = new Date();
-    this.minDate = new Date();
-    this.minDate.setDate(now.getDate() - 1);
-  }
-
-
-  private _setMaxDate() {
-    const now = new Date();
-    this.maxDate = new Date();
-    this.maxDate.setDate(now.getDate() + 1);
+  refreshNextEvents(){
+    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
+    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");  
   }
 
   changeLocation(location:string) {
     this.location = location
+    this.type = ""
   }
 
   changeType(type:string) {
     this.type = type
+  }
+  
+  selectEvent(id:string){
+    this.selectedEvent = id
+  }
+
+  updateEvents(){
+    var values: any[] = []
+    this.nextEvents.forEach(groups => {
+      groups.forEach((element: any) => {
+        element.date = this.datepipe.transform(element.date, 'yyyy-MM-dd HH:mm:ss')
+        values.push(element)
+      })
+    })
+    this.eventservice.put(this.nextEvents).subscribe();
   }
 
 }

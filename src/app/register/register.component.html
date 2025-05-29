@@ -10,23 +10,26 @@
             <p class="font-bold text-2xl pt-10">{{'register.form.title'|translate}}</p>
             <p class="pt-6">{{'register.form.description'|translate}}</p>
             <div name="location" class="flex flex-row md:w-1/2 m-auto gap-6 mt-5">
-                <button type="button" [ngClass]="this.location === 0 ? 'opacity-100' : 'opacity-40'" (click)="selectLocation(0)" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
+                <button type="button" [ngClass]="this.location === 'PARIS' ? 'opacity-100' : 'opacity-40'" (click)="selectLocation('PARIS')" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
                     {{'paris'|translate}}
                 </button>      
-                <button  type="button" [ngClass]="this.location === 1 ? 'opacity-100' : 'opacity-40'"  (click)="selectLocation(1)" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
+                <button  type="button" [ngClass]="this.location === 'TOKYO' ? 'opacity-100' : 'opacity-40'"  (click)="selectLocation('TOKYO')" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
                     {{'tokyo'|translate}}
                 </button> 
             </div>
             <p class="pt-14 ppmori-bold text-left md:w-2/3 w-4/5 m-auto">{{'register.eventDate'|translate}}</p>
-            <div class="mt-4 flex flex-col gap-y-5 md:flex-row md:w-9/12 m-auto">
-                <div class="justify-center m-auto" *ngFor="let event of nextEvents[this.location]">
+            <div class="mt-4 flex flex-col md:flex-row md:w-9/12 m-auto">
+                <div class="justify-center gap-y-5 m-auto" *ngFor="let event of returnSliced">
                     <button type="button" (click)="selectEvent(event.id)" [ngClass]="event.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="event"></app-past-event-card></button>
                 </div>
             </div>
             
             <form class="pt-2 md:w-2/3 m-auto text-left" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                <p class="pt-6">{{'register.form.name'|translate}}</p>
-                <input type="text" formControlName="name" name="name" placeholder="GENGOFFEE San" class="w-full border-b border-solid pt-4">
+                <p class="pt-6">{{'register.form.lastname'|translate}}</p>
+                <input type="text" formControlName="lastname" name="lastname" placeholder="SAN" class="w-full border-b border-solid pt-4">
+                <p class="pt-6">{{'register.form.firstname'|translate}}</p>
+                <input type="text" formControlName="firstname" name="firstname" placeholder="Gengoffee" class="w-full border-b border-solid pt-4">
+                
                 <p class="pt-6">{{'register.form.mail'|translate}}</p>
                 <input type="text"  formControlName="mail" name="mail" placeholder="san-gengoffee@gengoffee.fr"
                     class="w-full border-b border-solid pt-4">
@@ -36,20 +39,9 @@
                 </div>
                 <input type="text" formControlName="phone" name="phone" placeholder="+33X XX XX XX XX" class="w-full border-b border-solid pt-4">
                 <p class="pt-8">{{'register.form.language.title'|translate}}</p>
-                <div *ngFor="let language of selectedLanguages; let index = index;" class="flex gap-4 pl-4 my-4">
-                    <select [(ngModel)]="language.language" [ngModelOptions]="{standalone: true}" name="language + {{index}}" id="language + {{index}}" class="bg-white border-b-2">
-                        <option value="fr" [selected]="'fr' === language.language">{{'register.form.language.french'|translate}}</option>
-                        <option value="en" [selected]="'en' === language.language">{{'register.form.language.english'|translate}}</option>
-                        <option value="jp" [selected]="'jp' === language.language">{{'register.form.language.japanese'|translate}}</option>
-                    </select>
-                    <select [(ngModel)]="language.level" [ngModelOptions]="{standalone: true}" name="level + {{index}}" id="level + {{index}}" class="bg-white border-b-2">
-                        <option value="lv1" [selected]="'lv1' === language.level">{{'register.form.language.lv1'|translate}}</option>
-                        <option value="lv2" [selected]="'lv2' === language.level">{{'register.form.language.lv2'|translate}}</option>
-                        <option value="lv3" [selected]="'lv3' === language.level">{{'register.form.language.lv3'|translate}}</option>
-                    </select>
-                    <button type="button" (click)="removeLanguage(language)" class="p-1 border-x-2 border-y-2">X</button>
-                </div>
-                <button type="button" (click)="addLanguage()" [disabled]="this.selectedLanguages.length >= 3" [ngClass]="{'opacity-50': this.selectedLanguages.length >= 3}" class="flex text-gray-600 border-2 rounded-md px-4 py-2 my-6">{{'register.form.language.add'|translate}} +</button>
+                
+                <app-select-language [selectedLanguages]="selectedLanguages"></app-select-language>
+                
                 
                 <p class="font-semibold mt-12 mb-2">{{'register.form.diet.title'|translate}}</p>
                 <p>{{'register.form.diet.description'|translate}}</p>
@@ -60,11 +52,16 @@
                     <button type="button" (click)="toggleOther()" class="text-gray-400 border-2 rounded-md px-4 py-2 ml-4 mb-2 ">{{'register.form.diet.other'|translate}}</button>
                     <textarea [(ngModel)]="otherText" [ngModelOptions]="{standalone: true}" *ngIf="showText" name="otherText" class="border-b-4" placeholder="Let us know more..."></textarea>
                 </div>
+                <div class="text-sm my-4 inline-block">
+                    <p class="inline ">{{'register.form.general-conditions.1'|translate}}</p>
+                    <div class="inline underline"><a [routerLink]="['/general-conditions']">{{'register.form.general-conditions.2'|translate}}</a></div>
+                </div>
                 <p *ngIf="this.warning === 0" class="ppmori-bold gengoffee-red">{{'register.form.warning'|translate}}</p>
-                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <p *ngIf="this.subscribe === 0" class="ppmori-bold gengoffee-red">{{'register.form.warningSubscribe'|translate}}</p>
+                <button [disabled]="!registerForm.valid || this.sharedEvents.next.length === 0 || selectedEvent === '0' || this.subscribe === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
-                </button>                             
-            </form>
+                </button>                                 
+            </form>   
         </div>
     </div>
 </div>

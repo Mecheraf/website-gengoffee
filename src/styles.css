@@ -46,16 +46,8 @@ input::-webkit-inner-spin-button {
   color: #1F3D87;
 }
 
-.gengoffee-lightyellow {
-  color: #FBF8EA;
-}
-
 .gengoffee-lightblue {
   color: #E7EDF8;
-}
-
-.gengoffee-lightgreen {
-  color: #E1F2F5;
 }
 
 .gengoffee-lightred {
@@ -76,10 +68,6 @@ input::-webkit-inner-spin-button {
 
 .gengoffee-lightblue-bg {
   background-color: #E7EDF8;
-}
-
-.gengoffee-lightgreen-bg {
-  background-color: #E1F2F5;
 }
 
 .gengoffee-lightred-bg {

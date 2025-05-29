@@ -29,4 +29,11 @@ export class RegisteredService {
     return this.http.get<Event>(this.url+"getRegisteredList", options)
   }
 
+  public updateAttendee(data: any, options?: any) { 
+    options =  {...options, 
+      headers: {'Authorization':'Bearer '+this.cookieService.get("token")}
+    }
+    return this.http.put(this.url+"updateAttendee", data, options); 
+  } 
+
 }

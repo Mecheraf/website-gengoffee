@@ -72,6 +72,9 @@
             },
             "obrkof":{
                 "title":"Thanks a lot to Café Obrkof who permitted the project Gengoffee to exist ! On top of being an exceptional quality partner !"
+            },
+            "group":{
+                "title":"Thanks to our others partners for their support and the the quality of their products !"
             }
         }
     },
@@ -102,7 +105,8 @@
         "form": {
             "title": "Sign up for the next Gengoffee event",
             "description": "Join us for a conversation over a drink while improving your language skills!",
-            "name": "Full name",
+            "lastname": "Lastname",
+            "firstname": "Firstname",
             "mail": "Email",
             "phone": "Phone",
             "language": {
@@ -112,8 +116,10 @@
                 "french": "French",
                 "japanese": "Japanese",
                 "lv1": "Beginner",
-                "lv2": "Intermediate",
-                "lv3": "Fluent"
+                "lv2": "Lower intermediate",
+                "lv3": "Intermediate",
+                "lv4": "Fluent",
+                "lv5": "Native"
             },
             "diet": {
                 "title": "Do you have any allergies or dietary requirements?",
@@ -125,7 +131,13 @@
                 "halal": "Halal",
                 "other": "Other/Allergies"
             },
-            "register": "Sign up"
+            "register": "Sign up",
+            "general-conditions": {
+                "1":"By registering to our events, you accept our ",
+                "2":"terms and conditions."
+            },
+            "warningSubscribe":"The registrations for the selected event has been closed. For more informations, please contact us via mail or on our social networks."
+
         }
     },
     "about": {
@@ -152,11 +164,11 @@
             "title": "Some figures...",
             "1": {
                 "title": "Events",
-                "description": "Multiple French-English or French-Japanese language exchanges with about 65 attendees each event and more than <span class=\"font-semibold\">7000 attendees</span> in total. "
+                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">9000 sign-ups </span> and counting!"
             },
             "2": {
                 "title": "Community",
-                "description": "You can find our next langage exchange event date on our different social media (Meetup, Instagram and Facebook) who have more than <span class=\"font-semibold\">6000 followers</span>."
+                "description": "A total of more than <span class=\"font-semibold\">7500 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
             },
             "3": {
                 "title": "Collaborators",
@@ -190,9 +202,17 @@
     },
     "create":{
         "title":"Create event",
+        "change":"Change events",
         "type":"Type of the event (define the second language)",
         "place":"Date and place of the event",
-        "city":"City of the event (Define the main language)"
+        "city":"City of the event (Define the main language)",
+        "types": {
+            "karaoke": "Karaoke"
+        }
+    },
+    "admin":{
+        "event":"Event",
+        "registered":"List"
     },
     "en": "English",
     "fr": "French",

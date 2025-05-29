@@ -73,6 +73,9 @@
             },
             "obrkof":{
                 "title":"Gengoffeeの全てのプロジェクトはCafé Obrkof の皆様からの惜しみない協力のおかげで成り立っているので、Café Obrkof の皆様に多大なる感謝申し上げます。"
+            },
+            "group":{
+                "title":"また他のパートナーからの温かいサポートと高品質な製品の提供にも感謝致します！"
             }
         }
     },
@@ -103,7 +106,8 @@
         "form": {
             "title": "次のGengoffeeに参加する",
             "description": "私たちと一杯飲みながら言語レベルを上達しよう！ ",
-            "name": "姓 & 名",
+            "lastname": "姓",
+            "firstname": "名",
             "mail": "メールアドレス",
             "phone": "電話番号",
             "language": {
@@ -112,9 +116,11 @@
                 "english": "英語",
                 "french": "フランス語",
                 "japanese": "日本語",
-                "lv1": "初級",
-                "lv2": "中級",
-                "lv3": "上級"
+                "lv1": "初心者",
+                "lv2": "初級",
+                "lv3": "中級",
+                "lv4": "中上級",
+                "lv5": "上級"
             },
             "diet": {
                 "title": "食品に関するアレルギーについて",
@@ -127,11 +133,13 @@
                 "other": "その他"
             },
             "register":"参加する",
-            "warning":"このイベントは席に限りがございます。登録を確定するために72時間以内に確認メールが送信されます。"
+            "warning":"このイベントは席に限りがございます。登録を確定するために72時間以内に確認メールが送信されます。",
+            "warningSubscribe":"選択されたイベントの登録は締め切りました。さらに詳しい情報を知りたい場合、メールまたはSNSからご連絡ください。"
+
         }
     },
     "about":{
-        "title":"Gengoffeeとは",
+        "title":"概要",
         "subtitle":" 私たちについて",
         "description":"言語を学ぶ上で大事なステップのひとつが実践することです。gengoffeeは実際の交流を通してこのような学ぶ場所を作りたいと考えました。<br><br>私たちは日仏アソシエーションで、参加者が世界中、特に日本や英語圏の国々から来る人々と可能な限り出会える言語交換の機会を提供しています。",
         "followus":"もちろん私たちのSNSもご覧頂けます。",
@@ -153,11 +161,11 @@
             "title":"様々な統計数...",
             "1":{
                 "title":"イベント                ",
-                "description":"日仏、英仏、日英等複数の言語交換で毎回平均65人前後の参加者がおり、現在までにトータル<span class=\"font-semibold\">7000人以上</span>の参加者に参加していただきました！"
+                "description":"団体開設後、現在まで開催したイベント合計数！登録者は<span class=\"font-semibold\">9000</span>突破！"
             },
             "2":{
                 "title":"コミュニティ",
-                "description":"次回の言語交換の日程は各SNS (Meetup, instagram , Facebook)から確認していただけます。各SNSのフォロワー合計<span class=\"font-semibold\">6000人以上</span>を突破！"
+                "description":"全グループの合計<span class=\"font-semibold\">7500人突破</span>！ MeetupやInstagramのフォローもお願いします"
             },            
             "3":{
                 "title":"スタッフ",
@@ -193,9 +201,17 @@
     },
     "create":{
         "title":"イベントを作る",
+        "change":"イベントを変わる",
         "type":"イベントのタイプ (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
-        "city":"街 (défini la langue principale)"
+        "city":"街 (défini la langue principale)",
+        "types": {
+            "karaoke": "カラオケ"
+        }
+    },
+    "admin":{
+        "event":"イベント",
+        "registered":"リスト"
     },
     "en": "英語",
     "fr": "フランス語",

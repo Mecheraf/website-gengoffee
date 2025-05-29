@@ -16,4 +16,9 @@ export class AppComponent {
   switchLanguage(lang: string){
     this.translate.use(lang);
   }
+
+  onActivate() {
+    window.scrollTo(0, 0);
+  }
+
 }

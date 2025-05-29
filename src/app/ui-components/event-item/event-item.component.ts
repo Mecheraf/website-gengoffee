@@ -5,6 +5,7 @@ import { Event } from 'src/app/models/event';
 
 const localeToFlag: any = {
   'fr' : '🇫🇷',
+  'karaoke':'🇯🇵🎤',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
   'es' : '🇪🇸'
@@ -21,7 +22,6 @@ export class EventItemComponent implements OnInit {
   private defaultLanguage: string = '🇫🇷';
   public flags: string = '';
   public hour: string = '';
-  private photoEnglishId : number = 0;
 
   @Input() event: Event = {} as Event;
   @Input() active: boolean = false;
@@ -45,7 +45,7 @@ export class EventItemComponent implements OnInit {
 
   public getImageByCountry(id:string): string {
     if (this.event.type === 'jp') {
-      return 'gengoffee_event-'+Number(id)%2+'.webp';
+      return 'gengoffee_event-'+(Number(id)%2+1)+'.webp';
     } else if (this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return 'gengoffee_event_karaoke2.webp';
     }

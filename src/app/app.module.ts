@@ -24,25 +24,30 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateeventComponent } from './createevent/createevent.component';
-import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
-import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 import { CookieService } from 'ngx-cookie-service';
 import { RegisteredComponent } from './registered/registered.component';
 import { JobboardComponent } from './jobboard/jobboard.component';
 import { JobsRowComponent } from './ui-components/jobs-row/jobs-row.component';
 import { JobsItemComponent } from './ui-components/jobs-item/jobs-item.component';
+import { EventRowComponent } from './ui-components/event-row/event-row.component';
+
+import { Meta, provideClientHydration } from '@angular/platform-browser';
 import { CreatejobComponent } from './createjob/createjob.component';
-
-
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.component';
+import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
+import { ConditionsComponent } from './legal/conditions/conditions.component';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 
@@ -70,7 +75,10 @@ import { CreatejobComponent } from './createjob/createjob.component';
     JobboardComponent,
     JobsRowComponent,
     JobsItemComponent,
-    CreatejobComponent
+    CreatejobComponent,
+    LegalNoticeComponent,
+    SelectLanguageComponent,
+    EventRowComponent
     ],
   imports: [
     BrowserModule,
@@ -84,8 +92,6 @@ import { CreatejobComponent } from './createjob/createjob.component';
             deps: [HttpClient] 
         }
     }),
-    NgxMatDatetimePickerModule,
-    NgxMatTimepickerModule,
     MatDatepickerModule,
     MatInputModule,
     ReactiveFormsModule,
@@ -93,14 +99,19 @@ import { CreatejobComponent } from './createjob/createjob.component';
     CommonModule,
     BrowserAnimationsModule,
     MatNativeDateModule,
-    NgxMatNativeDateModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxMaterialTimepickerModule,
+    MatSlideToggleModule
   ],
   providers: [
     MatDatepickerModule,
     DatePipe,
     MatSnackBarModule,
-    CookieService
+    CookieService,
+    provideClientHydration(),
+    provideAnimationsAsync(),
+    { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }
+
   ],
   bootstrap: [AppComponent]
 })
