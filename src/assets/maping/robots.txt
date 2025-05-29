@@ -1,5 +1,10 @@
 User-agent: Googlebot
 Disallow: /admin/
+Allow: /
 
 User-agent: *
+Disallow: /admin/
 Allow: /
+
+# Sitemap
+Sitemap: https://www.gengoffee.com/sitemap.xml
