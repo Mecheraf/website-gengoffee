@@ -29,7 +29,12 @@
               "src/staticwebapp.config.json",
               {
                 "glob": "robots.txt",
-                "input": "src/assets/maping/",
+                "input": "src/assets/mapping/",
+                "output": "./"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "src/assets/mapping/",
                 "output": "./"
               }
             ],  
@@ -102,7 +107,12 @@
               "src/assets",
               {
                 "glob": "robots.txt",
-                "input": "src/assets/maping/",
+                "input": "src/assets/mapping/",
+                "output": "./"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "src/assets/mapping/",
                 "output": "./"
               }
             ],

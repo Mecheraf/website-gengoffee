@@ -205,10 +205,7 @@
         "change":"Change events",
         "type":"Type of the event (define the second language)",
         "place":"Date and place of the event",
-        "city":"City of the event (Define the main language)",
-        "types": {
-            "karaoke": "Karaoke"
-        }
+        "city":"City of the event (Define the main language)"
     },
     "admin":{
         "event":"Event",
@@ -216,5 +213,6 @@
     },
     "en": "English",
     "fr": "French",
-    "jp": "Japanese"
+    "jp": "Japanese",
+    "karaoke": "Karaoke"
 }
