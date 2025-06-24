@@ -125,6 +125,7 @@ export class RegisteredComponent implements OnInit {
 
   updateAttendee(){
     this.registeredService.updateAttendee({"attendees":this.updatedList, "mail":1}).subscribe()
+    this.updatedList = []
   }
   
   public getColorByCountry(eventType:string): string {
@@ -133,6 +134,10 @@ export class RegisteredComponent implements OnInit {
     }
     
     return "gengoffee-lightblue-bg";
+  }
+
+  printUpdatedList(){
+    console.log(this.updatedList)
   }
 
   public getTranslatedDate(theDate:Date) {
