@@ -136,10 +136,6 @@ export class RegisteredComponent implements OnInit {
     return "gengoffee-lightblue-bg";
   }
 
-  printUpdatedList(){
-    console.log(this.updatedList)
-  }
-
   public getTranslatedDate(theDate:Date) {
     const eventDate = new Date(theDate);
     const translatedDay = this.translateService.instant('days.' + eventDate.getDay().toString());
