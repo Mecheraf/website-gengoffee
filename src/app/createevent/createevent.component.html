@@ -49,7 +49,7 @@
             <div class="md:w-11/12">
                 <div class="max-h-[480px]" *ngFor="let city of nextEvents">
                     <div *ngFor="let event of city">
-                        <button type="button" (click)="selectEvent(event.id)" class="w-full text-left" [ngClass]="selectedEvent === event.id ? 'bg-white' : 'bg-[#F5F7F9]' "><app-event-row [event]="event"></app-event-row></button>
+                        <app-event-row class="bg-[#F5F7F9]" [event]="event"></app-event-row>
                     </div>
                 </div>
             </div>
