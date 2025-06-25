@@ -56,11 +56,18 @@ export class EventRowComponent {
     this.event.subscribe = 1 - this.event.subscribe
   }
 
+
+
   deleteEvent(){
-    console.log(this.event)
-    this.eventService.deleteEvent(this.event).subscribe((res:any) => {
-      console.log(res)
-    })
+    if(confirm("Are you sure you want to delete this event?")){
+      this.eventService.deleteEvent(this.event).subscribe((res:any) => {
+        console.log(res)
+      })
+    }
+    else{
+      return
+    }
+    
   }
 
 }
