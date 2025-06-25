@@ -109,6 +109,23 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
+.gengoffee-btn-extra-small {
+  place-items: center;
+  padding: 5px 10px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 35px;
+  border: none;
+  background: white;
+  font-family: 'PPMori';
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.gengoffee-btn-extra-small:hover {
+  cursor: pointer;
+}
+
 .gengoffee-btn-primary {
   background: #BF292E;
   color: white;
