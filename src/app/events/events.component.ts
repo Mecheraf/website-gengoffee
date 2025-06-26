@@ -53,4 +53,11 @@ export class EventsComponent implements OnInit {
   get returnSliced(){
     return this.sharedEvents.next["upcoming"]?.slice(0, 2)
   }
+
+  scrollto(element: string) {
+    console.log(element)
+    const scrollToElement = document.getElementById(element);
+    console.log(scrollToElement)
+    scrollToElement?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
