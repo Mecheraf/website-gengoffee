@@ -8,7 +8,8 @@ const localeToFlag: any = {
   'karaoke':'🇯🇵🎤',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
-  'es' : '🇪🇸'
+  'es' : '🇪🇸',
+  'boardgame' : '🇯🇵🇬🇧'
 }
 
 @Component({
