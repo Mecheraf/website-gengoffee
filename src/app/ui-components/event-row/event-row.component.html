@@ -8,7 +8,6 @@
         </div>
 
         <div class="flex flex-col text-xs w-20">
-            <p>Type</p>
             <select class="border-b border-[#262829]/50 border-solid pt-4" onchange="updateEvent('type', $event.type)" [(ngModel)]="event.type">
                 <option [value]="'jp'">{{ 'jp' | translate }}</option>
                 <option [value]="'en'">{{ 'en' | translate }}</option>
@@ -18,11 +17,9 @@
             </select>
         </div>
         <div class="flex flex-col text-xs w-14">
-            <p>Location</p>
             <input type="text" class="border-b border-[#262829]/50 border-solid pt-4" name="location" value="{{event.location}}" onchange='updateEvent("location", this.value)'>
         </div>
         <div class="flex flex-col text-xs">
-            <p>Place</p>
             <input type="text" class="border-b border-[#262829]/50 border-solid pt-4" name="place" value="{{event.place}}" (input)='updateEvent("place", $event)'>
         </div>
         <div class="flex flex-col ppmori">
