@@ -9,7 +9,6 @@ import { ContactComponent } from './contact/contact.component';
 import { RegisteredComponent } from './registered/registered.component';
 import { LoginAdminComponent } from './loginAdmin/loginAdmin.component';
 import { AuthGuard } from './auth/auth.guard';
-//import { JobboardComponent } from './jobboard/jobboard.component';
 import { CreatejobComponent } from './createjob/createjob.component';
 import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.component';
 import { ConditionsComponent } from './legal/conditions/conditions.component';

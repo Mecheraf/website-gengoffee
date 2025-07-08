@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, platformBrowser } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,14 +38,13 @@ import { JobsRowComponent } from './ui-components/jobs-row/jobs-row.component';
 import { JobsItemComponent } from './ui-components/jobs-item/jobs-item.component';
 import { EventRowComponent } from './ui-components/event-row/event-row.component';
 
-import { Meta, provideClientHydration } from '@angular/platform-browser';
+import { provideClientHydration } from '@angular/platform-browser';
 import { CreatejobComponent } from './createjob/createjob.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.component';
 import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
-import { ConditionsComponent } from './legal/conditions/conditions.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
