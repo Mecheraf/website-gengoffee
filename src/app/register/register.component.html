@@ -10,16 +10,16 @@
             <p class="font-bold text-2xl pt-10">{{'register.form.title'|translate}}</p>
             <p class="pt-6">{{'register.form.description'|translate}}</p>
             <div name="location" class="flex flex-row md:w-1/2 m-auto gap-6 mt-5">
-                <button type="button" [ngClass]="this.location === 0 ? 'opacity-100' : 'opacity-40'" (click)="selectLocation(0)" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
+                <button type="button" [ngClass]="this.location === 'PARIS' ? 'opacity-100' : 'opacity-40'" (click)="selectLocation('PARIS')" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
                     {{'paris'|translate}}
                 </button>      
-                <button  type="button" [ngClass]="this.location === 1 ? 'opacity-100' : 'opacity-40'"  (click)="selectLocation(1)" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
+                <button  type="button" [ngClass]="this.location === 'TOKYO' ? 'opacity-100' : 'opacity-40'"  (click)="selectLocation('TOKYO')" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-tertiary">
                     {{'tokyo'|translate}}
                 </button> 
             </div>
             <p class="pt-14 ppmori-bold text-left md:w-2/3 w-4/5 m-auto">{{'register.eventDate'|translate}}</p>
-            <div class="mt-4 flex flex-col gap-y-5 md:flex-row md:w-9/12 m-auto">
-                <div class="justify-center m-auto" *ngFor="let event of nextEvents[this.location]">
+            <div class="mt-4 flex flex-col md:flex-row md:w-9/12 m-auto">
+                <div class="justify-center gap-y-5 m-auto" *ngFor="let event of returnSliced">
                     <button type="button" (click)="selectEvent(event.id)" [ngClass]="event.id === selectedEvent ? 'opacity-100 border-black border rounded-[5%]' : 'opacity-60'"><app-past-event-card [event]="event"></app-past-event-card></button>
                 </div>
             </div>
@@ -57,9 +57,10 @@
                     <div class="inline underline"><a [routerLink]="['/general-conditions']">{{'register.form.general-conditions.2'|translate}}</a></div>
                 </div>
                 <p *ngIf="this.warning === 0" class="ppmori-bold gengoffee-red">{{'register.form.warning'|translate}}</p>
-                <button [disabled]="!registerForm.valid || this.nextEvents.length === 0 || selectedEvent === '0'" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
+                <p *ngIf="this.subscribe === 0" class="ppmori-bold gengoffee-red">{{'register.form.warningSubscribe'|translate}}</p>
+                <button [disabled]="!registerForm.valid || this.sharedEvents.next.length === 0 || selectedEvent === '0' || this.subscribe === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
-                </button>                             
+                </button>                                 
             </form>   
         </div>
     </div>

@@ -22,6 +22,12 @@
     <div class="">
       <a [routerLink]="['/contact']" (click)="closeMenu();">{{'header.menu.contact'|translate}}</a>
     </div>
+    <div *ngIf="isAdvancedRoute()">
+      <a [routerLink]="['/admin/events']" class="gengoffee-red"  (click)="closeMenu();">{{'admin.event'|translate}}</a>
+    </div>
+    <div *ngIf="isAdvancedRoute()">
+      <a [routerLink]="['/admin/registered']" class="gengoffee-red" (click)="closeMenu();">{{'admin.registered'|translate}}</a>
+    </div>
     <div *ngIf="isMobile" class="text-[#1F3D87] place-self-center">
       <button (click)="switchLanguage('en')" class="">ENG</button>
       <button (click)="switchLanguage('fr')" class="ml-8 mr-6">FR</button>

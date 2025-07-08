@@ -72,6 +72,9 @@
             },
             "obrkof":{
                 "title":"Thanks a lot to Café Obrkof who permitted the project Gengoffee to exist ! On top of being an exceptional quality partner !"
+            },
+            "group":{
+                "title":"Thanks to our others partners for their support and the the quality of their products !"
             }
         }
     },
@@ -115,8 +118,8 @@
                 "lv1": "Beginner",
                 "lv2": "Lower intermediate",
                 "lv3": "Intermediate",
-                "lv4": "Advenced",
-                "lv5": "Fluent"
+                "lv4": "Fluent",
+                "lv5": "Native"
             },
             "diet": {
                 "title": "Do you have any allergies or dietary requirements?",
@@ -132,7 +135,9 @@
             "general-conditions": {
                 "1":"By registering to our events, you accept our ",
                 "2":"terms and conditions."
-            }
+            },
+            "warningSubscribe":"The registrations for the selected event has been closed. For more informations, please contact us via mail or on our social networks."
+
         }
     },
     "about": {
@@ -154,11 +159,11 @@
             "title": "Gengoffee in figures...",
             "1": {
                 "title": "Events",
-                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">6000 sign-ups </span> and counting!"
+                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">9000 sign-ups </span> and counting!"
             },
             "2": {
                 "title": "Community",
-                "description": "A total of more than <span class=\"font-semibold\">6000 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
+                "description": "A total of more than <span class=\"font-semibold\">7500 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
             },
             "3": {
                 "title": "Collaborators",
@@ -192,11 +197,18 @@
     },
     "create":{
         "title":"Create event",
+        "change":"Change events",
         "type":"Type of the event (define the second language)",
         "place":"Date and place of the event",
         "city":"City of the event (Define the main language)"
     },
+    "admin":{
+        "event":"Event",
+        "registered":"List"
+    },
     "en": "English",
     "fr": "French",
-    "jp": "Japanese"
+    "jp": "Japanese",
+    "karaoke": "Karaoke",
+    "boardgame": "Boardgame"
 }

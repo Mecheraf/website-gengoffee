@@ -4,25 +4,35 @@ import { RegisteredService } from '../services/registered.service';
 import { EventService } from '../services/event.service';
 import { switchMap, tap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { DatePipe } from '@angular/common';
-
-
 
 interface registeredUser {
+  id:number,
   firstname:string,
   lastname:string
   mail:string,
   diet:string[], 
   idEvent:number,
   languages:any,
-  date_registered:Date
+  date_registered:Date,
+  paid:number
 }
 
 interface eventsAttendees {
   id:number,
   date:Date,
   type:string,
+  location:string,
   registeredList:registeredUser[]
+}
+
+interface updatedUser {
+  idUser:number,
+  idEvent:number,
+  paid:number, 
+  mail:string,
+  date:Date,
+  main:string,
+  second:string
 }
 
 
@@ -30,25 +40,24 @@ interface eventsAttendees {
 @Component({
   selector: 'app-registered',
   templateUrl: './registered.component.html',
-  styleUrls: ['./registered.component.css'],
-  providers: [DatePipe]
+  styleUrls: ['./registered.component.css']
 })
-export class RegisteredComponent implements OnInit {
 
+export class RegisteredComponent implements OnInit {
 
   public today = new Date()
   public nextEvents:any;
   public registeredList: any = [];
+  public updatedList:updatedUser[]  = []
+
   public events:eventsAttendees[] = [];
   public nbEventFr:number = 3;
-  public nbEventJp:number = 1;
+  public nbEventJp:number = 2;
 
   constructor(
     private registeredService: RegisteredService,
     private eventservice: EventService,
     private translateService: TranslateService,
-    private datepipe: DatePipe
-
   ) { }
 
   async ngOnInit() {
@@ -58,7 +67,6 @@ export class RegisteredComponent implements OnInit {
       }), 
       tap((registeredList)=>{
         registeredList.forEach((element: any, index:number) => {
-          //element.date_registered = this.datepipe.transform(element.date_registered, 'dd/MM/yyyy HH:mm')
           if(element.languages){
             registeredList[index].languages = this.getLanguages(element.languages)
           }
@@ -81,6 +89,7 @@ export class RegisteredComponent implements OnInit {
           id: element.id,
           date: element.date,
           type: element.type,
+          location:element.location,
           registeredList: currentList
         });
       });
@@ -91,6 +100,32 @@ export class RegisteredComponent implements OnInit {
     this.registeredService.getRegisteredList().subscribe((registeredList) => {
       this.registeredList = registeredList
     });
+  }
+
+  updateList(indexUser:number, indexEvent:number, paid:number, mail:string, date:Date, location:string, second:string){ //on update la liste des inscrits ou non
+    this.events[indexEvent].registeredList[indexUser].paid = -1 - paid  
+
+    let idUser = this.events[indexEvent].registeredList[indexUser].id;
+    let idEvent = this.events[indexEvent].id;
+    paid = this.events[indexEvent].registeredList[indexUser].paid
+    let tmp = 0
+    const main:string = location === "PARIS" ? "fr" : "jp"
+
+    this.updatedList.filter((element, index) => { //We check if the pair idUser and idEvent are already entered
+        if(idUser === element.idUser && idEvent === element.idEvent){
+          this.updatedList.splice(index, 1)
+          tmp = 1
+        }
+      }
+    )
+    if(!tmp){ //If we didnt change it, we just change the value.
+      this.updatedList.push({idUser, idEvent, paid, mail, date, main, second})
+    }
+  }
+
+  updateAttendee(){
+    this.registeredService.updateAttendee({"attendees":this.updatedList, "mail":1}).subscribe()
+    this.updatedList = []
   }
   
   public getColorByCountry(eventType:string): string {
@@ -125,16 +160,8 @@ export class RegisteredComponent implements OnInit {
           result[index].language = "jp"
           break;
       }
-
     });
     return result
-  }
-
-  public getLocation(type:string){
-    if(type === 'fr'){
-      return "TOKYO"
-    }
-    return "PARIS"
   }
 
 }

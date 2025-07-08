@@ -73,6 +73,9 @@
             },
             "obrkof":{
                 "title":"Gengoffeeの全てのプロジェクトはCafé Obrkof の皆様からの惜しみない協力のおかげで成り立っているので、Café Obrkof の皆様に多大なる感謝申し上げます。"
+            },
+            "group":{
+                "title":"また他のパートナーからの温かいサポートと高品質な製品の提供にも感謝致します！"
             }
         }
     },
@@ -130,7 +133,9 @@
                 "other": "その他"
             },
             "register":"参加する",
-            "warning":"このイベントは席に限りがございます。登録を確定するために72時間以内に確認メールが送信されます。"
+            "warning":"このイベントは席に限りがございます。登録を確定するために72時間以内に確認メールが送信されます。",
+            "warningSubscribe":"選択されたイベントの登録は締め切りました。さらに詳しい情報を知りたい場合、メールまたはSNSからご連絡ください。"
+
         }
     },
     "about":{
@@ -152,11 +157,11 @@
             "title":"様々な統計数...",
             "1":{
                 "title":"イベント                ",
-                "description":"団体開設後、現在まで開催したイベント合計数！登録者は<span class=\"font-semibold\">6000</span>突破！"
+                "description":"団体開設後、現在まで開催したイベント合計数！登録者は<span class=\"font-semibold\">9000</span>突破！"
             },
             "2":{
                 "title":"コミュニティ",
-                "description":"全グループの合計<span class=\"font-semibold\">6000人突破</span>！ MeetupやInstagramのフォローもお願いします"
+                "description":"全グループの合計<span class=\"font-semibold\">7500人突破</span>！ MeetupやInstagramのフォローもお願いします"
             },            
             "3":{
                 "title":"スタッフ",
@@ -192,11 +197,18 @@
     },
     "create":{
         "title":"イベントを作る",
+        "change":"イベントを変わる",
         "type":"イベントのタイプ (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
         "city":"街 (défini la langue principale)"
+    },  
+    "admin":{
+        "event":"イベント",
+        "registered":"リスト"
     },
     "en": "英語",
     "fr": "フランス語",
-    "jp": "日本語"
+    "jp": "日本語",
+    "karaoke": "カラオケ",
+    "boardgame": "ボードゲーム"
 }
