@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  private mailThisApi = 'https://formsubmit.co/4c829c560b64967a3ac2d6197e314f22'; // 49be6a6fc11f35df3a0c8b9ac748f9f7
+  private url = environment.API_URL
+
   constructor(private http: HttpClient) { }
 
-  sendEmail(data: FormData) {
-    return this.http.post(this.mailThisApi, data);
+  sendEmail(data: any) {
+    return this.http.post(this.url+"contactForm", data);
   }
 }

@@ -174,7 +174,7 @@
     "contact":{
         "title":"N'hésitez pas à nous écrire",
         "titleResponsive":"Ecrivez-nous",
-        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.fr",
+        "description":"En remplissant le formulaire ci-dessous<br>ou directement sur : contact@gengoffee.com",
         "name":"Nom & Prénom",
         "mail":"Adresse e-mail",
         "phone":"Numéro de Téléphone",
@@ -182,7 +182,8 @@
         "message":"Message",
         "button":"Envoyer",
         "p_object":"Objet du mail",
-        "p_message":"Je suis des cours de japonais depuis 5 ans mais j'ai encore des difficultés à m'exprimer :("
+        "p_message":"Je suis des cours de japonais depuis 5 ans mais j'ai encore des difficultés à m'exprimer :(",
+        "warning": "De juillet 2025 à août 11 2025, notre formulaire de contact n'était pas fonctionnel. Maintenant, tout est de retour à la normale !"
     },
     "job":{
         "title":"Découvrez de nouvelles opportunités",
@@ -205,7 +206,7 @@
     "legal":{
         "title":"Mentions Légales",
         "association": {
-            "description":"Les sites « www.gengoffee.fr » et « www.gengoffee.com » sont des propriétés de l'Association Gengoffee, Association loi de 1901 à but non lucratif.",
+            "description":"Les sites « www.gengoffee.com » et « www.gengoffee.com » sont des propriétés de l'Association Gengoffee, Association loi de 1901 à but non lucratif.",
             "siret":"Numéro Siret : 91385763700015",
             "address":"Siège de l'Association : 50 B AVENUE MAURICE THOREZ 94200 IVRY-SUR-SEINE, France",
             "headchef":"Représentant légal de l'association France : Alan MECHERAF",
@@ -220,7 +221,7 @@
                 "text":"Rédaction des textes : Alan MECHERAF, Catherine T. & Alexane LACOUTURE",
                 "seo": "Référencement du site : Alan MECHERAF & Alexane LACOUTURE"
             },
-            "credits":"Crédits : <br><br>Tout le contenu des sites www.gengoffee.fr et www.gengoffee.com (les graphismes, images, textes, logos...) ainsi que leur mise en forme sont la propriété exclusive de l'Association Gengoffee, à l'exception des visuels ou logos appartenant à d'autres sociétés partenaires ou auteurs/photographes. Toute reproduction, distribution, modification, retransmission ou publication de ces différents éléments est strictement interdite sans notre accord exprès par écrit. Pour toute demande d'autorisation ou d'information, envoyez-nous un e-mail à web@gengoffee.fr"
+            "credits":"Crédits : <br><br>Tout le contenu des sites www.gengoffee.com et www.gengoffee.com (les graphismes, images, textes, logos...) ainsi que leur mise en forme sont la propriété exclusive de l'Association Gengoffee, à l'exception des visuels ou logos appartenant à d'autres sociétés partenaires ou auteurs/photographes. Toute reproduction, distribution, modification, retransmission ou publication de ces différents éléments est strictement interdite sans notre accord exprès par écrit. Pour toute demande d'autorisation ou d'information, envoyez-nous un e-mail à web@gengoffee.com"
         },
         "data":{
             "title":"CHARTE DE PROTECTION DES DONNÉES PERSONNELLES DES UTILISATEURS",
@@ -242,11 +243,11 @@
                 "title":"LES DONNÉES QUE NOUS COLLECTONS :",
                 "fromUs":{
                     "title":"1. LES DONNÉES QUE VOUS NOUS TRANSMETTEZ :",
-                    "description":"Lorsque vous interagissez avec Gengoffee, de quelque manière que ce soit, vous êtes susceptibles de nous transmettre des informations dont des données à caractère personnel. C'est notamment le cas lorsque vous remplissez participez à un jeu concours, complétez une fiche de contact ou encore lorsque vous nous envoyez un mail pour nous faire part d'une situation vous concernant, grâce à l'adresse web@gengoffee.fr par exemple.<br><br>Dans le cadre d'une adhésion, il vous sera demandé votre nom, nom d'usage, prénom, adresse mail, numéro de téléphone, réseaux sociaux, pièce d'identité. Dans les autres cadres les données sont principalement votre nom, prénom, adresse e-mail et numéro de téléphone.<br><br>Les données relatives à la participation à des jeux concours et sondages. Ces données sont principalement une copie de l'ensemble des échanges et réponses apportées entre vous et Gengoffee. Ces informations étant susceptibles d'être collectées, rassemblées et utilisées pour des analyses et des recherches relatives aux finalités exposées sur les différents supports au moment de la participation.Les données que nous sommes susceptibles de vous demander en réponse à des questions, problèmes et réclamations ; notamment dans les échanges et réponses entre vous et Gengoffee.<br><br>Les données recueillies dans le cadre de l'exercice de vos droits. Exception faite de l'exercice du droit à l'oubli. Vous retrouverez l'ensemble de vos droits au point 13. de la présente charte.<br>Et d'autres informations que vous souhaitez nous communiquer, telles qu'une situation personnelle particulière, vos habitudes de vie.<br><br>Chaque personne reste maître de ses données, Gengoffee n'en dispose pas librement. Toutes les données collectées et traitées sont soumises à votre consentement ou à une obligation contractuelle et respectent la Loi Informatique et Libertés ainsi que le Règlement Général sur la Protection des Données. Ces données seront toujours traitées conformément à la politique en vigueur au moment de leur collecte, sauf modifications légales qui auraient une application rétroactive."  
+                    "description":"Lorsque vous interagissez avec Gengoffee, de quelque manière que ce soit, vous êtes susceptibles de nous transmettre des informations dont des données à caractère personnel. C'est notamment le cas lorsque vous remplissez participez à un jeu concours, complétez une fiche de contact ou encore lorsque vous nous envoyez un mail pour nous faire part d'une situation vous concernant, grâce à l'adresse web@gengoffee.com par exemple.<br><br>Dans le cadre d'une adhésion, il vous sera demandé votre nom, nom d'usage, prénom, adresse mail, numéro de téléphone, réseaux sociaux, pièce d'identité. Dans les autres cadres les données sont principalement votre nom, prénom, adresse e-mail et numéro de téléphone.<br><br>Les données relatives à la participation à des jeux concours et sondages. Ces données sont principalement une copie de l'ensemble des échanges et réponses apportées entre vous et Gengoffee. Ces informations étant susceptibles d'être collectées, rassemblées et utilisées pour des analyses et des recherches relatives aux finalités exposées sur les différents supports au moment de la participation.Les données que nous sommes susceptibles de vous demander en réponse à des questions, problèmes et réclamations ; notamment dans les échanges et réponses entre vous et Gengoffee.<br><br>Les données recueillies dans le cadre de l'exercice de vos droits. Exception faite de l'exercice du droit à l'oubli. Vous retrouverez l'ensemble de vos droits au point 13. de la présente charte.<br>Et d'autres informations que vous souhaitez nous communiquer, telles qu'une situation personnelle particulière, vos habitudes de vie.<br><br>Chaque personne reste maître de ses données, Gengoffee n'en dispose pas librement. Toutes les données collectées et traitées sont soumises à votre consentement ou à une obligation contractuelle et respectent la Loi Informatique et Libertés ainsi que le Règlement Général sur la Protection des Données. Ces données seront toujours traitées conformément à la politique en vigueur au moment de leur collecte, sauf modifications légales qui auraient une application rétroactive."  
                 },
                 "minor":{
                     "title":"2. LA PROTECTION DES MINEURS",
-                    "description":"Il peut arriver que Gengoffee traite des données relatives à des mineurs dans le cadre de la prise de contact de mineurs sur notre site www.gengoffee.fr ou www.gengoffee.com, néanmoins, conformément à l'article 8 du Règlement Général sur la Protection des Données, la collecte et le traitement de ces données ne s'opèrent qu'avec l'autorisation expresse donnée par le titulaire de la responsabilité parentale à l'égard du mineur."
+                    "description":"Il peut arriver que Gengoffee traite des données relatives à des mineurs dans le cadre de la prise de contact de mineurs sur notre site www.gengoffee.com ou www.gengoffee.com, néanmoins, conformément à l'article 8 du Règlement Général sur la Protection des Données, la collecte et le traitement de ces données ne s'opèrent qu'avec l'autorisation expresse donnée par le titulaire de la responsabilité parentale à l'égard du mineur."
                 },
                 "collection":{
                     "title":"3. LES MOYENS DE LA COLLECTE DES DONNÉES",
@@ -273,7 +274,7 @@
                 },
                 "links":{
                     "title":"8. LIEN VERS D'AUTRES SITES ET SITES PARTENAIRES",
-                    "description":"www.gengoffee.fr et www.gengoffee.com peuvent contenir des liens vous redirigeant vers d'autres sites web qui n'appartiennent, ni ne sont exploités par Gengoffee. De ce fait, Gengoffee n'est pas responsable des contenus, produits ou services proposés sur ces sites ni de la collecte et gestion des DCP susceptibles d'y être opérées."
+                    "description":"www.gengoffee.com et www.gengoffee.com peuvent contenir des liens vous redirigeant vers d'autres sites web qui n'appartiennent, ni ne sont exploités par Gengoffee. De ce fait, Gengoffee n'est pas responsable des contenus, produits ou services proposés sur ces sites ni de la collecte et gestion des DCP susceptibles d'y être opérées."
                 }, 
                 "security":{
                     "firstTitle":"QUELLE SÉCURITÉ POUR VOS DONNÉES ?",
@@ -305,12 +306,12 @@
                 },
                 "application":{
                     "title":"11. COMMENT EXERCER VOS DROITS ?",
-                    "description":"Si vous souhaitez exercer l'un de ces droits, vous pouvez contacter Gengoffee par écrit à l'adresse suivante par mail à <span class=\"font-semibold\">contact@gengoffee.fr</span> . Vous devez indiquer quelles sont les DCP sur lesquelles vous souhaitez une action et la nature exacte de l'action. Votre demande doit être signée et doit s'accompagner d'une copie de votre pièce d'identité recto verso en cours de validité (ou passeport). L'exercice de vos droits est gratuit toutefois si Gengoffee estime que la demande n'est pas suffisamment complète pour être traitée, des précisions peuvent vous être demandées. Aussi, en cas de demande abusive, un paiement forfaitaire peut être appliqué. Lorsque vous exercez l'un de vos droits, vous pouvez également nous demander de limiter les traitements effectués sur vos DCP. Toutefois ce droit n'est applicable que dans des conditions particulières."
+                    "description":"Si vous souhaitez exercer l'un de ces droits, vous pouvez contacter Gengoffee par écrit à l'adresse suivante par mail à <span class=\"font-semibold\">contact@gengoffee.com</span> . Vous devez indiquer quelles sont les DCP sur lesquelles vous souhaitez une action et la nature exacte de l'action. Votre demande doit être signée et doit s'accompagner d'une copie de votre pièce d'identité recto verso en cours de validité (ou passeport). L'exercice de vos droits est gratuit toutefois si Gengoffee estime que la demande n'est pas suffisamment complète pour être traitée, des précisions peuvent vous être demandées. Aussi, en cas de demande abusive, un paiement forfaitaire peut être appliqué. Lorsque vous exercez l'un de vos droits, vous pouvez également nous demander de limiter les traitements effectués sur vos DCP. Toutefois ce droit n'est applicable que dans des conditions particulières."
                 }
             },
             "contact":{
                 "title":"CONTACTS",
-                "description":"Si vous souhaitez nous contacter, afin de répondre à d'éventuelles questions ou réclamations, vous pouvez le faire par écrit à l'adresse suivante : par mail à l'adresse <span class=\"font-semibold\">contact@gengoffee.fr</span> . Si vous souhaitez nous contacter afin de nous fournir des recommandations ou émettre des commentaires visant à améliorer la qualité de ce document, vous pouvez également contacter le service."
+                "description":"Si vous souhaitez nous contacter, afin de répondre à d'éventuelles questions ou réclamations, vous pouvez le faire par écrit à l'adresse suivante : par mail à l'adresse <span class=\"font-semibold\">contact@gengoffee.com</span> . Si vous souhaitez nous contacter afin de nous fournir des recommandations ou émettre des commentaires visant à améliorer la qualité de ce document, vous pouvez également contacter le service."
             }
         }
 
@@ -382,7 +383,7 @@
         },
         "image":{
             "title":"Droit à l'image",
-            "description":"En participant aux événements de l'Association, vous consentez à ce que des photographies ou des vidéos prises pendant les événements puissent être utilisées à des fins de communication de l'Association, sauf avis contraire de votre part. Faites par de votre avis contraire sur place ou par e-mail à contact@gengoffee.fr"
+            "description":"En participant aux événements de l'Association, vous consentez à ce que des photographies ou des vidéos prises pendant les événements puissent être utilisées à des fins de communication de l'Association, sauf avis contraire de votre part. Faites par de votre avis contraire sur place ou par e-mail à contact@gengoffee.com"
         },
         "rights":{
             "title":"Droit Applicable",
