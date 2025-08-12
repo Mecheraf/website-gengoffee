@@ -31,6 +31,8 @@ export class RegisterComponent implements OnInit {
   public subscribe = 1;
   public warning = 1;
   public location = 'PARIS'; //Setup as Paris
+  public place = 'Les Berthom';
+  public date = '2025-08-11';
   public types = this.returnType(this.location, 'en')
 
   constructor(
@@ -52,7 +54,9 @@ export class RegisterComponent implements OnInit {
       phone: new FormControl<string>(''),
       selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
       dietList: new FormControl<string[]>([]),
-      types: new FormControl<string[]>([])
+      types: new FormControl<string[]>([]),
+      place: new FormControl<string>(''),
+      date: new FormControl<string>('')
     });
   }
 
@@ -96,6 +100,8 @@ export class RegisterComponent implements OnInit {
       this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
       this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
       this.registerForm.patchValue({'types':this.types})
+      this.registerForm.patchValue({'place':this.place})
+      this.registerForm.patchValue({'date':this.date})
       this.registerservice.post(this.registerForm.value).subscribe();
       this.initForm()
       this.selectedLanguages = [];
@@ -121,6 +127,8 @@ export class RegisterComponent implements OnInit {
           this.warning = this.sharedEvents.next[city][event].type == "karaoke" ? 0 : 1;
           this.subscribe = this.sharedEvents.next[city][event].subscribe
           this.types = this.returnType(city, this.sharedEvents.next[city][event].type)
+          this.place = this.sharedEvents.next[city][event].place + " - " + this.sharedEvents.next[city][event].location
+          this.date = this.sharedEvents.next[city][event].date
         }
       }
     }
