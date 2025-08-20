@@ -55,9 +55,7 @@ export class EventsComponent implements OnInit {
   }
 
   scrollto(element: string) {
-    console.log(element)
     const scrollToElement = document.getElementById(element);
-    console.log(scrollToElement)
     scrollToElement?.scrollIntoView({ behavior: 'smooth' });
   }
 }

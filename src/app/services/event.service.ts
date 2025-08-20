@@ -46,8 +46,6 @@ export class EventService {
 
   public deleteEvent(data: any, options?: any) { 
 
-    console.log(data)
-    console.log(options)
     options = {
       ...options,
       headers: {
