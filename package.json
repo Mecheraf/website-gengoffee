@@ -29,6 +29,7 @@
     "@angular/platform-server": "^17.3.1",
     "@angular/router": "^17.3.1",
     "@angular/ssr": "^17.3.1",
+    "@halloverden/ngx-cookiebot": "^4.0.0",
     "@material/snackbar": "^14.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
