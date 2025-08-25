@@ -11,6 +11,17 @@
 
   <!-- Cookiebot -->
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="b1029013-36e9-48ac-aa3f-9a2385f8f41b" data-blockingmode="auto" type="text/javascript"></script>  
+  <script>
+    window.addEventListener('load', function() {
+      window.Cookiebot.load();
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'cookiebot_consent',
+        'cookiebot': window.Cookiebot.consent
+      });
+      console.log(window.Cookiebot.consent);
+    });
+  </script>
   <!-- End Cookiebot -->
 
   <meta charset="utf-8">
