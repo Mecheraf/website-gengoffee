@@ -6,6 +6,7 @@ import { RegisterService } from '../services/register.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Meta } from '@angular/platform-browser';
 import { SharedDataService } from '../shared/shared-data/shared-data.service';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 
 interface userLanguage {
@@ -41,7 +42,8 @@ export class RegisterComponent implements OnInit {
     private translateService: TranslateService,
     public _snackBar: MatSnackBar,
     private meta: Meta,
-    public sharedEvents: SharedDataService
+    public sharedEvents: SharedDataService,
+    private gtmService: GoogleTagManagerService
     ) {
   }
 
@@ -66,6 +68,7 @@ export class RegisterComponent implements OnInit {
 
     this.sharedEvents.getCityEvents("PARIS")
     this.sharedEvents.getCityEvents("TOKYO")
+    this.trackMe()
   }
 
   toggleDiet (selectedDiet: string) {
@@ -95,6 +98,11 @@ export class RegisterComponent implements OnInit {
 
     if(this.selectedEvent === "0" || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
+      this.gtmService.pushTag({
+        event: 'event-register',
+        eventCategory: 'register',
+        eventLabel: 'register'
+      })
     } else {
       this.registerForm.patchValue({'idEvent':this.selectedEvent});
       this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
@@ -132,6 +140,11 @@ export class RegisterComponent implements OnInit {
         }
       }
     }
+    this.gtmService.pushTag({
+      event: 'form-select-event',
+      eventCategory: 'register',
+      eventLabel: 'form-select-event'
+    })
   }
 
   allTags(){
@@ -146,6 +159,14 @@ export class RegisterComponent implements OnInit {
   returnType(location:string,second:string){
     let main = location === "PARIS" ? "fr" : "jp";
     return [main, second]
+  }
+
+  trackMe() {
+    this.gtmService.pushTag({
+      event: 'page-register',
+      eventCategory: 'page-register',
+      eventLabel: 'register-page'
+    })
   }
 
   get returnSliced(){
