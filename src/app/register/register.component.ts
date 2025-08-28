@@ -137,14 +137,15 @@ export class RegisterComponent implements OnInit {
           this.types = this.returnType(city, this.sharedEvents.next[city][event].type)
           this.place = this.sharedEvents.next[city][event].place + " - " + this.sharedEvents.next[city][event].location
           this.date = this.sharedEvents.next[city][event].date
+          this.gtmService.pushTag({
+            event: 'form-select-event',
+            eventCategory: 'register',
+            eventLabel: 'event-clicked-' + city + '-' + this.sharedEvents.next[city][event].type
+          })
         }
       }
     }
-    this.gtmService.pushTag({
-      event: 'form-select-event',
-      eventCategory: 'register',
-      eventLabel: 'form-select-event'
-    })
+    
   }
 
   allTags(){
