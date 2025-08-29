@@ -3,7 +3,7 @@ import { EventService } from '../services/event.service';
 import { Meta } from '@angular/platform-browser';
 import { SharedDataService } from '../shared/shared-data/shared-data.service';
 import { BehaviorSubject } from 'rxjs';
-import { GoogleTagManagerService } from 'angular-google-tag-manager';
+import { GtmService } from '../services/gtm.service';
 
 const PAST_EVENT_QUANTITY = 10;
 const NEXT_EVENT_QUANTITY = 2;
@@ -26,7 +26,7 @@ export class EventsComponent implements OnInit {
     private eventService: EventService, 
     private meta: Meta,
     public sharedEvents:SharedDataService,
-    private gtmService: GoogleTagManagerService
+    private gtmService: GtmService
 
   ){
 
@@ -58,17 +58,11 @@ export class EventsComponent implements OnInit {
   }
 
   scrollto(element: string) {
-    console.log(element)
     const scrollToElement = document.getElementById(element);
-    console.log(scrollToElement)
     scrollToElement?.scrollIntoView({ behavior: 'smooth' });
   }
 
   trackMe() {
-    this.gtmService.pushTag({
-      event: 'page-event',
-      eventCategory: 'page-event',
-      eventLabel: 'event-page'
-    })
+    this.gtmService.trackMe('page-events', 'events', 'events-page')
   }
 }
