@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GtmService } from '../../services/gtm.service';
 
 
 interface userLanguage {
@@ -21,6 +22,8 @@ interface LanguagesToDisplay {
 export class SelectLanguageComponent implements OnInit {
 
   @Input() selectedLanguages: userLanguage[] = [] as userLanguage[];
+  
+  constructor(private gtmService: GtmService) { }
 
   public allLanguages: LanguagesToDisplay[] = [
     {translationKey: 'fr', value: 'fr'},
@@ -44,11 +47,13 @@ export class SelectLanguageComponent implements OnInit {
     }
     this.selectedLanguages.push(language);
     this.filterAvailableLanguages();
+    this.trackMeLanguage('add-language', language.language, language.level)
   }
 
   removeLanguage(language: userLanguage){
     this.selectedLanguages = this.selectedLanguages.filter((lang) => lang !== language);
     this.filterAvailableLanguages();
+    this.trackMeLanguage('remove-language', language.language, language.level)
   }
 
   filterAvailableLanguages() {
@@ -57,6 +62,10 @@ export class SelectLanguageComponent implements OnInit {
 
   getLanguageTranslation(language: string): string {
     return this.allLanguages.find((lang) => lang.value === language)?.translationKey ?? '';
+  }
+
+  trackMeLanguage(type:string, language: string, level: string) {
+    this.gtmService.trackMe(type, 'register', type+'-'+language+'-'+level)
   }
 
 }

@@ -3,7 +3,7 @@
         <option [value]="language.language">{{ getLanguageTranslation(language.language) | translate}}</option>
         <option *ngFor="let availableLanguage of availableLanguages" [value]="availableLanguage.value">{{ availableLanguage.translationKey | translate}}</option>
     </select>
-    <select [(ngModel)]="language.level" [ngModelOptions]="{standalone: true}" class="bg-white border-b-2">
+    <select [(ngModel)]="language.level" [ngModelOptions]="{standalone: true}" class="bg-white border-b-2" (ngModelChange)="trackMeLanguage('select-language-level', language.language, language.level)">
         <option value="1">{{'register.form.language.lv1'|translate}}</option>
         <option value="2">{{'register.form.language.lv2'|translate}}</option>
         <option value="3">{{'register.form.language.lv3'|translate}}</option>

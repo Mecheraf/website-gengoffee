@@ -150,6 +150,7 @@ export class RegisterComponent implements OnInit {
 
   selectLocation(location:string) {
     this.location = location;
+    this.gtmService.trackMe('select-location', 'register', 'select-location'+location)
   }
 
   returnType(location:string,second:string){
@@ -159,6 +160,10 @@ export class RegisterComponent implements OnInit {
 
   trackMe() {
     this.gtmService.trackMe('page-register', 'register', 'register-page')
+  }
+
+  trackMeButton(button:string) {
+    this.gtmService.trackMe('register-'+button, 'register', 'register-'+button)
   }
 
   get returnSliced(){
