@@ -48,5 +48,8 @@ export class HomeComponent implements OnInit {
     this.gtmService.trackMe('page-home', 'home', 'home-page')
   }
 
+  trackMeButton(button:string) {
+    this.gtmService.trackMe('home-'+button, 'home', 'home-'+button)
+  }
 
 }

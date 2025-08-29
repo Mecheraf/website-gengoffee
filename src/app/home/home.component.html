@@ -15,10 +15,10 @@
     </div>
     <!-- DESKTOP BUTTONS -->
     <div class="pt-9 hidden md:block">
-      <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
+      <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4" (click)="trackMeButton('home-to-register')">
         {{'hero.buttons.register'|translate}}
       </button>
-      <button [routerLink]="['/about']" class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+      <button [routerLink]="['/about']" class="text-lg gengoffee-btn gengoffee-btn-outline-primary" (click)="trackMeButton('home-to-about')">
         {{'hero.buttons.more'|translate}}
       </button>
     </div>
@@ -35,10 +35,10 @@
     </div>
     <!-- MOBILE BUTTONS -->
     <div class="pt-9 md:hidden flex place-content-center">
-      <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
+      <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4" (click)="trackMeButton('home-to-register')">
         {{'hero.buttons.register'|translate}}
       </button>
-      <button [routerLink]="['/about']" class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+      <button [routerLink]="['/about']" class="text-lg gengoffee-btn gengoffee-btn-outline-primary" (click)="trackMeButton('home-to-about')">
         {{'hero.buttons.more'|translate}} 
       </button>
     </div>
