@@ -49,6 +49,8 @@ export class EventItemComponent implements OnInit {
       return 'gengoffee_event-'+(Number(id)%2+1)+'.webp';
     } else if (this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return 'gengoffee_event_karaoke2.webp';
+    } else if (this.event.type?.toLocaleLowerCase() === 'boardgame') {
+      return 'photo-bd.webp';
     }
     return 'photo-en-'+ Number(id)%4 +'.webp';
   }
