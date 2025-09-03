@@ -136,7 +136,8 @@
                 "2":"conditions générales d'utilisations."
             },
             "warning":"Cet événement a un nombre de places limité. Un e-mail vous sera envoyé sous 72H pour confirmer votre inscription.",
-            "warningSubscribe":"Il n'est plus possible de s'inscrire pour l'événement sélectionné. Pour en savoir plus, veuillez nous contacter par mail ou via réseaux."
+            "warningSubscribe":"Il n'est plus possible de s'inscrire pour l'événement sélectionné. Pour en savoir plus, veuillez nous contacter par mail ou via réseaux.",
+            "warningSelectEvent":"Veuillez sélectionner un événement."
 
         }
     },

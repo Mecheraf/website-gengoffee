@@ -56,8 +56,11 @@
                     <p class="inline ">{{'register.form.general-conditions.1'|translate}}</p>
                     <div class="inline underline"><a [routerLink]="['/general-conditions']">{{'register.form.general-conditions.2'|translate}}</a></div>
                 </div>
-                <p *ngIf="this.warning === 0" class="ppmori-bold gengoffee-red">{{'register.form.warning'|translate}}</p>
-                <p *ngIf="this.subscribe === 0" class="ppmori-bold gengoffee-red">{{'register.form.warningSubscribe'|translate}}</p>
+                <div class="flex flex-col gap-2 pt-2 ppmori-bold gengoffee-red">
+                    <p *ngIf="this.warning === 0" class="">{{'register.form.warning'|translate}}</p>
+                    <p *ngIf="this.subscribe === 0" class="">{{'register.form.warningSubscribe'|translate}}</p>
+                    <p *ngIf="this.selectedEvent === '0'" class="text-center">{{'register.form.warningSelectEvent'|translate}}</p>
+                </div>
                 <button [disabled]="!registerForm.valid || this.sharedEvents.next.length === 0 || selectedEvent === '0' || this.subscribe === 0" type="submit" class="place-content-center flex mx-auto my-3 gengoffee-btn gengoffee-btn-primary">
                     {{'register.form.register'|translate}}
                 </button>                                 

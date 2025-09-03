@@ -136,7 +136,9 @@
                 "1":"By registering to our events, you accept our ",
                 "2":"terms and conditions."
             },
-            "warningSubscribe":"The registrations for the selected event has been closed. For more informations, please contact us via mail or on our social networks."
+            "warning":"The event has a limited number of places. A confirmation email will be sent to you within 72 hours to confirm your registration.",
+            "warningSubscribe":"The registrations for the selected event has been closed. For more informations, please contact us via mail or on our social networks.",
+            "warningSelectEvent":"Please select an event."
 
         }
     },
