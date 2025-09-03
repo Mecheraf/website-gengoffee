@@ -1,4 +1,4 @@
-<div class="w-11/12 flex flex-col md:flex-row mb-32 m-auto mt-12 ">
+<div class="w-11/12 flex flex-col lg:flex-row mb-32 m-auto mt-12 ">
     <div class="md:w-6/12">
         <h2 class="text-3xl w-fit">{{'create.title'|translate}}</h2>
         <form class="pt-2">
@@ -13,12 +13,12 @@
             
             <p class="pt-10 ppmori-bold">{{'create.type'|translate}}</p>
             <input type="text" [(ngModel)]="type" name="language" placeholder="en / jp" class="hidden border-b border-solid pt-4">
-            <div class="ml-3 md:ml-6 flex gap-4 md:gap-6 pt-6">
-                <button type="button" [ngClass]="location === 'PARIS' ? 'hidden' : type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn gengoffee-btn-quaternary">{{'fr'|translate}}</button>
-                <button type="button" [ngClass]="type === 'en' ? 'opacity-100' : 'opacity-50'" (click)="changeType('en')" class="gengoffee-btn gengoffee-btn-quaternary">{{'en'|translate}}</button>
-                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn gengoffee-btn-quaternary">{{'jp'|translate}}</button>
-                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'karaoke' ? 'opacity-100' : 'opacity-50'" (click)="changeType('karaoke')" class="gengoffee-btn gengoffee-btn-quaternary">{{'create.types.karaoke'|translate}}</button>
-
+            <div class="grid grid-cols-2 justify-items-center gap-2 md:gap-3 pt-6 w-72 my-auto">
+                <button type="button" [ngClass]="location === 'PARIS' ? 'hidden' : type === 'fr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('fr')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'fr'|translate}}</button>
+                <button type="button" [ngClass]="type === 'en' ? 'opacity-100' : 'opacity-50'" (click)="changeType('en')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'en'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'jp'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'karaoke' ? 'opacity-100' : 'opacity-50'" (click)="changeType('karaoke')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'karaoke'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'boardgame' ? 'opacity-100' : 'opacity-50'" (click)="changeType('boardgame')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'boardgame'|translate}}</button>
             </div>
             <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
             <input type="text" name="place"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
@@ -43,13 +43,13 @@
         </form>
     </div>
     
-    <div class="md:w-6/12 border-l-2 p-3">
+    <div class="md:border-l-2 md:p-3">
         <h2 class="text-3xl w-fit">{{'create.change'|translate}}</h2>
         <div class="min-h-[calc(100vh - 100px)] max-h-[450px] mt-16 rounded-t-xl mx-auto overflow-scroll no-scrollbar">
             <div class="md:w-11/12">
                 <div class="max-h-[480px]" *ngFor="let city of nextEvents">
                     <div *ngFor="let event of city">
-                        <button type="button" (click)="selectEvent(event.id)" class="w-full text-left" [ngClass]="selectedEvent === event.id ? 'bg-white' : 'bg-[#F5F7F9]' "><app-event-row [event]="event"></app-event-row></button>
+                        <app-event-row class="bg-[#F5F7F9]" [event]="event"></app-event-row>
                     </div>
                 </div>
             </div>

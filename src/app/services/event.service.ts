@@ -43,8 +43,18 @@ export class EventService {
     }
    return this.http.put(this.url+"updateEvent", data, options); 
   } 
-  public delete(url: string, options?: any) { 
-  return this.http.delete(url, options); 
+
+  public deleteEvent(data: any, options?: any) { 
+
+    console.log(data)
+    console.log(options)
+    options = {
+      ...options,
+      headers: {
+        "Authorization":"Bearer "+this.cookieService.get("token")
+      }
+    }
+    return this.http.delete(this.url+"deleteEvent", {body: data, ...options}); 
   } 
 
   

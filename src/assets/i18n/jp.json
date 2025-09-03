@@ -175,9 +175,9 @@
         }
     },
     "contact": {
-        "title": "お問い合わせ",
-        "titleResponsive":"お問い合わせ",
-        "description": "以下の情報を明記の上<br>contact@gengoffee.fr　までご連絡下さい",
+        "title": "気軽にお問い合わせください",
+        "titleResponsive":"気軽にお問い合わせください",
+        "description": "以下の情報を明記の上<br>contact@gengoffee.com　までご連絡下さい",
         "name": "姓 & 名",
         "mail": "メールアドレス",
         "phone": "電話番号",
@@ -186,7 +186,8 @@
         "button": "送信",
         "followus": "SNSも是非ご覧ください",
         "p_object":"題名",
-        "p_message":"フランスに来て数ヶ月経ちますが、まだまだフランス語でコミュニケーションとるのが難しいので、練習したいです^^"
+        "p_message":"フランスに来て数ヶ月経ちますが、まだまだフランス語でコミュニケーションとるのが難しいので、練習したいです^^",
+        "warning": "2025年7月から8月11日まで、お問い合わせフォームが機能していませんでした。現在、正常に機能しています！"
     },
     "job":{
         "title":"新たなチャンスを見つける",
@@ -205,7 +206,7 @@
         "type":"イベントのタイプ (défini la langue secondaire)",
         "place":"Date et Lieu de l'événement",
         "city":"街 (défini la langue principale)"
-    },
+    },  
     "admin":{
         "event":"イベント",
         "registered":"リスト"
@@ -213,5 +214,7 @@
     "en": "英語",
     "fr": "フランス語",
     "jp": "日本語",
-    "karaoke": "カラオケ"
+    "kr": "韓国語",
+    "karaoke": "カラオケ",
+    "boardgame": "ボードゲーム"
 }

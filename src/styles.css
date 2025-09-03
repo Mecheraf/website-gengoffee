@@ -46,6 +46,10 @@ input::-webkit-inner-spin-button {
   color: #1F3D87;
 }
 
+.gengoffee-green {
+  color: #BF292E;
+}
+
 .gengoffee-lightblue {
   color: #E7EDF8;
 }
@@ -60,6 +64,10 @@ input::-webkit-inner-spin-button {
 
 .gengoffee-blue-bg {
   background-color: #1F3D87;
+}
+
+.gengoffee-green-bg {
+  background-color: #AEC5C9;
 }
 
 .gengoffee-lightyellow-bg {
@@ -89,6 +97,40 @@ input::-webkit-inner-spin-button {
 }
 
 .gengoffee-btn:hover {
+  cursor: pointer;
+}
+
+.gengoffee-btn-small {
+  place-items: center;
+  padding: 10px 16px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 35px;
+  border: none;
+  background: white;
+  font-family: 'PPMori';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.gengoffee-btn-small:hover {
+  cursor: pointer;
+}
+
+.gengoffee-btn-extra-small {
+  place-items: center;
+  padding: 5px 10px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 35px;
+  border: none;
+  background: white;
+  font-family: 'PPMori';
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.gengoffee-btn-extra-small:hover {
   cursor: pointer;
 }
 

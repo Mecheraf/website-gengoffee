@@ -177,9 +177,9 @@
         }
     },
     "contact": {
-        "title": "Contact us",
-        "titleResponsive": "Contact us",
-        "description": "Fill out the form below or email us directly on contact@gengoffee.fr",
+        "title": "Write to us!",
+        "titleResponsive": "Write to us!",
+        "description": "Fill out the form below or email us directly on contact@gengoffee.com",
         "name": "Full name",
         "mail": "Email",
         "phone": "Phone",
@@ -187,7 +187,8 @@
         "message": "Message",
         "button": "Send",
         "p_object": "Email subject",
-        "p_message": "I have a really good idea to share with your organisation and I'd like to work with you ! <3"
+        "p_message": "I have a really good idea to share with your organisation and I'd like to work with you ! <3",
+        "warning": "From July 2025 to August 11th 2025, our contact form was not working. Now, it's back to normal !"
     },
     "job":{
         "title":"Discover our new job postings!",
@@ -214,5 +215,7 @@
     "en": "English",
     "fr": "French",
     "jp": "Japanese",
-    "karaoke": "Karaoke"
+    "kr": "Korean",
+    "karaoke": "Karaoke",
+    "boardgame": "Boardgame"
 }

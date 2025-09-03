@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GtmService } from '../../services/gtm.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent {
 
-  constructor() { }
+  constructor(private gtmService: GtmService) { }
+
+  trackMeSocialLink(link:string) {
+    this.gtmService.trackMe('footer-'+link, 'footer', 'footer'+link)
+  }
 
 }

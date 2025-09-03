@@ -8,11 +8,9 @@
       <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
       </button>
-      <a href="events/#notice">
-        <button class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
+      <button (click)="scrollto('#about')" class="text-lg gengoffee-btn gengoffee-btn-outline-primary">
         {{'hero.buttons.more'|translate}}
-        </button>
-      </a>
+      </button>
     </div>
   </div>
 </section>
@@ -35,6 +33,6 @@
     <app-past-event-card *ngFor="let event of sharedEvents.past['past']" [event]="event"></app-past-event-card>
   </div>
 </section>
-<section class="mt-16 md:mt-40">
-  <app-gengoffee-notice id="notice" [redWave]="true"></app-gengoffee-notice>
+<section id="#about" class="mt-16 md:mt-40">
+  <app-gengoffee-notice [redWave]="true"></app-gengoffee-notice>
 </section>

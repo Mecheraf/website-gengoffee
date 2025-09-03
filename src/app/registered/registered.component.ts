@@ -22,6 +22,7 @@ interface eventsAttendees {
   date:Date,
   type:string,
   location:string,
+  place:string,
   registeredList:registeredUser[]
 }
 
@@ -32,7 +33,8 @@ interface updatedUser {
   mail:string,
   date:Date,
   main:string,
-  second:string
+  second:string,
+  place:string
 }
 
 
@@ -90,6 +92,7 @@ export class RegisteredComponent implements OnInit {
           date: element.date,
           type: element.type,
           location:element.location,
+          place:element.place,
           registeredList: currentList
         });
       });
@@ -119,12 +122,13 @@ export class RegisteredComponent implements OnInit {
       }
     )
     if(!tmp){ //If we didnt change it, we just change the value.
-      this.updatedList.push({idUser, idEvent, paid, mail, date, main, second})
+      this.updatedList.push({idUser, idEvent, paid, mail, date, main, second, place:this.events[indexEvent].place + " - " + this.events[indexEvent].location })
     }
   }
 
   updateAttendee(){
     this.registeredService.updateAttendee({"attendees":this.updatedList, "mail":1}).subscribe()
+    this.updatedList = []
   }
   
   public getColorByCountry(eventType:string): string {

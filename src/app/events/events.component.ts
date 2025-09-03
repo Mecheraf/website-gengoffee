@@ -3,6 +3,7 @@ import { EventService } from '../services/event.service';
 import { Meta } from '@angular/platform-browser';
 import { SharedDataService } from '../shared/shared-data/shared-data.service';
 import { BehaviorSubject } from 'rxjs';
+import { GtmService } from '../services/gtm.service';
 
 const PAST_EVENT_QUANTITY = 10;
 const NEXT_EVENT_QUANTITY = 2;
@@ -24,7 +25,8 @@ export class EventsComponent implements OnInit {
   constructor(
     private eventService: EventService, 
     private meta: Meta,
-    public sharedEvents:SharedDataService
+    public sharedEvents:SharedDataService,
+    private gtmService: GtmService
 
   ){
 
@@ -34,6 +36,7 @@ export class EventsComponent implements OnInit {
     this.getPastEvents()
     this.getNextEvents()
     this.allTags()    
+    this.trackMe()
   }
 
   private getPastEvents(): void {
@@ -52,5 +55,14 @@ export class EventsComponent implements OnInit {
 
   get returnSliced(){
     return this.sharedEvents.next["upcoming"]?.slice(0, 2)
+  }
+
+  scrollto(element: string) {
+    const scrollToElement = document.getElementById(element);
+    scrollToElement?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  trackMe() {
+    this.gtmService.trackMe('page-events', 'events', 'events-page')
   }
 }

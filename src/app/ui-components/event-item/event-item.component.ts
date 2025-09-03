@@ -8,7 +8,9 @@ const localeToFlag: any = {
   'karaoke':'🇯🇵🎤',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
-  'es' : '🇪🇸'
+  'es' : '🇪🇸',
+  'kr' : '🇰🇷',
+  'boardgame' : '🇯🇵🇬🇧'
 }
 
 @Component({
@@ -48,6 +50,10 @@ export class EventItemComponent implements OnInit {
       return 'gengoffee_event-'+(Number(id)%2+1)+'.webp';
     } else if (this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return 'gengoffee_event_karaoke2.webp';
+    } else if (this.event.type?.toLocaleLowerCase() === 'boardgame') {
+      return 'photo-bd.webp';
+    } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
+      return 'photo-kr.webp';
     }
     return 'photo-en-'+ Number(id)%4 +'.webp';
   }
@@ -55,7 +61,9 @@ export class EventItemComponent implements OnInit {
   public getColorByCountry(): string {
     if (this.event.type === 'jp' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
       return "gengoffee-lightred-bg";
-    } 
+    } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
+      return "gengoffee-green-bg";
+    }
     return "gengoffee-lightblue-bg";
   }
 

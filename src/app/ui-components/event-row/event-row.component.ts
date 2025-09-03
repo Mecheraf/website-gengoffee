@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Event } from 'src/app/models/event';
+import { EventService } from 'src/app/services/event.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Event } from 'src/app/models/event';
 })
 export class EventRowComponent {
 
-  constructor(private translateService: TranslateService) { }
+  constructor(private translateService: TranslateService, private eventService: EventService) { }
 
   @Input() event: Event = {} as Event;
 
@@ -53,6 +54,20 @@ export class EventRowComponent {
 
   toggleSubscribe(){
     this.event.subscribe = 1 - this.event.subscribe
+  }
+
+
+
+  deleteEvent(){
+    if(confirm("Are you sure you want to delete this event?")){
+      this.eventService.deleteEvent(this.event).subscribe((res:any) => {
+        console.log(res)
+      })
+    }
+    else{
+      return
+    }
+    
   }
 
 }
