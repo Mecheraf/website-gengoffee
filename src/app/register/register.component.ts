@@ -169,5 +169,4 @@ export class RegisterComponent implements OnInit {
   get returnSliced(){
     return this.sharedEvents.next[this.location]?.slice(0, 3)
   }
-
 }

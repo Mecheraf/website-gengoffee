@@ -50,8 +50,8 @@
     },
     "hero": {
         "title": "Japanese culture",
-        "description": "Gengoffee is a Franco-Japanese group that organises events in French/Japanese and French/English in Paris.",
         "subtitle": "AWAITS YOU", 
+        "description": "Gengoffee offers French and Japanese language exchanges with participants from around the world in Paris and Tokyo.",
         "buttons": {
             "register": "Sign up",
             "more": "Learn more"
@@ -59,7 +59,7 @@
     },
     "carousel": {
         "title": "Our events, your interaction",
-        "description": "We meet every week to chat over a drink. Find our next events."
+        "description": "Each week talk during our events with foreign participants over a drink in Paris or Tokyo."
     },
     "partners": {
         "title": "Our partners",
@@ -80,7 +80,7 @@
     },
     "events": {
         "title": "Events",
-        "description": "Do you want to improve your French, English or Japanese?<br>Join our next event!",
+        "description": "If you have basic knowledge in French or Japanese, join us for our events. <br>You'll be installed at a table of 6 to 8 people, you speak the language indicated for 15min, then you change language.",
         "pastevents": {
             "title": "Previous events"
         },
@@ -141,10 +141,15 @@
         }
     },
     "about": {
-        "title": "About",
+        "title": "About Gengoffee",
         "subtitle": "Who are we?",
-        "description": "Gengoffee is a Franco-Japanese group based in Paris, bringing together a multicultural and multilinguistic community during our events. <br><br>We organise French-Japanese and French-English language exchanges in a friendly and supportive environment. Our events are hosted in cafés and bars allowing us to relax and chat over a drink! <br><br>We host multiple events every month and welcome all levels of fluency.",
-        "followus": "You can also contact us on social media!",
+        "description": "One step to learn a language is to practice. With Gengoffee, we wanted to create a place where people would be able to complete their learning through reel interactions and exchanges. <br><br> We are are a French-Japanese association that offers language exchange events where participants are able to meet other people from around the world exceptionally from France, Japan or English spoken countries.",
+        "followus": "Follow us on our social media.",
+        "mission":{
+            "title":"Our mission",
+            "description":"Our mission is to provide a place where you can learn, practice and improve your language skills with other participants in a friendly environment."
+        },
+        
         "people": {
             "alan": {
                 "title": "",
@@ -156,7 +161,7 @@
             }
         },
         "stats": {
-            "title": "Gengoffee in figures...",
+            "title": "Some figures...",
             "1": {
                 "title": "Events",
                 "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">9000 sign-ups </span> and counting!"
@@ -167,7 +172,7 @@
             },
             "3": {
                 "title": "Collaborators",
-                "description": "The group is currently organised by <span class=\"font-semibold\">11</span> active collaborators. Not to mention our external partners!"
+                "description": "Gengoffee is currently supported by collaboraters who actively make the association grows, on top of our different partners !"
             }
         }
     },
@@ -210,6 +215,7 @@
     "en": "English",
     "fr": "French",
     "jp": "Japanese",
+    "kr": "Korean",
     "karaoke": "Karaoke",
     "boardgame": "Boardgame"
 }

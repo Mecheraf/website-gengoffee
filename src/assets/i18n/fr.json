@@ -51,8 +51,8 @@
     },  
     "hero":{
         "title":"La culture Japonaise",
-        "description":"Gengoffee est une association franco-japonaise organisant des événements franco-japonais et franco-anglais à Paris",
         "subtitle":"À VOTRE RENCONTRE",
+        "description":"Gengoffee vous propose des échanges de langue japonais ou anglais avec des participants du monde entier à Paris et à Tokyo.",
         "buttons":{
             "register":"Inscription",
             "more":"En savoir plus"
@@ -60,7 +60,7 @@
     },
     "carousel":{
         "title":"Nos événements, vos échanges",
-        "description":"Chaque semaine des rendez-vous afin de vous permettre d'échanger autour d'un verre. Retrouvez nos prochaines sessions."
+        "description":"Chaque semaine discuter lors de nos événements avec des participants étrangers autour d’un verre à Paris ou à Tokyo."
     },
     "partners":{
         "title":"Nos partenaires",
@@ -79,7 +79,7 @@
     },
     "events":{
         "title":"Événements",
-        "description":"Vous voulez améliorer votre français, anglais ou japonais ?<br>Participer à notre prochain évènement !",
+        "description":"Si vous possédez les bases en japonais ou anglais rejoignez-nous lors de nos événements. <br>On vous installe à une table de 6 à 8 personnes, parler dans la langue qui vous est indiquée pendant 15min, puis on change de langue.",
         "pastevents":{
             "title":"Nos événements passés"
         },
@@ -141,7 +141,7 @@
         }
     },
     "about":{
-        "title":"À propos",
+        "title":"À propos de Gengoffee",
         "subtitle":"Qui sommes-nous ?",
         "description":"Gengoffee est une association franco-japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d'organiser des échanges de langues franco-japonais dans un but d'entraide, amical et culturel. Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d'un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
@@ -167,7 +167,7 @@
             },            
             "3":{
                 "title":"Collaborateurs",
-                "description":"Aujourd'hui, l'association est soutenue par <span class=\"font-semibold\">11</span> coopérateurs actifs ! Sans oublier les partenaires de l'association !"
+                "description":"Nous avons des collaborateurs qui soutiennent aujourd’hui l’association Gengoffee activement, en plus de nos différents partenaires."
             }
         }
     },
@@ -407,6 +407,7 @@
     "en": "Anglais",
     "fr": "Français",
     "jp": "Japonais",
+    "kr": "Coréen",
     "karaoke": "Karaoke",
     "boardgame": "Jeux de société"
 }

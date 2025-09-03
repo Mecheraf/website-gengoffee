@@ -1,6 +1,6 @@
 <section class="max-w-xs md:max-w-6xl mx-auto w-11/12 xl:w-full">
   <div class="relative mt-14 md:mt-28 w-fit mx-auto">
-    <h1 class="text-center text-4xl md:text-[2.625rem]">{{'about.title'|translate}}<span class="hidden md:inline"> de Gengoffee</span></h1>
+    <h1 class="text-center text-4xl md:text-[2.625rem]">{{'about.title'|translate}}<span class="hidden md:inline"></span></h1>
     <app-animated-quote class="absolute top-10 -left-28 md:top-16 scale-[65%] md:scale-[105%]" [width]="215" content="What is Gengoffee ?"></app-animated-quote>
     <app-animated-quote class="absolute -top-10 -right-24 md:-top-16 md:-right-16 scale-75 md:scale-[115%]" [width]="170" content="これは何ですか" [revert]="true"></app-animated-quote>
   </div>
@@ -19,16 +19,23 @@
           <a href="https://www.instagram.com/gengoffee"><img width="20" src="assets/images/instagram-black.svg" /></a>
           <a href="https://www.facebook.com/Gengoffee"><img width="20" src="assets/images/facebook-black.svg" /></a>
           <a href="https://www.meetup.com/fr-FR/find/?keywords=gengoffee&source=GROUPS"><img width="20" src="assets/images/meetup-black.svg" /></a>
+       
         </div>
+        <h2 class="mt-16 text-xl md:text-2xl font-medium">{{'about.mission.title'|translate}}</h2>
+        <div class="md:text-lg mt-8" [innerHtml]="'about.mission.description'|translate"></div>
+
       </div>
     </div>
+    
   </div>
   <div class="mt-16 md:mt-32">
     <div class="text-xl md:text-2xl">{{'about.stats.title'|translate}}</div>
     <div class="mt-8 md:mt-14">
       <div class="py-5 md:py-7 grid md:flex auto-rows-min border-t border-black/50">
         <div class="col-start-1 col-end-2 row-start-1 row-end-2 text-lg font-semibold md:w-36 md:mr-36 md:font-normal md:text-[1.375rem] md:my-auto">{{'about.stats.1.title'|translate}}</div>
-        <div class="col-start-1 col-end-7 row-start-2 row-end-3 md:flex-2 md:text-lg md:w-1/2 mt-6 md:mt-0" [innerHtml]="'about.stats.1.description'|translate"></div>
+        <div class=" col-start-1 col-end-7 row-start-2 row-end-3 flex-2 md:text-lg md:w-1/2 mt-6 md:mt-0" >
+          <p class="inline" [innerHtml]="'about.stats.1.description'|translate"></p>
+        </div>
         <div class="col-start-6 col-end-7 row-start-1 row-end-2 text-[2.5rem] md:text-[3.75rem] md:ml-auto leading-8 md:my-auto">{{countEvents || 0}}</div>
       </div>
       <div class="py-5 md:py-7 grid md:flex auto-rows-min border-t border-black/50">

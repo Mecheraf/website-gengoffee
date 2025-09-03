@@ -3,7 +3,7 @@
     <h1 class="text-[2.25rem] md:text-[2.625rem]">{{'events.title'|translate}}</h1>
     <app-animated-quote class="absolute top-12 left-9 md:-top-10 md:-left-8 scale-[65%] md:scale-[105%]" [width]="120" content="events !"></app-animated-quote>
     <app-animated-quote class="absolute -top-9 right-9 md:top-8 md:-right-6 scale-75 md:scale-[115%]" [width]="120" content="イベント" [revert]="true"></app-animated-quote>
-    <div class="md:text-xl pt-16 md:pt-10" [innerHtml]="'events.description' | translate"></div>
+    <div class="md:text-lg pt-16 md:pt-10 w-8/12 m-auto" [innerHtml]="'events.description' | translate"></div>
     <div class="pt-5">
       <button [routerLink]="['/register']" class="text-lg gengoffee-btn gengoffee-btn-primary mr-4">
         {{'hero.buttons.register'|translate}}
