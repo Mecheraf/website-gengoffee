@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'createjob', component:CreatejobComponent, canActivate:[AuthGuard]},
   { path: 'admin/login', component: LoginAdminComponent},
   { path: 'legal-notice', component: LegalNoticeComponent},
-  { path: 'general-conditions', component: ConditionsComponent}
+  { path: 'general-conditions', component: ConditionsComponent},
+  { path: '**', redirectTo: '' }
   //{ path: 'jobs', component: JobboardComponent}
 
 
