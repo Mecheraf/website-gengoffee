@@ -53,7 +53,7 @@ export class RegisteredComponent implements OnInit {
   public updatedList:updatedUser[]  = []
 
   public events:eventsAttendees[] = [];
-  public nbEventFr:number = 3;
+  public nbEventFr:number = 4;
   public nbEventJp:number = 2;
 
   constructor(
@@ -134,6 +134,9 @@ export class RegisteredComponent implements OnInit {
   public getColorByCountry(eventType:string): string {
     if (eventType === 'jp' || eventType === 'fr') {
       return "gengoffee-lightred-bg";
+    }
+    else if (eventType === 'kr') {
+      return "gengoffee-green-bg";
     }
     
     return "gengoffee-lightblue-bg";
