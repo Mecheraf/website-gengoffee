@@ -102,7 +102,12 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
     MatNativeDateModule,
     MatSnackBarModule,
     NgxMaterialTimepickerModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    GoogleTagManagerModule.forRoot({
+      id: 'GTM-MZDNXWTP',
+      dataCookieconsent: 'statistics',
+      type: 'text/plain'
+    })
   ],
   providers: [
     MatDatepickerModule,
