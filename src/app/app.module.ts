@@ -48,6 +48,7 @@ import { SelectLanguageComponent } from './ui-components/select-language/select-
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
+import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 
 
 
