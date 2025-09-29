@@ -48,7 +48,6 @@ import { SelectLanguageComponent } from './ui-components/select-language/select-
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
-import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 
 
 
@@ -102,11 +101,7 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
     MatNativeDateModule,
     MatSnackBarModule,
     NgxMaterialTimepickerModule,
-    MatSlideToggleModule,
-    GoogleTagManagerModule.forRoot({
-      id: 'GTM-MZDNXWTP',
-      dataCookieconsent: 'statistics'
-    })
+    MatSlideToggleModule
   ],
   providers: [
     MatDatepickerModule,
@@ -115,7 +110,7 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
     CookieService,
     provideClientHydration(),
     provideAnimationsAsync(),
-    { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }  
+    { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }
   ],
   bootstrap: [AppComponent]
 })
