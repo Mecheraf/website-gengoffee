@@ -138,7 +138,6 @@ export class RegisteredComponent implements OnInit {
     else if (eventType === 'kr') {
       return "gengoffee-green-bg";
     }
-    
     return "gengoffee-lightblue-bg";
   }
 
@@ -169,5 +168,4 @@ export class RegisteredComponent implements OnInit {
     });
     return result
   }
-
 }
