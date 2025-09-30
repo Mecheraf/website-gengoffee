@@ -51,7 +51,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
