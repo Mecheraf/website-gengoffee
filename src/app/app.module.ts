@@ -103,9 +103,7 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
     NgxMaterialTimepickerModule,
     MatSlideToggleModule,
     GoogleTagManagerModule.forRoot({
-      id: 'GTM-MZDNXWTP',
-      dataCookieconsent: 'statistics',
-      type: 'text/plain'
+      id: 'GTM-MZDNXWTP'
     })
   ],
   providers: [
