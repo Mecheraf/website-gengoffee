@@ -146,6 +146,10 @@
         "subtitle":"Qui sommes-nous ?",
         "description":"Gengoffee est une association franco-japonaise à Paris rassemblant les Français et Japonais lors d'événements.<br><br>Nous avons pour concept d'organiser des échanges de langues franco-japonais dans un but d'entraide, amical et culturel. Dans cet esprit, nous faisons nos événements dans des cafés et dans des bars afin de converser autour d'un verre !<br><br>Nous organisons plusieurs événements par mois et acceptons tous niveaux dès lors que le respect est présent.",
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
+        "mission":{
+            "title":"Notre mission",
+            "description":"Notre mission est de proposer un espace où vous pouvez apprendre, pratiquer et améliorer vos compétences linguistiques avec d'autres participants dans un environnement convivial."
+        },
         "people":{
             "alan":{
                 "title":"",
