@@ -12,6 +12,23 @@
         'cookiebot': window.Cookiebot.consent
       });
     });
+    
+    // Update consent when user changes preferences
+    window.addEventListener('CookiebotOnAccept', function() {
+      if (window.Cookiebot.consent.statistics) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'consent_update',
+          'consent_type': 'granted'
+        });
+        // Update gtag consent
+        if (typeof gtag !== 'undefined') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+      }
+    });
   </script>
   <!-- End Cookiebot -->
   <script>
