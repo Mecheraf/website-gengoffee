@@ -93,9 +93,15 @@ export class RegisteredComponent implements OnInit {
           type: element.type,
           location:element.location,
           place:element.place,
-          registeredList: currentList
+          registeredList: this.orderRegisteredList(currentList)
         });
       });
+    })
+  }
+
+  orderRegisteredList(registeredList:any) {
+    return registeredList.sort((a:any, b:any) => {
+      return new Date(a.date_registered).getTime() - new Date(b.date_registered).getTime()
     })
   }
 
