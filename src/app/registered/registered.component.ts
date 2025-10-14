@@ -4,6 +4,7 @@ import { RegisteredService } from '../services/registered.service';
 import { EventService } from '../services/event.service';
 import { switchMap, tap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { Meta } from '@angular/platform-browser';
 
 interface registeredUser {
   id:number,
@@ -60,9 +61,11 @@ export class RegisteredComponent implements OnInit {
     private registeredService: RegisteredService,
     private eventservice: EventService,
     private translateService: TranslateService,
+    private meta: Meta
   ) { }
 
   async ngOnInit() {
+    this.meta.addTag({ name: 'robots', content: 'noindex, nofollow' });
     this.registeredService.getRegisteredList().pipe(
       switchMap(()=> {
         return  this.registeredService.getRegisteredList()
