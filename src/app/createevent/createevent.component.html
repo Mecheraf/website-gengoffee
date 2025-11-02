@@ -19,6 +19,8 @@
                 <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'jp' ? 'opacity-100' : 'opacity-50'" (click)="changeType('jp')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'jp'|translate}}</button>
                 <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'karaoke' ? 'opacity-100' : 'opacity-50'" (click)="changeType('karaoke')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'karaoke'|translate}}</button>
                 <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'boardgame' ? 'opacity-100' : 'opacity-50'" (click)="changeType('boardgame')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'boardgame'|translate}}</button>
+                <button type="button" [ngClass]="location === 'TOKYO' ? 'hidden' : type === 'kr' ? 'opacity-100' : 'opacity-50'" (click)="changeType('kr')" class="gengoffee-btn-small gengoffee-btn-quaternary w-fit">{{'kr'|translate}}</button>
+
             </div>
             <p class="pt-10 ppmori-bold">{{'create.place'|translate}}</p>
             <input type="text" name="place"  [(ngModel)]="place"  placeholder="Les Berthom" class="border-b border-solid pt-4">
