@@ -29,11 +29,12 @@ export class SelectLanguageComponent implements OnInit {
     {translationKey: 'fr', value: 'fr'},
     {translationKey: 'en', value: 'en'},
     {translationKey: 'jp', value: 'jp'},
+    {translationKey: 'kr', value: 'kr'}
   ];
 
   public availableLanguages: LanguagesToDisplay[] = [];
 
-  public languages: string[] = ["fr", "jp", "en"];
+  public languages: string[] = ["fr", "jp", "en", "kr"];
 
   ngOnInit(): void {
     this.availableLanguages = this.allLanguages
