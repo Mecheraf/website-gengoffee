@@ -110,7 +110,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     provideClientHydration(),
     provideAnimationsAsync(),
     { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }
-
   ],
   bootstrap: [AppComponent]
 })

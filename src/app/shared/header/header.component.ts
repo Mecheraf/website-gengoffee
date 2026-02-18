@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { AuthGuard } from 'src/app/auth/auth.guard';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import {Location,LocationStrategy,PathLocationStrategy } from '@angular/common';
-import { Observable } from 'rxjs';
+import { GtmService } from '../../services/gtm.service';
 
 @Component({
   selector: 'app-header',
@@ -26,7 +25,8 @@ export class HeaderComponent implements OnInit {
     public translate: TranslateService, 
     private cdRef:ChangeDetectorRef,
     private router:Router,
-    private location:Location
+    private location:Location,
+    private gtmService: GtmService
   ) { }
 
   ngOnInit(): void {
@@ -36,14 +36,17 @@ export class HeaderComponent implements OnInit {
 
   openMenu() {
     this.showMobileMenu = true;
+    this.gtmService.trackMe('menu-opened', 'menu', 'menu-opened')
   }
 
-  closeMenu() {
+  closeMenu(page:string) {
+    this.gtmService.trackMe('menu-'+page, 'menu', 'menu-'+page)
     this.showMobileMenu = false;
   }
 
   switchLanguage(lang: string){
     this.translate.use(lang);
+    this.gtmService.trackMe('language-switched', 'language-switched', lang)
   }
 
   @HostListener('window:resize', ['$event'])

@@ -6,6 +6,7 @@ import { RegisterService } from '../services/register.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Meta } from '@angular/platform-browser';
 import { SharedDataService } from '../shared/shared-data/shared-data.service';
+import { GtmService } from '../services/gtm.service';
 
 
 interface userLanguage {
@@ -33,7 +34,7 @@ export class RegisterComponent implements OnInit {
   public location = 'PARIS'; //Setup as Paris
   public place = 'Les Berthom';
   public date = '2025-08-11';
-  public types = this.returnType(this.location, 'en')
+  public types = this.returnType(this.location, 'en');
 
   constructor(
     private eventservice: EventService,
@@ -41,7 +42,8 @@ export class RegisterComponent implements OnInit {
     private translateService: TranslateService,
     public _snackBar: MatSnackBar,
     private meta: Meta,
-    public sharedEvents: SharedDataService
+    public sharedEvents: SharedDataService,
+    private gtmService: GtmService
     ) {
   }
 
@@ -66,6 +68,7 @@ export class RegisterComponent implements OnInit {
 
     this.sharedEvents.getCityEvents("PARIS")
     this.sharedEvents.getCityEvents("TOKYO")
+    this.trackMe()
   }
 
   toggleDiet (selectedDiet: string) {
@@ -95,6 +98,8 @@ export class RegisterComponent implements OnInit {
 
     if(this.selectedEvent === "0" || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
+      this.gtmService.trackMe('submit-error', 'register', 'submit-error')
+      
     } else {
       this.registerForm.patchValue({'idEvent':this.selectedEvent});
       this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
@@ -106,6 +111,7 @@ export class RegisterComponent implements OnInit {
       this.initForm()
       this.selectedLanguages = [];
       this._snackBar.open(this.translateService.instant('registered'), "Fermer", validConfigSnack);
+      this.gtmService.trackMe('submit-success', 'register', 'submit-success'+this.location+'-'+this.selectedEvent)
     }
   }
 
@@ -129,9 +135,12 @@ export class RegisterComponent implements OnInit {
           this.types = this.returnType(city, this.sharedEvents.next[city][event].type)
           this.place = this.sharedEvents.next[city][event].place + " - " + this.sharedEvents.next[city][event].location
           this.date = this.sharedEvents.next[city][event].date
+          this.gtmService.trackMe('form-select-event', 'register', 'event-clicked-' + city + '-' + this.sharedEvents.next[city][event].type)
+
         }
       }
     }
+    
   }
 
   allTags(){
@@ -141,6 +150,7 @@ export class RegisterComponent implements OnInit {
 
   selectLocation(location:string) {
     this.location = location;
+    this.gtmService.trackMe('select-location', 'register', 'select-location'+location)
   }
 
   returnType(location:string,second:string){
@@ -148,8 +158,15 @@ export class RegisterComponent implements OnInit {
     return [main, second]
   }
 
-  get returnSliced(){
-    return this.sharedEvents.next[this.location]?.slice(0, 3)
+  trackMe() {
+    this.gtmService.trackMe('page-register', 'register', 'register-page')
   }
 
+  trackMeButton(button:string) {
+    this.gtmService.trackMe('register-'+button, 'register', 'register-'+button)
+  }
+
+  get returnSliced(){
+    return this.sharedEvents.next[this.location]?.slice(0, 4)
+  }
 }

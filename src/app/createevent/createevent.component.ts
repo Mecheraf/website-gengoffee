@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { EventService } from '../services/event.service';
 import { DatePipe } from '@angular/common'
 import { SharedDataService } from '../shared/shared-data/shared-data.service';
+import { Meta } from '@angular/platform-browser';
 
 
 const NEXT_EVENTS = 10
@@ -27,7 +28,8 @@ export class CreateeventComponent implements OnInit {
   constructor(
     private eventservice: EventService, 
     private datepipe: DatePipe,
-    public sharedEvents: SharedDataService
+    public sharedEvents: SharedDataService,
+    private meta: Meta
   ) { }
 
   public place:string ="";
@@ -47,6 +49,7 @@ export class CreateeventComponent implements OnInit {
   ngOnInit(): void {
     this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
     this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
+    this.meta.addTag({ name: 'robots', content: 'noindex, nofollow' });
   }
 
   getNextEvents(limit:number, position:number, location:string) {

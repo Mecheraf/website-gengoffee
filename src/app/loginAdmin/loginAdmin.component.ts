@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { environment } from 'src/environments/environment';
 import { LoginService } from '../services/login.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-loginAdmin',
@@ -20,10 +20,12 @@ export class LoginAdminComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private cookieService: CookieService,
-    private router: Router
+    private router: Router,
+    private meta: Meta
   ) { }
 
   ngOnInit(): void {
+    this.meta.addTag({ name: 'robots', content: 'noindex, nofollow' });
   }
 
 

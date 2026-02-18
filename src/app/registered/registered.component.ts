@@ -4,6 +4,7 @@ import { RegisteredService } from '../services/registered.service';
 import { EventService } from '../services/event.service';
 import { switchMap, tap } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { Meta } from '@angular/platform-browser';
 
 interface registeredUser {
   id:number,
@@ -53,16 +54,18 @@ export class RegisteredComponent implements OnInit {
   public updatedList:updatedUser[]  = []
 
   public events:eventsAttendees[] = [];
-  public nbEventFr:number = 3;
+  public nbEventFr:number = 4;
   public nbEventJp:number = 2;
 
   constructor(
     private registeredService: RegisteredService,
     private eventservice: EventService,
     private translateService: TranslateService,
+    private meta: Meta
   ) { }
 
   async ngOnInit() {
+    this.meta.addTag({ name: 'robots', content: 'noindex, nofollow' });
     this.registeredService.getRegisteredList().pipe(
       switchMap(()=> {
         return  this.registeredService.getRegisteredList()
@@ -93,9 +96,15 @@ export class RegisteredComponent implements OnInit {
           type: element.type,
           location:element.location,
           place:element.place,
-          registeredList: currentList
+          registeredList: this.orderRegisteredList(currentList)
         });
       });
+    })
+  }
+
+  orderRegisteredList(registeredList:any) {
+    return registeredList.sort((a:any, b:any) => {
+      return new Date(a.date_registered).getTime() - new Date(b.date_registered).getTime()
     })
   }
 
@@ -135,7 +144,9 @@ export class RegisteredComponent implements OnInit {
     if (eventType === 'jp' || eventType === 'fr') {
       return "gengoffee-lightred-bg";
     }
-    
+    else if (eventType === 'kr') {
+      return "gengoffee-green-bg";
+    }
     return "gengoffee-lightblue-bg";
   }
 
@@ -166,5 +177,4 @@ export class RegisteredComponent implements OnInit {
     });
     return result
   }
-
 }
