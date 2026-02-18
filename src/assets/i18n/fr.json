@@ -187,8 +187,7 @@
         "message":"Message",
         "button":"Envoyer",
         "p_object":"Objet du mail",
-        "p_message":"Je suis des cours de japonais depuis 5 ans mais j'ai encore des difficultés à m'exprimer :(",
-        "warning": "De juillet 2025 à août 11 2025, notre formulaire de contact n'était pas fonctionnel. Maintenant, tout est de retour à la normale !"
+        "p_message":"Je suis des cours de japonais depuis 5 ans mais j'ai encore des difficultés à m'exprimer :("
     },
     "job":{
         "title":"Découvrez de nouvelles opportunités",
