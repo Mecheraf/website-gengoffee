@@ -412,6 +412,7 @@
     "fr": "Français",
     "jp": "Japonais",
     "kr": "Coréen",
-    "karaoke": "Karaoke",
+    "karaoke-jp": "Karaoke (JP)",
+    "karaoke-int": "Karaoke (International)",
     "boardgame": "Jeux de société"
 }

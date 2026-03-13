@@ -130,7 +130,8 @@ export class RegisterComponent implements OnInit {
     for(let city in this.sharedEvents.next){ //For the city
       for(let event in this.sharedEvents.next[city]){
         if(this.sharedEvents.next[city][event].id === id){
-          this.warning = this.sharedEvents.next[city][event].type == "karaoke" ? 0 : 1;
+          const eventType = this.sharedEvents.next[city][event].type?.toLocaleLowerCase() || '';
+          this.warning = eventType.startsWith("karaoke") ? 0 : 1;
           this.subscribe = this.sharedEvents.next[city][event].subscribe
           this.types = this.returnType(city, this.sharedEvents.next[city][event].type)
           this.place = this.sharedEvents.next[city][event].place + " - " + this.sharedEvents.next[city][event].location

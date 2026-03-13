@@ -5,7 +5,8 @@ import { Event } from 'src/app/models/event';
 
 const localeToFlag: any = {
   'fr' : '🇫🇷',
-  'karaoke':'🇯🇵🎤',
+  'karaoke-jp':'🇯🇵🎤',
+  'karaoke-int':'🇬🇧🎤',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
   'es' : '🇪🇸',
@@ -48,7 +49,7 @@ export class EventItemComponent implements OnInit {
   public getImageByCountry(id:string): string {
     if (this.event.type === 'jp') {
       return 'gengoffee_event-'+(Number(id)%2+1)+'.webp';
-    } else if (this.event.type?.toLocaleLowerCase() === 'karaoke') {
+    } else if (this.event.type?.toLocaleLowerCase().startsWith('karaoke')) {
       return 'gengoffee_event_karaoke2.webp';
     } else if (this.event.type?.toLocaleLowerCase() === 'boardgame') {
       return 'photo-bd.webp';
@@ -59,7 +60,7 @@ export class EventItemComponent implements OnInit {
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type === 'karaoke-jp') {
       return "gengoffee-lightred-bg";
     } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
       return "gengoffee-green-bg";
