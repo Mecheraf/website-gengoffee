@@ -6,7 +6,7 @@ import { Event } from 'src/app/models/event';
 const localeToFlag: any = {
   'fr' : '🇫🇷',
   'karaoke-jp':'🇯🇵🎤',
-  'karaoke-int':'🇬🇧🎤',
+  'karaoke-int':'🌍🎤',
   'jp' : '🇯🇵',
   'en' : '🇬🇧',
   'es' : '🇪🇸',
