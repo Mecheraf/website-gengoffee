@@ -38,12 +38,9 @@ export class JobboardComponent implements OnInit {
       }
     })
     this.jobBtnStyle = true
-    console.log("Here in selectJob: "+this.jobBtnStyle)
   }
 
   closeJobItem(){
     this.jobBtnStyle = false
-
-    console.log("Here in closeJobItem: "+this.jobBtnStyle)
   }
 }

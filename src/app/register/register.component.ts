@@ -1,12 +1,12 @@
-const NEXT_EVENTS = 3
-
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { EventService } from '../services/event.service';
 import { RegisterService } from '../services/register.service';
-import { MatLegacySnackBar as MatSnackBar, MatLegacySnackBarConfig as MatSnackBarConfig } from '@angular/material/legacy-snack-bar';
-
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { Meta } from '@angular/platform-browser';
+import { SharedDataService } from '../shared/shared-data/shared-data.service';
+import { GtmService } from '../services/gtm.service';
 
 
 interface userLanguage {
@@ -22,43 +22,53 @@ interface userLanguage {
 
 export class RegisterComponent implements OnInit {
 
-  public languages: string[] = ["fr", "jp", "en"];
-
   public showText:boolean = false;
   public otherText:string = "";
   public selectedLanguages: userLanguage[] = [];
 
-  public registerForm: FormGroup = new FormGroup({
-    id_event: new FormControl<string>(''),
-    name: new FormControl<string>('', [Validators.required]),
-    mail: new FormControl<string>('', [Validators.required]),
-    phone: new FormControl<string>(''),
-    selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
-    dietList: new FormControl<string[]>([]),
-  });
-  public events:any;
-  public nextEvents:any[] = [];
+  public registerForm: FormGroup = new FormGroup({})
+
   public selectedEvent:string = "0";
+  public subscribe = 1;
   public warning = 1;
-  public location = 0; //Setup as Paris
+  public location = 'PARIS'; //Setup as Paris
+  public place = 'Les Berthom';
+  public date = '2025-08-11';
+  public types = this.returnType(this.location, 'en');
 
   constructor(
     private eventservice: EventService,
     private registerservice:RegisterService,
     private translateService: TranslateService,
-    public _snackBar: MatSnackBar
+    public _snackBar: MatSnackBar,
+    private meta: Meta,
+    public sharedEvents: SharedDataService,
+    private gtmService: GtmService
     ) {
   }
 
-  ngOnInit(): void {
-    this.getNextEvents(NEXT_EVENTS, 0, "PARIS");
-    this.getNextEvents(NEXT_EVENTS, 1, "TOKYO");
+  initForm(){
+    this.registerForm = new FormGroup({
+      idEvent: new FormControl<string>(''),
+      lastname: new FormControl<string>(''),
+      firstname: new FormControl<string>(''),
+      mail: new FormControl<string>('', [Validators.required]),
+      phone: new FormControl<string>(''),
+      selectedLanguages: new FormControl<userLanguage[]>({} as userLanguage[]),
+      dietList: new FormControl<string[]>([]),
+      types: new FormControl<string[]>([]),
+      place: new FormControl<string>(''),
+      date: new FormControl<string>('')
+    });
   }
 
-  getNextEvents(limit:number, position:number, location:string) {
-    this.eventservice.getNextEvents({params:{limit: limit, location:location}}).subscribe((data) => {
-      this.nextEvents[position] = data;
-    })
+  ngOnInit(): void {
+    this.allTags()
+    this.initForm()
+
+    this.sharedEvents.getCityEvents("PARIS")
+    this.sharedEvents.getCityEvents("TOKYO")
+    this.trackMe()
   }
 
   toggleDiet (selectedDiet: string) {
@@ -70,20 +80,10 @@ export class RegisterComponent implements OnInit {
       dietList.push(selectedDiet);
       this.registerForm.patchValue({'dietList': dietList});
     }
-  } 
+  }
 
-  toggleOther(){
+  toggleOther(){ 
     this.showText = !this.showText;
-  }
-
-  addLanguage(){
-    if (this.selectedLanguages.length >= 3) return;
-    const language: userLanguage = {language: "fr", level: "lv1"};
-    this.selectedLanguages.push(language);
-  }
-
-  removeLanguage(language: userLanguage){
-    this.selectedLanguages.splice(this.selectedLanguages.indexOf(language), 1);
   }
 
   onSubmit(){
@@ -93,40 +93,81 @@ export class RegisterComponent implements OnInit {
     const invalidConfigSnack = new MatSnackBarConfig();
     invalidConfigSnack.panelClass = ['invalid-snackbar'];
     invalidConfigSnack.horizontalPosition = 'center';
-    const name:string = this.registerForm.get('name')?.value;
+    const firstname:string = this.registerForm.get('firstname')?.value;
     const mail:string = this.registerForm.get('mail')?.value;
 
-    if(name.length === 0  || mail.length === 0){
+    if(this.selectedEvent === "0" || mail.length === 0){
       this._snackBar.open(this.translateService.instant('errorRegister'), "Fermer", invalidConfigSnack);
+      this.gtmService.trackMe('submit-error', 'register', 'submit-error')
+      
     } else {
-      const dietList: string[] = this.registerForm.get('dietList')?.value as string[];
-      dietList.push(this.otherText);
-      this.registerForm.patchValue({'id_event':this.selectedEvent});
-      this.registerForm.patchValue({'dietList': dietList});
+      this.registerForm.patchValue({'idEvent':this.selectedEvent});
+      this.registerForm.patchValue({'dietList': this.registerForm.get('dietList')?.value});
       this.registerForm.patchValue({'selectedLanguages': this.selectedLanguages});
+      this.registerForm.patchValue({'types':this.types})
+      this.registerForm.patchValue({'place':this.place})
+      this.registerForm.patchValue({'date':this.date})
       this.registerservice.post(this.registerForm.value).subscribe();
-      this.registerForm.reset();
+      this.initForm()
       this.selectedLanguages = [];
       this._snackBar.open(this.translateService.instant('registered'), "Fermer", validConfigSnack);
+      this.gtmService.trackMe('submit-success', 'register', 'submit-success'+this.location+'-'+this.selectedEvent)
     }
+  }
+
+  public checkLanguage(language:string, languages:userLanguage[]){
+    for(let element of languages){
+      if(element.language === language){
+        return true
+      }
+    }
+    return false
   }
 
 
   selectEvent(id:string) {
     this.selectedEvent = id;
-    for(let event in this.nextEvents){
-      if(this.nextEvents[event].id === id){
-        if(this.nextEvents[event].subscribe === 0){
-          this.warning = 0
-        } else {
-          this.warning = 1
+    for(let city in this.sharedEvents.next){ //For the city
+      for(let event in this.sharedEvents.next[city]){
+        if(this.sharedEvents.next[city][event].id === id){
+          const eventType = this.sharedEvents.next[city][event].type?.toLocaleLowerCase() || '';
+          this.warning = eventType.startsWith("karaoke") ? 0 : 1;
+          this.subscribe = this.sharedEvents.next[city][event].subscribe
+          this.types = this.returnType(city, this.sharedEvents.next[city][event].type)
+          this.place = this.sharedEvents.next[city][event].place + " - " + this.sharedEvents.next[city][event].location
+          this.date = this.sharedEvents.next[city][event].date
+          this.gtmService.trackMe('form-select-event', 'register', 'event-clicked-' + city + '-' + this.sharedEvents.next[city][event].type)
+
         }
       }
     }
+    
   }
 
-  selectLocation(location:number) {
-    this.location = location;
+  allTags(){
+    this.meta.updateTag({ name: 'title', content: 'Inscrivez-vous à nos échanges linguistique Gengoffee'});
+    this.meta.updateTag({ name: 'description', content: 'Participer aux différents événements échange de langue Gengoffee'});
   }
-  
+
+  selectLocation(location:string) {
+    this.location = location;
+    this.gtmService.trackMe('select-location', 'register', 'select-location'+location)
+  }
+
+  returnType(location:string,second:string){
+    let main = location === "PARIS" ? "fr" : "jp";
+    return [main, second]
+  }
+
+  trackMe() {
+    this.gtmService.trackMe('page-register', 'register', 'register-page')
+  }
+
+  trackMeButton(button:string) {
+    this.gtmService.trackMe('register-'+button, 'register', 'register-'+button)
+  }
+
+  get returnSliced(){
+    return this.sharedEvents.next[this.location]?.slice(0, 4)
+  }
 }

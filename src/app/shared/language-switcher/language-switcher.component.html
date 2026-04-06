@@ -1,15 +1,5 @@
 <span class="form-inline">
-    <!-- <select 
-      class="form-control position:sticky right:10"
-      #selectedLang
-      (change)="switchLanguage(selectedLang.value)">
-      <option *ngFor="let language of translate.getLangs()"
-      [value]="language"
-      [selected]="language === translate.currentLang">
-      {{language}}
-      </option>
-    </select> -->
-    <div class="absolute items-center flex-col top-80 bottom-0 right-16 text-[#1F3D87] hidden md:flex">
+    <div class="absolute items-center flex-col top-80 bottom-0 right-6 xl:right-16 text-[#1F3D87] hidden md:flex">
       <button (click)="switchLanguage('en')" class="mb-8 rotate-90">ENG</button>
       <button (click)="switchLanguage('fr')" class="mb-8 rotate-90">FR</button>
       <button (click)="switchLanguage('jp')" class="mb-10 ">日<bR>本<br>語</button>

@@ -30,8 +30,10 @@ export class PastEventCardComponent implements OnInit {
   }
 
   public getColorByCountry(): string {
-    if (this.event.type === 'jp' || this.event.type === 'fr' || this.event.type?.toLocaleLowerCase() === 'karaoke') {
+    if (this.event.type === 'jp' || this.event.type === 'fr' || this.event.type === 'karaoke-jp') {
       return "gengoffee-lightred-bg";
+    } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
+      return "gengoffee-green-bg";
     }
     
     return "gengoffee-lightblue-bg";

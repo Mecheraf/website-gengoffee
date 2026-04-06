@@ -4,4 +4,5 @@ export interface Event {
     date:Date;
     place:string;
     location:string;
+    subscribe:number;
 }
