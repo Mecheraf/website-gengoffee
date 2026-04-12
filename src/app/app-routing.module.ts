@@ -12,6 +12,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { CreatejobComponent } from './createjob/createjob.component';
 import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.component';
 import { ConditionsComponent } from './legal/conditions/conditions.component';
+import { FaqComponent } from './ui-components/faq/faq.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'admin/login', component: LoginAdminComponent},
   { path: 'legal-notice', component: LegalNoticeComponent},
   { path: 'general-conditions', component: ConditionsComponent},
+  { path: 'faq', component: FaqComponent},
   { path: '**', redirectTo: '' }
   //{ path: 'jobs', component: JobboardComponent}
 

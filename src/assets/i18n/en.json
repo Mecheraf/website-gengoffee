@@ -63,7 +63,8 @@
     },
     "partners": {
         "title": "Our partners",
-        "description": "Do you want to support Gengoffee or host our next event?",
+        "description": "Our events are hosted in trusted partner venues, chosen for their welcoming atmosphere and accessibility. We thank them for their support and the quality of their products.",
+        "invitation": "You want to support Gengoffee or host our next event?",
         "partner": {
             "berthom": {
                 "title": "A huge thank you to Les Berthom for hosting our events.",
@@ -149,7 +150,7 @@
         "followus": "Follow us on our social media.",
         "mission":{
             "title":"Our mission",
-            "description":"Our mission is to provide a place where you can learn, practice and improve your language skills with other participants in a friendly environment."
+            "description":"Our language exchange association in Paris and Tokyo aims to create authentic moments of practice and exchange between French, English and Japanese speakers. Through our events, we promote natural communication and cultural openness in a structured, welcoming and convivial environment.<br><br>Unlike a free tandem or a simple meetup, exchanges at Gengoffee are supervised by a team present on site, which ensures a linguistic balance and a fluid dynamic between participants, whatever their level of language proficiency.<br><br>At Gengoffee, we believe that learning a language is above all about human experience: meeting, exchanging, discovering other ways of thinking and communicating."
         },
         
         "people": {
@@ -166,16 +167,60 @@
             "title": "Some figures...",
             "1": {
                 "title": "Events",
-                "description": "The total number of events organised since our creation! That's over <span class=\"font-semibold\">9000 sign-ups </span> and counting!"
+                "description": "French-Japanese, French-English, jam session, karaoke, board game night etc."
             },
             "2": {
-                "title": "Community",
-                "description": "A total of more than <span class=\"font-semibold\">7500 members</span> across our different groups! Don't forget to join our networks <span class=\"font-semibold\">Meetup</span> and <span class=\"font-semibold\">Instagram</span>!"
+                "title": "Members",
+                "description": "We are present on different platforms, mainly social networks and Meetup"
             },
             "3": {
-                "title": "Collaborators",
-                "description": "Gengoffee is currently supported by collaboraters who actively make the association grows, on top of our different partners !"
+                "title": "Attendees",
+                "description": "We have between 80 and 100 attendees at each event"
             }
+        },
+        "story": {
+            "title": "Our Story",
+            "events": {
+                "1": { "title": "Gengoffee is founded" },
+                "2": { "title": "First online events" },
+                "3": { "title": "1,000 members reached" },
+                "4": { "title": "Expansion to Tokyo" },
+                "5": { "title": "5,000 members" },
+                "6": { "title": "10,000+ members worldwide" }
+            }
+        },
+        "strenghts": {
+            "1": {
+                "title": "Lively & convivial atmosphere",
+                "description": "Every Gengoffee event takes place in a warm and relaxed setting. The friendly vibe helps participants open up, laugh, and connect naturally over a shared drink."
+            },
+            "2": {
+                "title": "Caring guidance",
+                "description": "Our team is present at every session to ensure smooth exchanges and a balanced dynamic between participants, whatever their level of language proficiency."
+            },
+            "3": {
+                "title": "Little shared pleasures",
+                "description": "A good drink, great company, and a meaningful conversation. At Gengoffee, small everyday moments of joy are at the heart of every memorable exchange."
+            },
+            "4": {
+                "title": "Openness & diversity",
+                "description": "We welcome participants from all walks of life, backgrounds, and nationalities. Diversity is at the core of every exchange and makes each event truly unique."
+            }
+        },
+        "cities": {
+            "title": "Our cities, our communities",
+            "paris": {
+                "title": "Paris, France",
+                "description": "Born in the heart of Paris, Gengoffee brings together French, Japanese and English speakers every week. From lively bars to cosy venues, each event is a unique chance to connect, practise languages and live an authentic moment of cultural exchange in the French capital."
+            },
+            "tokyo": {
+                "title": "Tokyo, Japan",
+                "description": "In the vibrant city of Tokyo, Gengoffee creates a welcoming space for language enthusiasts. Whether you are a local or an expat, our events offer a unique opportunity to meet new people, practise your French and discover Tokyo through an open and multicultural lens."
+            }
+        },
+        "why": {
+            "title": "Why choose Gengoffee?",
+            "description": "Gengoffee is a French-Japanese association in Paris gathering French and Japanese people during events.<br><br>We have the concept of organising French-Japanese language exchanges in an altruistic, friendly and cultural spirit. In this spirit, we organise our events in cafes and bars in order to chat around a drink!<br><br>We organise several events per month and accept all levels as long as respect is present."
         }
     },
     "contact": {
@@ -208,6 +253,17 @@
         "type":"Type of the event (define the second language)",
         "place":"Date and place of the event",
         "city":"City of the event (Define the main language)"
+    },
+    "faq":{
+        "title":"FAQ",
+        "question1":"How can I log in?",
+        "answer1":"You can log in by clicking on the 'Log in' button in the top right corner of the page.",
+        "question2":"How can I log out?",
+        "answer2":"You can log out by clicking on the 'Log out' button in the top right corner of the page.",
+        "question3":"How can I log in?",
+        "answer3":"You can log in by clicking on the 'Log in' button in the top right corner of the page.",
+        "question4":"How can I log in?",
+        "answer4":"You can log in by clicking on the 'Log in' button in the top right corner of the page."
     },
     "admin":{
         "event":"Event",
