@@ -4,7 +4,7 @@
     <div class="font-semibold text-[10px] md:text-sm">{{getTranslatedDate()}}</div>
     <div class="font-semibold text-[10px] md:text-sm">{{getDayHour()}}</div>
     <div class="flex flex-row justify-center gap-1 items-center">
-      <div class="font-extralight flex flex-row gap-1" *ngIf="this.event.type.toLocaleLowerCase() != 'karaoke-jp' && this.event.type.toLocaleLowerCase() != 'karaoke-int' && this.event.type.toLocaleLowerCase() != 'boardgame'">
+      <div class="font-extralight flex flex-row gap-1" *ngIf="this.event.type.toLocaleLowerCase() != 'karaoke-jp' && this.event.type.toLocaleLowerCase() != 'karaoke-int' && this.event.type.toLocaleLowerCase() != 'boardgame' && this.event.type.toLocaleLowerCase() != 'anniversary'">
         {{getMainLanguage()}}
         <p class="font-extralight"> - </p>
       </div>

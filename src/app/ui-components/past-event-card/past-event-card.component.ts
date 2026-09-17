@@ -34,6 +34,8 @@ export class PastEventCardComponent implements OnInit {
       return "gengoffee-lightred-bg";
     } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
       return "gengoffee-green-bg";
+    } else if (this.event.type?.toLocaleLowerCase() === 'anniversary') {
+      return "gengoffee-lightyellow-bg";
     }
     
     return "gengoffee-lightblue-bg";
