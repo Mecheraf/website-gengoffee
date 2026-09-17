@@ -18,7 +18,9 @@
       </ng-container>
     </div>
     <!-- Event image -->
-    <img class="pt-4 m-auto w-full" [src]="'assets/images/' + getImageByCountry(event.id)" />
+    <div class="mt-4 w-full h-[200px] overflow-hidden rounded-[0.375rem]">
+      <img class="w-full h-full object-cover" [src]="'assets/images/' + getImageByCountry(event.id)" />
+    </div>
     <button [routerLink]="['/register']" [state]="{ id: event.id }" *ngIf="active && participateLink" class="place-content-center flex mx-auto mt-3 gengoffee-btn gengoffee-btn-secondary">
       {{'register.form.register'|translate}}
     </button>

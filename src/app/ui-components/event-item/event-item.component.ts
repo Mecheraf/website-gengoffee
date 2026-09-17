@@ -55,6 +55,8 @@ export class EventItemComponent implements OnInit {
       return 'photo-bd.webp';
     } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
       return 'photo-kr.webp';
+    } else if (this.event.type?.toLocaleLowerCase() === 'anniversary') {
+      return 'GengoffeeAnniversary.JPG';
     }
     return 'photo-en-'+ Number(id)%4 +'.webp';
   }
@@ -64,6 +66,8 @@ export class EventItemComponent implements OnInit {
       return "gengoffee-lightred-bg";
     } else if (this.event.type?.toLocaleLowerCase() === 'kr') {
       return "gengoffee-green-bg";
+    } else if (this.event.type?.toLocaleLowerCase() === 'anniversary') {
+      return "gengoffee-lightyellow-bg";
     }
     return "gengoffee-lightblue-bg";
   }
