@@ -89,6 +89,7 @@
   color: #4A5578;
   text-align: center;
   letter-spacing: 0.06em;
+  max-width: 130px; /* max-width for the date */
 }
 
 .event-title {
@@ -96,5 +97,5 @@
   color: #374151;
   text-align: center;
   line-height: 1.35;
-  max-width: 140px;
+  max-width: 130px; /* max-width for the title */
 }
