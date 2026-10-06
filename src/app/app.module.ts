@@ -47,6 +47,7 @@ import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.componen
 import { SelectLanguageComponent } from './ui-components/select-language/select-language.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { FaqComponent } from './ui-components/faq/faq.component';
 
 
 
@@ -59,6 +60,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     HomeComponent,
     EventItemComponent,
     PartnersComponent,
+    FaqComponent,
     GengoffeeNoticeComponent,
     ClientsFeedbackComponent,
     WavesComponent,

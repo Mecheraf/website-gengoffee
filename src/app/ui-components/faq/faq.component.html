@@ -1,0 +1,19 @@
+<div class="max-w-xs md:max-w-4xl mx-auto mb-8 gengoffee-gray-bg p-8 rounded-2xl">
+  <h2 class="text-xl md:text-xl font-medium mb-8">{{'faq.title' | translate}}</h2>
+  <div *ngFor="let q of questions" class="border-b border-gray-200">
+    <button class="w-full flex items-center justify-between py-4 text-left" (click)="toggle(q)">
+      <h3 class="text-base md:text-base font-semibold">{{'faq.question' + q | translate}}</h3>
+      <svg
+        [class.rotate-180]="openIndex === q"
+        class="transition-transform duration-300 flex-shrink-0 ml-4"
+        width="19" height="13" viewBox="0 0 19 13" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 12L9.5 1L18 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div *ngIf="openIndex === q" class="pb-4">
+      <p class="text-sm text-gray-500 leading-relaxed">{{'faq.answer' + q | translate}}</p>
+    </div>
+    <div class="border-t border-gray-200"></div>
+  </div>
+</div>

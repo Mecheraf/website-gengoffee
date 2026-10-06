@@ -82,6 +82,10 @@ input::-webkit-inner-spin-button {
  background-color: #F8E7E7;
 }
 
+.gengoffee-gray-bg {
+  background-color: #F4F7FA;
+}
+
 /* Inputs & Buttons */
 
 .gengoffee-btn {
