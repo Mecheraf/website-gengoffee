@@ -253,9 +253,9 @@
     <div class="mt-16 md:mt-24">
       <app-faq></app-faq>
     </div>
-    <div class="mt-16 md:mt-24 mb-16 md:text-left mx-auto max-w-md"> <!-- Join us -->
+    <div class="mt-16 md:mt-24 mb-16 mx-auto w-full md:w-3/4 text-center"> <!-- Join us -->
       <h2 class="text-xl md:text-2xl font-medium mb-8">{{'about.join.title' | translate}}</h2>
-      <div class="text-sm md:text-base mt-4 text-left w-full" [innerHtml]="'about.join.description'|translate"></div>
+      <div class="text-sm md:text-base mt-4 w-full" [innerHtml]="'about.join.description'|translate"></div>
       <button
         class="text-sm mt-4 md:mt-6 mb-4 md:mb-0 gengoffee-btn gengoffee-btn-primary mx-auto block"
         [routerLink]="['/register']"
