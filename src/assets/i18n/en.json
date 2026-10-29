@@ -150,18 +150,8 @@
         "followus": "Follow us on our social media.",
         "mission":{
             "title":"Our mission",
-            "description":"Our language exchange association in Paris and Tokyo aims to create authentic moments of practice and exchange between French, English and Japanese speakers. Through our events, we promote natural communication and cultural openness in a structured, welcoming and convivial environment.<br><br>Unlike a free tandem or a simple meetup, exchanges at Gengoffee are supervised by a team present on site, which ensures a linguistic balance and a fluid dynamic between participants, whatever their level of language proficiency.<br><br>At Gengoffee, we believe that learning a language is above all about human experience: meeting, exchanging, discovering other ways of thinking and communicating."
-        },
-        
-        "people": {
-            "alan": {
-                "title": "",
-                "description": "",
-                "link": {
-                    "linkedin": "",
-                    "website": ""
-                }
-            }
+            "description":"Our language exchange association in Paris and Tokyo aims to create authentic moments of practice and exchange between French, English and Japanese speakers. Through our events, we promote natural communication and cultural openness in a structured, welcoming and convivial environment.<br><br>Unlike a free tandem or a simple meetup, exchanges at Gengoffee are supervised by a team present on site, which ensures a linguistic balance and a fluid dynamic between participants, whatever their level of language proficiency.<br><br>At Gengoffee, we believe that learning a language is above all about human experience: meeting, exchanging, discovering other ways of thinking and communicating.",
+            "button": "Discover our events"
         },
         "stats": {
             "title": "Some figures...",

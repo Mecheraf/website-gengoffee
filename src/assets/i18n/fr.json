@@ -149,17 +149,8 @@
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "mission":{
             "title":"Notre mission",
-            "description":"Notre association d’échanges linguistiques à Paris et Tokyo a pour mission de créer des moments authentiques de pratique et d’échange entre francophones, anglophones et japonais. À travers nos événements, nous favorisons la communication naturelle et l’ouverture culturelle, dans un cadre structuré, bienveillant et convivial.<br><br>Contrairement à un tandem libre ou à un simple meetup, les échanges à Gengoffee sont encadrés par une équipe présente sur place, qui veille à maintenir un équilibre linguistique et une dynamique fluide entre les participants, qu’ils soient de niveau intermédiaire ou avancé.<br><br>À Gengoffee, nous croyons qu’apprendre une langue, c’est avant tout vivre une expérience humaine : rencontrer, échanger, découvrir d’autres façons de penser et de communiquer."
-        },
-        "people":{
-            "alan":{
-                "title":"",
-                "description":"",
-                "link":{
-                    "linkedin":"",
-                    "website":""
-                }
-            }
+            "description":"Notre association d’échanges linguistiques à Paris et Tokyo a pour mission de créer des moments authentiques de pratique et d’échange entre francophones, anglophones et japonais. À travers nos événements, nous favorisons la communication naturelle et l’ouverture culturelle, dans un cadre structuré, bienveillant et convivial.<br><br>Contrairement à un tandem libre ou à un simple meetup, les échanges à Gengoffee sont encadrés par une équipe présente sur place, qui veille à maintenir un équilibre linguistique et une dynamique fluide entre les participants, qu’ils soient de niveau intermédiaire ou avancé.<br><br>À Gengoffee, nous croyons qu’apprendre une langue, c’est avant tout vivre une expérience humaine : rencontrer, échanger, découvrir d’autres façons de penser et de communiquer.",
+            "button": "Découvrir nos événements"
         },
         "stats":{
             "title":"En quelques chiffres...",
