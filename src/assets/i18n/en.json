@@ -57,6 +57,26 @@
             "more": "Learn more"
         }
     },
+    "home": {
+        "qualities": {
+            "1": {
+                "title": "Lively & convivial atmosphere",
+                "explanation": "Every Gengoffee event takes place in a warm and relaxed setting. The friendly vibe helps participants open up, laugh, and connect naturally over a shared drink."
+            },
+            "2": {
+                "title": "Caring guidance",
+                "explanation": "Our team is present at every session to ensure smooth exchanges and a balanced dynamic between participants, whatever their level of language proficiency."
+            },
+            "3": {
+                "title": "Little shared pleasures",
+                "explanation": "A good drink, great company, and a meaningful conversation. At Gengoffee, small everyday moments of joy are at the heart of every memorable exchange."
+            },
+            "4": {
+                "title": "Openness & diversity",
+                "explanation": "We welcome participants from all walks of life, backgrounds, and nationalities. Diversity is at the core of every exchange and makes each event truly unique."
+            }
+        }
+    },
     "carousel": {
         "title": "Our events, your interaction",
         "description": "Each week talk during our events with foreign participants over a drink in Paris or Tokyo."
@@ -277,5 +297,9 @@
     "karaoke-jp": "Karaoke",
     "karaoke-int": "Karaoke",
     "boardgame": "Boardgame",
-    "anniversary": "5th Anniversary"
+    "anniversary": "5th Anniversary",
+    "eventKind": {
+        "exchange": "Language exchange",
+        "activity": "Activity"
+    }
 }

@@ -37,11 +37,10 @@
     "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
     "header":{
         "menu":{
-            "home":"Accueil",
             "events":"Événements",
-            "news":"News",
             "about":"À Propos",
-            "contact":"Contact"
+            "contact":"Contact",
+            "register":"Inscription"
         }
     },
     "footer":{
@@ -50,17 +49,51 @@
         "conditions":"Conditions générales"
     },  
     "hero":{
-        "title":"La culture Japonaise",
+        "title":"Événements linguistiques et culturels à Paris et Tokyo",
         "subtitle":"À VOTRE RENCONTRE",
-        "description":"Gengoffee vous propose des échanges de langue japonais ou anglais avec des participants du monde entier à Paris et à Tokyo.",
+        "description":"Nos événements pour pratiquer et découvrir d’autres cultures dans un cadre chaleureux.",
+        "since":"Depuis 2021",
         "buttons":{
-            "register":"Inscription",
-            "more":"En savoir plus"
+            "register":"S'inscrire à un événement",
+            "more":"Découvrir nos événements",
+            "about":"Qui sommes-nous ?"
         }
     },
-    "carousel":{
-        "title":"Nos événements, vos échanges",
-        "description":"Chaque semaine discuter lors de nos événements avec des participants étrangers autour d’un verre à Paris ou à Tokyo."
+    "home":{
+        "since":"Depuis 2021",
+        "title":"Événements linguistiques et culturels à Paris et Tokyo",
+        "description":"Nos événements pour pratiquer et découvrir d’autres cultures dans un cadre chaleureux.",
+        "buttons":{
+            "register":"S'inscrire à un événement",
+            "more":"Découvrir nos événements",
+            "about":"Qui sommes-nous ?"
+        },
+        "qualities":{
+            "1":{
+                "title":"Encadrement par notre équipe",
+                "explanation":"Nos événements sont animés par une équipe présente sur place pour guider les participants, équilibrer les langues et créer une atmosphère détendue."
+            },
+            "2":{
+                "title":"Ratio équilibré entre les langues",
+                "explanation":"On apprend en discutant, en riant et en partageant des expériences. C’est une méthode naturelle pour progresser tout en rencontrant des personnes qui partagent la même envie."
+            },
+            "3":{
+                "title":"Ambiance conviviale et détendue",
+                "explanation":"Les échanges se déroulent dans des lieux partenaires chaleureux, propices à la discussion et à la détente. Vous pouvez pratiquer sans pression, dans un cadre bienveillant et structuré."
+            },
+            "4":{
+                "title":"Accessible à différents profils",
+                "explanation":"Nos événements permettant à chacun de découvrir de nouvelles cultures et de créer des liens durables, bien au-delà de la pratique linguistique."
+            }
+        }
+    },
+    "events-list":{
+        "title":"Nos prochains événements linguistiques et culturels",
+        "description":"Nous organisons régulièrement des ateliers de conversation dans deux grandes villes.  En complément de ces échanges linguistiques, nous proposons également d’autres événements conviviaux. Ces événements permettent de renforcer les liens entre participants dans une ambiance détendue et festive.",
+        "button":"Voir le calendrier des événements"
+    },
+    "photo-carousel":{
+        "title":"Découvrez nos événements en photos"
     },
     "partners":{
         "title":"Nos partenaires",
@@ -477,5 +510,9 @@
     "karaoke-jp": "Karaoke",
     "karaoke-int": "Karaoke",
     "boardgame": "Jeux de société",
-    "anniversary": "5ème Anniversaire"
+    "anniversary": "5ème Anniversaire",
+    "eventKind": {
+        "exchange": "Échange de langue",
+        "activity": "Activité"
+    }
 }
