@@ -37,11 +37,10 @@
     "headbanner":"Le site web est actuellement en construction. Revenez bientôt !",
     "header":{
         "menu":{
-            "home":"Accueil",
             "events":"Événements",
-            "news":"News",
             "about":"À Propos",
-            "contact":"Contact"
+            "contact":"Contact",
+            "register":"Inscription"
         }
     },
     "footer":{
@@ -50,21 +49,56 @@
         "conditions":"Conditions générales"
     },  
     "hero":{
-        "title":"La culture Japonaise",
+        "title":"Événements linguistiques et culturels à Paris et Tokyo",
         "subtitle":"À VOTRE RENCONTRE",
-        "description":"Gengoffee vous propose des échanges de langue japonais ou anglais avec des participants du monde entier à Paris et à Tokyo.",
+        "description":"Nos événements pour pratiquer et découvrir d’autres cultures dans un cadre chaleureux.",
+        "since":"Depuis 2021",
         "buttons":{
-            "register":"Inscription",
-            "more":"En savoir plus"
+            "register":"S'inscrire à un événement",
+            "more":"Découvrir nos événements",
+            "about":"Qui sommes-nous ?"
         }
     },
-    "carousel":{
-        "title":"Nos événements, vos échanges",
-        "description":"Chaque semaine discuter lors de nos événements avec des participants étrangers autour d’un verre à Paris ou à Tokyo."
+    "home":{
+        "since":"Depuis 2021",
+        "title":"Événements linguistiques et culturels à Paris et Tokyo",
+        "description":"Nos événements pour pratiquer et découvrir d’autres cultures dans un cadre chaleureux.",
+        "buttons":{
+            "register":"S'inscrire à un événement",
+            "more":"Découvrir nos événements",
+            "about":"Qui sommes-nous ?"
+        },
+        "qualities":{
+            "1":{
+                "title":"Encadrement par notre équipe",
+                "explanation":"Nos événements sont animés par une équipe présente sur place pour guider les participants, équilibrer les langues et créer une atmosphère détendue."
+            },
+            "2":{
+                "title":"Ratio équilibré entre les langues",
+                "explanation":"On apprend en discutant, en riant et en partageant des expériences. C’est une méthode naturelle pour progresser tout en rencontrant des personnes qui partagent la même envie."
+            },
+            "3":{
+                "title":"Ambiance conviviale et détendue",
+                "explanation":"Les échanges se déroulent dans des lieux partenaires chaleureux, propices à la discussion et à la détente. Vous pouvez pratiquer sans pression, dans un cadre bienveillant et structuré."
+            },
+            "4":{
+                "title":"Accessible à différents profils",
+                "explanation":"Nos événements permettant à chacun de découvrir de nouvelles cultures et de créer des liens durables, bien au-delà de la pratique linguistique."
+            }
+        }
+    },
+    "events-list":{
+        "title":"Nos prochains événements linguistiques et culturels",
+        "description":"Nous organisons régulièrement des ateliers de conversation dans deux grandes villes.  En complément de ces échanges linguistiques, nous proposons également d’autres événements conviviaux. Ces événements permettent de renforcer les liens entre participants dans une ambiance détendue et festive.",
+        "button":"Voir le calendrier des événements"
+    },
+    "photo-carousel":{
+        "title":"Découvrez nos événements en photos"
     },
     "partners":{
         "title":"Nos partenaires",
-        "description":"Vous souhaitez soutenir Gengoffee ou accueillir nos prochaines sessions ?",
+        "description":"Nos événements sont accueillis dans des lieux partenaires de confiance, choisis pour leur ambiance accueillante et leur accessibilité. Nous les remercions de leur soutien et de la qualité de leurs produits.",
+        "invitation":"Vous souhaitez nous soutenir ou accueillir nos prochaines sessions ?",
         "partner":{
             "berthom":{
                 "title":"Un grand merci à Les Berthom qui accueille nos événements.",
@@ -148,7 +182,7 @@
         "followus":"Vous pouvez évidemment nous joindre sur nos réseaux sociaux",
         "mission":{
             "title":"Notre mission",
-            "description":"Notre mission est de proposer un espace où vous pouvez apprendre, pratiquer et améliorer vos compétences linguistiques avec d'autres participants dans un environnement convivial."
+            "description":"Notre association d’échanges linguistiques à Paris et Tokyo a pour mission de créer des moments authentiques de pratique et d’échange entre francophones, anglophones et japonais. À travers nos événements, nous favorisons la communication naturelle et l’ouverture culturelle, dans un cadre structuré, bienveillant et convivial.<br><br>Contrairement à un tandem libre ou à un simple meetup, les échanges à Gengoffee sont encadrés par une équipe présente sur place, qui veille à maintenir un équilibre linguistique et une dynamique fluide entre les participants, qu’ils soient de niveau intermédiaire ou avancé.<br><br>À Gengoffee, nous croyons qu’apprendre une langue, c’est avant tout vivre une expérience humaine : rencontrer, échanger, découvrir d’autres façons de penser et de communiquer."
         },
         "people":{
             "alan":{
@@ -164,16 +198,66 @@
             "title":"En quelques chiffres...",
             "1":{
                 "title":"Événements",
-                "description":"Le nombre total d'événements organisés depuis la création du collectif ! Comptabilisant plus de <span class=\"font-semibold\">9000 d'inscriptions</span>!"
+                "description":"Événements franco-japonais, franco-anglais, jam session, karaoké, soirée jeux de société etc."
             },
             "2":{
-                "title":"Communauté",
-                "description":"Un total de plus de <span class=\"font-semibold\">7500 membres</span> sur nos différents groupes ! N'oubliez pas de nous suivre vous aussi sur nos réseaux <span class=\"font-semibold\">Meetup</span> et <span class=\"font-semibold\">Instagram</span> !"
+                "title":"Membres",
+                "description":"Nous sommes présents sur différentes plateformes, notamment  les réseaux sociaux et Meetup"
             },            
             "3":{
-                "title":"Collaborateurs",
-                "description":"Nous avons des collaborateurs qui soutiennent aujourd’hui l’association Gengoffee activement, en plus de nos différents partenaires."
+                "title":"Participations",
+                "description":"Nous avons entre 80 et 100 participants à chaque événement"
             }
+        },
+        "story": {
+            "title": "Notre histoire",
+            "events": {
+                "1": { "title": "Création de Gengoffee" },
+                "2": { "title": "Premiers événements en ligne" },
+                "3": { "title": "1 000 membres" },
+                "4": { "title": "Expansion à Tokyo" },
+                "5": { "title": "5 000 membres" },
+                "6": { "title": "10 000+ membres" }
+            }
+        },
+        "strenghts": {
+            "1": {
+                "title": "Ambiance conviviale et animée",
+                "description": "Chaque événement Gengoffee se déroule dans une ambiance chaleureuse et détendue. Ce cadre bienveillant favorise les échanges naturels et spontanés autour d'un verre."
+            },
+            "2": {
+                "title": "Encadrement bienveillant",
+                "description": "Notre équipe est présente à chaque session pour assurer des échanges fluides et un équilibre entre les participants, quel que soit leur niveau de langue."
+            },
+            "3": {
+                "title": "Petits plaisirs partagés",
+                "description": "Un bon verre, une belle compagnie et une vraie conversation. Chez Gengoffee, les petits plaisirs du quotidien sont au cœur de chaque échange mémorable."
+            },
+            "4": {
+                "title": "Ouverture et diversité",
+                "description": "Nous accueillons des participants de tous horizons, origines et nationalités. La diversité est au cœur de chaque échange et rend chaque événement véritablement unique."
+            }
+        },
+        "cities": {
+            "title": "Nos villes, nos communautés",
+            "paris": {
+                "title": "Paris, France",
+                "description": "Né au cœur de Paris, Gengoffee réunit chaque semaine des francophones, des Japonais et des anglophones. Des bars animés aux lieux cosy, chaque événement est une occasion unique d'échanger, de pratiquer et de vivre un vrai moment de rencontre interculturelle dans la capitale."
+            },
+            "tokyo": {
+                "title": "Tokyo, Japon",
+                "description": "Dans la dynamique ville de Tokyo, Gengoffee crée un espace chaleureux pour les passionnés de langues. Que vous soyez local ou expatrié, nos événements offrent une occasion unique de rencontrer des personnes, de pratiquer votre français et de découvrir Tokyo sous un angle multiculturel."
+            }
+        },
+        "why": {
+            "title": "Pourquoi choisir Gengoffee ?",
+            "button": "S'inscrire à un événement",
+            "description": "Chaque événement est pensé dans le détail pour que l'échange reste facile et agréable, du choix du lieu à la taille des groupes. Participer à un événement Gengoffee c’est profiter d’un cadre organisé et bienveillant où la pratique des langues se fait sans stress."
+        },
+        "join": {
+            "title": "Rejoignez notre communauté linguistique et culturelle",
+            "description": "Nos événements rassemblent autour d’une passion commune : la rencontre et le partage. Inscrivez-vous et vivez l’expérience Gengoffee.",
+            "button": "Participer à un événement"
         }
     },
     "contact":{
@@ -403,6 +487,17 @@
         }
 
     },
+    "faq":{
+        "title":"FAQ",
+        "question1":"Comment puis-je me connecter ?",
+        "answer1":"Vous pouvez vous connecter en cliquant sur le bouton 'Connexion' en haut à droite de la page.",
+        "question2":"Comment puis-je me déconnecter ?",
+        "answer2":"Vous pouvez vous déconnecter en cliquant sur le bouton 'Déconnexion' en haut à droite de la page.",
+        "question3":"Comment puis-je me connecter ?",
+        "answer3":"Vous pouvez vous connecter en cliquant sur le bouton 'Connexion' en haut à droite de la page.",
+        "question4":"Comment puis-je me connecter ?",
+        "answer4":"Vous pouvez vous connecter en cliquant sur le bouton 'Connexion' en haut à droite de la page."
+    },
     "admin":{
         "event":"Évent",
         "registered":"Liste"
@@ -415,5 +510,9 @@
     "karaoke-jp": "Karaoke",
     "karaoke-int": "Karaoke",
     "boardgame": "Jeux de société",
-    "anniversary": "5ème Anniversaire"
+    "anniversary": "5ème Anniversaire",
+    "eventKind": {
+        "exchange": "Échange de langue",
+        "activity": "Activité"
+    }
 }

@@ -11,9 +11,6 @@
       md:flex-row md:text-base md:gap-10 md:relative md:pt-5 md:ml-auto"
   >
     <div class="">
-      <a [routerLink]="['/']" (click)="closeMenu('home');">{{'header.menu.home'|translate}}</a>
-    </div>
-    <div class="header__link">
       <a [routerLink]="['/events']" (click)="closeMenu('events');">{{'header.menu.events'|translate}}</a>
     </div>
     <div class="">
@@ -21,6 +18,9 @@
     </div>
     <div class="">
       <a [routerLink]="['/contact']" (click)="closeMenu('contact');">{{'header.menu.contact'|translate}}</a>
+    </div>
+    <div class="">
+      <a [routerLink]="['/register']" class="gengoffee-btn gengoffee-btn-quaternary inline-flex items-center" (click)="closeMenu('register');">{{'header.menu.register'|translate}}</a>
     </div>
     <div *ngIf="isAdvancedRoute()">
       <a [routerLink]="['/admin/events']" class="gengoffee-red"  (click)="closeMenu('admin-events');">{{'admin.event'|translate}}</a>

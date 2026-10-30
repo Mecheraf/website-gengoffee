@@ -1,56 +1,257 @@
-<section class="max-w-xs md:max-w-6xl mx-auto w-11/12 xl:w-full">
+<section class="md:max-w-6xl mx-auto w-11/12 xl:w-full">
   <div class="relative mt-14 md:mt-28 w-fit mx-auto">
     <h1 class="text-center text-4xl md:text-[2.625rem]">{{'about.title'|translate}}<span class="hidden md:inline"></span></h1>
-    <app-animated-quote class="absolute top-10 -left-28 md:top-16 scale-[65%] md:scale-[105%]" [width]="215" content="What is Gengoffee ?"></app-animated-quote>
-    <app-animated-quote class="absolute -top-10 -right-24 md:-top-16 md:-right-16 scale-75 md:scale-[115%]" [width]="170" content="これは何ですか" [revert]="true"></app-animated-quote>
   </div>
   <div class="mt-24 md:mt-48">
     <div class="flex flex-col md:flex-row">
-      <div class="relative md:w-[423px] mb-10 md:ml-8 md:mb-0 md:mr-20 p-5 border border-solid border-[#262829]/50 rounded-[0.625rem]">
-        <img src="assets/images/about-us-bg.jpg"/>
-        <app-waves class="hidden md:block" top="30%" left="-40%" color="red"></app-waves>
+      <div class="relative mb-10 md:ml-8 md:mb-0 md:mr-20">
+        <div class="md:p-4 md:border md:border-solid md:border-[#262829]/50 md:rounded-[0.625rem] w-fit h-fit" style="width: 100%; max-width: 450px; box-sizing: border-box;">
+          <img src="assets/images/about-us-bg.jpg" class="block w-full h-auto" style="width:100%; max-width:418px;" />
+        </div>
       </div>
       <div class="md:w-[49%] text-center md:text-left">
-        <h2 class="text-xl md:text-2xl font-medium">{{'about.subtitle'|translate}}</h2>
-        <div class="md:text-lg mt-8" [innerHtml]="'about.description'|translate"></div>
-        <div class="flex flex-wrap md:flex-nowrap gap-2 mt-4 place-content-center">
-          <div class="basis-full text-sm place-self-end font-semibold md:font-normal">{{'about.followus'|translate}}</div>
-          <img src="assets/images/right-arrow-black.svg" />
-          <a href="https://www.instagram.com/gengoffee"><img width="20" src="assets/images/instagram-black.svg" /></a>
-          <a href="https://www.facebook.com/Gengoffee"><img width="20" src="assets/images/facebook-black.svg" /></a>
-          <a href="https://www.meetup.com/fr-FR/find/?keywords=gengoffee&source=GROUPS"><img width="20" src="assets/images/meetup-black.svg" /></a>
-       
-        </div>
-        <h2 class="mt-16 text-xl md:text-2xl font-medium">{{'about.mission.title'|translate}}</h2>
-        <div class="md:text-lg mt-8" [innerHtml]="'about.mission.description'|translate"></div>
+        <h2 class="text-2xl font-medium">{{'about.subtitle'|translate}}</h2>
+        <div class="md:text-lg mt-8 text-left" [innerHtml]="'about.description'|translate"></div>
+      </div>
+    </div>
+  </div>
 
-      </div>
-    </div>
-    
-  </div>
   <div class="mt-16 md:mt-32">
-    <div class="text-xl md:text-2xl">{{'about.stats.title'|translate}}</div>
-    <div class="mt-8 md:mt-14">
-      <div class="py-5 md:py-7 grid md:flex auto-rows-min border-t border-black/50">
-        <div class="col-start-1 col-end-2 row-start-1 row-end-2 text-lg font-semibold md:w-36 md:mr-36 md:font-normal md:text-[1.375rem] md:my-auto">{{'about.stats.1.title'|translate}}</div>
-        <div class=" col-start-1 col-end-7 row-start-2 row-end-3 flex-2 md:text-lg md:w-1/2 mt-6 md:mt-0" >
-          <p class="inline" [innerHtml]="'about.stats.1.description'|translate"></p>
+    <div class="w-screen left-1/2 right-1/2 relative -translate-x-1/2 h-72 gengoffee-lightyellow-bg">
+      <div class="text-xl md:text-2xl w-full h-full flex items-center justify-center">
+        <div class="w-screen left-1/2 right-1/2 relative -translate-x-1/2 gengoffee-lightyellow-bg">
+          <div class="flex flex-col md:flex-row gap-y-[18px] md:gap-y-0 w-full max-w-xs md:max-w-6xl mx-auto px-4 py-8 justify-between items-stretch">
+            <!-- Event Count -->
+            <div class="flex flex-col justify-start w-full md:w-1/3 px-4 md:px-8 border-l-2 border-black/70">
+              <div class="flex flex-col items-start">
+                <div class="text-[1.75rem] md:text-[2.2rem] font-semibold text-left mb-2 mt-1">{{countEvents || 0}}</div>
+                <div class="text-base md:text-lg font-medium md:font-normal text-left mb-2">{{'about.stats.1.title'|translate}}</div>
+                <div class="text-sm text-justify w-11/12 md:w-3/4 mb-1" [innerHtml]="'about.stats.1.description'|translate"></div>
+              </div>
+            </div>
+            <!-- Members -->
+            <div class="flex flex-col justify-start w-full md:w-1/3 px-4 md:px-8 border-l-2 border-black/70">
+              <div class="flex flex-col items-start">
+                <div class="text-[1.75rem] md:text-[2.2rem] font-semibold text-left mb-2 mt-1">10000+</div>
+                <div class="text-base font-medium md:font-normal md:text-lg text-left mb-2">{{'about.stats.2.title'|translate}}</div>
+                <div class="text-sm text-justify w-11/12 md:w-3/4 mb-1" [innerHtml]="'about.stats.2.description'|translate"></div>
+              </div>
+            </div>
+            <!-- Participation -->
+            <div class="flex flex-col justify-start w-full md:w-1/3 px-4 md:px-8 border-l-2 border-black/70">
+              <div class="flex flex-col items-start">
+                <div class="text-[1.75rem] md:text-[2.2rem] font-semibold text-left mb-2 mt-1">90</div>
+                <div class="text-base font-medium md:font-normal md:text-lg text-left mb-2">{{'about.stats.3.title'|translate}}</div>
+                <div class="text-sm text-justify w-11/12 md:w-3/4 mb-1" [innerHtml]="'about.stats.3.description'|translate"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-start-6 col-end-7 row-start-1 row-end-2 text-[2.5rem] md:text-[3.75rem] md:ml-auto leading-8 md:my-auto">{{countEvents || 0}}</div>
-      </div>
-      <div class="py-5 md:py-7 grid md:flex auto-rows-min border-t border-black/50">
-        <div class="col-start-1 col-end-2 row-start-1 row-end-2 text-lg font-semibold md:w-36 md:mr-36 md:font-normal md:text-[1.375rem] md:my-auto">{{'about.stats.2.title'|translate}}</div>
-        <div class="col-start-1 col-end-7 row-start-2 row-end-3 md:flex-2 md:text-lg md:w-1/2 mt-6 md:mt-0" [innerHtml]="'about.stats.2.description'|translate"></div>
-        <div class="col-start-6 col-end-7 row-start-1 row-end-2 text-[2.5rem] md:text-[3.75rem] md:ml-auto leading-8 md:my-auto">7500</div>
-      </div>
-      <div class="py-5 md:py-7 grid md:flex auto-rows-min border-t border-black/50">
-        <div class="col-start-1 col-end-2 row-start-1 row-end-2 text-lg font-semibold md:w-36 md:mr-36 md:font-normal md:text-[1.375rem] md:mt-5">{{'about.stats.3.title'|translate}}</div>
-        <div class="col-start-1 col-end-7 row-start-2 row-end-3 md:flex-2 md:text-lg md:w-1/2 mt-6 md:mt-0" [innerHtml]="'about.stats.3.description'|translate"></div>
-        <div class="col-start-6 col-end-7 row-start-1 row-end-2 text-[2.5rem] md:text-[3.75rem] md:ml-auto leading-8 md:my-auto">13</div>
       </div>
     </div>
   </div>
+
+  <div class="mt-16 md:mt-32">
+    <h2 class="text-xl md:text-2xl font-medium mb-8">{{'about.story.title' | translate}}</h2>
+    <!-- Responsive timeline: mobile = vertical, desktop = horizontal -->
+    <div>
+      <!-- Desktop (horizontal) -->
+      <div 
+        class="hidden md:block timeline-scroll"
+        #timelineScroll
+        (mousedown)="onMouseDown($event)"
+        (mousemove)="onMouseMove($event)"
+        (mouseup)="onMouseUp()"
+        (mouseleave)="onMouseUp()"
+      >
+        <div class="timeline-track" [style.width.px]="totalWidth">
+          <!-- Horizontal line -->
+          <div class="timeline-line"></div>
+          <!-- Arrowhead SVG — 16×16px chevron, same height as the dot -->
+          <svg class="timeline-arrow" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="0,0 16,8 0,16" fill="none" stroke="#4A5578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <!-- Event items -->
+          <div *ngFor="let event of storyEvents; let i = index"
+               class="timeline-event"
+               [style.left.px]="startPad + i * dotSpacing">
+
+            <!-- Label above (even indices: 0, 2, 4…) -->
+            <div class="label-area label-area-above">
+              <ng-container *ngIf="i % 2 === 0">
+                <span class="event-title">{{event.titleKey | translate}}</span>
+                <span class="event-date">{{event.date}}</span>
+              </ng-container>
+            </div>
+
+            <div class="timeline-dot"></div>
+
+            <!-- Label below (odd indices: 1, 3, 5…) -->
+            <div class="label-area label-area-below">
+              <ng-container *ngIf="i % 2 !== 0">
+                <span class="event-date">{{event.date}}</span>
+                <span class="event-title">{{event.titleKey | translate}}</span>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile (vertical) -->
+      <div class="block md:hidden w-[85vw] mx-auto py-2 overflow-y-auto" style="max-height: 340px;">
+        <!-- Timeline items — relative here so the absolute line spans the full content height -->
+        <div class="flex flex-col relative">
+          <!-- Single continuous vertical line -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-[#4A5578] z-0"></div>
+          <div *ngFor="let event of storyEvents; let i = index"
+               class="flex items-center relative z-10"
+               [ngClass]="{'mb-[44px]': i < storyEvents.length - 1}">
+            <!-- Left label (even) -->
+            <div class="w-[calc(50%-6px)] pr-3 text-right">
+              <ng-container *ngIf="i % 2 === 0" class="max-w-[130px]">
+                <span class="event-title block">{{ event.titleKey | translate }}</span>
+                <span class="event-date block">{{ event.date }}</span>
+              </ng-container>
+            </div>
+            <!-- Dot -->
+            <div class="w-3 h-3 rounded-full bg-[#4A5578] flex-shrink-0 z-20"></div>
+            <!-- Right label (odd) -->
+            <div class="w-[calc(50%-6px)] pl-3 text-left">
+              <ng-container *ngIf="i % 2 !== 0" class="max-w-[130px]">
+                <span class="event-date block">{{ event.date }}</span>
+                <span class="event-title block">{{ event.titleKey | translate }}</span>
+              </ng-container>
+            </div>
+          </div>
+          <!-- Arrow at the bottom -->
+          <svg class="relative left-1/2 -translate-x-1/2 mt-1 z-10 flex-shrink-0" width="12" height="12" viewBox="0 0 16 16">
+            <polyline points="0,0 8,16 16,0" fill="none" stroke="#4A5578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-16 md:mt-32">
+    <div class="flex flex-col md:flex-row">
+      <div class="md:w-[49%] text-center md:text-left">
+        <h2 class="text-xl md:text-2xl font-medium">{{'about.mission.title'|translate}}</h2>
+        <div class="md:text-lg mt-8 text-left" [innerHtml]="'about.mission.description'|translate"></div>
+      </div>
+      <div class="relative mb-10 md:ml-20 md:mr-8 md:mb-0 mt-10 md:mt-0">
+        <div class="md:p-4 md:border md:border-solid md:border-[#262829]/50 md:rounded-[0.625rem] w-fit h-fit" style="width: 100%; max-width: 450px; box-sizing: border-box;">
+          <img src="assets/images/about-us-bg.jpg" class="block w-full h-auto" style="width:100%; max-width:418px;" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mt-16 md:mt-20"> <!-- Our cities, our communities -->
+    <h2 class="text-xl md:text-2xl font-medium mb-8">{{'about.cities.title' | translate}}</h2>
+
+    <div class="flex flex-col gap-6">
+      <!-- Paris — image below text in mobile -->
+      <div class="flex flex-col-reverse md:flex-row gengoffee-gray-bg md:rounded-2xl md:overflow-hidden md:h-[272px] items-center">
+        <img src="assets/images/Paris.png" alt="Paris"
+          class="w-full h-[125px] md:w-[272px] md:h-[272px] object-cover flex-shrink-0 rounded-lg md:rounded-none md:mb-4 md:mb-0 md:mr-0"
+          style="margin-top: 1.5rem;"
+        />
+        <div class="p-8 md:pt-0 md:px-28 flex flex-col justify-center w-full md:w-auto">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">{{'about.cities.paris.title' | translate}}</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">{{'about.cities.paris.description' | translate}}</p>
+        </div>
+      </div>
+
+      <!-- Tokyo — image below text in mobile -->
+      <div class="flex flex-col-reverse md:flex-row-reverse gengoffee-gray-bg md:rounded-2xl md:overflow-hidden md:h-[272px] items-center">
+        <img src="assets/images/Tokyo.png" alt="Tokyo"
+          class="w-full h-[125px] md:w-[272px] md:h-[272px] object-cover flex-shrink-0 rounded-lg md:rounded-none md:mb-4 md:mb-0 md:ml-0"
+          style="margin-top: 1.5rem;"
+        />
+        <div class="p-8 md:pt-0 md:px-28 flex flex-col justify-center w-full md:w-auto">
+          <h3 class="text-lg md:text-xl font-semibold mb-3">{{'about.cities.tokyo.title' | translate}}</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">{{'about.cities.tokyo.description' | translate}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 md:mt-36"> <!-- Why Gengoffee ? -->
+      <div class="flex flex-col-reverse md:flex-row md:items-center">
+        <div class="relative mb-10 md:ml-8 md:mb-0 md:mr-20 flex-shrink-0">
+          <div class="md:p-4 md:border md:border-solid md:border-[#262829]/50 md:rounded-[0.625rem] w-fit h-fit" style="width: 100%; max-width: 450px; box-sizing: border-box;">
+            <img src="assets/images/about-us-bg.jpg" class="block w-full h-auto" style="width:100%; max-width:418px;" />
+          </div>
+        </div>
+        <div class="md:w-[49%] text-center md:text-left flex flex-col justify-center items-center md:items-start">
+          <h2 class="text-xl md:text-2xl font-medium">{{'about.why.title'|translate}}</h2>
+          <!-- Part 1: existing description -->
+          <div class="text-sm md:text-base mt-4 text-left w-full" [innerHtml]="'about.why.description'|translate"></div>
+
+          <!-- Parts 2–5: strengths -->
+          <div class="mt-2 md:mt-4 flex flex-col gap-5 w-full text-left">
+
+            <!-- 1 -->
+            <div>
+              <div class="flex items-center gap-1">
+                <img src="assets/images/social.png" alt="" class="w-6 h-6 object-contain flex-shrink-0" />
+                <span class="text-sm md:text-base font-semibold">{{'about.strenghts.1.title' | translate}}</span>
+              </div>
+              <p class="text-xs md:text-sm text-gray-500 leading-relaxed">{{'about.strenghts.1.description' | translate}}</p>
+            </div>
+
+            <!-- 2 -->
+            <div>
+              <div class="flex items-center gap-1">
+                <img src="assets/images/heartwarming.png" alt="" class="w-6 h-6 object-contain flex-shrink-0" />
+                <span class="text-sm md:text-base font-semibold">{{'about.strenghts.2.title' | translate}}</span>
+              </div>
+              <p class="text-xs md:text-sm text-gray-500 leading-relaxed">{{'about.strenghts.2.description' | translate}}</p>
+            </div>
+
+            <!-- 3 -->
+            <div>
+              <div class="flex items-center gap-1">
+                <img src="assets/images/foodrinks.png" alt="" class="w-6 h-6 object-contain flex-shrink-0" />
+                <span class="text-sm md:text-base font-semibold">{{'about.strenghts.3.title' | translate}}</span>
+              </div>
+              <p class="text-xs md:text-sm text-gray-500 leading-relaxed">{{'about.strenghts.3.description' | translate}}</p>
+            </div>
+
+            <!-- 4 -->
+            <div>
+              <div class="flex items-center gap-1">
+                <img src="assets/images/world.png" alt="" class="w-6 h-6 object-contain flex-shrink-0" />
+                <span class="text-sm md:text-base font-semibold">{{'about.strenghts.4.title' | translate}}</span>
+              </div>
+              <p class="text-xs md:text-sm text-gray-500 leading-relaxed">{{'about.strenghts.4.description' | translate}}</p>
+            </div>
+
+          </div>
+
+          <button
+            class="text-sm mt-4 md:mt-6 mb-4 md:mb-0 mx-auto block gengoffee-btn gengoffee-btn-primary"
+            [routerLink]="['/register']"
+          >
+            {{'about.why.button'|translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 md:mt-32 py-8 md:py-16">
+      <app-partners [emptyQuote]="true"></app-partners>
+    </div>
+    <app-faq></app-faq>
+    <div class="mt-8 md:mt-32 md:text-left mx-auto max-w-md"> <!-- Join us -->
+      <h2 class="text-xl md:text-2xl font-medium mb-8">{{'about.join.title' | translate}}</h2>
+      <div class="text-sm md:text-base mt-4 text-left w-full" [innerHtml]="'about.join.description'|translate"></div>
+      <button
+        class="text-sm mt-4 md:mt-6 mb-4 md:mb-0 gengoffee-btn gengoffee-btn-primary mx-auto block"
+        [routerLink]="['/register']"
+      >
+        {{'about.join.button'|translate}}
+    </button>
+    </div>
+  </div>
+
 </section>
-<div class="mt-20 md:mt-40 py-16 gengoffee-lightyellow-bg">
-  <app-partners [emptyQuote]="true"></app-partners>
-</div>

@@ -1,4 +1,4 @@
-const NB_EVENTS = 2
+const NB_EVENTS = 4
 
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
@@ -15,6 +15,9 @@ import { GtmService } from '../services/gtm.service';
 })
 export class HomeComponent implements OnInit {
 
+  public readonly carouselPhotos = [1, 2, 3, 4, 5].map(
+    (index) => `assets/images/photos/carousel${index}.JPG`
+  );
   public nextEvents:any;
   public pastEvents:any;
   public newDate:string | null= "";
@@ -26,17 +29,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getNextEvents()
-    this.getPastEvents()
     this.allTags()
     this.trackMe()
   }
 
-  private getNextEvents(): void {
-    this.sharedEvents.getNextEvents();
+  public get nextFourEvents() {
+    const upcoming = this.sharedEvents.next['upcoming'];
+    return Array.isArray(upcoming) ? upcoming.slice(0, NB_EVENTS) : [];
   }
 
-  private getPastEvents(): void {
-    this.sharedEvents.getPastEvents();
+  private getNextEvents(): void {
+    this.sharedEvents.getNextEvents();
   }
 
   allTags(){
