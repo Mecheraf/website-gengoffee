@@ -1,15 +1,16 @@
 <div class="flex place-items-center flex-col text-center">
   <div class="relative">
-    <h4 class="font-medium text-base md:text-3xl">{{'partners.title'|translate}}</h4>
+    <h4 class="font-medium text-lg md:text-2xl">{{'partners.title'|translate}}</h4>
     <app-animated-quote class="absolute z-10 -top-10 -right-24 md:-right-32 scale-[60%] md:scale-100" content="thank you!" [empty]="emptyQuote"></app-animated-quote>
   </div>
-  <div class="mt-10 text-sm md:text-base w-full md:w-3/4 mx-auto">
+  <div class="mt-10 text-base w-full md:w-3/4 mx-auto">
     {{'partners.description'|translate}}
   </div>
-  <div class="flex justify-center items-stretch gap-10 md:gap-16 mt-10">
+  <div class="flex justify-center items-stretch gap-10 md:gap-16 mt-10 text-base">
     <div class="flex flex-col items-center justify-between">
-      <img class="w-20 md:w-28" src="assets/images/berthom-logo.svg"/>
-      <p class="mt-2">{{'partners.partner.berthom.name'|translate}}</p>
+      <a href="https://www.instagram.com/lesberthom_paris/" target="_blank">
+        <img class="w-20 md:w-28" src="assets/images/berthom-logo.svg"/>
+      </a>
     </div>
   </div>
   <div class="mt-10">

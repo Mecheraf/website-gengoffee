@@ -26,7 +26,6 @@
 .timeline-line {
   position: absolute;
   top: 50%;
-  left: 60px;
   right: 20px; /* ends at the tip of the chevron arrowhead */
   height: 2px;
   background-color: #4A5578;
@@ -50,52 +49,53 @@
   flex-direction: column;
   align-items: center;
   transform: translateX(-50%);
-  width: 150px;
+  max-width: 180px;
 }
 
 .timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #4A5578;
-  flex-shrink: 0;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 /* ── Labels ── */
 
 .label-area {
-  flex: 1;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  max-width: 250px;
   gap: 3px;
+  overflow: hidden;
 }
 
 .label-area-above {
   justify-content: flex-end;
-  padding-bottom: 10px;
+  padding-bottom: 18px; /* clears the 16px dot centered on the line */
 }
 
 .label-area-below {
   justify-content: flex-start;
-  padding-top: 10px;
+  padding-top: 18px;
 }
 
 .event-date {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #4A5578;
+  font-family: 'PPMori-bold';
+  font-weight: 600;
   text-align: center;
-  letter-spacing: 0.06em;
   max-width: 130px; /* max-width for the date */
 }
 
 .event-title {
-  font-size: 0.75rem;
-  color: #374151;
+  font-size: 14px;
   text-align: center;
-  line-height: 1.35;
-  max-width: 130px; /* max-width for the title */
 }

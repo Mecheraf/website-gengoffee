@@ -170,12 +170,12 @@
         "story": {
             "title": "Notre histoire",
             "events": {
-                "1": { "title": "Création de Gengoffee" },
-                "2": { "title": "Premiers événements en ligne" },
-                "3": { "title": "1 000 membres" },
-                "4": { "title": "Expansion à Tokyo" },
-                "5": { "title": "5 000 membres" },
-                "6": { "title": "10 000+ membres" }
+                "1": { "title": "Création de l'association et des événements Franco-Japonais", "date": "Septembre 2021" },
+                "2": { "title": "Premiers événements Franco-Anglais", "date": "Octobre 2021" },
+                "3": { "title": "Diversification des événements : Karaoke, jam session", "date": "Mai 2023" },
+                "4": { "title": "Expansion à Tokyo", "date": "Avril 2024" },
+                "5": { "title": "Début des événements jeux de société", "date": "Août 2025" },
+                "6": { "title": "5 ans de l'association", "date": "Septembre 2026" }
             }
         },
         "strenghts": {
@@ -454,7 +454,8 @@
         "question3":"Comment puis-je me connecter ?",
         "answer3":"Vous pouvez vous connecter en cliquant sur le bouton 'Connexion' en haut à droite de la page.",
         "question4":"Comment puis-je me connecter ?",
-        "answer4":"Vous pouvez vous connecter en cliquant sur le bouton 'Connexion' en haut à droite de la page."
+        "answer4":"Vous pouvez vous connecter en cliquant sur le bouton 'Connexion' en haut à droite de la page.",
+        "contact_us":"Une question ?"
     },
     "admin":{
         "event":"Évent",

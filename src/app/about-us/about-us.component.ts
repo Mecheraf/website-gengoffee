@@ -18,20 +18,20 @@ export class AboutUsComponent implements OnInit {
   private dragStartX = 0;
   private dragScrollLeft = 0;
 
-  readonly startPad = 80;
-  readonly dotSpacing = 250;
+  readonly startPad = 120;
+  readonly dotSpacing = 210;
 
   storyEvents = [
-    { date: '2019', titleKey: 'about.story.events.1.title' },
-    { date: '2020', titleKey: 'about.story.events.2.title' },
-    { date: '2021', titleKey: 'about.story.events.3.title' },
-    { date: '2022', titleKey: 'about.story.events.4.title' },
-    { date: '2023', titleKey: 'about.story.events.5.title' },
-    { date: '2024', titleKey: 'about.story.events.6.title' },
+    { dateKey: 'about.story.events.1.date', titleKey: 'about.story.events.1.title' },
+    { dateKey: 'about.story.events.2.date', titleKey: 'about.story.events.2.title' },
+    { dateKey: 'about.story.events.3.date', titleKey: 'about.story.events.3.title' },
+    { dateKey: 'about.story.events.4.date', titleKey: 'about.story.events.4.title' },
+    { dateKey: 'about.story.events.5.date', titleKey: 'about.story.events.5.title' },
+    { dateKey: 'about.story.events.6.date', titleKey: 'about.story.events.6.title' },
   ];
 
   get totalWidth(): number {
-    return this.startPad + (this.storyEvents.length - 1) * this.dotSpacing + 110;
+    return this.startPad + (this.storyEvents.length - 1) * this.dotSpacing + 150;
   }
 
   constructor(private eventservice: EventService, private meta: Meta, private gtmService: GtmService) { }
