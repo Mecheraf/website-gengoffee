@@ -1,0 +1,9 @@
+.mobile-full-btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mobile-full-btn {
+    width: fit-content;
+  }
+}

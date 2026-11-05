@@ -1,0 +1,9 @@
+.contact-btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contact-btn {
+    width: fit-content;
+  }
+}
