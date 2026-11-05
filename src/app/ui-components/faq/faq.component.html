@@ -1,5 +1,5 @@
-<div class="max-w-xs md:max-w-7xl mx-auto mb-8 gengoffee-gray-bg p-8 rounded-2xl">
-  <div class="w-11/12 md:w-10/12 mx-auto">
+<div class="md:max-w-7xl mx-auto mb-8 gengoffee-gray-bg p-8 rounded-2xl">
+  <div class="md:w-10/12 mx-auto">
     <h2 class="text-xl md:text-xl font-medium">{{'faq.title' | translate}}</h2>
     <div *ngFor="let q of questions" class="border-b border-gray-200">
       <button class="w-full flex items-center justify-between py-4 text-left" (click)="toggle(q)">
@@ -18,7 +18,7 @@
       <div class="border-t border-gray-200"></div>
       
     </div>
-    <button class="gengoffee-btn gengoffee-btn-outline-primary bg-white mt-8" [routerLink]="['/contact']">
+    <button class="gengoffee-btn gengoffee-btn-outline-primary mt-8 contact-btn" style="background: transparent;" [routerLink]="['/contact']">
       {{'faq.contact_us'|translate}}
     </button>
   </div>

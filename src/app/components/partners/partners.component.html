@@ -1,9 +1,9 @@
-<div class="flex place-items-center flex-col text-center">
-  <div class="relative">
-    <h4 class="font-medium text-lg md:text-2xl">{{'partners.title'|translate}}</h4>
+<div class="flex place-items-center flex-col">
+  <div class="relative self-start md:self-center">
+    <h2 class="font-medium text-xl md:text-2xl text-left md:text-center">{{'partners.title'|translate}}</h2>
     <app-animated-quote class="absolute z-10 -top-10 -right-24 md:-right-32 scale-[60%] md:scale-100" content="thank you!" [empty]="emptyQuote"></app-animated-quote>
   </div>
-  <div class="mt-10 text-base w-full md:w-3/4 mx-auto">
+  <div class="mt-7 text-base w-full md:w-3/4 mx-auto text-left md:text-center">
     {{'partners.description'|translate}}
   </div>
   <div class="flex justify-center items-stretch gap-10 md:gap-16 mt-10 text-base">
@@ -13,10 +13,10 @@
       </a>
     </div>
   </div>
-  <div class="mt-10">
+  <div class="my-7">
     {{'partners.invitation'|translate}}
   </div>
-  <button [routerLink]="['/contact']" class="gengoffee-btn gengoffee-btn-outline-primary bg-white mt-8">
+  <button [routerLink]="['/contact']" class="gengoffee-btn gengoffee-btn-outline-primary bg-white mt-8 mobile-full-btn">
     {{'contact_us'|translate}}
   </button>
 </div>
